@@ -1,0 +1,37 @@
+.portfolio-swiper {
+  position: relative;
+  padding-bottom: 40px; 
+}
+
+/* Adjust navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.082);
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.082);
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 10px;
+}
+
+/* Adjust pagination dots */
+.swiper-pagination-bullets {
+  bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #000;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
+  opacity: 1;
+}

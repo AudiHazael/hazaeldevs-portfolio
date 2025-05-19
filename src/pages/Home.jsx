@@ -268,7 +268,7 @@ function Home() {
                 vision. Reach out today and let's embark on a creative and
                 successful journey together.
               </p>
-              <div className="d-flex mt-5 pt-5">
+              <div className="d-flex mt-5">
                 <FaEnvelope fontSize="3rem" color="#181717" className="pe-4" />
                 <p>
                   Plot 15, Jesus Avenue, Simawa, Lukosi, <br /> Sagamu, Ogun

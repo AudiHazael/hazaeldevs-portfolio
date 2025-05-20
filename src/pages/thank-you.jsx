@@ -8,7 +8,6 @@ function Thanks() {
       <section className="container thanks d-flex justify-content-center align-items-center">
         <div className="row justify-content-center align-items-center">
           <div className="col-md-6 col-12 content">
-            <img src="/Logo-Image.png" alt="logo-image" />
             <h1>Thank You</h1>
             <p>
               Thank you for contacting us. Your message has being recieved, and

@@ -1,11 +1,18 @@
 import React from "react";
-import Home from "./pages/Home"; // adjust if the path differs
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Thanks from "./pages/thank-you";
+import Error from "./pages/Error";
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/thankyou" element={<Thanks />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </Router>
   );
 }
 

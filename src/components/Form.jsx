@@ -15,7 +15,7 @@ function Form() {
       <input
         type="hidden"
         name="_next"
-        value="https://yourdomain.com/thank-you"
+        value="https://hazaeldevs-portfolio.vercel.app/thank-you"
       />
 
       <div className="mb-3">

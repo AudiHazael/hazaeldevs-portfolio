@@ -148,6 +148,26 @@ footer {
   }
 }
 
+// thank-you page
+.thanks {
+  background-color: #f5f5f5;
+  .content {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+}
+
+// Error Page
+.error {
+  background-color: #f5f5f5;
+  .content {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+}
+
 /* === Responsive Typography === */
 h1 {
   font-size: clamp(1.5rem, 5vw, 2.5rem);

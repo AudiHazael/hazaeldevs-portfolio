@@ -130,7 +130,7 @@ function Home() {
                 concepts into tangible, interactive experiences that leaves an
                 impression.
               </p>
-              <h5>CEO, HazaelDevs | Audi Hazael</h5>
+              <h5>HazaelDevs | Audi Hazael</h5>
             </div>
           </div>
         </div>

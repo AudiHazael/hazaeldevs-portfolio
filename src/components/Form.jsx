@@ -7,7 +7,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 function Form() {
   return (
     <form
-      action="https://formsubmit.co/hazaeldevs@gmail.com"
+      action="https://formsubmit.co/hazaelaudi@gmail.com"
       method="POST"
       className="my-4 p-2 w-100 text-dark"
       style={{ width: "100%" }}>

@@ -6,8 +6,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 function error() {
   return (
     <div>
-      <section className=" container error">
-        <div className="row justify-contents-center align-items-center">
+      <section className=" container error d-flex justify-content-center align-items-center">
+        <div className="row justify-content-center align-items-center">
           <div className="col-md-6 col-12 content">
             <h6>ERROR</h6>
             <h1>404</h1>

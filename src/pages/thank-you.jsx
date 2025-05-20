@@ -5,7 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 function Thanks() {
   return (
     <div>
-      <section className="container thanks">
+      <section className="container thanks d-flex justify-content-center align-items-center">
         <div className="row justify-content-center align-items-center">
           <div className="col-md-6 col-12 content">
             <img src="/Logo-Image.png" alt="logo-image" />
@@ -16,7 +16,7 @@ function Thanks() {
             </p>
           </div>
         </div>
-      </section>   
+      </section>
     </div>
   );
 }

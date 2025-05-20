@@ -258,22 +258,30 @@ function Home() {
                 vision. Reach out today and let's embark on a creative and
                 successful journey together.
               </p>
-              <div className="d-flex mt-5">
-                <FaEnvelope fontSize="3rem" color="#181717" className="pe-4" />
+              <div className="d-flex">
+                <FaEnvelope
+                  fontSize="2.25rem"
+                  color="#181717"
+                  className="pe-3"
+                />
                 <p>
                   Plot 15, Jesus Avenue, Simawa, Lukosi, <br /> Sagamu, Ogun
                   State
                 </p>
               </div>
               <div className="d-flex">
-                <FaPhoneAlt fontSize="3rem" color="#181717" className="pe-4" />
+                <FaPhoneAlt
+                  fontSize="2.25rem"
+                  color="#181717"
+                  className="pe-3"
+                />
                 <p className="pt-2">+234 703 940 4909</p>
               </div>
               <div className="d-flex">
                 <FaMapMarkerAlt
-                  fontSize="3rem"
+                  fontSize="2.25rem"
                   color="#181717"
-                  className="pe-4"
+                  className="pe-3"
                 />
                 <p className="pt-2">hazaeldevs@gmail.com</p>
               </div>

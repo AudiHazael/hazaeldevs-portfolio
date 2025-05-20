@@ -24,7 +24,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 
-  a.btn:hover {
+  :hover {
     background-color: #b08a2e;
   }
 }
@@ -139,6 +139,13 @@ form {
 footer {
   background: linear-gradient(to bottom, #1c1c1c);
   color: #f1f1f1;
+
+  .socials {
+  }
+
+  img {
+    height: 2.5rem;
+  }
 }
 
 /* === Responsive Typography === */

@@ -24,15 +24,15 @@ function Footer() {
             <FaInstagram fontSize="3rem" color="#181717" className="pe-4" />
           </div>
           <div className="row justify-content-center align-items-center">
-            <div className="col-md-4 col-12">
-              <img src="" alt="logo-image" />
+            <div className="col-md-4 col-12 pt-4">
+              <img src="/Logo-Image.png" alt="logo-image" />
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ex
                 aut incidunt ipsa consequuntur dignissimos aliquid, distinctio
                 natus veniam illo.
               </p>
             </div>
-            <div className="col-md-4 col-12 flex-column">
+            <div className="col-md-4 col-12 flex-column pt-4">
               <ul>
                 <li>
                   <a href="">Lorem ipsum</a>
@@ -45,23 +45,23 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-md-4 col-12">
+            <div className="col-md-4 col-12 pt-4">
               <div className="d-flex">
-                <FaEnvelope fontSize="3rem" color="#f5f5f5" className="pe-4" />
+                <FaEnvelope fontSize="2.25rem" color="#f5f5f5" className="pe-3" />
                 <p>
                   Plot 15, Jesus Avenue, Simawa, Lukosi, <br /> Sagamu, Ogun
                   State
                 </p>
               </div>
               <div className="d-flex">
-                <FaPhoneAlt fontSize="3rem" color="#f5f5f5" className="pe-4" />
+                <FaPhoneAlt fontSize="2.25rem" color="#f5f5f5" className="pe-3" />
                 <p className="pt-2">+234 703 940 4909</p>
               </div>
               <div className="d-flex">
                 <FaMapMarkerAlt
-                  fontSize="3rem"
+                  fontSize="2.25rem"
                   color="#f5f5f5"
-                  className="pe-4"
+                  className="pe-3"
                 />
                 <p className="pt-2">hazaeldevs@gmail.com</p>
               </div>

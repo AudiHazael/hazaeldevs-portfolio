@@ -193,41 +193,31 @@ function Home() {
 
       <section className="tools pt-4 pb-5">
         <div className="container d-flex justify-content-center align-items-center">
-          <FaFigma
-            fontSize="6rem"
-            color="#f24e1e"
-            className="ps-4 pe-4"
-            data-aos="fade-right"
-            data-aos-delay=""
-          />
-          <FaReact
-            fontSize="6rem"
-            color="#61dafb"
-            className="ps-4 pe-4"
-            data-aos="fade-right"
-            data-aos-delay="500"
-          />
-          <FaSass
-            fontSize="6rem"
-            color="#cd6799"
-            className="ps-4 pe-4"
-            data-aos="fade-down"
-            data-aos-delay="700"
-          />
-          <FaBootstrap
-            fontSize="6rem"
-            color="#7952b3"
-            className="ps-4 pe-4"
-            data-aos="fade-left"
-            data-aos-delay="900"
-          />
-          <FaGithub
-            fontSize="6rem"
-            color="#181717"
-            className="ps-4 pe-4"
-            data-aos="fade-left"
-            data-aos-delay="1000"
-          />
+          <div data-aos="fade-right" data-aos-delay="">
+            <FaFigma
+              fontSize="6rem"
+              color="#f24e1e"
+              className="ps-4 pe-4"
+              data-aos="fade-right"
+              data-aos-delay=""
+            />
+          </div>
+          <div data-aos="fade-right" data-aos-delay="500">
+            <FaReact fontSize="6rem" color="#61dafb" className="ps-4 pe-4" />
+          </div>
+          <div data-aos="fade-down" data-aos-delay="700">
+            <FaSass fontSize="6rem" color="#cd6799" className="ps-4 pe-4" />
+          </div>
+          <div data-aos="fade-left" data-aos-delay="900">
+            <FaBootstrap
+              fontSize="6rem"
+              color="#7952b3"
+              className="ps-4 pe-4"
+            />
+          </div>
+          <div data-aos="fade-left" data-aos-delay="1000">
+            <FaGithub fontSize="6rem" color="#181717" className="ps-4 pe-4" />
+          </div>
         </div>
       </section>
 

@@ -80,7 +80,7 @@ function Home() {
                   href="https://wa.me/2347039404909?text=Hello%20HazaelDevs!%20I'm%20interested%20in%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary">
+                  className="btn btn-primary mt-2">
                   Hire Me
                 </a>
               </div>
@@ -97,7 +97,7 @@ function Home() {
                   href="https://wa.me/2347039404909?text=Hello%20HazaelDevs!%20I'm%20interested%20in%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary">
+                  className="btn btn-primary mt-2">
                   Contact Me !
                 </a>
               </div>
@@ -107,12 +107,12 @@ function Home() {
       </section>
 
       <section
-        className="about pt-4 pb-4"
+        className="about pt-5 pb-4"
         data-aos="fade-up"
         data-aos-delay="800">
         <div className="container">
           <div className="row justify-content-center align-items-center">
-            <div className="col-md-6 col-12">
+            <div className="col-md-6 col-12 mb-4">
               <img src="/" alt="image-of-hazael-audi" />
             </div>
             <div className="col-md-6 col-12">
@@ -143,8 +143,8 @@ function Home() {
           <div
             className="row justify-content-center align-irens-center"
             data-aos="fade-left">
-            <div className="col-md-4 col-12 image">
-              <img src="" alt="image-for-ui-design" />
+            <div className="col-md-4 col-12 image mt-4 d-flex justify-content-center align-items center">
+              <img src="/service-one.png" alt="image-for-ui-design" />
             </div>
             <div
               className="col-md-7 col-12 shadow-sm text"
@@ -184,14 +184,17 @@ function Home() {
                 evolution, with a focus on clean code and optimal performance
               </p>
             </div>
-            <div className="col-md-4 col-12 image">
-              <img src="" alt="image-of-front-end-development" />
+            <div className="col-md-4 col-12 image mt-4 d-flex justify-content-center align-items-center">
+              <img
+                src="/service-two.png"
+                alt="image-of-front-end-development"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="tools pt-4 pb-5">
+      <section className="tools pt-5 pb-5">
         <div className="container d-flex justify-content-center align-items-center">
           <div data-aos="fade-right" data-aos-delay="">
             <FaFigma
@@ -233,7 +236,7 @@ function Home() {
       </section>
 
       <section
-        className="blog pt-4 pb-4"
+        className="blog pt-5 pb-5"
         data-aos="fade-in"
         data-aos-delay="500">
         <div className="container">
@@ -243,15 +246,50 @@ function Home() {
             unique perspective, resulting in a knowledge hub for enthusiasts,
             learners, and fellow creators alike.
           </p>
+          <div className="row justify-content-center align-items-center pt-4 m-1">
+            <div className="col-md-4 col-12 card p-4 shadow-sm">
+              <h4 className="card-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h4>
+              <p className="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                accusantium maiores architecto modi mollitia hic!
+              </p>
+              <a href="">Read More!</a>
+            </div>
+            <div className="col-md-4 col-12 card p-4 mt-4 shadow-sm">
+              <h4 className="card-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h4>
+              <p className="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                accusantium maiores architecto modi mollitia hic!
+              </p>
+              <a href="">Read More!</a>
+            </div>
+            <div className="col-md-4 col-12 card p-4 mt-4 shadow-sm">
+              <h4 className="card-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h4>
+              <p className="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                accusantium maiores architecto modi mollitia hic!
+              </p>
+              <a href="">Read More!</a>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="contact" data-aos="fade-in" data-aos-delay="500">
+      <section
+        className="contact pt-5 pb-4"
+        data-aos="fade-in"
+        data-aos-delay="500">
         <div className="container">
           <h6>Contact Me</h6>
           <h4>Reach Out - Let's Create Together</h4>
-          <div className="row justify-content-center align-items-center">
-            <div className="col-md-6 col-12 ps-3 d-flex flex-column justify-content-center aligh-items-center">
+          <div className="row justify-content-center align-items-center mt-5">
+            <div className="col-md-6 col-12 ps-3 details d-flex flex-column justify-content-center aligh-items-center">
               <p>
                 Do you want to transform your ideas into memorable experiences?
                 I am here to listen, collaborate, and help you realize your
@@ -286,7 +324,7 @@ function Home() {
                 <p className="pt-2">hazaeldevs@gmail.com</p>
               </div>
             </div>
-            <div className="col-md-6 col-12">
+            <div className="col-md-6 col-12 p-4 form">
               <Form />
             </div>
           </div>

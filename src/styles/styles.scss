@@ -74,6 +74,8 @@ body {
   .row {
     .image {
       img {
+        width: 100%;
+        height: auto;
       }
     }
     .text {
@@ -112,6 +114,14 @@ body {
 }
 
 .blog {
+  background: url("/blog-background.png");
+  color: #fff;
+
+  .card {
+    background-color: transparent;
+    border: 1px #d4af371a solid;
+    color: #f1f1f1;
+  }
   h6 {
   }
   p {
@@ -119,11 +129,12 @@ body {
 }
 
 .contact {
-  h6 {
-  }
-  h4 {
-  }
-  p {
+  .row {
+    .details {
+    }
+    .form {
+      border: 1px #010101 solid;
+    }
   }
 }
 

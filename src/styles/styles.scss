@@ -60,20 +60,20 @@ section {
   }
 }
 
-.about {
-  h6 {
-  }
-  h3 {
-  }
-  p {
-  }
-  img {
-  }
-}
+// .about {
+//   h6 {
+//   }
+//   h3 {
+//   }
+//   p {
+//   }
+//   img {
+//   }
+// }
 
 .services {
-  h6 {
-  }
+  // h6 {
+  // }
   .row {
     .image {
       img {
@@ -86,35 +86,35 @@ section {
       padding: 1.5rem;
       margin-top: 4rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      h4 {
-      }
-      p {
-      }
+      // h4 {
+      // }
+      // p {
+      // }
     }
   }
 }
 
-.tools {
-}
+// .tools {
+// }
 
-.portfolio {
-  h6 {
-  }
-  h3 {
-  }
-}
+// .portfolio {
+//   h6 {
+//   }
+//   h3 {
+//   }
+// }
 
 // Portfolio Component
-.portfolio-swiper {
-  .card {
-    img {
-    }
-    h4 {
-    }
-    p {
-    }
-  }
-}
+// .portfolio-swiper {
+//   .card {
+//     img {
+//     }
+//     h4 {
+//     }
+//     p {
+//     }
+//   }
+// }
 
 .blog {
   background: url("/blog-background.png");
@@ -125,16 +125,16 @@ section {
     border: 1px #d4af371a solid;
     color: #f1f1f1;
   }
-  h6 {
-  }
-  hh p {
-  }
+  // h6 {
+  // }
+  // hh p {
+  // }
 }
 
 .contact {
   .row {
-    .details {
-    }
+    // .details {
+    // }
     .form {
       border: 1px #010101 solid;
     }
@@ -142,20 +142,20 @@ section {
 }
 
 // Form Component
-form {
-  label {
-  }
-  .btn {
-  }
-}
+// form {
+//   label {
+//   }
+//   .btn {
+//   }
+// }
 
 // Footer Component
 footer {
   background: linear-gradient(to bottom, #1c1c1c);
   color: #f1f1f1;
 
-  .socials {
-  }
+  // .socials {
+  // }
 
   img {
     height: 2.5rem;
@@ -224,9 +224,6 @@ p {
 
 /* Styles for mobile devices (767px or smaller) */
 @media (max-width: 767px) {
-  // body {
-  //   padding: 1rem;
-  // }
 }
 
 /* Styles for tablets or larger devices (768px or larger) */

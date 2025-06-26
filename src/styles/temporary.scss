@@ -1,0 +1,32 @@
+.Temp {
+  width: 50dvw;
+  img {
+  }
+  h4 {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  p {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .btn {
+    font-size: 2rem;
+    color: #cae4f5;
+  }
+}
+
+/* Styles for mobile devices (767px or smaller) */
+@media (max-width: 767px) {
+  .Temp {
+    margin: 1rem;
+    width: 100dvw;
+
+    h4 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}

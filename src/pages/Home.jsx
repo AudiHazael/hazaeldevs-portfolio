@@ -112,10 +112,10 @@ function Home() {
         data-aos-delay="800">
         <div className="container">
           <div className="row justify-content-center align-items-center">
-            <div className="col-md-6 col-12 mb-4">
+            <div className="col-md-6 col-12 mb-4 ">
               <img src="/" alt="image-of-hazael-audi" />
             </div>
-            <div className="col-md-6 col-12">
+            <div className="col-md-6 col-12 ">
               <h6>My Bio</h6>
               <h3>A Freelance UI Designer and Frontend Developer</h3>
               <p>
@@ -136,7 +136,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="services pt-4 pb-4">
+      <section className="services pt-2 pb-2 p-2">
         <div className="container">
           <h6>My Services</h6>
           <h3>Professional UI Design and Development Services</h3>
@@ -147,7 +147,7 @@ function Home() {
               <img src="/service-one.png" alt="image-for-ui-design" />
             </div>
             <div
-              className="col-md-7 col-12 shadow-sm text"
+              className="col-md-7 col-12 shadow-sm text "
               data-aos="fade-left"
               data-aos-delay="800">
               <h4>User Interface (UI) Design</h4>

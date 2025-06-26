@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Thanks from "./pages/thank-you";
 import Error from "./pages/Error";
-import Temporary from "./pages/TempPage";
+import Temporary from "./pages/TempFix";
 
 function App() {
   return (

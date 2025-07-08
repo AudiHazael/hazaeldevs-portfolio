@@ -54,7 +54,7 @@ function Hero() {
           <img
             src="/sample-image.jpg"
             alt="Sample hero image"
-            className=" w-full max-w-md shadow-lg md:max-w-lg rounded-xl"
+            className=" h-1/3 max-w-md shadow-lg md:max-w-lg rounded-xl"
           />
         </div>
       </div>

@@ -96,7 +96,7 @@ function Form() {
       {/* Submit Button */}
       <button
         type="submit"
-        className="px-6 py-2 text-white transition bg-blue-600 rounded-md hover:bg-blue-700">
+        className="px-6 py-2 text-white transition bg-gradient-to-r from-zinc-950 via-indigo-950 to-zinc-950 rounded-md hover:bg-blue-700">
         Submit
       </button>
     </form>

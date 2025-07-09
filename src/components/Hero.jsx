@@ -6,7 +6,7 @@ const slides = [
   {
     heading: "Hi, I am Hazael Audi",
     subheading: "A UI Designer and Front-End Developer",
-    buttonText: "View My Work",
+    buttonText: "Contact Me",
     link: "https://wa.me/2347039404909?text=Hello%20HazaelDevs!%20I'm%20interested%20in%20your%20services.",
   },
 ];
@@ -49,7 +49,7 @@ function Hero() {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 font-semibold text-white transition bg-gradient-to-r from-zinc-950 to-sky-300 rounded-md hover:brightness-110"
+              className="inline-block px-8 py-3 font-semibold text-white transition bg-gradient-to-r from-zinc-950 via-indigo-950 to-zinc-950 rounded-md hover:brightness-110"
               data-aos="fade-in"
               data-aos-delay="2000">
               {buttonText}

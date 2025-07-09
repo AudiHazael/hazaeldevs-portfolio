@@ -113,7 +113,7 @@ const Portfolio = () => {
                     href={item.previewLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-1 text-sm w-auto flex justify-center gap-3 font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
+                    className="px-4 py-2 text-sm w-auto flex justify-center gap-3 font-medium text-white bg-gradient-to-r from-zinc-950 via-indigo-950 to-zinc-950 rounded hover:bg-blue-700">
                     {Icons.LinkIcon({ className: "w-4 h-4 pt-1" })}
                     Live Demo
                   </a>
@@ -121,7 +121,7 @@ const Portfolio = () => {
                     href={item.repoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-1 text-sm w-auto flex justify-center gap-3 font-medium text-stone-100 border border-blue-600 rounded hover:bg-blue-100">
+                    className="text-sm w-auto flex justify-center gap-3 font-medium text-stone-100 border border-indigo-800 px-6 py-2 rounded-md hover:bg-indigo-400 hover:text-zinc-950 transition">
                     {Icons.Github({ className: "w-4 h-4 pt-1" })}
                     Code
                   </a>

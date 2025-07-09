@@ -39,7 +39,7 @@ function Contact() {
               className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center"
               data-aos="fade-in"
               data-aos-delay="500">
-              {Icons.Map({ className: "w-7 h-7 mt-1 text-indigo-400 " })}
+              {Icons.Map({ className: "w-8 h-8 ml-4 mt-1 text-indigo-400 " })}
               <div>
                 <h4 className="text-xl font-bold text-stone-100">Address</h4>
                 <p className="text-stone-300">
@@ -53,7 +53,7 @@ function Contact() {
               className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center"
               data-aos="fade-in"
               data-aos-delay="1000">
-              {Icons.Phone({ className: "w-7 h-7 mt-1 text-indigo-400 " })}
+              {Icons.Phone({ className: "w-8 h-8 ml-4 mt-1 text-indigo-400 " })}
               <div>
                 <h4 className="text-xl font-bold text-stone-100">Phone</h4>
                 <p className="text-stone-300 ">+234 703 940 4909</p>
@@ -64,7 +64,7 @@ function Contact() {
               className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center"
               data-aos="fade-in"
               data-aos-delay="1500">
-              {Icons.Mail({ className: "w-7 h-7 mt-1 text-indigo-400" })}
+              {Icons.Mail({ className: "w-8 h-8 ml-4 mt-1 text-indigo-400" })}
               <div>
                 <h4 className="text-xl font-bold text-stone-100">Email</h4>
                 <p className="text-stone-300 ">hazaeldevs@gmail.com</p>

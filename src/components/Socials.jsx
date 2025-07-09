@@ -13,7 +13,7 @@ function Socials() {
           data-aos="fade-in"
           data-aos-delay="500">
           {Icons.Github({
-            className: "w-8 h-8 text-stone-300 hover:text-white transition",
+            className: "w-7 h-7 text-stone-300 hover:text-white transition",
           })}
         </a>
         <a
@@ -24,7 +24,7 @@ function Socials() {
           data-aos="fade-in"
           data-aos-delay="1000">
           {Icons.LinkedIn({
-            className: "w-8 h-8 text-stone-300 hover:text-white transition",
+            className: "w-7 h-7 text-stone-300 hover:text-white transition",
           })}
         </a>
         <a
@@ -35,7 +35,7 @@ function Socials() {
           data-aos="fade-in"
           data-aos-delay="1500">
           {Icons.Mail({
-            className: "w-8 h-8 text-stone-300 hover:text-white transition",
+            className: "w-7 h-7 text-stone-300 hover:text-white transition",
           })}
         </a>
         <a
@@ -46,7 +46,7 @@ function Socials() {
           data-aos="fade-in"
           data-aos-delay="2000">
           {Icons.Facebook({
-            className: "w-8 h-8 text-stone-300 hover:text-white transition",
+            className: "w-7 h-7 text-stone-300 hover:text-white transition",
           })}
         </a>
         <a
@@ -57,7 +57,7 @@ function Socials() {
           data-aos="fade-in"
           data-aos-delay="2500">
           {Icons.Instagram({
-            className: "w-8 h-8 text-stone-300 hover:text-white transition",
+            className: "w-7 h-7 text-stone-300 hover:text-white transition",
           })}
         </a>
       </div>

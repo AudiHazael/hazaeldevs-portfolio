@@ -6,12 +6,12 @@ function About() {
     <section className="pt-10 pb-8 text-gray-800 bg-inherit">
       <div className="max-w-6xl px-4 mx-auto">
         {/* Top grid: image + bio */}
-        <div className="grid items-center gap-8 md:grid-cols-2">
+        <div className="grid items-center gap-8 md:grid-cols-2 overflow-hidden">
           <div>
             <img
               src="/sample-image.jpg"
               alt="Sample hero image"
-              className="h-1/3 max-w-sm mx-auto shadow-lg rounded-xl"
+              className="w-full max-w-xs mx-auto shadow-lg rounded-xl object-contain"
               data-aos="fade-in"
               data-aos-delay="500"
             />
@@ -33,15 +33,9 @@ function About() {
               className="mb-6 leading-relaxed text-stone-100 break-words"
               data-aos="fade-in"
               data-aos-delay="1200">
-              My interest in user interfaces and the desire to create
-              user-centric solutions sparked my interest in design. I have honed
-              my skills in creating visually appealing designs that not only
-              captivate, but also improve user interactions. <br />
-              <br />
-              Consequently, as a frontend developer, I bring these designs to
-              life by weaving the fabric of functionality and aesthetics
-              together. I believe in the power of code to turn abstract concepts
-              into tangible, interactive experiences that leave an impression.
+              My interest in user interfaces and the desire to create user-centric solutions sparked my interest in design. I have honed my skills in creating visually appealing designs that not only captivate, but also improve user interactions.
+              <br /><br />
+              Consequently, as a frontend developer, I bring these designs to life by weaving the fabric of functionality and aesthetics together. I believe in the power of code to turn abstract concepts into tangible, interactive experiences that leave an impression.
             </p>
             <h5
               className="text-lg font-semibold text-zinc-50"
@@ -65,10 +59,10 @@ function About() {
               Clean Code
             </h2>
             <p className="leading-relaxed text-stone-100">
-              Writing clear, efficient, and scalable code with proper
-              documentation, following established best practices.
+              Writing clear, efficient, and scalable code with proper documentation, following established best practices.
             </p>
           </div>
+
           <div
             className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
             data-aos="fade-in"
@@ -80,10 +74,10 @@ function About() {
               UI/UX Focus
             </h2>
             <p className="leading-relaxed text-stone-100">
-              Designing user-friendly and aesthetically pleasing interfaces that
-              deliver exceptional user experiences.
+              Designing user-friendly and aesthetically pleasing interfaces that deliver exceptional user experiences.
             </p>
           </div>
+
           <div
             className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
             data-aos="fade-in"
@@ -95,8 +89,7 @@ function About() {
               Performance
             </h2>
             <p className="leading-relaxed text-stone-100">
-              Optimizing apps for fast load times, accessibility compliance, and
-              strong search engine presence.
+              Optimizing apps for fast load times, accessibility compliance, and strong search engine presence.
             </p>
           </div>
         </div>

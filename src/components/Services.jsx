@@ -33,7 +33,7 @@ function Services() {
 
           {/* Text content */}
           <div className="w-full md:w-2/3 p-6">
-            <h4 className="mb-4 text-xl text-zinc-50 font-semibold">
+            <h4 className="mb-4 p-2 text-zinc-50 font-semibold text-sm">
               User Interface (UI) Design
             </h4>
             <p className="leading-relaxed text-stone-50">

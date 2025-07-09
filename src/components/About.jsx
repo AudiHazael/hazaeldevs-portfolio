@@ -11,12 +11,12 @@ function About() {
             <img
               src="/sample-image.jpg"
               alt="Sample hero image"
-              className="w-full max-w-xs mx-auto shadow-lg rounded-xl object-contain"
+              className="w-full max-w-full sm:max-w-xs mx-auto shadow-lg rounded-xl object-contain"
               data-aos="fade-in"
               data-aos-delay="300"
             />
           </div>
-          <div className="text-center md:text-left">
+          <div className=" md:text-left">
             <h6
               className="mb-2 font-semibold text-indigo-400 uppercase"
               data-aos="fade-in"
@@ -50,57 +50,6 @@ function About() {
               data-aos-delay="300">
               HazaelDevs | Audi Hazael
             </h5>
-          </div>
-        </div>
-
-        {/* Bottom grid: features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
-          <div className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition">
-            <div className="my-2">
-              {Icons.CodeIcon({ className: "text-indigo-400" })}
-            </div>
-            <h2
-              className="mb-2 font-semibold text-zinc-50 uppercase"
-              data-aos="fade-in"
-              data-aos-delay="600">
-              Clean Code
-            </h2>
-            <p className="leading-relaxed text-stone-100">
-              Writing clear, efficient, and scalable code with proper
-              documentation, following established best practices.
-            </p>
-          </div>
-
-          <div
-            className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
-            data-aos="fade-in"
-            data-aos-delay="1000">
-            <div className="my-2">
-              {Icons.LayoutDashboard({ className: "text-indigo-400" })}
-            </div>
-            <h2 className="mb-2 font-semibold text-zinc-50 uppercase">
-              UI/UX Focus
-            </h2>
-            <p className="leading-relaxed text-stone-100">
-              Designing user-friendly and aesthetically pleasing interfaces that
-              deliver exceptional user experiences.
-            </p>
-          </div>
-
-          <div
-            className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
-            data-aos="fade-in"
-            data-aos-delay="1500">
-            <div className="my-2">
-              {Icons.Zap({ className: "text-indigo-400" })}
-            </div>
-            <h2 className="mb-2 font-semibold text-zinc-50 uppercase">
-              Performance
-            </h2>
-            <p className="leading-relaxed text-stone-100">
-              Optimizing apps for fast load times, accessibility compliance, and
-              strong search engine presence.
-            </p>
           </div>
         </div>
       </div>

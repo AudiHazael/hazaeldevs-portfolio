@@ -1,4 +1,5 @@
 import React from "react";
+import { Icons } from "./Icons";
 
 function Services() {
   return (
@@ -82,6 +83,72 @@ function Services() {
               of development to deliver polished and user-friendly interfaces
               that stand the test of technological evolution, with a focus on
               clean code and optimal performance.
+            </p>
+          </div>
+        </div>
+        {/* Bottom grid: features */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+          <div className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition">
+            <div className="my-2">
+              {Icons.CodeIcon({ className: "text-indigo-400" })}
+            </div>
+            <h2
+              className="mb-2 font-semibold text-zinc-50 uppercase"
+              data-aos="fade-in"
+              data-aos-delay="600">
+              Clean Code
+            </h2>
+            <p className="leading-relaxed text-stone-100">
+              Writing clear, efficient, and scalable code with proper
+              documentation, following established best practices.
+            </p>
+          </div>
+
+          <div
+            className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
+            data-aos="fade-in"
+            data-aos-delay="1000">
+            <div className="my-2">
+              {Icons.LayoutDashboard({ className: "text-indigo-400" })}
+            </div>
+            <h2 className="mb-2 font-semibold text-zinc-50 uppercase">
+              UI/UX Focus
+            </h2>
+            <p className="leading-relaxed text-stone-100">
+              Designing user-friendly and aesthetically pleasing interfaces that
+              deliver exceptional user experiences.
+            </p>
+          </div>
+
+          <div
+            className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
+            data-aos="fade-in"
+            data-aos-delay="1500">
+            <div className="my-2">
+              {Icons.Mphone({ className: "text-indigo-400" })}
+            </div>
+            <h2 className="mb-2 font-semibold text-zinc-50 uppercase">
+              Mobile Optimization
+            </h2>
+            <p className="leading-relaxed text-stone-100">
+              Optimizing apps for fast load times, accessibility compliance, and
+              strong search engine presence.
+            </p>
+          </div>
+
+          <div
+            className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
+            data-aos="fade-in"
+            data-aos-delay="1500">
+            <div className="my-2">
+              {Icons.Zap({ className: "text-indigo-400" })}
+            </div>
+            <h2 className="mb-2 font-semibold text-zinc-50 uppercase">
+              Performance
+            </h2>
+            <p className="leading-relaxed text-stone-100">
+              Optimizing apps for fast load times, accessibility compliance, and
+              strong search engine presence.
             </p>
           </div>
         </div>

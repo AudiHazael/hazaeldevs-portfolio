@@ -9,7 +9,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Example portfolio items
 const portfolioItems = [
   {
     title: "WealthWave",
@@ -28,12 +27,17 @@ const portfolioItems = [
     repoLink: "https://github.com/AudiHazael/soy-joy",
   },
   {
-    title: "Extensive Academy",
+    title: "Extensive Academy ",
     text: "A modern website for an educational institute with login and learning dashboard.",
     img: "/Extensive (1).png",
     tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
     previewLink: "https://academy-web-oasis.vercel.app/",
     repoLink: "#",
+    collaborator: {
+      text: "In collaboration with",
+      name: "CodeMax",
+      link: "https://preciousamos.dev",
+    },
   },
   {
     title: "Luxor",
@@ -90,19 +94,35 @@ const Portfolio = () => {
                 className="object-cover w-full h-48"
               />
               <div className="p-4 text-left">
-                <h4 className="mb-2 text-lg font-semibold text-gray-900 dark:text-zinc-50">
-                  {item.title}
-                </h4>
+                <div className="flex flex-wrap items-center gap-2 mb-1">
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-zinc-50">
+                    {item.title}
+                  </h4>
+                  {item.collaborator && (
+                    <>
+                      <span className="text-sm md:text-base text-stone-300">
+                        – In collaboration with
+                      </span>
+                      <a
+                        href={item.collaborator.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm md:text-base text-indigo-200 font-medium hover:text-indigo-400">
+                        {item.collaborator.name}
+                      </a>
+                    </>
+                  )}
+                </div>
+
                 <p className="mb-4 text-sm text-gray-600 dark:text-stone-100">
                   {item.text}
                 </p>
 
-                {/* Tools Section */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tools?.map((tool, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs font-medium text-zinc-50 uppercaseshadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 rounded-lg">
+                      className="px-3 py-1 text-xs font-medium text-zinc-50 uppercase shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 rounded-lg">
                       {tool}
                     </span>
                   ))}

@@ -21,6 +21,8 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
+import { MdPhoneIphone } from "react-icons/md";
+
 export const Icons = {
   ArrowDown: (props) => <ArrowDownIcon className="w-6 h-6" {...props} />,
   Phone: (props) => <PhoneIcon className="w-6 h-6" {...props} />,
@@ -29,6 +31,7 @@ export const Icons = {
   Facebook: (props) => <FaFacebook className="w-6 h-6" {...props} />,
   LinkedIn: (props) => <FaLinkedin className="w-6 h-6" {...props} />,
   Instagram: (props) => <FaInstagram className="w-6 h-6" {...props} />,
+  Mphone: (props) => <MdPhoneIphone className="w-6 h-6" {...props} />,
   CodeIcon: (props) => <CodeIcon className="w-6 h-6 text-sky-500" {...props} />,
   Zap: (props) => <Zap className="w-6 h-6 text-sky-500" {...props} />,
   LayoutDashboard: (props) => (

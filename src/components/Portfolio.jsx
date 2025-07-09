@@ -17,7 +17,7 @@ const portfolioItems = [
     img: "/Wealthwave.png",
     tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
     previewLink: "https://wealth-wave-kappa.vercel.app/",
-    repoLink: "#",
+    repoLink: "https://github.com/AudiHazael/WealthWave",
   },
   {
     title: "Soy-Joy",
@@ -25,7 +25,7 @@ const portfolioItems = [
     img: "/soyjoy.png",
     tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
     previewLink: "https://soy-joy.vercel.app/",
-    repoLink: "#",
+    repoLink: "https://github.com/AudiHazael/soy-joy",
   },
   {
     title: "Extensive Academy",
@@ -41,7 +41,7 @@ const portfolioItems = [
     img: "/Luxor.png",
     tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
     previewLink: "https://luxor-seven.vercel.app/",
-    repoLink: "#",
+    repoLink: "https://github.com/AudiHazael/Luxor",
   },
   {
     title: "Project Five",

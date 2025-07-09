@@ -6,30 +6,29 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    AOS.init({ duration: 1500, once: true });
+    AOS.init({ duration: 1000, once: true });
 
-    // Optional: Close navbar when scrolling
-    const handleScroll = () => setIsOpen(false);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const closeMenuOnScroll = () => setIsOpen(false);
+    window.addEventListener("scroll", closeMenuOnScroll);
+    return () => window.removeEventListener("scroll", closeMenuOnScroll);
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full border-b border-gray-800 shadow-md bg-black/30 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-black/30 backdrop-blur-md border-b border-gray-800 shadow-md">
       <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-7xl">
         {/* Logo */}
         <a href="#home" className="flex items-center">
           <img
             src="/Logo-Image.png"
             alt="logo"
-            className="object-contain w-auto h-10"
+            className="h-10 object-contain"
           />
         </a>
 
-        {/* Toggle Button for Mobile */}
+        {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-stone-50 md:hidden focus:outline-none"
+          className="text-white md:hidden focus:outline-none"
           aria-label="Toggle navigation">
           <svg
             className="w-6 h-6"
@@ -54,34 +53,29 @@ function Navbar() {
           </svg>
         </button>
 
-        {/* Nav Links */}
+        {/* Navigation Links */}
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } w-full md:flex md:items-center md:w-auto transition-all duration-300 ease-in-out`}
-          data-aos="fade">
-          <ul className="flex flex-col mt-4 space-y-2 font-medium text-md text-stone-50 md:mt-0 md:flex-row md:space-y-0 md:space-x-6">
+          } absolute top-full left-0 w-full bg-black/90 px-6 py-4 md:static md:bg-transparent md:flex md:items-center md:space-x-6 md:w-auto transition-all duration-300 ease-in-out`}>
+          <ul className="flex flex-col px-4 py-4 md:p-0 md:flex-row md:space-y-0 space-y-3 text-white font-medium">
             <li>
-              <a href="#home" className="transition-colors hover:text-sky-500">
+              <a href="#home" className="hover:text-sky-500">
                 Home
               </a>
             </li>
             <li>
-              <a href="#about" className="transition-colors hover:text-sky-500">
+              <a href="#about" className="hover:text-sky-500">
                 About
               </a>
             </li>
             <li>
-              <a
-                href="#portfolio"
-                className="transition-colors hover:text-sky-500">
+              <a href="#portfolio" className="hover:text-sky-500">
                 Portfolio
               </a>
             </li>
             <li>
-              <a
-                href="#contact"
-                className="transition-colors hover:text-sky-500">
+              <a href="#contact" className="hover:text-sky-500">
                 Contact
               </a>
             </li>

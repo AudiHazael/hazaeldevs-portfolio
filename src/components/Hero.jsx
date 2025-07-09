@@ -18,19 +18,21 @@ function Hero() {
     const slideInterval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(slideInterval);
   }, []);
 
   const { heading, subheading, buttonText, link } = slides[current];
 
   return (
-    <section className="flex items-center w-full min-h-screen shadow-md inset-shadow-xs backdrop-blur-sm text-white bg-gradient-to-br from-zinc-950 via-gray-900 to-black md:px-20">
-      <div className="grid items-center w-full mx-auto md:grid-cols-2 max-w-7xl">
-        {/* Text Column */}
-        <div className="space-y-6 text-center md:text-left">
+    <section
+      id="home"
+      className="flex items-center w-full min-h-screen px-4 md:px-20 text-white bg-gradient-to-br from-zinc-950 via-gray-900 to-black overflow-hidden"
+      data-aos="fade-up">
+      <div className="grid items-center w-full max-w-7xl mx-auto md:grid-cols-2 gap-8">
+        {/* Text */}
+        <div className="space-y-6 text-center md:text-left overflow-hidden w-full">
           <h1
-            className="text-4xl text-indigo-400 font font-ob "
+            className="text-4xl text-indigo-400 font-ob"
             data-aos="fade-in"
             data-aos-delay="1000">
             {heading}
@@ -47,7 +49,7 @@ function Hero() {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 text-white font-semibold transition bg-gradient-to-r from-zinc-950 to-sky-300 rounded-md hover:bg-sky-300"
+              className="inline-block px-8 py-3 font-semibold text-white transition bg-gradient-to-r from-zinc-950 to-sky-300 rounded-md hover:brightness-110"
               data-aos="fade-in"
               data-aos-delay="2000">
               {buttonText}
@@ -60,12 +62,12 @@ function Hero() {
         </div>
 
         {/* Image Column */}
-        <div className="flex justify-center mt-6 md:mt-0">
+        <div className="hidden md:flex justify-center mt-6 md:mt-0">
           <img
             src="/sample-image.jpg"
             alt="Sample hero image"
-            className=" h-1/3 max-w-md shadow-lg md:max-w-lg rounded-xl"
-             data-aos="fade-in"
+            className="w-[90%] max-w-md md:max-w-lg rounded-xl shadow-lg"
+            data-aos="fade-in"
             data-aos-delay="2000"
           />
         </div>

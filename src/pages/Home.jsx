@@ -20,7 +20,7 @@ function Home() {
     });
   }, []);
   return (
-    <div className="scroll-smooth overflow-hidden">
+    <div className="scroll-smooth">
       <section>
         <div>
           <Navbar

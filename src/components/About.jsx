@@ -30,7 +30,7 @@ function About() {
               A Freelance UI Designer and Frontend Developer
             </h3>
             <p
-              className="mb-6 leading-relaxed text-stone-100"
+              className="mb-6 leading-relaxed text-stone-100 break-words"
               data-aos="fade-in"
               data-aos-delay="1200">
               My interest in user interfaces and the desire to create

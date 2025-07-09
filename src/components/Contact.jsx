@@ -5,10 +5,7 @@ import { Icons } from "../components/Icons";
 
 function Contact() {
   return (
-    <section
-      className="py-10 text-gray-800"
-      data-aos="fade-in"
-      data-aos-delay="500">
+    <section className="py-10 text-gray-800">
       <div className="max-w-6xl px-4 mx-auto">
         <div className="flex flex-col items-start gap-8 md:flex-row">
           {/* Contact Details */}
@@ -16,7 +13,7 @@ function Contact() {
             <h6
               className="mb-2 font-semibold text-indigo-400 uppercase"
               data-aos="fade-in"
-              data-aos-delay="">
+              data-aos-delay="300">
               Contact Me
             </h6>
             <h4
@@ -28,7 +25,7 @@ function Contact() {
             <p
               className="text-stone-200"
               data-aos="fade-in"
-              data-aos-delay="1200">
+              data-aos-delay="900">
               Do you want to transform your ideas into memorable experiences? I
               am here to listen, collaborate, and help you realize your vision.
               Reach out today and let's embark on a creative and successful
@@ -38,7 +35,7 @@ function Contact() {
             <div
               className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center"
               data-aos="fade-in"
-              data-aos-delay="500">
+              data-aos-delay="600">
               {Icons.Map({ className: "w-8 h-8 ml-4 mt-1 text-indigo-400 " })}
               <div>
                 <h4 className="text-xl font-bold text-stone-100">Address</h4>
@@ -52,7 +49,7 @@ function Contact() {
             <div
               className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center"
               data-aos="fade-in"
-              data-aos-delay="1000">
+              data-aos-delay="900">
               {Icons.Phone({ className: "w-8 h-8 ml-4 mt-1 text-indigo-400 " })}
               <div>
                 <h4 className="text-xl font-bold text-stone-100">Phone</h4>
@@ -63,7 +60,7 @@ function Contact() {
             <div
               className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center"
               data-aos="fade-in"
-              data-aos-delay="1500">
+              data-aos-delay="1200">
               {Icons.Mail({ className: "w-8 h-8 ml-4 mt-1 text-indigo-400" })}
               <div>
                 <h4 className="text-xl font-bold text-stone-100">Email</h4>

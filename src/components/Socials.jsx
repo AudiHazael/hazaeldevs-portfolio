@@ -11,7 +11,7 @@ function Socials() {
           target="_blank"
           rel="noopener noreferrer"
           data-aos="fade-in"
-          data-aos-delay="500">
+          data-aos-delay="300">
           {Icons.Github({
             className: "w-7 h-7 text-stone-300 hover:text-white transition",
           })}
@@ -22,7 +22,7 @@ function Socials() {
           target="_blank"
           rel="noopener noreferrer"
           data-aos="fade-in"
-          data-aos-delay="1000">
+          data-aos-delay="600">
           {Icons.LinkedIn({
             className: "w-7 h-7 text-stone-300 hover:text-white transition",
           })}
@@ -33,7 +33,7 @@ function Socials() {
           target="_blank"
           rel="noopener noreferrer"
           data-aos="fade-in"
-          data-aos-delay="1500">
+          data-aos-delay="900">
           {Icons.Mail({
             className: "w-7 h-7 text-stone-300 hover:text-white transition",
           })}
@@ -44,7 +44,7 @@ function Socials() {
           target="_blank"
           rel="noopener noreferrer"
           data-aos="fade-in"
-          data-aos-delay="2000">
+          data-aos-delay="1200">
           {Icons.Facebook({
             className: "w-7 h-7 text-stone-300 hover:text-white transition",
           })}
@@ -55,7 +55,7 @@ function Socials() {
           target="_blank"
           rel="noopener noreferrer"
           data-aos="fade-in"
-          data-aos-delay="2500">
+          data-aos-delay="1400">
           {Icons.Instagram({
             className: "w-7 h-7 text-stone-300 hover:text-white transition",
           })}

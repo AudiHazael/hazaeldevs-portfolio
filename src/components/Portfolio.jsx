@@ -59,13 +59,13 @@ const Portfolio = () => {
       <h6
         className="mb-2 font-semibold text-indigo-400 uppercase px-4"
         data-aos="fade-in"
-        data-aos-delay="800">
+        data-aos-delay="300">
         My Portfolio
       </h6>
       <h3
         className="mb-6 text-2xl font-bold md:text-3xl text-zinc-50 px-4"
         data-aos="fade-in"
-        data-aos-delay="1500">
+        data-aos-delay="600">
         Check out some of my successful projects
       </h3>
 
@@ -80,7 +80,7 @@ const Portfolio = () => {
         }}
         className="w-full px-4"
         data-aos="fade-in"
-        data-aos-delay="2000">
+        data-aos-delay="900">
         {portfolioItems.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="h-full overflow-hidden transition-transform duration-300 rounded-md shadow-md dark:bg-gray-800/80 backdrop-blur-lg hover:-translate-y-1">

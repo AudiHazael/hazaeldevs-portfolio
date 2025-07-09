@@ -25,7 +25,7 @@ function Home() {
         <div>
           <Navbar
             data-aos="fade-in"
-            data-aos-delay=""
+            data-aos-delay="600"
             data-aos-duration="500"
           />
         </div>

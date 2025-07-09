@@ -18,28 +18,28 @@ function Tools() {
             className="transition-transform hover:scale-110"
           />
         </div>
-        <div data-aos="fade-right" data-aos-delay="500">
+        <div data-aos="fade-right" data-aos-delay="300">
           <FaReact
             fontSize="2rem"
             color="#61dafb"
             className="transition-transform hover:scale-110"
           />
         </div>
-        <div data-aos="fade-down" data-aos-delay="1000">
+        <div data-aos="fade-down" data-aos-delay="600">
           <FaSass
             fontSize="2rem"
             color="#cd6799"
             className="transition-transform hover:scale-110"
           />
         </div>
-        <div data-aos="fade-left" data-aos-delay="1500">
+        <div data-aos="fade-left" data-aos-delay="900">
           <FaBootstrap
             fontSize="2rem"
             color="#7952b3"
             className="transition-transform hover:scale-110"
           />
         </div>
-        <div data-aos="fade-left" data-aos-delay="2000">
+        <div data-aos="fade-left" data-aos-delay="1200">
           <FaGithub
             fontSize="2rem"
             className="text-white transition-transform hover:scale-110"

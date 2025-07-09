@@ -27,9 +27,9 @@ function Footer() {
 
         {/* Copyright */}
         <div
-          className="text-sm text-center text-gray-1500"
+          className="text-sm text-center text-gray-100"
           data-aos="fade-in"
-          data-aos-delay="1500">
+          data-aos-delay="900">
           <p>
             © 2025 HazaElDevs | Designed by{" "}
             <a

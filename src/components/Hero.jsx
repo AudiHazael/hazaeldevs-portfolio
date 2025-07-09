@@ -27,20 +27,21 @@ function Hero() {
     <section
       id="home"
       className="flex items-center w-full min-h-screen px-4 md:px-20 text-white bg-gradient-to-br from-zinc-950 via-gray-900 to-black overflow-hidden"
-      data-aos="fade-up">
+      data-aos="fade-up"
+      data-aos-delay="200">
       <div className="grid items-center w-full max-w-7xl mx-auto md:grid-cols-2 gap-8">
         {/* Text */}
         <div className="space-y-6 text-center md:text-left overflow-hidden w-full">
           <h1
             className="text-4xl text-indigo-400 font-ob"
             data-aos="fade-in"
-            data-aos-delay="1000">
+            data-aos-delay="500">
             {heading}
           </h1>
           <h2
             className="text-2xl font-bold md:text-5xl"
             data-aos="fade-in"
-            data-aos-delay="1500">
+            data-aos-delay="1000">
             {subheading}
           </h2>
 
@@ -51,7 +52,7 @@ function Hero() {
               rel="noopener noreferrer"
               className="inline-block px-8 py-3 font-semibold text-white transition bg-gradient-to-r from-zinc-950 via-indigo-950 to-zinc-950 rounded-md hover:brightness-110"
               data-aos="fade-in"
-              data-aos-delay="2000">
+              data-aos-delay="1500">
               {buttonText}
             </a>
           </div>

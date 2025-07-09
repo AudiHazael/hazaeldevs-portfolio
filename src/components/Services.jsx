@@ -7,13 +7,13 @@ function Services() {
         <h6
           className="mb-2 font-semibold text-indigo-400 uppercase"
           data-aos="fade-in"
-          data-aos-delay="500">
+          data-aos-delay="300">
           My Services
         </h6>
         <h3
           className="mb-10 text-3xl font-bold text-zinc-50"
           data-aos="fade-in"
-          data-aos-delay="1000">
+          data-aos-delay="600">
           Professional UI Design and Development Services
         </h3>
 
@@ -21,7 +21,7 @@ function Services() {
         <div
           className="flex flex-col md:flex-row overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow mb-12"
           data-aos="fade-in"
-          data-aos-delay="1000">
+          data-aos-delay="900">
           {/* Image flush to the left */}
           <div className="md:w-auto w-full h-auto">
             <img
@@ -55,7 +55,7 @@ function Services() {
         <div
           className="flex flex-col md:flex-row-reverse overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow"
           data-aos="fade-in"
-          data-aos-delay="1500">
+          data-aos-delay="1200">
           {/* Image flush to the right */}
           <div className="md:w-auto w-full h-auto">
             <img

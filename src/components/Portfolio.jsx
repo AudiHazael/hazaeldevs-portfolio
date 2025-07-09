@@ -15,6 +15,7 @@ const portfolioItems = [
     title: "WealthWave",
     text: "An investment platform dashboard designed for tracking portfolios in real-time.",
     img: "/Wealthwave.png",
+    tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
     previewLink: "https://wealth-wave-kappa.vercel.app/",
     repoLink: "#",
   },
@@ -22,6 +23,7 @@ const portfolioItems = [
     title: "Soy-Joy",
     text: "E-commerce site for a soy milk brand with responsive UI and product cart features.",
     img: "/soyjoy.png",
+    tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
     previewLink: "https://soy-joy.vercel.app/",
     repoLink: "#",
   },
@@ -29,6 +31,7 @@ const portfolioItems = [
     title: "Extensive Academy",
     text: "A modern website for an educational institute with login and learning dashboard.",
     img: "/Extensive (1).png",
+    tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
     previewLink: "https://academy-web-oasis.vercel.app/",
     repoLink: "#",
   },
@@ -36,6 +39,7 @@ const portfolioItems = [
     title: "Luxor",
     text: "Coming soon placeholder for a new development project.",
     img: "/Luxor.png",
+    tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
     previewLink: "https://luxor-seven.vercel.app/",
     repoLink: "#",
   },
@@ -43,6 +47,7 @@ const portfolioItems = [
     title: "Project Five",
     text: "Coming soon placeholder for a new UI/UX concept. Just added this to make it longer.",
     img: "https://placehold.co/400x200",
+    tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
     previewLink: "#",
     repoLink: "#",
   },
@@ -91,6 +96,17 @@ const Portfolio = () => {
                 <p className="mb-4 text-sm text-gray-600 dark:text-stone-100">
                   {item.text}
                 </p>
+
+                {/* Tools Section */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {item.tools?.map((tool, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 text-xs font-medium text-zinc-50 uppercaseshadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 rounded-lg">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
 
                 <div className="flex gap-3 mt-4">
                   <a

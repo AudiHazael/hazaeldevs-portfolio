@@ -33,10 +33,10 @@ const portfolioItems = [
     repoLink: "#",
   },
   {
-    title: "Project Four",
+    title: "Luxor",
     text: "Coming soon placeholder for a new development project.",
-    img: "https://placehold.co/400x200",
-    previewLink: "#",
+    img: "/Luxor.png",
+    previewLink: "https://luxor-seven.vercel.app/",
     repoLink: "#",
   },
   {

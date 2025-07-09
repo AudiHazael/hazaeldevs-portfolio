@@ -58,24 +58,24 @@ function Navbar() {
           className={`${
             isOpen ? "block" : "hidden"
           } absolute top-full left-0 w-full bg-black/90 px-6 py-4 md:static md:bg-transparent md:flex md:items-center md:space-x-6 md:w-auto transition-all duration-300 ease-in-out`}>
-          <ul className="flex flex-col px-4 py-4 md:p-0 md:flex-row md:space-y-0 space-y-3 text-white font-medium">
+          <ul className="flex flex-col px-4 py-4 md:p-0 md:flex-row md:space-y-0 space-y-3 text-white font-medium gap-4">
             <li>
-              <a href="#home" className="hover:text-sky-500">
+              <a href="#home" className="hover:text-indigo-300">
                 Home
               </a>
             </li>
             <li>
-              <a href="#about" className="hover:text-sky-500">
+              <a href="#about" className="hover:text-indigo-300">
                 About
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="hover:text-sky-500">
+              <a href="#portfolio" className="hover:text-indigo-300">
                 Portfolio
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-sky-500">
+              <a href="#contact" className="hover:text-indigo-300">
                 Contact
               </a>
             </li>

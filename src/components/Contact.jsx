@@ -13,20 +13,32 @@ function Contact() {
         <div className="flex flex-col items-start gap-8 md:flex-row">
           {/* Contact Details */}
           <div className="space-y-6 md:w-1/2 mt-4">
-            <h6 className="mb-2 font-semibold text-indigo-400 uppercase">
+            <h6
+              className="mb-2 font-semibold text-indigo-400 uppercase"
+              data-aos="fade-in"
+              data-aos-delay="">
               Contact Me
             </h6>
-            <h4 className=" text-2xl text-zinc-50 font-bold md:text-3xl">
+            <h4
+              className=" text-2xl text-zinc-50 font-bold md:text-3xl"
+              data-aos="fade-in"
+              data-aos-delay="600">
               Reach Out - Let's Create Together
             </h4>
-            <p className="text-stone-200">
+            <p
+              className="text-stone-200"
+              data-aos="fade-in"
+              data-aos-delay="1200">
               Do you want to transform your ideas into memorable experiences? I
               am here to listen, collaborate, and help you realize your vision.
               Reach out today and let's embark on a creative and successful
               journey together.
             </p>
 
-            <div className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center">
+            <div
+              className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center"
+              data-aos="fade-in"
+              data-aos-delay="500">
               {Icons.Map({ className: "w-7 h-7 mt-1 text-indigo-400 " })}
               <div>
                 <h4 className="text-xl font-bold text-stone-100">Address</h4>
@@ -37,7 +49,10 @@ function Contact() {
               </div>
             </div>
 
-            <div className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center">
+            <div
+              className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center"
+              data-aos="fade-in"
+              data-aos-delay="1000">
               {Icons.Phone({ className: "w-7 h-7 mt-1 text-indigo-400 " })}
               <div>
                 <h4 className="text-xl font-bold text-stone-100">Phone</h4>
@@ -45,7 +60,10 @@ function Contact() {
               </div>
             </div>
 
-            <div className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center">
+            <div
+              className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center"
+              data-aos="fade-in"
+              data-aos-delay="1500">
               {Icons.Mail({ className: "w-7 h-7 mt-1 text-indigo-400" })}
               <div>
                 <h4 className="text-xl font-bold text-stone-100">Email</h4>
@@ -55,7 +73,11 @@ function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="w-full md:w-1/2 px-0 md:px-4">
+          <div
+            className="w-full md:w-1/2 px-0 md:px-4"
+            data-aos="fade-in"
+            data-aos-delay="1500"
+            data-aos-duration="800">
             <Form />
           </div>
         </div>

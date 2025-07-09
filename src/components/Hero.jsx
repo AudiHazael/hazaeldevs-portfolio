@@ -25,21 +25,31 @@ function Hero() {
   const { heading, subheading, buttonText, link } = slides[current];
 
   return (
-    <section
-      className="flex items-center w-full min-h-screen text-white bg-gradient-to-br from-zinc-950 via-gray-900 to-black md:px-20"
-      data-aos="fade-up">
+    <section className="flex items-center w-full min-h-screen shadow-md inset-shadow-xs backdrop-blur-sm text-white bg-gradient-to-br from-zinc-950 via-gray-900 to-black md:px-20">
       <div className="grid items-center w-full mx-auto md:grid-cols-2 max-w-7xl">
         {/* Text Column */}
-        <div className="space-y-6 text-center md:text-left animate-fade-in">
-          <h1 className="text-4xl text-indigo-400 font font-ob">{heading}</h1>
-          <h2 className="text-2xl font-bold md:text-5xl">{subheading}</h2>
+        <div className="space-y-6 text-center md:text-left">
+          <h1
+            className="text-4xl text-indigo-400 font font-ob "
+            data-aos="fade-in"
+            data-aos-delay="1000">
+            {heading}
+          </h1>
+          <h2
+            className="text-2xl font-bold md:text-5xl"
+            data-aos="fade-in"
+            data-aos-delay="1500">
+            {subheading}
+          </h2>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 text-white font-semibold transition bg-gradient-to-r from-zinc-950 to-sky-300 rounded-md hover:bg-sky-300">
+              className="inline-block px-8 py-3 text-white font-semibold transition bg-gradient-to-r from-zinc-950 to-sky-300 rounded-md hover:bg-sky-300"
+              data-aos="fade-in"
+              data-aos-delay="2000">
               {buttonText}
             </a>
           </div>
@@ -55,6 +65,8 @@ function Hero() {
             src="/sample-image.jpg"
             alt="Sample hero image"
             className=" h-1/3 max-w-md shadow-lg md:max-w-lg rounded-xl"
+             data-aos="fade-in"
+            data-aos-delay="2000"
           />
         </div>
       </div>

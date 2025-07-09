@@ -23,11 +23,15 @@ function Home() {
     <div className="scroll-smooth">
       <section>
         <div>
-          <Navbar data-aos="fade-in" />
+          <Navbar
+            data-aos="fade-in"
+            data-aos-delay=""
+            data-aos-duration="500"
+          />
         </div>
       </section>
 
-      <div className="" id="">
+      <div className="" id="" data-aos="fade-up" data-aos-delay="">
         <Hero />
       </div>
 

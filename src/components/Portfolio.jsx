@@ -51,10 +51,16 @@ const portfolioItems = [
 const Portfolio = () => {
   return (
     <div className="w-full px-0 sm:px-4 mx-auto my-12 md:max-w-7xl">
-      <h6 className="mb-2 font-semibold text-indigo-400 uppercase px-4">
+      <h6
+        className="mb-2 font-semibold text-indigo-400 uppercase px-4"
+        data-aos="fade-in"
+        data-aos-delay="800">
         My Portfolio
       </h6>
-      <h3 className="mb-6 text-2xl font-bold md:text-3xl text-zinc-50 px-4">
+      <h3
+        className="mb-6 text-2xl font-bold md:text-3xl text-zinc-50 px-4"
+        data-aos="fade-in"
+        data-aos-delay="1500">
         Check out some of my successful projects
       </h3>
 
@@ -67,7 +73,9 @@ const Portfolio = () => {
           768: { slidesPerView: 2 },
           992: { slidesPerView: 3 },
         }}
-        className="w-full px-4">
+        className="w-full px-4"
+        data-aos="fade-in"
+        data-aos-delay="2000">
         {portfolioItems.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="h-full overflow-hidden transition-transform duration-300 rounded-md shadow-md dark:bg-gray-800/80 backdrop-blur-lg hover:-translate-y-1">
@@ -110,6 +118,5 @@ const Portfolio = () => {
     </div>
   );
 };
-
 
 export default Portfolio;

@@ -4,17 +4,24 @@ function Services() {
   return (
     <section className="py-10 text-gray-800 bg-inherit" id="services">
       <div className="max-w-6xl px-4 mx-auto">
-        <h6 className="mb-2 font-semibold text-indigo-400 uppercase">
+        <h6
+          className="mb-2 font-semibold text-indigo-400 uppercase"
+          data-aos="fade-in"
+          data-aos-delay="500">
           My Services
         </h6>
-        <h3 className="mb-10 text-3xl font-bold text-zinc-50">
+        <h3
+          className="mb-10 text-3xl font-bold text-zinc-50"
+          data-aos="fade-in"
+          data-aos-delay="1000">
           Professional UI Design and Development Services
         </h3>
 
         {/* UI Design Section - Card */}
         <div
           className="flex flex-col md:flex-row overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow mb-12"
-          data-aos="fade-left">
+          data-aos="fade-in"
+          data-aos-delay="1000">
           {/* Image flush to the left */}
           <div className="md:w-auto w-full h-auto">
             <img
@@ -47,7 +54,8 @@ function Services() {
         {/* Frontend Development Section - Card */}
         <div
           className="flex flex-col md:flex-row-reverse overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow"
-          data-aos="fade-right">
+          data-aos="fade-in"
+          data-aos-delay="1500">
           {/* Image flush to the right */}
           <div className="md:w-auto w-full h-auto">
             <img

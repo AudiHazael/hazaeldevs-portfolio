@@ -15,7 +15,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full border-b border-gray-700 shadow-md bg-black/30 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 z-50 w-full border-b border-gray-800 shadow-md bg-black/30 backdrop-blur-md">
       <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-7xl">
         {/* Logo */}
         <a href="#home" className="flex items-center">

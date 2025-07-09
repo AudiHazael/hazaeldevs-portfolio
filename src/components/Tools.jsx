@@ -13,35 +13,35 @@ function Tools() {
       <div className="flex flex-wrap items-center justify-center max-w-6xl gap-8 px-4 mx-auto">
         <div data-aos="fade-right">
           <FaFigma
-            fontSize="3.25rem"
+            fontSize="3rem"
             color="#f24e1e"
             className="transition-transform hover:scale-110"
           />
         </div>
         <div data-aos="fade-right" data-aos-delay="500">
           <FaReact
-            fontSize="3.25rem"
+            fontSize="3rem"
             color="#61dafb"
             className="transition-transform hover:scale-110"
           />
         </div>
-        <div data-aos="fade-down" data-aos-delay="700">
+        <div data-aos="fade-down" data-aos-delay="1000">
           <FaSass
-            fontSize="3.25rem"
+            fontSize="3rem"
             color="#cd6799"
             className="transition-transform hover:scale-110"
           />
         </div>
-        <div data-aos="fade-left" data-aos-delay="900">
+        <div data-aos="fade-left" data-aos-delay="1500">
           <FaBootstrap
-            fontSize="3.25rem"
+            fontSize="3rem"
             color="#7952b3"
             className="transition-transform hover:scale-110"
           />
         </div>
-        <div data-aos="fade-left" data-aos-delay="1000">
+        <div data-aos="fade-left" data-aos-delay="2000">
           <FaGithub
-            fontSize="3.25rem"
+            fontSize="3rem"
             className="text-white transition-transform hover:scale-110"
           />
         </div>

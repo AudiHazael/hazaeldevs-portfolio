@@ -1,10 +1,9 @@
 import React from "react";
-import { Icons } from "../components/Icons";
 import Socials from "./Socials";
 
 function Footer() {
   return (
-    <footer className="py-10 text-white bg-gray-900">
+    <footer className="py-5 text-white bg-gray-900">
       <div className="container px-4 mx-auto">
         <Socials />
 
@@ -30,7 +29,7 @@ function Footer() {
           data-aos="fade-in"
           data-aos-delay="900">
           <p>
-            © 2025 HazaElDevs | Designed by
+            © 2025 HazaElDevs | Designed by {/* */}
             <a
               href="https://wa.link/8k0f7s"
               target="_blank"

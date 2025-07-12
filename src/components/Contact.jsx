@@ -5,9 +5,9 @@ import { Icons } from "../components/Icons";
 
 function Contact() {
   return (
-    <section className="py-10 text-gray-800">
+    <section className="py-5 text-gray-800">
       <div className="max-w-6xl px-4 mx-auto">
-        <div className="flex flex-col items-start gap-8 md:flex-row">
+        <div className="flex flex-col items-start gap-4 md:flex-row">
           {/* Contact Details */}
           <div className="space-y-6 md:w-1/2 mt-4">
             <h6

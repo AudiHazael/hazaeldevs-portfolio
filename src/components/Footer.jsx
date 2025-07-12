@@ -6,7 +6,6 @@ function Footer() {
   return (
     <footer className="py-10 text-white bg-gray-900">
       <div className="container px-4 mx-auto">
-        {/* Social Icons */}
         <Socials />
 
         {/* Logo & Description (Centered) */}
@@ -27,16 +26,16 @@ function Footer() {
 
         {/* Copyright */}
         <div
-          className="text-sm text-center text-gray-100"
+          className="text-md text-center text-zinc-100"
           data-aos="fade-in"
           data-aos-delay="900">
           <p>
-            © 2025 HazaElDevs | Designed by{" "}
+            © 2025 HazaElDevs | Designed by
             <a
               href="https://wa.link/8k0f7s"
               target="_blank"
               rel="noreferrer"
-              className="text-blue-400 hover:underline">
+              className="text-indigo-400 hover:underline">
               Hazael Audi
             </a>
           </p>

@@ -52,7 +52,7 @@ const portfolioItems = [
     text: "A sleek and user-friendly interface for a modern gadget store. This is a fully responsive frontend interface for an electronics store. It features product listings, filterable categories, a dynamic cart, and reusable components to ensure scalability.",
     img: "/ecom.png",
     tools: ["UI Design", "Responsive Layout", "ReactJs", "Tailwind"],
-    previewLink: "https://i4-dt.vercel.app/",
+    previewLink: "https://gadget-ecom-website.vercel.app/",
     repoLink: "../pages/Error.jsx",
   },
   {

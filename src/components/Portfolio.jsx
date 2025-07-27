@@ -60,7 +60,7 @@ const portfolioItems = [
     text: "i4DT is a volunteer-driven initiative where we teach tech-related skills to students. I built a clean, informative landing page that showcases our mission and allows interested learners to sign up through an embedded Google Form. It’s mobile-optimized and community-focused.",
     img: "/i4dt.png",
     tools: ["UI Design", "Responsive Layout", "ReactJs", "Tailwind"],
-    previewLink: "https://gadget-ecom-website.vercel.app/",
+    previewLink: "https://i4-dt.vercel.app/",
     repoLink: "../pages/Error.jsx",
   },
 ];

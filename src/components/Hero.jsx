@@ -29,9 +29,9 @@ function Hero() {
       className="flex items-center w-full min-h-screen px-4 md:px-20 text-white bg-gradient-to-br from-zinc-950 via-gray-900 to-black overflow-hidden"
       data-aos="fade-up"
       data-aos-delay="200">
-      <div className="grid items-center w-full max-w-7xl mx-auto md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-12 items-center w-full max-w-7xl mx-auto gap-8">
         {/* Text */}
-        <div className="space-y-6 text-center md:text-left overflow-hidden w-full">
+        <div className="space-y-6 md:col-span-8 text-center md:text-left overflow-hidden w-full">
           <h1
             className="text-4xl text-indigo-400 font-ob"
             data-aos="fade-in"
@@ -44,7 +44,9 @@ function Hero() {
             data-aos-delay="1000">
             {subheading}
           </h2>
-
+          <div className="flex flex-wrap justify-center md:justify-start gap-6 mt-7">
+            <Socials />
+          </div>
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a
               href={link}
@@ -56,21 +58,17 @@ function Hero() {
               {buttonText}
             </a>
           </div>
-
-          <div className="flex flex-wrap justify-center md:justify-start gap-6 mt-7">
-            <Socials />
-          </div>
         </div>
 
         {/* Image Column */}
         <div className="hidden md:flex justify-center mt-6 md:mt-0">
-          <img
+          {/* <img
             src="/sample-image.jpg"
             alt="Sample hero image"
             className="w-[90%] max-w-md md:max-w-lg rounded-xl shadow-lg"
             data-aos="fade-in"
             data-aos-delay="2000"
-          />
+          /> */}
         </div>
       </div>
     </section>

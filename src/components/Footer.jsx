@@ -9,14 +9,8 @@ function Footer() {
 
         {/* Logo & Description (Centered) */}
         <div className="flex flex-col items-center max-w-xl mx-auto text-center gap-4 mb-10">
-          <img
-            src="/Logo-Image.png"
-            alt="HazaElDevs Logo"
-            className="w-32"
-            data-aos="fade-in"
-            data-aos-delay="500"
-          />
-          <p className="text-gray-300" data-aos="fade-in" data-aos-delay="1000">
+          <img src="/Logo-Image.png" alt="HazaElDevs Logo" className="w-32" />
+          <p className="text-gray-300">
             Crafting seamless user experiences with attention to detail,
             functionality, and style. Let’s build something meaningful and
             memorable together.
@@ -24,12 +18,9 @@ function Footer() {
         </div>
 
         {/* Copyright */}
-        <div
-          className="text-md text-center text-zinc-100"
-          data-aos="fade-in"
-          data-aos-delay="900">
+        <div className="text-md text-center text-zinc-100">
           <p>
-            © 2025 HazaElDevs | Designed by {/* */}
+            © 2025 HazaElDevs | Designed by
             <a
               href="https://wa.link/8k0f7s"
               target="_blank"

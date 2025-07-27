@@ -28,7 +28,7 @@ function Socials() {
           })}
         </a>
         <a
-          href="mailto:youremail@example.com"
+          href="mailto:hazaeldevs@gmail.com"
           aria-label="Email"
           target="_blank"
           rel="noopener noreferrer"

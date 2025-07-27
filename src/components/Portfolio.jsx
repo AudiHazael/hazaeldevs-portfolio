@@ -12,25 +12,25 @@ import "swiper/css/pagination";
 const portfolioItems = [
   {
     title: "WealthWave",
-    text: "An investment platform dashboard designed for tracking portfolios in real-time.",
+    text: "A web platform designed to educate users on financial growth and investment strategies. WealthWave provides insights, tools, and resources to help users make smarter financial decisions. I developed the frontend interface that communicates trust, clarity.",
     img: "/Wealthwave.png",
-    tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
+    tools: ["UI Design", "Responsive Layout", "ReactJs", "Bootstrap"],
     previewLink: "https://wealth-wave-kappa.vercel.app/",
     repoLink: "https://github.com/AudiHazael/WealthWave",
   },
   {
     title: "Soy-Joy",
-    text: "E-commerce site for a soy milk brand with responsive UI and product cart features.",
+    text: "A modern landing page for a health-conscious soy milk brand. I designed and developed a responsive website for SoyJoy, a startup focused on natural soy milk products. The site highlights the product’s health benefits, tells the brand story.",
     img: "/soyjoy.png",
-    tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
+    tools: ["UI Design", "Responsive Layout", "ReactJs", "Bootstrap"],
     previewLink: "https://soy-joy.vercel.app/",
     repoLink: "https://github.com/AudiHazael/soy-joy",
   },
   {
     title: "Extensive Academy ",
-    text: "A modern website for an educational institute with login and learning dashboard.",
+    text: "In collaboration with Codemax, I contributed to designing and developing the frontend interface of this educational platform. The goal was to build a clean, accessible, and responsive website that appeals to parents, students, and educators.",
     img: "/Extensive (1).png",
-    tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
+    tools: ["ReactJs", "Tailwind"],
     previewLink: "https://academy-web-oasis.vercel.app/",
     repoLink: "#",
     collaborator: {
@@ -41,25 +41,33 @@ const portfolioItems = [
   },
   {
     title: "Luxor",
-    text: "Coming soon placeholder for a new development project.",
+    text: "A bold and elegant digital presence for a premium watch brand. For Luxor, I crafted a stylish landing page that reflects the premium nature of the brand. The site features high-end visuals, product highlights, and smooth scroll animations to impress visitors and reflect luxury.",
     img: "/Luxor.png",
-    tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
+    tools: ["UI Design", "Responsive Layout", "ReactJs", "Bootstrap"],
     previewLink: "https://luxor-seven.vercel.app/",
     repoLink: "https://github.com/AudiHazael/Luxor",
   },
   {
-    title: "Project Five",
-    text: "Coming soon placeholder for a new UI/UX concept. Just added this to make it longer.",
-    img: "https://placehold.co/400x200",
-    tools: ["React", "Tailwind", "Chart.js", "Vite", "AOS"],
-    previewLink: "#",
-    repoLink: "#",
+    title: "Haza'ElDevs Store",
+    text: "A sleek and user-friendly interface for a modern gadget store. This is a fully responsive frontend interface for an electronics store. It features product listings, filterable categories, a dynamic cart, and reusable components to ensure scalability.",
+    img: "/ecom.png",
+    tools: ["UI Design", "Responsive Layout", "ReactJs", "Tailwind"],
+    previewLink: "https://i4-dt.vercel.app/",
+    repoLink: "../pages/Error.jsx",
+  },
+  {
+    title: "i4DT",
+    text: "i4DT is a volunteer-driven initiative where we teach tech-related skills to students. I built a clean, informative landing page that showcases our mission and allows interested learners to sign up through an embedded Google Form. It’s mobile-optimized and community-focused.",
+    img: "/i4dt.png",
+    tools: ["UI Design", "Responsive Layout", "ReactJs", "Tailwind"],
+    previewLink: "https://gadget-ecom-website.vercel.app/",
+    repoLink: "../pages/Error.jsx",
   },
 ];
 
 const Portfolio = () => {
   return (
-    <div className="w-full px-0 sm:px-4 mx-auto my-12 md:max-w-7xl">
+    <div className="w-full px-0 sm:px-4 mx-auto md:max-w-7xl">
       <h6
         className="mb-2 font-semibold text-indigo-400 uppercase px-4"
         data-aos="fade-in"
@@ -100,21 +108,21 @@ const Portfolio = () => {
                   </h4>
                   {item.collaborator && (
                     <>
-                      <span className="text-sm md:text-base text-stone-300">
+                      <span className="text-[12px] md:text-base text-stone-300">
                         – In collaboration with
                       </span>
                       <a
                         href={item.collaborator.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm md:text-base text-indigo-200 font-medium hover:text-indigo-400">
+                        className="text-[12px] md:text-base text-indigo-200 hover:text-indigo-400">
                         {item.collaborator.name}
                       </a>
                     </>
                   )}
                 </div>
 
-                <p className="mb-4 text-sm text-gray-600 dark:text-stone-100">
+                <p className="mb-4 text-[12px] text-gray-600 dark:text-stone-100">
                   {item.text}
                 </p>
 

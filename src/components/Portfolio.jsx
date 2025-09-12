@@ -11,12 +11,12 @@ import "swiper/css/pagination";
 
 const portfolioItems = [
   {
-    title: "WealthWave",
-    text: "A web platform designed to educate users on financial growth and investment strategies. WealthWave provides insights, tools, and resources to help users make smarter financial decisions. I developed the frontend interface that communicates trust, clarity.",
-    img: "/Wealthwave.png",
-    tools: ["UI Design", "Responsive Layout", "ReactJs", "Bootstrap"],
-    previewLink: "https://wealth-wave-kappa.vercel.app/",
-    repoLink: "https://github.com/AudiHazael/WealthWave",
+    title: "Artist Kelle",
+    text: "A responsive website for a visual artist featuring an artwork shop, commission request form with image uploads, and popup order modals — built for smooth client interaction across devices.",
+    img: "/art-by-kelle.png",
+    tools: ["UI Design", "Responsive Layout", "ReactJs", "Tailwind "],
+    previewLink: "https://www.artistkelle.com/",
+    repoLink: "https://github.com/AudiHazael/Kelle-Art",
   },
   {
     title: "Soy-Joy",
@@ -71,13 +71,15 @@ const Portfolio = () => {
       <h6
         className="mb-2 font-semibold text-indigo-400 uppercase px-4"
         data-aos="fade-in"
-        data-aos-delay="300">
+        data-aos-delay="300"
+      >
         My Portfolio
       </h6>
       <h3
         className="mb-6 text-2xl font-bold md:text-3xl text-zinc-50 px-4"
         data-aos="fade-in"
-        data-aos-delay="600">
+        data-aos-delay="600"
+      >
         Check out some of my successful projects
       </h3>
 
@@ -88,11 +90,12 @@ const Portfolio = () => {
         slidesPerView={1}
         breakpoints={{
           768: { slidesPerView: 2 },
-          992: { slidesPerView: 3 },
+          992: { slidesPerView: 2 },
         }}
         className="w-full px-4"
         data-aos="fade-in"
-        data-aos-delay="900">
+        data-aos-delay="900"
+      >
         {portfolioItems.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="h-full overflow-hidden transition-transform duration-300 rounded-md shadow-md dark:bg-gray-800/80 backdrop-blur-lg hover:-translate-y-1">
@@ -115,7 +118,8 @@ const Portfolio = () => {
                         href={item.collaborator.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[12px] md:text-base text-indigo-200 hover:text-indigo-400">
+                        className="text-[12px] md:text-base text-indigo-200 hover:text-indigo-400"
+                      >
                         {item.collaborator.name}
                       </a>
                     </>
@@ -130,7 +134,8 @@ const Portfolio = () => {
                   {item.tools?.map((tool, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs font-medium text-zinc-50 uppercase shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 rounded-lg">
+                      className="px-3 py-1 text-xs font-medium text-zinc-50 uppercase shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 rounded-lg"
+                    >
                       {tool}
                     </span>
                   ))}
@@ -141,7 +146,8 @@ const Portfolio = () => {
                     href={item.previewLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 text-sm w-auto flex justify-center gap-3 font-medium text-white bg-gradient-to-r from-zinc-950 via-indigo-950 to-zinc-950 rounded hover:bg-blue-700">
+                    className="px-4 py-2 text-sm w-auto flex justify-center gap-3 font-medium text-white bg-gradient-to-r from-zinc-950 via-indigo-950 to-zinc-950 rounded hover:bg-blue-700"
+                  >
                     {Icons.LinkIcon({ className: "w-4 h-4 pt-1" })}
                     Live Demo
                   </a>
@@ -149,7 +155,8 @@ const Portfolio = () => {
                     href={item.repoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm w-auto flex justify-center gap-3 font-medium text-stone-100 border border-indigo-800 px-6 py-2 rounded-md hover:bg-indigo-400 hover:text-zinc-950 transition">
+                    className="text-sm w-auto flex justify-center gap-3 font-medium text-stone-100 border border-indigo-800 px-6 py-2 rounded-md hover:bg-indigo-400 hover:text-zinc-950 transition"
+                  >
                     {Icons.Github({ className: "w-4 h-4 pt-1" })}
                     Code
                   </a>

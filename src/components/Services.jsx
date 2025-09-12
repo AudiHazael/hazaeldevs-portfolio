@@ -4,25 +4,28 @@ import { Icons } from "./Icons";
 function Services() {
   return (
     <section className="py-10 text-gray-800 bg-inherit" id="services">
-      <div className="max-w-6xl px-4 mx-auto">
+      <div className="max-w-7xl px-4 mx-auto">
         <h6
           className="mb-2 font-semibold text-indigo-400 uppercase"
           data-aos="fade-in"
-          data-aos-delay="300">
+          data-aos-delay="300"
+        >
           My Services
         </h6>
         <h3
           className="mb-10 text-3xl font-bold text-zinc-50"
           data-aos="fade-in"
-          data-aos-delay="600">
+          data-aos-delay="600"
+        >
           Professional UI Design and Development Services
         </h3>
 
         {/* UI Design Section - Card */}
         <div
-          className="flex flex-col md:flex-row overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow mb-12"
+          className="flex flex-col md:flex-row overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow mb-12 h-[300px]"
           data-aos="fade-in"
-          data-aos-delay="900">
+          data-aos-delay="900"
+        >
           {/* Image flush to the left */}
           <div className="md:w-auto w-full h-auto">
             <img
@@ -33,7 +36,7 @@ function Services() {
           </div>
 
           {/* Text content */}
-          <div className="w-full md:w-2/3 p-6">
+          <div className="flex flex-col justify-center w-full md:w-2/3 p-6">
             <h4 className="mb-4 text-xl font-semibold text-zinc-50">
               User Interface (UI) Design
             </h4>
@@ -54,9 +57,10 @@ function Services() {
 
         {/* Frontend Development Section - Card */}
         <div
-          className="flex flex-col md:flex-row-reverse overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow"
+          className="flex flex-col md:flex-row-reverse overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow h-[300px]"
           data-aos="fade-in"
-          data-aos-delay="1200">
+          data-aos-delay="1200"
+        >
           {/* Image flush to the right */}
           <div className="md:w-auto w-full h-auto">
             <img
@@ -67,7 +71,7 @@ function Services() {
           </div>
 
           {/* Text content */}
-          <div className="w-full md:w-2/3 p-6">
+          <div className="flex flex-col justify-center w-full md:w-2/3 p-6">
             <h4 className="mb-4 text-xl font-semibold text-zinc-50">
               Frontend Development
             </h4>
@@ -89,15 +93,17 @@ function Services() {
         {/* Bottom grid: features */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
           <div className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition">
-            <div className="my-2">
+            <div className=" flex space-x-4 my-2">
               {Icons.CodeIcon({ className: "text-indigo-400" })}
+              <h2
+                className=" font-semibold text-zinc-50 uppercase"
+                data-aos="fade-in"
+                data-aos-delay="600"
+              >
+                Clean Code
+              </h2>
             </div>
-            <h2
-              className="mb-2 font-semibold text-zinc-50 uppercase"
-              data-aos="fade-in"
-              data-aos-delay="600">
-              Clean Code
-            </h2>
+
             <p className="leading-relaxed text-stone-100">
               Writing clear, efficient, and scalable code with proper
               documentation, following established best practices.
@@ -107,13 +113,15 @@ function Services() {
           <div
             className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
             data-aos="fade-in"
-            data-aos-delay="1000">
-            <div className="my-2">
+            data-aos-delay="1000"
+          >
+            <div className="flex space-x-4 my-2">
               {Icons.LayoutDashboard({ className: "text-indigo-400" })}
+              <h2 className="font-semibold text-zinc-50 uppercase">
+                UI/UX Focus
+              </h2>
             </div>
-            <h2 className="mb-2 font-semibold text-zinc-50 uppercase">
-              UI/UX Focus
-            </h2>
+
             <p className="leading-relaxed text-stone-100">
               Designing user-friendly and aesthetically pleasing interfaces that
               deliver exceptional user experiences.
@@ -123,13 +131,15 @@ function Services() {
           <div
             className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
             data-aos="fade-in"
-            data-aos-delay="1500">
-            <div className="my-2">
+            data-aos-delay="1500"
+          >
+            <div className="flex space-x-4 my-2">
               {Icons.Mphone({ className: "text-indigo-400" })}
+              <h2 className="font-semibold text-zinc-50 uppercase">
+                Mobile Optimization
+              </h2>
             </div>
-            <h2 className="mb-2 font-semibold text-zinc-50 uppercase">
-              Mobile Optimization
-            </h2>
+
             <p className="leading-relaxed text-stone-100">
               Optimizing apps for fast load times, accessibility compliance, and
               strong search engine presence.
@@ -139,13 +149,15 @@ function Services() {
           <div
             className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
             data-aos="fade-in"
-            data-aos-delay="1500">
-            <div className="my-2">
+            data-aos-delay="1500"
+          >
+            <div className="flex space-x-4 my-2">
               {Icons.Zap({ className: "text-indigo-400" })}
+              <h2 className="font-semibold text-zinc-50 uppercase">
+                Performance
+              </h2>
             </div>
-            <h2 className="mb-2 font-semibold text-zinc-50 uppercase">
-              Performance
-            </h2>
+
             <p className="leading-relaxed text-stone-100">
               Optimizing apps for fast load times, accessibility compliance, and
               strong search engine presence.

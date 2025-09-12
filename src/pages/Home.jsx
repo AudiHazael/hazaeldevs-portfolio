@@ -5,6 +5,7 @@ import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Tools from "../components/Tools";
 import Portfolio from "../components/Portfolio";
+import Price from "../components/Price";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 
@@ -35,9 +36,9 @@ function Home() {
         <Hero />
       </div>
 
-      <div className="" id="about">
+      {/* <div className="" id="about">
         <About />
-      </div>
+      </div> */}
 
       <div className="" id="services">
         <Services />
@@ -50,11 +51,16 @@ function Home() {
       <section
         className="py-8 text-gray-800"
         data-aos="fade-in"
-        data-aos-delay="700">
-        <div className="max-w-6xl px-4 mx-auto" id="portfolio">
+        data-aos-delay="700"
+      >
+        <div className="" id="portfolio">
           <Portfolio />
         </div>
       </section>
+
+      <div id="pricing">
+        <Price />
+      </div>
 
       <div className="" id="contact">
         <Contact />

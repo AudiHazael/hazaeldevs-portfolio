@@ -67,11 +67,11 @@ const portfolioItems = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 2 },
   visible: (delay = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, delay, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" },
   }),
 };
 

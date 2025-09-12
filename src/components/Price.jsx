@@ -55,11 +55,11 @@ function Price() {
   return (
     <div className="max-w-7xl px-4 mx-auto py-12 text-zinc-50">
       <h2 className="text-2xl font-bold">Pricing Plans</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 justify-items-center">
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className="card w-full md:w-96 bg-white/10 backdrop-blur-md inset-shadow-xs shadow-sm px-auto py-8 rounded-md"
+            className="card w-full lg:w-96 bg-white/10 backdrop-blur-md inset-shadow-xs shadow-sm px-auto py-8 rounded-md"
           >
             <div className="card-body">
               {plan.popular && (
@@ -73,7 +73,7 @@ function Price() {
               </div>
               <ul className="mt-6 flex flex-col gap-2 text-md">
                 {plan.features.map((f, i) => (
-                  <li key={i}>
+                  <li key={i} className="flex items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="size-4 me-2 inline-block text-success"

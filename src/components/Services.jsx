@@ -41,7 +41,7 @@ function Services() {
 
         {/* UI Design Card */}
         <motion.div
-          className="flex flex-col md:flex-row overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow mb-12 h-[300px] transition"
+          className="flex flex-col md:flex-row overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow mb-12 h-fit transition"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -55,7 +55,7 @@ function Services() {
               className="h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-l-xl"
             />
           </div>
-          <div className="flex flex-col justify-center w-full md:w-2/3 p-6">
+          <div className="flex flex-col justify-center w-full md:w-2/3 px-6 py-8">
             <h4 className="mb-4 text-xl font-semibold text-zinc-50">
               User Interface (UI) Design
             </h4>
@@ -88,7 +88,7 @@ function Services() {
               className="h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-r-xl"
             />
           </div>
-          <div className="flex flex-col justify-center w-full md:w-2/3 p-6">
+          <div className="flex flex-col justify-center w-full md:w-2/3 px-6 py-8">
             <h4 className="mb-4 text-xl font-semibold text-zinc-50">
               Frontend Development
             </h4>

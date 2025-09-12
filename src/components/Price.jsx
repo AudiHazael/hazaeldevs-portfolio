@@ -59,7 +59,7 @@ function Price() {
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className="card w-full lg:w-96 bg-white/10 backdrop-blur-md inset-shadow-xs shadow-sm px-auto py-8 rounded-md"
+            className="card w-full lg:w-96 bg-white/10 backdrop-blur-md inset-shadow-xs shadow-lg px-auto py-8 rounded-md"
           >
             <div className="card-body">
               {plan.popular && (

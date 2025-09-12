@@ -6,8 +6,8 @@ import { Icons } from "../components/Icons";
 function Contact() {
   return (
     <section className="py-20 text-gray-800">
-      <div className="max-w-6xl px-4 mx-auto">
-        <div className="flex flex-col items-start gap-4 md:flex-row">
+      <div className="max-w-7xl px-4 mx-auto">
+        <div className="flex flex-col  gap-4 md:flex-row justify-center items-end">
           {/* Contact Details */}
           <div className="space-y-6 md:w-1/2 mt-4">
             <h6
@@ -36,7 +36,7 @@ function Contact() {
             </p>
 
             <div
-              className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
               data-aos="fade-in"
               data-aos-delay="600"
             >
@@ -50,7 +50,7 @@ function Contact() {
             </div>
 
             <div
-              className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
               data-aos="fade-in"
               data-aos-delay="900"
             >
@@ -62,7 +62,7 @@ function Contact() {
             </div>
 
             <div
-              className="flex gap-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
               data-aos="fade-in"
               data-aos-delay="1200"
             >

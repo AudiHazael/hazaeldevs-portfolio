@@ -22,7 +22,7 @@ function Services() {
 
         {/* UI Design Section - Card */}
         <div
-          className="flex flex-col md:flex-row overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow mb-12 h-[300px]"
+          className="flex flex-col md:flex-row overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow mb-12 h-[300px]"
           data-aos="fade-in"
           data-aos-delay="900"
         >
@@ -36,7 +36,7 @@ function Services() {
           </div>
 
           {/* Text content */}
-          <div className="flex flex-col justify-center w-full md:w-2/3 p-6">
+          <div className="flex flex-col justify-center w-full md:w-2/3 px-2 py-6">
             <h4 className="mb-4 text-xl font-semibold text-zinc-50">
               User Interface (UI) Design
             </h4>
@@ -57,7 +57,7 @@ function Services() {
 
         {/* Frontend Development Section - Card */}
         <div
-          className="flex flex-col md:flex-row-reverse overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow h-[300px]"
+          className="flex flex-col md:flex-row-reverse overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow h-[300px]"
           data-aos="fade-in"
           data-aos-delay="1200"
         >
@@ -71,7 +71,7 @@ function Services() {
           </div>
 
           {/* Text content */}
-          <div className="flex flex-col justify-center w-full md:w-2/3 p-6">
+          <div className="flex flex-col justify-center w-full md:w-2/3 px-2 py-6">
             <h4 className="mb-4 text-xl font-semibold text-zinc-50">
               Frontend Development
             </h4>
@@ -92,7 +92,7 @@ function Services() {
         </div>
         {/* Bottom grid: features */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
-          <div className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition">
+          <div className="p-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition">
             <div className=" flex space-x-4 my-2 items-center">
               {Icons.CodeIcon({ className: "w-5 h-5 text-indigo-400" })}
               <h2
@@ -111,7 +111,7 @@ function Services() {
           </div>
 
           <div
-            className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
+            className="p-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
             data-aos="fade-in"
             data-aos-delay="1000"
           >
@@ -129,7 +129,7 @@ function Services() {
           </div>
 
           <div
-            className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
+            className="p-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
             data-aos="fade-in"
             data-aos-delay="1500"
           >
@@ -147,7 +147,7 @@ function Services() {
           </div>
 
           <div
-            className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
+            className="p-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
             data-aos="fade-in"
             data-aos-delay="1500"
           >

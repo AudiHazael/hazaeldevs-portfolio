@@ -93,8 +93,8 @@ function Services() {
         {/* Bottom grid: features */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
           <div className="p-4 rounded-xl shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition">
-            <div className=" flex space-x-4 my-2">
-              {Icons.CodeIcon({ className: "text-indigo-400" })}
+            <div className=" flex space-x-4 my-2 items-center">
+              {Icons.CodeIcon({ className: "w-5 h-5 text-indigo-400" })}
               <h2
                 className=" font-semibold text-zinc-50 uppercase"
                 data-aos="fade-in"
@@ -115,8 +115,8 @@ function Services() {
             data-aos="fade-in"
             data-aos-delay="1000"
           >
-            <div className="flex space-x-4 my-2">
-              {Icons.LayoutDashboard({ className: "text-indigo-400" })}
+            <div className="flex space-x-4 my-2 items-center">
+              {Icons.LayoutDashboard({ className: "w-5 h-5 text-indigo-400" })}
               <h2 className="font-semibold text-zinc-50 uppercase">
                 UI/UX Focus
               </h2>
@@ -133,8 +133,8 @@ function Services() {
             data-aos="fade-in"
             data-aos-delay="1500"
           >
-            <div className="flex space-x-4 my-2">
-              {Icons.Mphone({ className: "text-indigo-400" })}
+            <div className="flex space-x-4 my-2 items-center">
+              {Icons.Mphone({ className: "w-5 h-5 text-indigo-400" })}
               <h2 className="font-semibold text-zinc-50 uppercase">
                 Mobile Optimization
               </h2>
@@ -151,8 +151,8 @@ function Services() {
             data-aos="fade-in"
             data-aos-delay="1500"
           >
-            <div className="flex space-x-4 my-2">
-              {Icons.Zap({ className: "text-indigo-400" })}
+            <div className="flex space-x-4 my-2 items-center">
+              {Icons.Zap({ className: "w-5 h-5 text-indigo-400" })}
               <h2 className="font-semibold text-zinc-50 uppercase">
                 Performance
               </h2>

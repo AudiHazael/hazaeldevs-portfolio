@@ -1,5 +1,19 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Icons } from "./Icons";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay,
+      ease: "easeOut",
+    },
+  }),
+};
 
 function About() {
   return (
@@ -7,36 +21,49 @@ function About() {
       <div className="max-w-7xl px-4 mx-auto">
         {/* Top grid: image + bio */}
         <div className="grid grid-cols-1 md:grid-cols-12 place-items-center gap-8 overflow-hidden">
-          {/* <div className="md:col-span-4">
+          <motion.div
+            className="md:col-span-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            custom={0.2}
+            variants={fadeInUp}
+          >
             <img
               src="/about-img.jpg"
               alt="Sample hero image"
-              data-credit="Photo by Roman Synkevych on Unsplash: https://unsplash.com/photos/black-and-silver-laptop-computer-E-V6EMtGSUU"
               className="w-full max-w-full sm:max-w-xs mx-auto shadow-lg rounded-sm object-contain"
-              data-aos="fade-in"
-              data-aos-delay="300"
             />
-          </div> */}
+          </motion.div>
 
-          <div className="md:col-span-10 md:text-left">
-            <h6
+          <motion.div
+            className="md:col-span-10 md:text-left"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            custom={0.4}
+            variants={fadeInUp}
+          >
+            <motion.h6
               className="mb-2 font-semibold text-indigo-400 uppercase"
-              data-aos="fade-in"
-              data-aos-delay="600"
+              custom={0.6}
+              variants={fadeInUp}
             >
               My Bio
-            </h6>
-            <h3
+            </motion.h6>
+
+            <motion.h3
               className="mb-4 text-xl font-bold md:text-3xl text-zinc-50"
-              data-aos="fade-in"
-              data-aos-delay="900"
+              custom={0.8}
+              variants={fadeInUp}
             >
               A Freelance UI Designer and Frontend Developer
-            </h3>
-            <p
+            </motion.h3>
+
+            <motion.p
               className="mb-6 leading-relaxed text-stone-100 break-words text-md"
-              data-aos="fade-in"
-              data-aos-delay="1200"
+              custom={1.0}
+              variants={fadeInUp}
             >
               My interest in user interfaces and the desire to create
               user-centric solutions sparked my interest in design. I have honed
@@ -48,15 +75,16 @@ function About() {
               life by weaving the fabric of functionality and aesthetics
               together. I believe in the power of code to turn abstract concepts
               into tangible, interactive experiences that leave an impression.
-            </p>
-            <h5
+            </motion.p>
+
+            <motion.h5
               className="text-lg font-semibold text-zinc-50"
-              data-aos="fade-in"
-              data-aos-delay="300"
+              custom={1.2}
+              variants={fadeInUp}
             >
               HazaelDevs | Audi Hazael
-            </h5>
-          </div>
+            </motion.h5>
+          </motion.div>
         </div>
       </div>
     </section>

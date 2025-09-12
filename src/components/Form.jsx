@@ -1,11 +1,31 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay,
+      ease: "easeOut",
+    },
+  }),
+};
 
 function Form() {
   return (
-    <form
+    <motion.form
       action="https://formsubmit.co/95ed19d5febab735883fe41446874d20"
       method="POST"
-      className="w-full p-4 text-stone-50 backdrop-blur-sm bg-white/10 border border-gray-800 rounded-md shadow-md">
+      className="w-full p-4 text-stone-50 backdrop-blur-sm bg-white/10 border border-gray-800 rounded-md shadow-md"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }}
+      variants={fadeInUp}
+      custom={0.2}
+    >
       {/* Hidden Inputs */}
       <input type="hidden" name="_captcha" value="false" />
       <input
@@ -42,19 +62,6 @@ function Form() {
         />
       </div>
 
-      {/* Phone */}
-      {/* <div className="mb-4">
-        <label htmlFor="phone" className="block mb-1 font-semibold">
-          Phone No.
-        </label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
-      </div> */}
-
       {/* Subject */}
       <div className="mb-4">
         <label htmlFor="subject" className="block mb-1 font-semibold">
@@ -77,7 +84,8 @@ function Form() {
           id="message"
           name="message"
           rows="4"
-          className="w-full px-3 py-2 border border-gray-800 rounded-md bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+          className="w-full px-3 py-2 border border-gray-800 rounded-md bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        ></textarea>
       </div>
 
       {/* Checkbox */}
@@ -96,10 +104,11 @@ function Form() {
       {/* Submit Button */}
       <button
         type="submit"
-        className="px-6 py-2 text-white transition bg-gradient-to-r from-zinc-950 via-indigo-950 to-zinc-950 rounded-md hover:bg-blue-700">
+        className="px-6 py-2 text-white transition bg-gradient-to-r from-zinc-950 via-indigo-950 to-zinc-950 rounded-md hover:bg-blue-700"
+      >
         Submit
       </button>
-    </form>
+    </motion.form>
   );
 }
 

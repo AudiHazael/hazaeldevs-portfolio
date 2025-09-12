@@ -1,20 +1,32 @@
 import React, { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-
     const closeMenuOnScroll = () => setIsOpen(false);
     window.addEventListener("scroll", closeMenuOnScroll);
     return () => window.removeEventListener("scroll", closeMenuOnScroll);
   }, []);
 
+  const fadeDown = {
+    hidden: { opacity: 0, y: -40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
+
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-black/30 backdrop-blur-md border-b border-gray-800 shadow-md">
+    <motion.nav
+      className="fixed top-0 left-0 z-50 w-full bg-black/30 backdrop-blur-md border-b border-gray-800 shadow-md"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.1 }}
+      variants={fadeDown}
+    >
       <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-7xl">
         {/* Logo */}
         <a href="#home" className="flex items-center">
@@ -67,7 +79,6 @@ function Navbar() {
                 Home
               </a>
             </li>
-
             <li>
               <a href="#portfolio" className="hover:text-indigo-300">
                 Portfolio
@@ -86,7 +97,7 @@ function Navbar() {
           </ul>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

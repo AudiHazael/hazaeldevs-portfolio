@@ -74,7 +74,7 @@ function Services() {
 
         {/* Frontend Development Card */}
         <motion.div
-          className="flex flex-col md:flex-row-reverse overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow h-[300px] transition"
+          className="flex flex-col md:flex-row-reverse overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow h-fit transition"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"

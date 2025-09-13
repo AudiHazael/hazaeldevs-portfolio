@@ -87,11 +87,11 @@ function Price() {
   return (
     <section id="pricing" className="max-w-7xl px-4 mx-auto py-16 text-zinc-50">
       {/* Heading */}
-      <div className="mb-12">
+      <div className="mb-8">
         <h2 className="text-3xl font-bold">Pricing Plans</h2>
-        <p className="text-gray-400 mt-2">
+        {/* <p className="text-gray-400 mt-2">
           Choose a package that fits your project needs
-        </p>
+        </p> */}
       </div>
 
       {/* Plans with staggered motion */}
@@ -184,7 +184,7 @@ function Price() {
 
       <div className="px-4 mt-6">
         <ul>
-          <li className="list-disc text-gray-200 mt-2 text-xl">
+          <li className="list-disc text-gray-400 mt-2 text-sm">
             I offer monthly maintenance retainers ($100 - $150) for edits,
             backups, security and updates.
           </li>

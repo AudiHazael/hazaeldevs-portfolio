@@ -5,6 +5,8 @@ function Price() {
   const plans = [
     {
       name: "Basic",
+      description:
+        "For individuals and  small businesses that just needs an online presence ",
       price: "$150 - $250",
       popular: false,
       features: [
@@ -19,6 +21,8 @@ function Price() {
     },
     {
       name: "Standard",
+      description:
+        " For businesses that want to attract clients, and look professional online",
       price: "$400 – $700",
       popular: true,
       features: [
@@ -35,6 +39,8 @@ function Price() {
     },
     {
       name: "Premium",
+      description:
+        " For entrepreneurs, SMEs and organizations that need advanced features, full customization and online sales",
       price: "$800 – $1,500+",
       popular: false,
       features: [
@@ -81,7 +87,7 @@ function Price() {
   return (
     <section id="pricing" className="max-w-7xl px-4 mx-auto py-16 text-zinc-50">
       {/* Heading */}
-      <div className="text-center mb-12">
+      <div className="mb-12">
         <h2 className="text-3xl font-bold">Pricing Plans</h2>
         <p className="text-gray-400 mt-2">
           Choose a package that fits your project needs
@@ -115,6 +121,9 @@ function Price() {
             <div className="flex justify-between items-center my-4">
               <h3 className="text-xl font-semibold">{plan.name}</h3>
               <span className="text-lg font-medium">{plan.price}</span>
+            </div>
+            <div className="py-4 text-gray-200 text-sm ">
+              <p>{plan.description}</p>
             </div>
 
             {/* Features */}
@@ -172,6 +181,15 @@ function Price() {
           </motion.div>
         ))}
       </motion.div>
+
+      <div className="px-4 mt-6">
+        <ul>
+          <li className="list-disc text-gray-200 mt-2 text-xl">
+            I offer monthly maintenance retainers ($100 - $150) for edits,
+            backups, security and updates.
+          </li>
+        </ul>
+      </div>
     </section>
   );
 }

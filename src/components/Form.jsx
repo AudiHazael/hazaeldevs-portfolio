@@ -89,7 +89,7 @@ function Form() {
       </div>
 
       {/* Checkbox */}
-      <div className="flex items-start gap-2 mb-6">
+      <div className="flex items-center-safe gap-2 mb-6">
         <input
           type="checkbox"
           id="terms"
@@ -104,7 +104,7 @@ function Form() {
       {/* Submit Button */}
       <button
         type="submit"
-        className="px-6 py-2 text-white transition bg-gradient-to-r from-zinc-950 via-indigo-950 to-zinc-950 rounded-md hover:bg-blue-700"
+        className="px-6 py-2 text-white transition bg-indigo-500 rounded-md hover:bg-blue-700"
       >
         Submit
       </button>

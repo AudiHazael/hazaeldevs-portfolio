@@ -105,71 +105,73 @@ function Price() {
         {plans.map((plan, i) => (
           <motion.div
             key={plan.name}
-            className={`w-full lg:w-96 bg-white/10 backdrop-blur-md shadow-lg rounded-xl px-6 py-8 relative overflow-hidden transition-transform hover:scale-105 ${
+            className={`w-full lg:w-96 bg-white/10 backdrop-blur-md shadow-lg rounded-xl px-6 py-8 flex flex-col justify-between relative overflow-hidden transition-transform hover:scale-105 ${
               plan.popular ? "border-2 border-indigo-400" : ""
             }`}
             variants={cardVariants}
           >
-            {/* Badge */}
-            {plan.popular && (
-              <span className="absolute top-4 right-4 text-xs bg-indigo-500 text-white px-3 py-1 rounded-full">
-                Most Popular
-              </span>
-            )}
+            <div>
+              {/* Badge */}
+              {plan.popular && (
+                <span className="absolute top-4 right-4 text-xs bg-indigo-500 text-white px-3 py-1 rounded-full">
+                  Most Popular
+                </span>
+              )}
 
-            {/* Header */}
-            <div className="flex justify-between items-center my-4">
-              <h3 className="text-xl font-semibold">{plan.name}</h3>
-              <span className="text-lg font-medium">{plan.price}</span>
-            </div>
-            <div className="py-4 text-gray-200 text-sm ">
-              <p>{plan.description}</p>
-            </div>
+              {/* Header */}
+              <div className="flex justify-between items-center my-4">
+                <h3 className="text-xl font-semibold">{plan.name}</h3>
+                <span className="text-lg font-medium">{plan.price}</span>
+              </div>
+              <div className="py-4 text-gray-200 text-sm ">
+                <p>{plan.description}</p>
+              </div>
 
-            {/* Features */}
-            <ul className="space-y-3 text-sm">
-              {plan.features.map((f, i) => (
-                <li key={i} className="flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5 text-green-400 mr-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>{f}</span>
-                </li>
-              ))}
-              {plan.unavailable.map((f, i) => (
-                <li key={i} className="flex items-center opacity-60">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5 text-red-400 mr-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                  <span className="line-through">{f}</span>
-                </li>
-              ))}
-            </ul>
+              {/* Features */}
+              <ul className="space-y-3 text-sm">
+                {plan.features.map((f, i) => (
+                  <li key={i} className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-5 h-5 text-green-400 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>{f}</span>
+                  </li>
+                ))}
+                {plan.unavailable.map((f, i) => (
+                  <li key={i} className="flex items-center opacity-60">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-5 h-5 text-red-400 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                    <span className="line-through">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             {/* Button */}
-            <div className="mt-6">
+            <div className="mt-8 mb-4">
               <button className="w-full py-3 rounded-md bg-indigo-500 hover:bg-indigo-600 transition-colors font-medium">
                 {plan.popular
                   ? "Choose Standard"

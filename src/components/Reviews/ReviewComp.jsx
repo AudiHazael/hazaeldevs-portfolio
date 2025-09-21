@@ -33,7 +33,7 @@ export default function Reviews() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto py-8">
+    <section className="max-w-7xl mx-auto py-8 px-4">
       <motion.h2
         className="text-2xl font-bold mb-6 text-zinc-50"
         initial={{ opacity: 0, scale: 0.95 }}
@@ -69,7 +69,18 @@ export default function Reviews() {
                 {"☆".repeat(5 - r.rating)}
               </p>
               <p className="text-zinc-50 flex-grow">“{r.body}”</p>
-              <span className="mt-4 text-sm text-zinc-50">– {r.author}</span>
+
+              {/* Avatar + Author */}
+              <div className="flex items-center mt-4">
+                {r.avatar && (
+                  <img
+                    src={r.avatar}
+                    alt={r.author}
+                    className="w-10 h-10 rounded-full object-cover mr-3 border border-white/20"
+                  />
+                )}
+                <span className="text-sm text-zinc-50">– {r.author}</span>
+              </div>
             </motion.div>
           </SwiperSlide>
         ))}

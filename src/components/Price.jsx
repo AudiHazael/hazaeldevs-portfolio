@@ -187,8 +187,8 @@ function Price() {
       <div className="px-4 mt-6">
         <ul>
           <li className="list-disc text-gray-400 mt-2 text-sm">
-            I offer monthly maintenance retainers ($100 - $150) for edits,
-            backups, security and updates.
+            I offer monthly maintenance retainers ($100–$150) that cover edits,
+            backups, security, and updates
           </li>
         </ul>
       </div>

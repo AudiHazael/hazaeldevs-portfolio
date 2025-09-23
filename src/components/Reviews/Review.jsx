@@ -12,6 +12,12 @@ const reviews = [
     body: "I’m impressed by the attention to detail. The site looks professional, loads fast, and works perfectly on mobile. Communication was clear throughout, and he made sure every change I requested was handled quickly",
     avatar: "/Joshua.png",
   },
+  {
+    author: "Elmond Isaiah",
+    rating: 5,
+    body: "I’m impressed by the attention to detail. The site looks professional, loads fast, and works perfectly on mobile. Communication was clear throughout, and he made sure every change I requested was handled quickly",
+    avatar: "/Isaiah.png",
+  },
 ];
 
 export default reviews;

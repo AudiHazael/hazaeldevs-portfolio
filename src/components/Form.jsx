@@ -24,7 +24,7 @@ function Form() {
 
     const formData = new FormData(e.target);
     try {
-      await fetch("https://formsubmit.co/hazaeldevs@gmail.com", {
+      await fetch("https://formsubmit.co/c41c51ccdd0636aed8eba6d6d1ef1bad", {
         method: "POST",
         body: formData,
       });

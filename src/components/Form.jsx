@@ -111,7 +111,7 @@ function Form() {
         </div>
 
         {/* Checkbox */}
-        <div className="flex items-center gap-2 mb-6">
+        <div className="flex items-end gap-2 mb-6">
           <input
             type="checkbox"
             id="terms"

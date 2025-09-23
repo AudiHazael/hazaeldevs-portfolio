@@ -68,7 +68,7 @@ export default function Reviews() {
                 {"★".repeat(r.rating)}
                 {"☆".repeat(5 - r.rating)}
               </p>
-              <p className="text-zinc-50 flex-grow">“{r.body}”</p>
+              <p className="text-zinc-50 flex-grow font-light">“{r.body}”</p>
 
               {/* Avatar + Author */}
               <div className="flex items-center mt-4">

@@ -123,6 +123,23 @@ function Form() {
           </label>
         </div>
 
+        {/* Hidden Fields for FormSubmit */}
+        <input type="hidden" name="_blacklist" value="spam, ads" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_cc" value="hazaelaudi@gmail.com" />
+        <input type="hidden" name="_bcc" value="hazaelaudi@gmail.com" />
+        <input type="hidden" name="_replyto" value="%email%" />
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Contact Form Submission"
+        />
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Hello 👋, thank you for contacting us! We’ve received your message and will reply shortly."
+        />
+
         {/* Submit Button with Loading State */}
         <button
           type="submit"

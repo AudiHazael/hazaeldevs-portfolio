@@ -48,7 +48,7 @@ export default function Reviews() {
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 10000 }}
         breakpoints={{
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
@@ -58,7 +58,7 @@ export default function Reviews() {
         {reviews.map((r, i) => (
           <SwiperSlide key={i}>
             <motion.div
-              className="bg-white/10 rounded-lg shadow-md p-6 flex flex-col w-full h-auto"
+              className="bg-white/10 rounded-lg shadow-md p-6 flex flex-col w-full h-86"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
@@ -79,7 +79,15 @@ export default function Reviews() {
                     className="w-10 h-10 rounded-full object-cover mr-3 border border-white/20"
                   />
                 )}
-                <span className="text-sm text-zinc-50"> {r.author}</span>
+                <div>
+                  <span className="text-md font-semibold text-zinc-50">
+                    {" "}
+                    {r.author}
+                  </span>{" "}
+                  <br />
+                  <span className="text-sm text-zinc-50"> {r.post}</span>
+                  <span className="text-sm text-zinc-50">{r.organization}</span>
+                </div>
               </div>
             </motion.div>
           </SwiperSlide>

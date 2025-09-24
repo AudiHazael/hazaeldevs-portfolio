@@ -2,11 +2,11 @@ import { SitemapStream } from "sitemap";
 import { createWriteStream, writeFileSync } from "fs";
 import { finished } from "stream/promises";
 
-const hostname = "https://hazaeldevs-portfolio.vercel.app/";
+const hostname = "https://hazaeldevs-portfolio.vercel.app"; // no trailing slash
 
 const links = [
   { url: "/", changefreq: "daily", priority: 1.0 },
-  { url: "/Home", changefreq: "daily", priority: 1.0 },
+  { url: "/thank-you", changefreq: "monthly", priority: 0.8 },
 ];
 
 async function generateFiles() {

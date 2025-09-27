@@ -176,7 +176,7 @@ const Portfolio = () => {
                       href={item.previewLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 text-md w-auto flex justify-center gap-3 font-medium text-white bg-indigo-500 hover:bg-indigo-600 "
+                      className="px-4 py-2 rounded-md text-md w-auto flex justify-center gap-3 font-medium text-white bg-indigo-500 hover:bg-indigo-600 "
                     >
                       {Icons.LinkIcon({ className: "w-4 h-4 pt-1" })}
                       Live Demo

@@ -23,12 +23,23 @@ export default function Reviews() {
     },
     review: reviews.slice(0, 5).map((r) => ({
       "@type": "Review",
-      author: r.author,
+      author: {
+        "@type": "Person",
+        name: r.author,
+      },
       reviewRating: {
         "@type": "Rating",
         ratingValue: r.rating,
+        bestRating: "5",
+        worstRating: "1",
       },
       reviewBody: r.body,
+      publisher: r.organization
+        ? {
+            "@type": "Organization",
+            name: r.organization,
+          }
+        : undefined,
     })),
   };
 
@@ -81,11 +92,10 @@ export default function Reviews() {
                 )}
                 <div>
                   <span className="text-md font-semibold text-zinc-50">
-                    {" "}
                     {r.author}
-                  </span>{" "}
+                  </span>
                   <br />
-                  <span className="text-sm text-zinc-50"> {r.post}</span>
+                  <span className="text-sm text-zinc-50">{r.post}</span>
                   <span className="text-sm text-zinc-50">{r.organization}</span>
                 </div>
               </div>

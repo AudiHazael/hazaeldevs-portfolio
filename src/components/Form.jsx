@@ -129,11 +129,11 @@ function Form() {
         <input type="hidden" name="_cc" value="hazaelaudi@gmail.com" />
         <input type="hidden" name="_bcc" value="hazaelaudi@gmail.com" />
         <input type="hidden" name="_replyto" value="%email%" />
-        <input
+        {/* <input
           type="hidden"
           name="_subject"
           value="New Contact Form Submission"
-        />
+        /> */}
         <input
           type="hidden"
           name="_autoresponse"

@@ -92,7 +92,7 @@ function Form() {
           <input
             type="text"
             id="subject"
-            name="subject"
+            name="_subject"
             className="w-full px-3 py-2 border border-gray-800 rounded-md bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
@@ -129,11 +129,7 @@ function Form() {
         <input type="hidden" name="_cc" value="hazaelaudi@gmail.com" />
         <input type="hidden" name="_bcc" value="hazaelaudi@gmail.com" />
         <input type="hidden" name="_replyto" value="%email%" />
-        {/* <input
-          type="hidden"
-          name="_subject"
-          value="New Contact Form Submission"
-        /> */}
+
         <input
           type="hidden"
           name="_autoresponse"

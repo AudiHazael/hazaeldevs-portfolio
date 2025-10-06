@@ -11,16 +11,20 @@ export default function Reviews() {
   const total = reviews.length;
   const avgRating = reviews.reduce((sum, r) => sum + r.rating, 0) / total;
 
-  // JSON-LD Schema
+  // JSON-LD Schema with 'publisher' removed
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Hazael Audi",
+    "@type": "Service", // Best fit for a freelance developer's portfolio
+    name: "Haza’ElDevs Web Development", // Use your professional service name
+
+    // Aggregate Rating for Rich Snippet eligibility
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: avgRating.toFixed(1),
       reviewCount: total,
     },
+
+    // Individual Reviews (slice(0, 5) is a good practice)
     review: reviews.slice(0, 5).map((r) => ({
       "@type": "Review",
       author: {
@@ -34,12 +38,7 @@ export default function Reviews() {
         worstRating: "1",
       },
       reviewBody: r.body,
-      publisher: r.organization
-        ? {
-            "@type": "Organization",
-            name: r.organization,
-          }
-        : undefined,
+      // The 'publisher' property has been omitted here.
     })),
   };
 

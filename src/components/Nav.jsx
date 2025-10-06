@@ -80,15 +80,20 @@ function Navbar() {
               </a>
             </li>
             <li>
+              <a href="#services" className="hover:text-indigo-300">
+                Services
+              </a>
+            </li>
+            <li>
               <a href="#portfolio" className="hover:text-indigo-300">
                 Portfolio
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#pricing" className="hover:text-indigo-300">
                 Pricing
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="#contact" className="hover:text-indigo-300">
                 Contact

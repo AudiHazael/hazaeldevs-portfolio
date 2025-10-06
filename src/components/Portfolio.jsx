@@ -10,6 +10,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const BASE_URL = "https://hazaeldevs-portfolio.vercel.app/"; // Replace with your actual domain!
+
 const portfolioItems = [
   {
     title: "Artist Kelle",
@@ -76,8 +78,31 @@ const fadeUp = {
 };
 
 const Portfolio = () => {
+  const portfolioSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Haza’ElDevs Web Development Portfolio",
+    description:
+      "A collection of successful front-end development projects and designs built by Haza’ElDevs.",
+    mainEntity: portfolioItems.map((item) => ({
+      "@type": "CreativeWork",
+      name: item.title,
+      description: item.text,
+      url: item.previewLink,
+      image: `${BASE_URL}${item.img}`,
+      author: {
+        "@type": "Person",
+        name: "Haza’ElDevs",
+      },
+      keywords: item.tools.join(", "),
+    })),
+  };
   return (
     <div className="w-full px-0 sm:px-4 mx-auto md:max-w-7xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }}
+      />
       {/* Section Title */}
       <motion.h6
         className="mb-2 font-semibold text-indigo-400 uppercase px-4"

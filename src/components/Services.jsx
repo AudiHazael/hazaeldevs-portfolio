@@ -13,8 +13,29 @@ function Services() {
     }),
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Frontend Development",
+    name: "Professional Frontend Web Development Services",
+    description:
+      "Custom development services using modern frameworks like React and Next.js to build fast, responsive, and SEO-friendly user interfaces.",
+    provider: {
+      "@type": "Person",
+      name: "Haza’ElDevs",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Worldwide",
+    },
+  };
+
   return (
     <section className="py-10 text-gray-800 bg-inherit" id="services">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <div className="max-w-7xl px-4 mx-auto">
         {/* Section Heading */}
         <motion.h6

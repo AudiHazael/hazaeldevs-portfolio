@@ -5,7 +5,7 @@ import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Tools from "../components/Tools";
 import Portfolio from "../components/Portfolio";
-import Price from "../components/Price";
+// import Price from "../components/Price";
 import Navbar from "../components/Nav";
 import Reviews from "../components/Reviews/ReviewComp";
 import Footer from "../components/Footer";
@@ -44,9 +44,9 @@ function Home() {
         </div>
       </section>
 
-      <div id="pricing">
+      {/* <div id="pricing">
         <Price />
-      </div>
+      </div> */}
 
       <div id="reviews">
         <Reviews />

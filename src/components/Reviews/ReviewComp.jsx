@@ -11,13 +11,20 @@ export default function Reviews() {
   const total = reviews.length;
   const avgRating = reviews.reduce((sum, r) => sum + r.rating, 0) / total;
 
-  // JSON-LD Schema
+  // JSON-LD Schema for Reviews
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "LocalBusiness",
     name: "Haza’ElDevs Web Development",
+    image: "https://hazaeldevs-portfolio.vercel.app/og-preview.png",
+    url: "https://hazaeldevs-portfolio.vercel.app/",
 
-    // Aggregate Rating
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Lagos",
+      addressCountry: "NG",
+    },
+
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: avgRating.toFixed(1),

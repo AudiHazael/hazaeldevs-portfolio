@@ -108,7 +108,7 @@ function Services() {
         </motion.div>
 
         {/* --- Feature Grid --- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
               icon: Icons.CodeIcon,
@@ -121,9 +121,19 @@ function Services() {
               text: "Designing user-friendly and aesthetically pleasing interfaces.",
             },
             {
+              icon: Icons.SEO,
+              title: "SEO",
+              text: "Optimizing your site to rank higher on search engines, increasing your visibility.",
+            },
+            {
               icon: Icons.Mphone,
               title: "Mobile Optimization",
               text: "Optimizing apps for fast load times and accessibility compliance.",
+            },
+            {
+              icon: Icons.Devices,
+              title: "Responsive Design",
+              text: "Creating layouts that adapt seamlessly to any screen size, from desktops to mobile phones.",
             },
             {
               icon: Icons.Zap,
@@ -143,7 +153,7 @@ function Services() {
               <div className="flex items-center space-x-3 mb-3">
                 {feature.icon({
                   className:
-                    "w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors",
+                    "w-6 h-6 text-indigo-400 group-hover:text-indigo-300 transition-colors",
                 })}
                 <h3 className="font-semibold text-zinc-100 uppercase tracking-wide text-sm">
                   {feature.title}

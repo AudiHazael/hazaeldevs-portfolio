@@ -6,7 +6,7 @@
 /* globals.css */
 html {
   @apply bg-gradient-to-br from-zinc-950 via-gray-900 to-black;
-  font-size: 75%;
+  font-size: 70%;
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;

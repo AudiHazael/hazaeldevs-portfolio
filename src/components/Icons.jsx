@@ -5,10 +5,16 @@ import {
   EnvelopeIcon,
   MapPinIcon,
   LinkIcon,
+  RocketLaunchIcon,
 } from "@heroicons/react/24/outline";
 
 // Lucide or React Icons (for tech stack)
-import { CodeIcon, Zap, LayoutDashboard } from "lucide-react";
+import {
+  CodeIcon,
+  Zap,
+  LayoutDashboard,
+  MonitorSmartphone,
+} from "lucide-react";
 import {
   FaGithub,
   FaGitAlt,
@@ -46,4 +52,10 @@ export const Icons = {
   ),
   Html: (props) => <FaHtml5 className="text-xl text-orange-600" {...props} />,
   Css: (props) => <FaCss3Alt className="text-xl text-blue-500" {...props} />,
+  SEO: (props) => (
+    <RocketLaunchIcon className="text-xl text-blue-500" {...props} />
+  ),
+  Devices: (props) => (
+    <MonitorSmartphone className="text-xl text-blue-500" {...props} />
+  ),
 };

@@ -65,7 +65,7 @@ function Services() {
               User Interface Design for Websites & Mobile Applications
             </h2>
           </div>
-          <div className="md:w-1/2 p-8 bg-zinc-900/50 ">
+          <div className="md:w-1/2 py-10 px-4 bg-zinc-900/50 ">
             <p className="text-gray-300 leading-relaxed text-base">
               I specialize in visually appealing and user-centered experiences.
               My approach revolves around understanding user needs and
@@ -93,7 +93,7 @@ function Services() {
               Frontend Development for Websites & Mobile Applications
             </h2>
           </div>
-          <div className="md:w-1/2 p-8 bg-zinc-900/50 ">
+          <div className="md:w-1/2 py-10 px-4 bg-zinc-900/50 ">
             <p className="text-gray-300 leading-relaxed text-base">
               With precision and functionality, I bring designs to life. I
               convert static visuals into dynamic, interactive interfaces with

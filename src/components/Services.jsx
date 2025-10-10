@@ -151,7 +151,7 @@ function Services() {
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-gray-400 text-md leading-relaxed">
+              <p className="text-gray-400 text-sm md:text-md leading-relaxed">
                 {feature.text}
               </p>
             </motion.div>

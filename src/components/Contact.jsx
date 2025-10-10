@@ -19,7 +19,7 @@ const fadeInUp = {
 function Contact() {
   return (
     <section className="py-20 text-gray-800 bg-transparent" id="contact">
-      <div className="max-w-[75%] px-4 mx-auto">
+      <div className="md:max-w-[75%] px-4 mx-auto">
         <div className="flex flex-col gap-4 md:flex-row justify-center items-end">
           {/* Contact Details */}
           <motion.div

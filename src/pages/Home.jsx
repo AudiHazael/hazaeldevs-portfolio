@@ -26,9 +26,9 @@ function Home() {
         <Hero />
       </div>
 
-      {/* <div className="" id="about">
+      <div className="" id="about">
         <About />
-      </div> */}
+      </div>
 
       <div className="" id="services">
         <Services />

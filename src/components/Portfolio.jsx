@@ -1,16 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Icons } from "./Icons";
 import { motion } from "framer-motion";
-
-import "../Styles/Styles.css";
+import { Icons } from "./Icons";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const BASE_URL = "https://hazaeldevs-portfolio.vercel.app/"; // Replace with your actual domain!
+const BASE_URL = "https://hazaeldevs-portfolio.vercel.app/";
 
 const portfolioItems = [
   {
@@ -37,7 +35,6 @@ const portfolioItems = [
     previewLink: "https://academy-web-oasis.vercel.app/",
     repoLink: "#",
     collaborator: {
-      text: "In collaboration with",
       name: "CodeMax",
       link: "https://preciousamos.dev",
     },
@@ -69,11 +66,11 @@ const portfolioItems = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 2 },
+  hidden: { opacity: 0, y: 10 },
   visible: (delay = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { delay, duration: 0.6, ease: "easeOut" },
   }),
 };
 
@@ -90,139 +87,140 @@ const Portfolio = () => {
       description: item.text,
       url: item.previewLink,
       image: `${BASE_URL}${item.img}`,
-      author: {
-        "@type": "Person",
-        name: "Haza’ElDevs",
-      },
+      author: { "@type": "Person", name: "Haza’ElDevs" },
       keywords: item.tools.join(", "),
     })),
   };
+
   return (
-    <div className="w-full px-0 sm:px-4 mx-auto md:max-w-7xl">
+    <section
+      id="portfolio"
+      className="py-20 bg-inherit text-gray-200 border-t border-gray-800"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }}
       />
-      {/* Section Title */}
-      <motion.h6
-        className="mb-2 font-semibold text-indigo-400 uppercase px-4"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
-        custom={0.1}
-        variants={fadeUp}
-      >
-        My Portfolio
-      </motion.h6>
 
-      <motion.h3
-        className="mb-6 text-2xl font-bold md:text-3xl text-zinc-50 px-4"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
-        custom={0.3}
-        variants={fadeUp}
-      >
-        Check out some of my successful projects
-      </motion.h3>
-
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
-        custom={0.5}
-        variants={fadeUp}
-      >
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={20}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          slidesPerView={1}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            992: { slidesPerView: 2 },
-          }}
-          className="w-full px-4"
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Section Heading */}
+        <motion.h6
+          className="text-indigo-400 uppercase font-semibold mb-2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
         >
-          {portfolioItems.map((item, index) => (
-            <SwiperSlide key={index}>
-              <motion.div
-                className="h-full overflow-hidden transition-transform duration-300 rounded-md pb-6 backdrop-blur-md border-b border-gray-800 dark:bg-gray-800/25 hover:-translate-y-1"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
-                custom={index * 0.2}
-                variants={fadeUp}
-              >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="object-cover w-full h-48"
-                />
-                <div className="p-4 text-left">
-                  <div className="flex flex-wrap items-center gap-2 mb-1">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-zinc-50">
-                      {item.title}
-                    </h4>
-                    {item.collaborator && (
-                      <>
-                        <span className="text-[12px] md:text-base text-stone-300">
-                          – In collaboration with
-                        </span>
-                        <a
-                          href={item.collaborator.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[12px] md:text-base text-indigo-200 hover:text-indigo-400"
+          My Portfolio
+        </motion.h6>
+
+        <motion.h3
+          className="text-3xl md:text-4xl font-bold text-zinc-50 mb-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          custom={0.2}
+        >
+          Check out some of my successful projects
+        </motion.h3>
+
+        {/* Portfolio Slider */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={fadeUp}
+          custom={0.4}
+        >
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={24}
+            autoplay={{ delay: 4500, disableOnInteraction: false }}
+            slidesPerView={1}
+            breakpoints={{
+              768: { slidesPerView: 2 },
+              1200: { slidesPerView: 3 },
+            }}
+            className="!pb-10"
+          >
+            {portfolioItems.map((item, i) => (
+              <SwiperSlide key={i}>
+                <motion.div
+                  className="rounded-xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-md overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:border-indigo-400"
+                  variants={fadeUp}
+                  custom={i * 0.1}
+                >
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="object-cover w-full h-48 md:h-56 opacity-90 hover:opacity-100 transition"
+                  />
+                  <div className="p-5">
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <h4 className="text-lg font-semibold text-zinc-50">
+                        {item.title}
+                      </h4>
+                      {item.collaborator && (
+                        <>
+                          <span className="text-sm text-stone-400">
+                            – In collaboration with
+                          </span>
+                          <a
+                            href={item.collaborator.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-indigo-300 hover:text-indigo-400 text-sm"
+                          >
+                            {item.collaborator.name}
+                          </a>
+                        </>
+                      )}
+                    </div>
+
+                    <p className="text-sm text-stone-200 mb-4 leading-relaxed">
+                      {item.text}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 mb-5">
+                      {item.tools.map((tool, t) => (
+                        <span
+                          key={t}
+                          className="px-3 py-1 text-xs font-medium text-zinc-100 border border-zinc-700 bg-zinc-800/40 rounded-lg"
                         >
-                          {item.collaborator.name}
-                        </a>
-                      </>
-                    )}
-                  </div>
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
 
-                  <p className="mb-4 text-[12px] text-gray-600 dark:text-stone-100">
-                    {item.text}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tools?.map((tool, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 text-xs font-medium text-zinc-50 uppercase shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 rounded-lg"
+                    <div className="flex gap-3">
+                      <a
+                        href={item.previewLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 transition"
                       >
-                        {tool}
-                      </span>
-                    ))}
+                        {Icons.LinkIcon({ className: "w-4 h-4" })}
+                        Live Demo
+                      </a>
+                      <a
+                        href={item.repoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md text-stone-100 border border-indigo-500 hover:bg-indigo-400 hover:text-zinc-950 transition"
+                      >
+                        {Icons.Github({ className: "w-4 h-4" })}
+                        Code
+                      </a>
+                    </div>
                   </div>
-
-                  <div className="flex gap-3 mt-4">
-                    <a
-                      href={item.previewLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-md text-md w-auto flex justify-center gap-3 font-medium text-white bg-indigo-500 hover:bg-indigo-600 "
-                    >
-                      {Icons.LinkIcon({ className: "w-4 h-4 pt-1" })}
-                      Live Demo
-                    </a>
-                    <a
-                      href={item.repoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-md w-auto flex justify-center gap-3 font-medium text-stone-100 border border-indigo-500 px-6 py-2 rounded-md hover:bg-indigo-400 hover:text-zinc-950 transition"
-                    >
-                      {Icons.Github({ className: "w-4 h-4 pt-1" })}
-                      Code
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </motion.div>
-    </div>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

@@ -3,13 +3,12 @@ import { motion } from "framer-motion";
 import { Icons } from "./Icons";
 
 function Services() {
-  // Variants for staggered fade-in
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i = 1) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.2, duration: 0.6, type: "spring" },
+      transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
     }),
   };
 
@@ -20,67 +19,58 @@ function Services() {
     name: "Professional Frontend Web Development Services",
     description:
       "Custom development services using modern frameworks like React and Next.js to build fast, responsive, and SEO-friendly user interfaces.",
-    provider: {
-      "@type": "Person",
-      name: "Haza’ElDevs",
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "Worldwide",
-    },
+    provider: { "@type": "Person", name: "Haza’ElDevs" },
+    areaServed: { "@type": "Country", name: "Worldwide" },
   };
 
   return (
-    <section className="py-10 text-gray-800 bg-inherit" id="services">
+    <section
+      id="services"
+      className="relative py-24 bg-zinc-950 text-zinc-100 border-t border-zinc-800"
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <div className="max-w-7xl px-4 mx-auto">
-        {/* Section Heading */}
-        {/* <motion.h6
-          className="mb-2 font-semibold text-indigo-400 uppercase"
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false }}
-          custom={0}
-        >
-          My Services
-        </motion.h6> */}
 
-        {/* <motion.h3
-          className="mb-10 text-3xl font-bold text-zinc-50"
+      <div className="max-w-6xl px-6 mx-auto">
+        {/* Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          custom={0}
+          className="text-center mb-20"
+        >
+          <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-3">
+            My Services
+          </h6>
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Professional UI Design and Development Services
+          </h3>
+          <p className="max-w-2xl mx-auto text-gray-400 text-base leading-relaxed">
+            I provide modern, detail-oriented solutions that combine great
+            design and clean development for seamless digital experiences.
+          </p>
+        </motion.div>
+
+        {/* --- UI Design Card --- */}
+        <motion.div
+          className="group flex flex-col md:flex-row overflow-hidden rounded-xl bg-zinc-900/40 hover:bg-zinc-900/60 backdrop-blur-md transition-all duration-500 mb-16"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           custom={1}
         >
-          Professional UI Design and Development Services
-        </motion.h3> */}
-
-        {/* UI Design Card */}
-        <motion.div
-          className="flex flex-col md:flex-row overflow-hidden rounded-lg mb-12 h-fit transition"
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false }}
-          custom={2}
-        >
-          <div className="md:w-auto w-full h-auto flex justify-center items-center">
-            {/* <img
-              src="/service-one.png"
-              alt="image-for-ui-design"
-              className="h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-l-xl"
-            /> */}
-            <h2 className="text-4xl font-bold text-indigo-400 px-4 md:px-6 py-9">
-              User Interfce Design for Websites & Mobile Applications
+          <div className="md:w-1/2 flex items-center justify-center p-10 border-b border-zinc-800">
+            <h2 className="text-2xl md:text-3xl font-semibold text-indigo-400 leading-snug">
+              User Interface Design for Websites & Mobile Applications
             </h2>
           </div>
-          <div className="dark:bg-gray-800/25 flex flex-col justify-center w-full px-6 py-8  backdrop-blur-md border-b  shadow-md border border-gray-800 bg-white/5">
-            <p className="leading-relaxed text-stone-50 text-md">
+          <div className="md:w-1/2 p-8">
+            <p className="text-gray-300 leading-relaxed text-base">
               I specialize in visually appealing and user-centered experiences.
               My approach revolves around understanding user needs and
               seamlessly translating them into elegant design solutions—from the
@@ -93,27 +83,22 @@ function Services() {
           </div>
         </motion.div>
 
-        {/* Frontend Development Card */}
+        {/* --- Frontend Development Card --- */}
         <motion.div
-          className="flex flex-col md:flex-row-reverse overflow-hidden rounded-lg mb-24 h-fit transition"
+          className="group flex flex-col md:flex-row-reverse overflow-hidden rounded-xl bg-zinc-900/40 hover:bg-zinc-900/60 backdrop-blur-md transition-all duration-500 mb-24"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false }}
-          custom={3}
+          viewport={{ once: true }}
+          custom={2}
         >
-          <div className="md:w-auto w-full h-auto flex justify-center items-center">
-            {/* <img
-              src="/service-two.png"
-              alt="image-of-front-end-development"
-              className="h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-r-xl"
-            /> */}
-            <h2 className="text-4xl font-bold text-indigo-400 px-4 md:px-6 py-9">
+          <div className="md:w-1/2 flex items-center justify-center p-10 border-b border-zinc-800">
+            <h2 className="text-2xl md:text-3xl font-semibold text-indigo-400 leading-snug">
               Frontend Development for Websites & Mobile Applications
             </h2>
           </div>
-          <div className="flex flex-col justify-center w-full px-6 py-8 backdrop-blur-md border-b shadow-md border border-gray-800 dark:bg-gray-800/25">
-            <p className="leading-relaxed text-stone-50 text-md">
+          <div className="md:w-1/2 p-8">
+            <p className="text-gray-300 leading-relaxed text-base">
               With precision and functionality, I bring designs to life. I
               convert static visuals into dynamic, interactive interfaces with
               ReactJS, adhering to industry best practices.
@@ -126,8 +111,8 @@ function Services() {
           </div>
         </motion.div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 mt-12 gap-y-8">
+        {/* --- Feature Grid --- */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
               icon: Icons.CodeIcon,
@@ -152,20 +137,25 @@ function Services() {
           ].map((feature, i) => (
             <motion.div
               key={i}
-              className="py-6 px-4 rounded-lg inset-shadow-xs gap-y-12 backdrop-blur-md shadow-md border-b border-gray-800"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
-              custom={i}
+              viewport={{ once: true }}
+              custom={i + 3}
+              className="group p-6 rounded-lg border-b border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300"
             >
-              <div className="flex space-x-4 my-2 items-center">
-                {feature.icon({ className: "w-5 h-5 text-indigo-400" })}
-                <h2 className="font-semibold text-zinc-100 uppercase">
+              <div className="flex items-center space-x-3 mb-3">
+                {feature.icon({
+                  className:
+                    "w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors",
+                })}
+                <h3 className="font-semibold text-zinc-100 uppercase tracking-wide text-sm">
                   {feature.title}
-                </h2>
+                </h3>
               </div>
-              <p className="leading-relaxed text-stone-200">{feature.text}</p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {feature.text}
+              </p>
             </motion.div>
           ))}
         </div>

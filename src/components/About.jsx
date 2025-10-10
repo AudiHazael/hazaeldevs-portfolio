@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Icons } from "./Icons";
+import { Icons } from "./Icons"; // keep if you plan to use icons later
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -17,73 +17,89 @@ const fadeInUp = {
 
 function About() {
   return (
-    <section className="py-20 text-gray-800 bg-inherit">
-      <div className="max-w-7xl px-4 mx-auto">
-        {/* Top grid: image + bio */}
-        <div className="grid grid-cols-1 md:grid-cols-12 place-items-center gap-8 overflow-hidden">
+    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-gray-900 via-zinc-900 to-black text-gray-100">
+      {/* Subtle decorative glow */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500/20 blur-3xl rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/20 blur-3xl rounded-full animate-pulse"></div>
+      </div>
+
+      <div className="max-w-6xl px-6 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-12 items-start gap-12">
+          {/* Left tagline */}
           <motion.div
-            className="md:col-span-4"
+            className="md:col-span-4 relative"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
             custom={0.2}
             variants={fadeInUp}
           >
-            <img
-              src="/about-img.jpg"
-              alt="Sample hero image"
-              className="w-full max-w-full sm:max-w-xs mx-auto shadow-lg rounded-sm object-contain"
-            />
+            <span className="inline-block mb-4 text-sm tracking-wider text-indigo-400 uppercase">
+              Designer • Developer
+            </span>
+            <h3 className="text-2xl font-semibold leading-snug text-white md:text-3xl">
+              Designing the vision, <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                coding the reality.
+              </span>
+            </h3>
+
+            {/* Decorative line */}
+            <div className="mt-6 w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
           </motion.div>
 
+          {/* Right bio content */}
           <motion.div
-            className="md:col-span-10 md:text-left"
+            className="md:col-span-8 space-y-5"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
             custom={0.4}
             variants={fadeInUp}
           >
             <motion.h6
-              className="mb-2 font-semibold text-indigo-400 uppercase"
+              className="font-semibold tracking-wide text-indigo-400 uppercase"
               custom={0.6}
               variants={fadeInUp}
             >
               My Bio
             </motion.h6>
 
-            <motion.h3
-              className="mb-4 text-xl font-bold md:text-3xl text-zinc-50"
+            <motion.h2
+              className="text-3xl font-bold text-white md:text-4xl"
               custom={0.8}
               variants={fadeInUp}
             >
-              A Freelance UI Designer and Frontend Developer
-            </motion.h3>
+              A Freelance UI Designer & Frontend Developer
+            </motion.h2>
 
             <motion.p
-              className="mb-6 leading-relaxed text-stone-100 break-words text-md"
+              className="text-base leading-relaxed text-gray-300 md:text-lg"
               custom={1.0}
               variants={fadeInUp}
             >
-              My interest in user interfaces and the desire to create
-              user-centric solutions sparked my interest in design. I have honed
-              my skills in creating visually appealing designs that not only
-              captivate, but also improve user interactions.
+              My journey into user interface design began with a fascination for
+              how people interact with technology. Over the years, I’ve honed my
+              ability to create digital experiences that balance aesthetics with
+              usability.
               <br />
               <br />
-              Consequently, as a frontend developer, I bring these designs to
-              life by weaving the fabric of functionality and aesthetics
-              together. I believe in the power of code to turn abstract concepts
-              into tangible, interactive experiences that leave an impression.
+              As a frontend developer, I bridge creativity and logic — bringing
+              visual ideas to life through clean, efficient, and responsive
+              code. I believe every interaction is an opportunity to delight
+              users and make technology feel effortless.
             </motion.p>
 
-            <motion.h5
-              className="text-lg font-semibold text-zinc-50"
+            <motion.div
+              className="pt-4 border-t border-gray-700"
               custom={1.2}
               variants={fadeInUp}
             >
-              HazaelDevs | Audi Hazael
-            </motion.h5>
+              <h5 className="text-lg font-semibold text-white">
+                HazaelDevs • Audi Hazael
+              </h5>
+            </motion.div>
           </motion.div>
         </div>
       </div>

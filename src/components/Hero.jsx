@@ -6,22 +6,18 @@ import Socials from "./Socials";
 const slides = [
   {
     heading: "Hi, I am Hazael Audi",
-    subheading: "A UI Designer and Front-End Developer",
+    subheading: "UI Designer and Frontend Developer",
     buttonText: "Contact Me",
     link: "https://wa.me/2347039404909?text=Hello%20HazaelDevs!%20I'm%20interested%20in%20your%20services.",
   },
 ];
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (delay = 0) => ({
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 1) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.7,
-      delay,
-      ease: "easeOut",
-    },
+    transition: { delay: i * 0.15, duration: 0.7, ease: "easeOut" },
   }),
 };
 
@@ -31,7 +27,7 @@ function Hero() {
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 6000);
     return () => clearInterval(slideInterval);
   }, []);
 
@@ -40,71 +36,58 @@ function Hero() {
   return (
     <section
       id="home"
-      className="flex items-center w-full min-h-fit py-24  px-4 md:px-20 text-gray-200 bg-gradient-to-br from-zinc-950 via-gray-900 to-black border-b border-gray-900 overflow-hidden"
+      className="relative flex items-center justify-center w-full min-h-[90vh] py-20 px-6 md:px-16 text-gray-200 bg-gradient-to-br from-zinc-950 via-gray-900 to-black border-b border-gray-900 overflow-hidden"
     >
-      <div className="grid grid-cols-1 md:grid-cols-12 items-center w-full max-w-7xl mx-auto gap-8">
-        {/* Text */}
-        <motion.div
-          className="flex flex-col justify-center items-start my-24 space-y-4 md:col-span-12 overflow-hidden w-full"
+      {/* Subtle background light overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.08),transparent_70%)] pointer-events-none"></div>
+
+      <div className="relative z-10 flex flex-col items-center text-center w-full max-w-5xl space-y-6 backdrop-blur-[1px]">
+        <motion.h1
+          className="text-2xl md:text-3xl text-indigo-400 font-medium tracking-wide"
+          variants={fadeInUp}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          animate="visible"
+          custom={0.2}
         >
-          <motion.h1
-            className="text-3xl text-indigo-400 font-ob"
-            variants={fadeInUp}
-            custom={0.3}
-          >
-            {heading}
-          </motion.h1>
+          {heading}
+        </motion.h1>
 
-          <motion.h2
-            className="text-5xl font-bold leading-normal md:text-6xl"
-            variants={fadeInUp}
-            custom={0.6}
-          >
-            {subheading}
-          </motion.h2>
+        <motion.h2
+          className="text-4xl md:text-6xl font-bold text-zinc-50 leading-tight"
+          variants={fadeInUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.4}
+        >
+          {subheading}
+        </motion.h2>
 
-          <motion.div
-            className="flex flex-wrap justify-center md:justify-start gap-6 mt-7"
-            variants={fadeInUp}
-            custom={0.9}
-          >
-            <Socials />
-          </motion.div>
-
-          <motion.div
-            className="flex flex-wrap justify-center md:justify-start gap-4"
-            variants={fadeInUp}
-            custom={1.2}
-          >
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-lg px-8 py-3 font-semibold text-gray-200 transition bg-gradient-to-r bg-indigo-500/15 hover:bg-indigo-600/50 rounded-md hover:brightness-110"
-            >
-              {buttonText}
-            </a>
-          </motion.div>
+        <motion.div
+          className="flex justify-center mt-6"
+          variants={fadeInUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.6}
+        >
+          <Socials />
         </motion.div>
 
-        {/* Image Column (optional) */}
-        {/* <motion.div
-          className="hidden md:flex justify-center mt-6 md:mt-0"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+        <motion.div
+          className="mt-10"
           variants={fadeInUp}
-          custom={1.5}
+          initial="hidden"
+          animate="visible"
+          custom={0.9}
         >
-          <img
-            src="/sample-image.jpg"
-            alt="Sample hero image"
-            className="w-[90%] max-w-md md:max-w-lg rounded-xl shadow-lg"
-          />
-        </motion.div> */}
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-lg px-8 py-3 font-semibold text-gray-200 border border-gray-700 rounded-md transition-all duration-300 bg-indigo-500/15 hover:bg-indigo-600/40 hover:border-indigo-400 hover:text-indigo-200"
+          >
+            {buttonText}
+          </a>
+        </motion.div>
       </div>
     </section>
   );

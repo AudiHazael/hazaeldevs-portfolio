@@ -36,7 +36,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative flex items-center justify-center w-full min-h-[90vh] py-20 px-6 md:px-16 text-gray-200 bg-gradient-to-br from-zinc-950 via-gray-900 to-black border-b border-gray-900 overflow-hidden"
+      className="relative flex items-center justify-center w-full min-h-[75vh] py-20 px-6 md:px-16 text-gray-200 bg-gradient-to-br from-zinc-950 via-gray-900 to-black border-b border-gray-900 overflow-hidden"
     >
       {/* Subtle background light overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.08),transparent_70%)] pointer-events-none"></div>

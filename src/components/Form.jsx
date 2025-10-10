@@ -47,7 +47,7 @@ function Form() {
     <>
       <motion.form
         onSubmit={handleSubmit}
-        className="w-full p-4 text-stone-50 backdrop-blur-md dark:bg-zinc-900/15 border border-gray-800 rounded-md shadow-md"
+        className="w-full p-4 text-stone-50 backdrop-blur-md dark:bg-zinc-900/40 border border-gray-800 rounded-md shadow-md"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}

@@ -22,12 +22,13 @@ function Home() {
         </div>
       </section>
 
-      <div className="" id="">
-        <Hero />
-      </div>
-
-      <div className="" id="about">
-        <About />
+      <div className="grid grid-cols-1 md:grid-cols-12 justify-center items-stretch">
+        <div className="md:col-span-6 relative py-20 h-full">
+          <Hero />
+        </div>
+        <div className="md:col-span-6 h-full">
+          <About />
+        </div>
       </div>
 
       <div className="" id="services">

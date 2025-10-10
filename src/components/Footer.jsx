@@ -20,6 +20,7 @@ function Footer() {
     <footer className="py-5 text-white border-t-1 border-gray-800">
       <div className="container px-4 mx-auto py-8">
         <motion.div
+          className="mb-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}

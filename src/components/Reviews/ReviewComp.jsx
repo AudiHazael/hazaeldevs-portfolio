@@ -55,7 +55,7 @@ export default function Reviews() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto py-8 px-4">
+    <section className="max-w-[80%] mx-auto py-8 px-4">
       <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-3">
         Testimonials
       </h6>

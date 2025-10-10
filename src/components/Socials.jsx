@@ -40,7 +40,7 @@ function Socials({ size = "md", gap = 6, color = "text-stone-300" }) {
   ];
 
   return (
-    <div className={`flex justify-center gap-${gap} mb-8`}>
+    <div className={`flex justify-center gap-${gap}`}>
       {socials.map((social, index) => (
         <motion.a
           key={social.label}

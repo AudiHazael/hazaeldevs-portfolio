@@ -15,20 +15,20 @@ const portfolioItems = [
     title: "Artist Kelle",
     text: "A responsive website for a visual artist featuring an artwork shop, commission request form with image uploads, and popup order modals — built for smooth client interaction across devices.",
     img: "/art-by-kelle.png",
-    tools: ["UI Design", "Responsive Layout", "ReactJs", "Tailwind "],
+    tools: ["UI Design", "Responsive Layout", "ReactJs", "Tailwind"],
     previewLink: "https://www.artistkelle.com/",
     repoLink: "https://github.com/AudiHazael/Kelle-Art",
   },
   {
     title: "Soy-Joy",
-    text: "A modern landing page for a health-conscious soy milk brand. I designed and developed a responsive website for SoyJoy, a startup focused on natural soy milk products. The site highlights the product’s health benefits, tells the brand story.",
+    text: "A modern landing page for a health-conscious soy milk brand. I designed and developed a responsive website for SoyJoy, a startup focused on natural soy milk products. The site highlights the product’s health benefits and tells the brand story.",
     img: "/soyjoy.png",
     tools: ["UI Design", "Responsive Layout", "ReactJs", "Bootstrap"],
     previewLink: "https://soy-joy.vercel.app/",
     repoLink: "https://github.com/AudiHazael/soy-joy",
   },
   {
-    title: "Extensive Academy ",
+    title: "Extensive Academy",
     text: "In collaboration with Codemax, I contributed to designing and developing the frontend interface of this educational platform. The goal was to build a clean, accessible, and responsive website that appeals to parents, students, and educators.",
     img: "/Extensive (1).png",
     tools: ["ReactJs", "Tailwind"],
@@ -41,7 +41,7 @@ const portfolioItems = [
   },
   {
     title: "Luxor",
-    text: "A bold and elegant digital presence for a premium watch brand. For Luxor, I crafted a stylish landing page that reflects the premium nature of the brand. The site features high-end visuals, product highlights, and smooth scroll animations to impress visitors and reflect luxury.",
+    text: "A bold and elegant digital presence for a premium watch brand. For Luxor, I crafted a stylish landing page that reflects the premium nature of the brand. The site features high-end visuals, product highlights, and smooth scroll animations.",
     img: "/Luxor.png",
     tools: ["UI Design", "Responsive Layout", "ReactJs", "Bootstrap"],
     previewLink: "https://luxor-seven.vercel.app/",
@@ -49,19 +49,19 @@ const portfolioItems = [
   },
   {
     title: "Haza'ElDevs Store",
-    text: "A sleek and user-friendly interface for a modern gadget store. This is a fully responsive frontend interface for an electronics store. It features product listings, filterable categories, a dynamic cart, and reusable components to ensure scalability.",
+    text: "A sleek and user-friendly interface for a modern gadget store. This is a fully responsive frontend interface featuring product listings, filterable categories, a dynamic cart, and reusable components for scalability.",
     img: "/ecom.png",
     tools: ["UI Design", "Responsive Layout", "ReactJs", "Tailwind"],
     previewLink: "https://gadget-ecom-website.vercel.app/",
-    repoLink: "../pages/Error.jsx",
+    repoLink: "#",
   },
   {
     title: "i4DT",
-    text: "i4DT is a volunteer-driven initiative where we teach tech-related skills to students. I built a clean, informative landing page that showcases our mission and allows interested learners to sign up through an embedded Google Form. It’s mobile-optimized and community-focused.",
+    text: "i4DT is a volunteer-driven initiative where we teach tech-related skills to students. I built a clean, informative landing page that showcases our mission and allows interested learners to sign up easily.",
     img: "/i4dt.png",
     tools: ["UI Design", "Responsive Layout", "ReactJs", "Tailwind"],
     previewLink: "https://i4-dt.vercel.app/",
-    repoLink: "../pages/Error.jsx",
+    repoLink: "#",
   },
 ];
 
@@ -97,12 +97,13 @@ const Portfolio = () => {
       id="portfolio"
       className="py-20 bg-inherit text-gray-200 border-t border-gray-800"
     >
+      {/* Structured Data for SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }}
       />
 
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="md:max-w-[80%] mx-auto px-4">
         {/* Section Heading */}
         <motion.h6
           className="text-indigo-400 uppercase font-semibold mb-2"
@@ -142,21 +143,26 @@ const Portfolio = () => {
               768: { slidesPerView: 2 },
               1200: { slidesPerView: 3 },
             }}
-            className="!pb-10"
+            centeredSlides={false}
+            grabCursor={true}
+            className="!pb-10 cursor-grab"
           >
             {portfolioItems.map((item, i) => (
               <SwiperSlide key={i}>
                 <motion.div
-                  className="rounded-xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-md overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:border-indigo-400"
+                  className="h-full flex flex-col rounded-xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-md overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:border-indigo-400"
                   variants={fadeUp}
                   custom={i * 0.1}
                 >
+                  {/* Project Image */}
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="object-cover w-full h-48 md:h-56 opacity-90 hover:opacity-100 transition"
+                    className="object-cover w-full h-48 md:h-64 opacity-90 hover:opacity-100 transition"
                   />
-                  <div className="p-5">
+
+                  {/* Project Details */}
+                  <div className="flex flex-col flex-1 p-5">
                     <div className="flex flex-wrap items-center gap-2 mb-2">
                       <h4 className="text-lg font-semibold text-zinc-50">
                         {item.title}
@@ -178,7 +184,7 @@ const Portfolio = () => {
                       )}
                     </div>
 
-                    <p className="text-sm text-stone-200 mb-4 leading-relaxed">
+                    <p className="text-sm text-stone-200 mb-4 leading-relaxed flex-1">
                       {item.text}
                     </p>
 
@@ -193,14 +199,15 @@ const Portfolio = () => {
                       ))}
                     </div>
 
-                    <div className="flex gap-3">
+                    {/* Buttons at bottom */}
+                    <div className="mt-auto flex gap-3">
                       <a
                         href={item.previewLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md text-white bg-indigo-500/15 border border-gray-700 hover:bg-indigo-600 transition"
                       >
-                        {Icons.LinkIcon({ className: "w-4 h-4" })}
+                        <Icons.LinkIcon className="w-4 h-4" />
                         Live Demo
                       </a>
                       <a
@@ -209,7 +216,7 @@ const Portfolio = () => {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md text-stone-100 border border-indigo-500 hover:bg-indigo-400 hover:text-zinc-950 transition"
                       >
-                        {Icons.Github({ className: "w-4 h-4" })}
+                        <Icons.Github className="w-4 h-4" />
                         Code
                       </a>
                     </div>

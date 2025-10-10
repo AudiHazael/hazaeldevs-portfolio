@@ -26,14 +26,14 @@ function Services() {
   return (
     <section
       id="services"
-      className="relative py-24  text-zinc-100 border-t border-zinc-800"
+      className="relative py-24 text-zinc-100 border-t border-zinc-800"
     >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
-      <div className="max-w-6xl px-6 mx-auto">
+      <div className="md:max-w-9/10 px-6 mx-auto">
         {/* Header */}
         <motion.div
           initial="hidden"
@@ -41,7 +41,7 @@ function Services() {
           viewport={{ once: true }}
           variants={fadeInUp}
           custom={0}
-          className="md:text-center mb-8 flex flex-col justify-center items-start md:items-center"
+          className="mb-2 flex flex-col justify-center items-start"
         >
           <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-3">
             My Services
@@ -53,62 +53,54 @@ function Services() {
 
         {/* --- UI Design Card --- */}
         <motion.div
-          className="group flex flex-col md:flex-row overflow-hidden rounded-xlhover:bg-zinc-900/60 backdrop-blur-md transition-all duration-500 mb-16"
+          className="group grid grid-cols-1 md:grid-cols-12 justify-center items-stretch overflow-hidden rounded-xl mb-12"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           custom={1}
         >
-          <div className="md:w-1/2 flex items-center justify-center py-10 md:py-0 md:px-8 border-b border-zinc-800">
-            <h2 className="text-2xl md:text-3xl font-semibold text-indigo-400 leading-snug">
-              User Interface Design for Websites & Mobile Applications
+          <div className="md:col-span-6 relative md:mx-24 py-10 md:py-20 h-full">
+            <h2 className="text-2xl md:ml-8 md:text-3xl font-semibold text-indigo-400 leading-snug">
+              User Interface Design for Websites <br /> & Mobile Applications
             </h2>
+            <div className="px-4 md:px-24 md:my-12 py-4 md:py-10 bg-zinc-900/40">
+              <p className="text-gray-300 leading-relaxed text-base">
+                I specialize in visually appealing and user-centered
+                experiences. My approach revolves around understanding user
+                needs and seamlessly translating them into elegant design
+                solutions—from the initial concept to the final product.
+                <br />
+                <br />I strive to create interfaces that not only engage users
+                but also improve their overall digital journey through a
+                meticulous blend of aesthetics and functionality.
+              </p>
+            </div>
           </div>
-          <div className="md:w-1/2 py-10 px-4 bg-zinc-900/50 ">
-            <p className="text-gray-300 leading-relaxed text-base">
-              I specialize in visually appealing and user-centered experiences.
-              My approach revolves around understanding user needs and
-              seamlessly translating them into elegant design solutions—from the
-              initial concept to the final product.
-              <br />
-              <br />I strive to create interfaces that not only engage users but
-              also improve their overall digital journey through a meticulous
-              blend of aesthetics and functionality.
-            </p>
-          </div>
-        </motion.div>
 
-        {/* --- Frontend Development Card --- */}
-        <motion.div
-          className="group flex flex-col md:flex-row-reverse overflow-hidden rounded-xl hover:bg-zinc-900/60 backdrop-blur-md transition-all duration-500 mb-24"
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={2}
-        >
-          <div className="md:w-1/2 flex items-center justify-center py-10 md:py-0 md:px-8 border-b border-zinc-800">
-            <h2 className="text-2xl md:text-3xl font-semibold text-indigo-400 leading-snug">
-              Frontend Development for Websites & Mobile Applications
+          {/* --- Frontend Development Card --- */}
+
+          <div className="md:col-span-6 relative md:mx-24 py-20 h-full border-t md:border-t-0 md:border-l border-zinc-800">
+            <h2 className="text-2xl md:text-3xl md:ml-8 font-semibold text-indigo-400 leading-snug">
+              Frontend Development for Websites <br /> & Mobile Applications
             </h2>
-          </div>
-          <div className="md:w-1/2 py-10 px-4 bg-zinc-900/50 ">
-            <p className="text-gray-300 leading-relaxed text-base">
-              With precision and functionality, I bring designs to life. I
-              convert static visuals into dynamic, interactive interfaces with
-              ReactJS, adhering to industry best practices.
-              <br />
-              <br />
-              My experience includes developing responsive and scalable user
-              interface (UI) components that ensure consistent user experiences
-              across multiple devices and platforms.
-            </p>
+            <div className="p-6 md:px-24 md:my-12 md:py-10 bg-zinc-900/40 ">
+              <p className="text-gray-300 leading-relaxed text-base">
+                With precision and functionality, I bring designs to life. I
+                convert static visuals into dynamic, interactive interfaces with
+                ReactJS, adhering to industry best practices.
+                <br />
+                <br />
+                My experience includes developing responsive and scalable user
+                interface (UI) components that ensure consistent user
+                experiences across multiple devices and platforms.
+              </p>
+            </div>
           </div>
         </motion.div>
 
         {/* --- Feature Grid --- */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="md:max-w-[70%] mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
           {[
             {
               icon: Icons.CodeIcon,
@@ -148,9 +140,9 @@ function Services() {
               whileInView="visible"
               viewport={{ once: true }}
               custom={i + 3}
-              className="group p-6 rounded-lg border-b border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300"
+              className="w-full group p-6 rounded-lg border-b border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300"
             >
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center space-x-3 mb-8">
                 {feature.icon({
                   className:
                     "w-6 h-6 text-indigo-400 group-hover:text-indigo-300 transition-colors",
@@ -159,7 +151,7 @@ function Services() {
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-md leading-relaxed">
                 {feature.text}
               </p>
             </motion.div>

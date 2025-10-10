@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Icons } from "./Icons";
 import Socials from "./Socials";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
-const slides = [
-  {
-    heading: "Hi, I am Hazael Audi",
-    subheading: "UI Designer and Frontend Developer",
-    buttonText: "Contact Me",
-    link: "https://wa.me/2347039404909?text=Hello%20HazaelDevs!%20I'm%20interested%20in%20your%20services.",
-  },
-];
+const slide = {
+  heading: "Hazael Audi",
+  subheading: "UI Designer & Frontend Developer",
+  buttonText: "Contact Me",
+  link: "https://wa.me/2347039404909?text=Hello%20HazaelDevs!%20I'm%20interested%20in%20your%20services.",
+};
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -22,58 +20,60 @@ const fadeInUp = {
 };
 
 function Hero() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 6000);
-    return () => clearInterval(slideInterval);
-  }, []);
-
-  const { heading, subheading, buttonText, link } = slides[current];
+  const { heading, subheading, buttonText, link } = slide;
 
   return (
     <section
       id="home"
-      className="relative flex items-center justify-center w-full min-h-[75vh] py-20 px-6 md:px-16 text-gray-200 bg-gradient-to-br from-zinc-950 via-gray-900 to-black border-b border-gray-900 overflow-hidden"
+      className="relative flex items-center justify-center w-full pt-20 px-6 md:px-20 text-gray-200 overflow-hidden"
     >
-      {/* Subtle background light overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.08),transparent_70%)] pointer-events-none"></div>
+      {/* Background Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15)_0%,transparent_70%)] pointer-events-none"></div>
 
-      <div className="relative z-10 flex flex-col items-center text-center w-full max-w-5xl space-y-6 backdrop-blur-[1px]">
-        <motion.h1
-          className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 font-medium tracking-wide"
+      <div className="relative z-10 flex flex-col md:items-start justify-center w-full max-w-5xl space-y-6 backdrop-blur-[1px] text-center md:text-left">
+        <motion.div
+          className="flex items-end gap-x-8"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
-          custom={0.2}
+          custom={0.3}
         >
-          {heading}
-        </motion.h1>
+          <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full ring-4 ring-purple-400/50 ring-offset-[3px] ring-offset-gray-900 shadow-lg shadow-purple-500/10 overflow-hidden">
+            <img
+              src="/hazael-audi.jpg"
+              alt="Hazael Audi"
+              className="object-cover w-full h-full"
+            />
+          </div>
+
+          <div className="flex flex-col justify-end">
+            <motion.h1
+              className="text-3xl md:text-4xl mb-2 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+              custom={0.4}
+            >
+              {heading}
+            </motion.h1>
+            <div className="mt-2">
+              <Socials size="sm" />
+            </div>
+          </div>
+        </motion.div>
 
         <motion.h2
-          className="text-4xl md:text-6xl font-bold text-zinc-50 leading-tight"
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-          custom={0.4}
-        >
-          {subheading}
-        </motion.h2>
-
-        <motion.div
-          className="flex justify-center mt-6"
+          className="text-4xl font-bold text-zinc-50 leading-tight mt-4"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
           custom={0.6}
         >
-          <Socials />
-        </motion.div>
+          {subheading}
+        </motion.h2>
 
         <motion.div
-          className="mt-10"
+          className="w-fit"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
@@ -83,9 +83,10 @@ function Hero() {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-lg px-8 py-3 font-semibold text-gray-200 border border-gray-700 rounded-md transition-all duration-300 bg-indigo-500/15 hover:bg-indigo-600/40 hover:border-indigo-400 hover:text-indigo-200"
+            className="inline-block text-lg md:text-xl px-8 py-3 font-semibold text-purple-300 border border-purple-500/40 rounded-full hover:bg-indigo-600/40 hover:border-indigo-400 hover:text-indigo-200 transition-all duration-300"
           >
             {buttonText}
+            <ArrowLongRightIcon className="w-5 h-5 inline-block ml-2 -mt-1" />
           </a>
         </motion.div>
       </div>

@@ -41,7 +41,7 @@ function Services() {
           viewport={{ once: true }}
           variants={fadeInUp}
           custom={0}
-          className="md:text-center mb-16 flex flex-col justify-center items-start md:items-center"
+          className="md:text-center mb-8 flex flex-col justify-center items-start md:items-center"
         >
           <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-3">
             My Services
@@ -60,7 +60,7 @@ function Services() {
           viewport={{ once: true }}
           custom={1}
         >
-          <div className="md:w-1/2 flex items-center justify-center py-10 border-b border-zinc-800">
+          <div className="md:w-1/2 flex items-center justify-center py-10 md:py-0 md:px-8 border-b border-zinc-800">
             <h2 className="text-2xl md:text-3xl font-semibold text-indigo-400 leading-snug">
               User Interface Design for Websites & Mobile Applications
             </h2>
@@ -88,7 +88,7 @@ function Services() {
           viewport={{ once: true }}
           custom={2}
         >
-          <div className="md:w-1/2 flex items-center justify-center py-10 border-b border-zinc-800">
+          <div className="md:w-1/2 flex items-center justify-center py-10 md:py-0 md:px-8 border-b border-zinc-800">
             <h2 className="text-2xl md:text-3xl font-semibold text-indigo-400 leading-snug">
               Frontend Development for Websites & Mobile Applications
             </h2>

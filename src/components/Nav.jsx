@@ -3,11 +3,30 @@ import { motion } from "framer-motion";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const closeMenuOnScroll = () => setIsOpen(false);
     window.addEventListener("scroll", closeMenuOnScroll);
     return () => window.removeEventListener("scroll", closeMenuOnScroll);
+  }, []);
+
+  // Watch which section is in view
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
   const fadeDown = {
@@ -18,6 +37,14 @@ function Navbar() {
       transition: { duration: 0.7, ease: "easeOut" },
     },
   };
+
+  const navLinks = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "services", label: "Services" },
+    { id: "portfolio", label: "Portfolio" },
+    { id: "contact", label: "Contact" },
+  ];
 
   return (
     <motion.nav
@@ -74,36 +101,20 @@ function Navbar() {
           } absolute top-full left-0 w-full bg-black/50 px-6 py-4 md:static md:bg-transparent md:flex md:items-center md:space-x-6 md:w-auto transition-all duration-300 ease-in-out`}
         >
           <ul className="flex flex-col px-4 py-4 md:p-0 md:flex-row md:space-y-0 space-y-3 text-white font-medium gap-4">
-            <li>
-              <a href="#home" className="hover:text-indigo-300">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="hover:text-indigo-300">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#services" className="hover:text-indigo-300">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#portfolio" className="hover:text-indigo-300">
-                Portfolio
-              </a>
-            </li>
-            {/* <li>
-              <a href="#pricing" className="hover:text-indigo-300">
-                Pricing
-              </a>
-            </li> */}
-            <li>
-              <a href="#contact" className="hover:text-indigo-300">
-                Contact
-              </a>
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.id}>
+                <a
+                  href={`#${link.id}`}
+                  className={`hover:text-indigo-300 transition ${
+                    activeSection === link.id
+                      ? "text-indigo-400 font-semibold border-b-2 border-indigo-400"
+                      : ""
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

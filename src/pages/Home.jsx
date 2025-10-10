@@ -38,7 +38,7 @@ function Home() {
         <Tools />
       </div>
 
-      <section className="py-8 text-gray-800">
+      <section className="py-8">
         <div className="" id="portfolio">
           <Portfolio />
         </div>

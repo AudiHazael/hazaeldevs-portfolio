@@ -152,7 +152,7 @@ function Services() {
           ].map((feature, i) => (
             <motion.div
               key={i}
-              className="dark:bg-gray-800/50 py-6 px-4 rounded-lg inset-shadow-xs gap-y-12 backdrop-blur-md shadow-md border-b  border-gray-800"
+              className="py-6 px-4 rounded-lg inset-shadow-xs gap-y-12 backdrop-blur-md shadow-md border-b border-gray-800"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"

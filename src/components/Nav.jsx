@@ -5,13 +5,14 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
+  // Close menu when scrolling
   useEffect(() => {
     const closeMenuOnScroll = () => setIsOpen(false);
     window.addEventListener("scroll", closeMenuOnScroll);
     return () => window.removeEventListener("scroll", closeMenuOnScroll);
   }, []);
 
-  // Watch which section is in view
+  // Detect which section is active
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
     const observer = new IntersectionObserver(
@@ -45,6 +46,11 @@ function Navbar() {
     { id: "portfolio", label: "Portfolio" },
     { id: "contact", label: "Contact" },
   ];
+
+  // Close menu when a link is clicked (only on mobile)
+  const handleLinkClick = () => {
+    if (window.innerWidth < 768) setIsOpen(false);
+  };
 
   return (
     <motion.nav
@@ -98,13 +104,14 @@ function Navbar() {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } absolute top-full left-0 w-full bg-black/50 px-6 py-4 md:static md:bg-transparent md:flex md:items-center md:space-x-6 md:w-auto transition-all duration-300 ease-in-out`}
+          } absolute top-full left-0 w-full bg-black/90 px-6 py-4 md:static md:flex md:items-center md:space-x-6 md:w-auto transition-all duration-300 ease-in-out`}
         >
           <ul className="flex flex-col px-4 py-4 md:p-0 md:flex-row md:space-y-0 space-y-3 text-white font-medium gap-4">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
                   href={`#${link.id}`}
+                  onClick={handleLinkClick}
                   className={`hover:text-indigo-300 transition ${
                     activeSection === link.id
                       ? "text-indigo-400 font-semibold border-b-2 border-indigo-400"

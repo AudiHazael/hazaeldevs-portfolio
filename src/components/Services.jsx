@@ -69,13 +69,13 @@ function Services() {
           viewport={{ once: false }}
           custom={2}
         >
-          <div className="md:w-auto w-full h-auto">
+          <div className="md:w-auto w-full h-auto flex justify-center items-center">
             {/* <img
               src="/service-one.png"
               alt="image-for-ui-design"
               className="h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-l-xl"
             /> */}
-            <h2 className="text-4xl font-bold text-indigo-400 opacity-50 px-2 md:px-6 py-9">
+            <h2 className="text-4xl font-bold text-indigo-400 px-2 md:px-6 py-9">
               User Interfce Design for Websites & Mobile Applications
             </h2>
           </div>
@@ -102,13 +102,13 @@ function Services() {
           viewport={{ once: false }}
           custom={3}
         >
-          <div className="md:w-auto w-full h-auto">
+          <div className="md:w-auto w-full h-auto flex justify-center items-center">
             {/* <img
               src="/service-two.png"
               alt="image-of-front-end-development"
               className="h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-r-xl"
             /> */}
-            <h2 className="text-4xl font-bold text-indigo-400 opacity-50 px-2 md:px-6 py-9">
+            <h2 className="text-4xl font-bold text-indigo-400 px-2 md:px-6 py-9">
               Frontend Development for Websites & Mobile Applications
             </h2>
           </div>

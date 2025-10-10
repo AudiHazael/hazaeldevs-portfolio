@@ -80,7 +80,7 @@ export default function Reviews() {
         {reviews.map((r, i) => (
           <SwiperSlide key={i}>
             <motion.div
-              className="bg-white/10 rounded-lg shadow-md p-6 flex flex-col w-full h-auto md:h-86"
+              className="dark:bg-gray-800/50 rounded-lg shadow-md p-6 flex flex-col w-full h-auto md:h-86"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
@@ -98,7 +98,7 @@ export default function Reviews() {
                   <img
                     src={r.avatar}
                     alt={r.author}
-                    className="w-10 h-10 rounded-full object-cover mr-3 border border-white/20"
+                    className="w-10 h-10 rounded-full object-cover mr-3 border border-white/10"
                   />
                 )}
                 <div>
@@ -106,7 +106,7 @@ export default function Reviews() {
                     {r.author}
                   </span>
                   <br />
-                  <span className="text-sm text-zinc-50">{r.post}</span>
+                  <span className="text-md text-zinc-50">{r.post}</span>
                   <span className="text-sm text-zinc-50">{r.organization}</span>
                 </div>
               </div>

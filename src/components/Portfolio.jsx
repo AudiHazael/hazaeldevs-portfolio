@@ -147,7 +147,7 @@ const Portfolio = () => {
           {portfolioItems.map((item, index) => (
             <SwiperSlide key={index}>
               <motion.div
-                className="h-full overflow-hidden transition-transform duration-300 rounded-md shadow-md dark:bg-gray-800/80 backdrop-blur-lg hover:-translate-y-1"
+                className="h-full overflow-hidden transition-transform duration-300 rounded-md pb-6 backdrop-blur-md border-b border-gray-800 dark:bg-gray-800/25 hover:-translate-y-1"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.2 }}

@@ -38,7 +38,7 @@ function Services() {
       />
       <div className="max-w-7xl px-4 mx-auto">
         {/* Section Heading */}
-        <motion.h6
+        {/* <motion.h6
           className="mb-2 font-semibold text-indigo-400 uppercase"
           variants={fadeInUp}
           initial="hidden"
@@ -47,9 +47,9 @@ function Services() {
           custom={0}
         >
           My Services
-        </motion.h6>
+        </motion.h6> */}
 
-        <motion.h3
+        {/* <motion.h3
           className="mb-10 text-3xl font-bold text-zinc-50"
           variants={fadeInUp}
           initial="hidden"
@@ -58,11 +58,11 @@ function Services() {
           custom={1}
         >
           Professional UI Design and Development Services
-        </motion.h3>
+        </motion.h3> */}
 
         {/* UI Design Card */}
         <motion.div
-          className="flex flex-col md:flex-row overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow mb-12 h-fit transition"
+          className="flex flex-col md:flex-row overflow-hidden rounded-lg mb-12 h-fit transition"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -70,17 +70,17 @@ function Services() {
           custom={2}
         >
           <div className="md:w-auto w-full h-auto">
-            <img
+            {/* <img
               src="/service-one.png"
               alt="image-for-ui-design"
               className="h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-l-xl"
-            />
+            /> */}
+            <h2 className="text-4xl font-bold text-indigo-400 opacity-50 px-2 md:px-6 py-9">
+              User Interfce Design for Websites & Mobile Applications
+            </h2>
           </div>
-          <div className="flex flex-col justify-center w-full md:w-2/3 px-6 py-8">
-            <h4 className="mb-4 text-xl font-semibold text-zinc-50">
-              User Interface (UI) Design
-            </h4>
-            <p className="leading-relaxed text-stone-50">
+          <div className="dark:bg-gray-800/25 flex flex-col justify-center w-full px-6 py-8  backdrop-blur-md border-b  shadow-md border border-gray-800 bg-white/5">
+            <p className="leading-relaxed text-stone-50 text-md">
               I specialize in visually appealing and user-centered experiences.
               My approach revolves around understanding user needs and
               seamlessly translating them into elegant design solutions—from the
@@ -95,7 +95,7 @@ function Services() {
 
         {/* Frontend Development Card */}
         <motion.div
-          className="flex flex-col md:flex-row-reverse overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800 hover:-translate-y-1 shadow h-fit transition"
+          className="flex flex-col md:flex-row-reverse overflow-hidden rounded-lg mb-24 h-fit transition"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -103,17 +103,17 @@ function Services() {
           custom={3}
         >
           <div className="md:w-auto w-full h-auto">
-            <img
+            {/* <img
               src="/service-two.png"
               alt="image-of-front-end-development"
               className="h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-r-xl"
-            />
+            /> */}
+            <h2 className="text-4xl font-bold text-indigo-400 opacity-50 px-2 md:px-6 py-9">
+              Frontend Development for Websites & Mobile Applications
+            </h2>
           </div>
-          <div className="flex flex-col justify-center w-full md:w-2/3 px-6 py-8">
-            <h4 className="mb-4 text-xl font-semibold text-zinc-50">
-              Frontend Development
-            </h4>
-            <p className="leading-relaxed text-stone-50 ">
+          <div className="flex flex-col justify-center w-full px-6 py-8 backdrop-blur-md border-b shadow-md border border-gray-800 dark:bg-gray-800/25">
+            <p className="leading-relaxed text-stone-50 text-md">
               With precision and functionality, I bring designs to life. I
               convert static visuals into dynamic, interactive interfaces with
               ReactJS, adhering to industry best practices.
@@ -127,7 +127,7 @@ function Services() {
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 mt-12 gap-y-8">
           {[
             {
               icon: Icons.CodeIcon,
@@ -152,7 +152,7 @@ function Services() {
           ].map((feature, i) => (
             <motion.div
               key={i}
-              className="p-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 transition"
+              className="dark:bg-gray-800/50 py-6 px-4 rounded-lg inset-shadow-xs gap-y-12 backdrop-blur-md shadow-md border-b  border-gray-800"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
@@ -161,11 +161,11 @@ function Services() {
             >
               <div className="flex space-x-4 my-2 items-center">
                 {feature.icon({ className: "w-5 h-5 text-indigo-400" })}
-                <h2 className="font-semibold text-zinc-50 uppercase">
+                <h2 className="font-semibold text-zinc-100 uppercase">
                   {feature.title}
                 </h2>
               </div>
-              <p className="leading-relaxed text-stone-100">{feature.text}</p>
+              <p className="leading-relaxed text-stone-200">{feature.text}</p>
             </motion.div>
           ))}
         </div>

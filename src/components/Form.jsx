@@ -47,7 +47,7 @@ function Form() {
     <>
       <motion.form
         onSubmit={handleSubmit}
-        className="w-full p-4 text-stone-50 backdrop-blur-sm bg-white/10 border border-gray-800 rounded-md shadow-md"
+        className="w-full p-4 text-stone-50 backdrop-blur-md dark:bg-gray-800/50 border border-gray-800 rounded-md shadow-md"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
@@ -116,7 +116,7 @@ function Form() {
             type="checkbox"
             id="terms"
             required
-            className="mt-1 text-blue-500 focus:ring-blue-400"
+            className="mt-1 text-blue-500 focus:ring-blue-400 border"
           />
           <label htmlFor="terms" className="text-sm">
             Agree to Privacy Policy and Terms and Conditions
@@ -143,7 +143,7 @@ function Form() {
           className={`inline-block px-6 md:px-8 py-3 font-semibold text-white rounded-md transition ${
             loading
               ? "bg-gray-400 cursor-not-allowed"
-              : "bg-indigo-500 hover:bg-indigo-600"
+              : "bg-indigo-500/15 hover:bg-indigo-600"
           }`}
         >
           {loading ? "Sending..." : "Send Message"}
@@ -172,7 +172,7 @@ function Form() {
               </p>
               <button
                 onClick={handleClosePopup}
-                className="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600"
+                className="px-4 py-2 bg-indigo-500/15 text-white rounded-md hover:bg-indigo-600"
               >
                 Close
               </button>

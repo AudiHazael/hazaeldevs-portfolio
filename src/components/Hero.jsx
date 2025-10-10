@@ -40,18 +40,18 @@ function Hero() {
   return (
     <section
       id="home"
-      className="flex items-center w-full min-h-screen px-4 md:px-20 text-white bg-gradient-to-br from-zinc-950 via-gray-900 to-black overflow-hidden"
+      className="flex items-center w-full min-h-fit py-24  px-4 md:px-20 text-gray-200 bg-gradient-to-br from-zinc-950 via-gray-900 to-black border-b border-gray-900 overflow-hidden"
     >
       <div className="grid grid-cols-1 md:grid-cols-12 items-center w-full max-w-7xl mx-auto gap-8">
         {/* Text */}
         <motion.div
-          className="flex flex-col justify-center items-center space-y-6 md:col-span-12 text-center overflow-hidden w-full"
+          className="flex flex-col justify-center items-start my-24 space-y-4 md:col-span-12 overflow-hidden w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
         >
           <motion.h1
-            className="text-4xl text-indigo-400 font-ob"
+            className="text-3xl text-indigo-400 font-ob"
             variants={fadeInUp}
             custom={0.3}
           >
@@ -59,7 +59,7 @@ function Hero() {
           </motion.h1>
 
           <motion.h2
-            className="text-2xl font-bold md:text-5xl"
+            className="text-5xl font-bold leading-normal md:text-6xl"
             variants={fadeInUp}
             custom={0.6}
           >
@@ -83,7 +83,7 @@ function Hero() {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-lg px-8 py-3 font-semibold text-white transition bg-gradient-to-r bg-indigo-500 hover:bg-indigo-600  rounded-md hover:brightness-110"
+              className="inline-block text-lg px-8 py-3 font-semibold text-gray-200 transition bg-gradient-to-r bg-indigo-500/15 hover:bg-indigo-600/50 rounded-md hover:brightness-110"
             >
               {buttonText}
             </a>

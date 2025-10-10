@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 z-50 w-full bg-black/30 backdrop-blur-md border-b border-gray-800 shadow-md"
+      className="fixed top-0 left-0 z-50 w-full bg-black/10 backdrop-blur-md border-b border-white/5 shadow-md"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.1 }}
@@ -71,7 +71,7 @@ function Navbar() {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } absolute top-full left-0 w-full bg-black/90 px-6 py-4 md:static md:bg-transparent md:flex md:items-center md:space-x-6 md:w-auto transition-all duration-300 ease-in-out`}
+          } absolute top-full left-0 w-full bg-black/50 px-6 py-4 md:static md:bg-transparent md:flex md:items-center md:space-x-6 md:w-auto transition-all duration-300 ease-in-out`}
         >
           <ul className="flex flex-col px-4 py-4 md:p-0 md:flex-row md:space-y-0 space-y-3 text-white font-medium gap-4">
             <li>

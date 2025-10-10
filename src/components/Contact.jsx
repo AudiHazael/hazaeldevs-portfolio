@@ -47,7 +47,7 @@ function Contact() {
             </motion.h4>
 
             <motion.p
-              className="text-stone-200"
+              className="text-stone-200 text-md"
               variants={fadeInUp}
               custom={0.7}
             >
@@ -58,7 +58,7 @@ function Contact() {
             </motion.p>
 
             <motion.div
-              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md dark:bg-gray-800/50 border-b border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
               variants={fadeInUp}
               custom={0.9}
             >
@@ -72,7 +72,7 @@ function Contact() {
             </motion.div>
 
             <motion.div
-              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md dark:bg-gray-800/50 border-b border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
               variants={fadeInUp}
               custom={1.1}
             >
@@ -84,7 +84,7 @@ function Contact() {
             </motion.div>
 
             <motion.div
-              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-sm bg-white/10 border border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md dark:bg-gray-800/50 border-b border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
               variants={fadeInUp}
               custom={1.3}
             >

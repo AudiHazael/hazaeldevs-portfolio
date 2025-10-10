@@ -75,7 +75,7 @@ function Services() {
               alt="image-for-ui-design"
               className="h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-l-xl"
             /> */}
-            <h2 className="text-4xl font-bold text-indigo-400 px-2 md:px-6 py-9">
+            <h2 className="text-4xl font-bold text-indigo-400 px-4 md:px-6 py-9">
               User Interfce Design for Websites & Mobile Applications
             </h2>
           </div>
@@ -108,7 +108,7 @@ function Services() {
               alt="image-of-front-end-development"
               className="h-full w-full object-cover rounded-t-xl md:rounded-t-none md:rounded-r-xl"
             /> */}
-            <h2 className="text-4xl font-bold text-indigo-400 px-2 md:px-6 py-9">
+            <h2 className="text-4xl font-bold text-indigo-400 px-4 md:px-6 py-9">
               Frontend Development for Websites & Mobile Applications
             </h2>
           </div>

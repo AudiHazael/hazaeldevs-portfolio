@@ -80,6 +80,11 @@ function Navbar() {
               </a>
             </li>
             <li>
+              <a href="#about" className="hover:text-indigo-300">
+                About
+              </a>
+            </li>
+            <li>
               <a href="#services" className="hover:text-indigo-300">
                 Services
               </a>

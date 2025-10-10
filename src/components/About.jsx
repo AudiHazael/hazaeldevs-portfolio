@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Icons } from "./Icons"; // keep if you plan to use icons later
+import Socials from "./Socials";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -62,9 +62,7 @@ function About() {
               className="font-semibold tracking-wide text-indigo-400 uppercase"
               custom={0.6}
               variants={fadeInUp}
-            >
-              My Bio
-            </motion.h6>
+            ></motion.h6>
 
             <motion.h2
               className="text-3xl font-bold text-white md:text-4xl"
@@ -99,6 +97,16 @@ function About() {
               <h5 className="text-lg font-semibold text-white">
                 HazaelDevs • Audi Hazael
               </h5>
+
+              <motion.div
+                className="flex mt-6"
+                variants={fadeInUp}
+                initial="hidden"
+                animate="visible"
+                custom={0.6}
+              >
+                <Socials size="sm" gap={4} />
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>

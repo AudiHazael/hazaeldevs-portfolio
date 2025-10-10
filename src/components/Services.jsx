@@ -26,7 +26,7 @@ function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 bg-zinc-950 text-zinc-100 border-t border-zinc-800"
+      className="relative py-24  text-zinc-100 border-t border-zinc-800"
     >
       <script
         type="application/ld+json"
@@ -41,7 +41,7 @@ function Services() {
           viewport={{ once: true }}
           variants={fadeInUp}
           custom={0}
-          className="text-center mb-20"
+          className="md:text-center mb-16 flex flex-col justify-center"
         >
           <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-3">
             My Services
@@ -49,15 +49,11 @@ function Services() {
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Professional UI Design and Development Services
           </h3>
-          <p className="max-w-2xl mx-auto text-gray-400 text-base leading-relaxed">
-            I provide modern, detail-oriented solutions that combine great
-            design and clean development for seamless digital experiences.
-          </p>
         </motion.div>
 
         {/* --- UI Design Card --- */}
         <motion.div
-          className="group flex flex-col md:flex-row overflow-hidden rounded-xl bg-zinc-900/40 hover:bg-zinc-900/60 backdrop-blur-md transition-all duration-500 mb-16"
+          className="group flex flex-col md:flex-row overflow-hidden rounded-xlhover:bg-zinc-900/60 backdrop-blur-md transition-all duration-500 mb-16"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -69,7 +65,7 @@ function Services() {
               User Interface Design for Websites & Mobile Applications
             </h2>
           </div>
-          <div className="md:w-1/2 p-8">
+          <div className="md:w-1/2 p-8 bg-zinc-900/50 ">
             <p className="text-gray-300 leading-relaxed text-base">
               I specialize in visually appealing and user-centered experiences.
               My approach revolves around understanding user needs and
@@ -85,7 +81,7 @@ function Services() {
 
         {/* --- Frontend Development Card --- */}
         <motion.div
-          className="group flex flex-col md:flex-row-reverse overflow-hidden rounded-xl bg-zinc-900/40 hover:bg-zinc-900/60 backdrop-blur-md transition-all duration-500 mb-24"
+          className="group flex flex-col md:flex-row-reverse overflow-hidden rounded-xl hover:bg-zinc-900/60 backdrop-blur-md transition-all duration-500 mb-24"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
@@ -97,7 +93,7 @@ function Services() {
               Frontend Development for Websites & Mobile Applications
             </h2>
           </div>
-          <div className="md:w-1/2 p-8">
+          <div className="md:w-1/2 p-8 bg-zinc-900/50 ">
             <p className="text-gray-300 leading-relaxed text-base">
               With precision and functionality, I bring designs to life. I
               convert static visuals into dynamic, interactive interfaces with

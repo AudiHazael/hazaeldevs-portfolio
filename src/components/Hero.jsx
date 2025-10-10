@@ -43,7 +43,7 @@ function Hero() {
 
       <div className="relative z-10 flex flex-col items-center text-center w-full max-w-5xl space-y-6 backdrop-blur-[1px]">
         <motion.h1
-          className="text-2xl md:text-3xl text-indigo-400 font-medium tracking-wide"
+          className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 font-medium tracking-wide"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"

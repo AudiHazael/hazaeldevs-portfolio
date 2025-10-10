@@ -198,7 +198,7 @@ const Portfolio = () => {
                         href={item.previewLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 transition"
+                        className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md text-white bg-indigo-500/15 border border-gray-700 hover:bg-indigo-600 transition"
                       >
                         {Icons.LinkIcon({ className: "w-4 h-4" })}
                         Live Demo

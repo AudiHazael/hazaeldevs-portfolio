@@ -56,6 +56,9 @@ export default function Reviews() {
 
   return (
     <section className="max-w-7xl mx-auto py-8 px-4">
+      <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-3">
+        Testimonials
+      </h6>
       <motion.h2
         className="text-2xl font-bold mb-6 text-zinc-50"
         initial={{ opacity: 0, scale: 0.95 }}
@@ -80,7 +83,7 @@ export default function Reviews() {
         {reviews.map((r, i) => (
           <SwiperSlide key={i}>
             <motion.div
-              className="dark:bg-gray-800/50 rounded-lg shadow-md p-6 flex flex-col w-full h-auto md:h-86"
+              className="bg-zinc-900/40 rounded-lg shadow-md p-6 flex flex-col w-full h-auto md:h-86 border border-zinc-800 hover:border-indigo-400 transition-all duration-300"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut" }}

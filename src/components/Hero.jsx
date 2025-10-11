@@ -28,9 +28,15 @@ function Hero() {
       className="relative flex items-center justify-center w-full pt-20 px-6 md:px-20 text-gray-200 overflow-hidden"
     >
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15)_0%,transparent_70%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(9, 9, 11, 0.15)_0%,transparent_70%)] pointer-events-none"></div>
 
-      <div className="relative z-10 flex flex-col items-center md:items-start justify-center w-full max-w-5xl space-y-6 backdrop-blur-[1px] md:text-left">
+      {/* Subtle decorative glow */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500/20 blur-3xl rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/20 blur-3xl rounded-full animate-pulse"></div>
+      </div>
+
+      <div className="relative z-10 flex flex-col items-center md:items-start justify-center md:py-8 w-full max-w-5xl space-y-6 backdrop-blur-[1px] md:text-left">
         <motion.div
           className="flex items-end gap-x-8"
           variants={fadeInUp}

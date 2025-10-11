@@ -64,7 +64,7 @@ function Services() {
             <h2 className="text-2xl md:ml-8 md:text-3xl font-semibold text-indigo-400 leading-snug">
               User Interface Design for Websites <br /> & Mobile Applications
             </h2>
-            <div className="px-4 md:px-24 md:my-12 py-4 md:py-10 bg-zinc-900/40">
+            <div className="px-4 mt-6 md:px-24 md:my-12 py-4 md:py-10 bg-zinc-900/40">
               <p className="text-gray-300 leading-relaxed text-base">
                 I specialize in visually appealing and user-centered
                 experiences. My approach revolves around understanding user
@@ -80,11 +80,11 @@ function Services() {
 
           {/* --- Frontend Development Card --- */}
 
-          <div className="md:col-span-6 relative md:mx-24 py-20 h-full border-t md:border-t-0 md:border-l border-zinc-800">
+          <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full border-t md:border-t-0 md:border-l border-zinc-800">
             <h2 className="text-2xl md:text-3xl md:ml-8 font-semibold text-indigo-400 leading-snug">
               Frontend Development for Websites <br /> & Mobile Applications
             </h2>
-            <div className="p-6 md:px-24 md:my-12 md:py-10 bg-zinc-900/40 ">
+            <div className="p-6 mt-6 md:px-24 md:my-12 md:py-10 bg-zinc-900/40 ">
               <p className="text-gray-300 leading-relaxed text-base">
                 With precision and functionality, I bring designs to life. I
                 convert static visuals into dynamic, interactive interfaces with
@@ -151,7 +151,7 @@ function Services() {
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-gray-400 text-sm md:text-md leading-relaxed">
+              <p className="text-gray-400 text-[10px] md:text-md leading-relaxed">
                 {feature.text}
               </p>
             </motion.div>

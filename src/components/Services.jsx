@@ -57,19 +57,18 @@ function Services() {
           viewport={{ once: true }}
           custom={1}
         >
-          <div className="md:col-span-6 relative md:mx-24 py-10 md:py-20 h-full">
-            <span className="inline-block mb-2 text-sm tracking-wider text-indigo-400 uppercase">
+          <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full border-t md:border-t-0  border-zinc-800">
+            <span className="inline-block mb-2 text-sm md:ml-8 tracking-wider text-indigo-400 uppercase">
               Designer
             </span>
             <h2 className="text-2xl md:ml-8 md:text-3xl font-semibold text-gray-100 leading-snug">
               User Interface Design for Websites <br /> & Mobile Applications
             </h2>
-            <div className="px-4 mt-6 md:px-24 md:my-12 py-4 md:py-10 bg-zinc-900/40">
+            <div className="p-4 mt-4 md:px-20 md:my-12 md:py-10 bg-zinc-900/40 ">
               <p className="text-gray-300 leading-relaxed text-base">
                 I specialize in visually appealing and user-centered
-                experiences. My approach revolves around understanding user
-                needs and seamlessly translating them into elegant design
-                solutions—from the initial concept to the final product.
+                experiences, revolving around understanding user needs and
+                seamlessly translating them into elegant design solutions.
                 <br />
                 <br />I strive to create interfaces that not only engage users
                 but also improve their overall digital journey through a
@@ -80,14 +79,14 @@ function Services() {
 
           {/* --- Frontend Development Card --- */}
 
-          <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full border-t md:border-t-0 md:border-l border-zinc-800">
-            <span className="inline-block mb-2 text-sm tracking-wider text-indigo-400 uppercase">
+          <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full border-t md:border-t-0  border-zinc-800">
+            <span className="inline-block mb-2 text-sm md:ml-8 tracking-wider text-indigo-400 uppercase">
               Developer
             </span>
             <h2 className="text-2xl md:text-3xl md:ml-8 font-semibold text-gray-100 leading-snug">
               Frontend Development for Websites <br /> & Mobile Applications
             </h2>
-            <div className="p-6 mt-6 md:px-24 md:my-12 md:py-10 bg-zinc-900/40 ">
+            <div className="p-4 mt-6 md:px-20 md:my-12 md:py-10 bg-zinc-900/40 ">
               <p className="text-gray-300 leading-relaxed text-base">
                 With precision and functionality, I bring designs to life. I
                 convert static visuals into dynamic, interactive interfaces with

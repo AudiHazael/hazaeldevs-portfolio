@@ -57,7 +57,7 @@ function Services() {
           viewport={{ once: true }}
           custom={1}
         >
-          <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full border-t md:border-t-0  border-zinc-800">
+          <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full md:border-t-0  border-zinc-800">
             <span className="inline-block mb-2 text-sm md:ml-8 tracking-wider text-indigo-400 uppercase">
               Designer
             </span>

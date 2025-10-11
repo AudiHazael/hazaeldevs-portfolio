@@ -30,7 +30,7 @@ function Hero() {
       {/* Background Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15)_0%,transparent_70%)] pointer-events-none"></div>
 
-      <div className="relative z-10 flex flex-col md:items-start justify-center w-full max-w-5xl space-y-6 backdrop-blur-[1px] md:text-left">
+      <div className="relative z-10 flex flex-col items-center md:items-start justify-center w-full max-w-5xl space-y-6 backdrop-blur-[1px] md:text-left">
         <motion.div
           className="flex items-end gap-x-8"
           variants={fadeInUp}
@@ -63,7 +63,7 @@ function Hero() {
         </motion.div>
 
         <motion.h2
-          className="text-3xl font-bold text-zinc-50 leading-tight mt-4"
+          className="text-2xl text-center md:text-left font-bold text-zinc-50 leading-tight mt-4"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"

@@ -29,7 +29,7 @@ function Hero() {
     >
       {/* Subtle decorative glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute md:top-20 md:left-10 w-72 h-72 bg-indigo-500/20 blur-3xl rounded-full animate-pulse"></div>
+        <div className="absolute md:top-20 md:left-10 w-72 h-72 bg-indigo-700/20 blur-3xl rounded-full animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/20 blur-3xl rounded-full animate-pulse"></div>
       </div>
       {/* Background Glow */}

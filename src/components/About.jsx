@@ -38,7 +38,7 @@ function About() {
             <span className="inline-block mb-4 text-sm tracking-wider text-indigo-400 uppercase">
               Designer • Developer
             </span>
-            <h3 className="text-2xl font-semibold leading-snug text-white md:text-3xl">
+            <h3 className="text-xl font-semibold leading-snug text-white md:text-3xl">
               Designing the vision,{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
                 coding the reality.
@@ -46,7 +46,7 @@ function About() {
             </h3>
 
             {/* Decorative line */}
-            <div className="mt-6 w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
+            <div className="mt-4 w-20 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
 
             {/* Right bio content */}
             <motion.div

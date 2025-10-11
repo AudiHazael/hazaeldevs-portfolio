@@ -43,12 +43,9 @@ function Services() {
           custom={0}
           className="mb-2 flex flex-col justify-center items-start"
         >
-          <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-3">
+          <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-2">
             My Services
           </h6>
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Professional UI Design and Development Services
-          </h3>
         </motion.div>
 
         {/* --- UI Design Card --- */}
@@ -61,7 +58,10 @@ function Services() {
           custom={1}
         >
           <div className="md:col-span-6 relative md:mx-24 py-10 md:py-20 h-full">
-            <h2 className="text-2xl md:ml-8 md:text-3xl font-semibold text-indigo-400 leading-snug">
+            <span className="inline-block mb-2 text-sm tracking-wider text-indigo-400 uppercase">
+              Designer
+            </span>
+            <h2 className="text-2xl md:ml-8 md:text-3xl font-semibold text-gray-100 leading-snug">
               User Interface Design for Websites <br /> & Mobile Applications
             </h2>
             <div className="px-4 mt-6 md:px-24 md:my-12 py-4 md:py-10 bg-zinc-900/40">
@@ -81,7 +81,10 @@ function Services() {
           {/* --- Frontend Development Card --- */}
 
           <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full border-t md:border-t-0 md:border-l border-zinc-800">
-            <h2 className="text-2xl md:text-3xl md:ml-8 font-semibold text-indigo-400 leading-snug">
+            <span className="inline-block mb-2 text-sm tracking-wider text-indigo-400 uppercase">
+              Developer
+            </span>
+            <h2 className="text-2xl md:text-3xl md:ml-8 font-semibold text-gray-100 leading-snug">
               Frontend Development for Websites <br /> & Mobile Applications
             </h2>
             <div className="p-6 mt-6 md:px-24 md:my-12 md:py-10 bg-zinc-900/40 ">

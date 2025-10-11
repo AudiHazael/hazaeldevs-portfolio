@@ -38,7 +38,7 @@ function Hero() {
           animate="visible"
           custom={0.3}
         >
-          <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full ring-4 ring-purple-400/50 ring-offset-[3px] ring-offset-gray-900 shadow-lg shadow-purple-500/10 overflow-hidden">
+          <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full ring-2 ring-purple-400/50 ring-offset-[3px] ring-offset-gray-900 shadow-lg shadow-purple-500/10 overflow-hidden">
             <img
               src="/hazael-audi.jpg"
               alt="Hazael Audi"

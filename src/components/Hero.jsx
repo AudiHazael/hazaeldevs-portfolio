@@ -63,7 +63,7 @@ function Hero() {
         </motion.div>
 
         <motion.h2
-          className="text-2xl text-center md:text-left font-bold text-zinc-50 leading-tight mt-4"
+          className="text-4xl text-center md:text-left font-bold text-zinc-50 leading-tight mt-4"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"

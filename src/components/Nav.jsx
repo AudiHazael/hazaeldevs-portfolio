@@ -144,7 +144,7 @@ function Navbar() {
       {/* --- Mobile Dropdown Menu --- */}
       {isOpen && (
         <div className="md:hidden bg-black/90 backdrop-blur-md border-t border-white/10 py-4">
-          <ul className="flex flex-col items-center gap-4 text-white font-medium">
+          <ul className="flex flex-col ml-16 gap-4 text-white font-medium">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a

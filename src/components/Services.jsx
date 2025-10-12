@@ -43,10 +43,10 @@ function Services() {
           custom={0}
           className="flex flex-col justify-center items-start"
         >
-          <h6 className="text-sm md:mx-24 font-semibold tracking-widest text-indigo-400 uppercase">
+          <h6 className="text-sm md:mx-12 font-semibold tracking-widest text-indigo-400 uppercase">
             My Services
           </h6>
-          <h3 className="text-2xl md:mx-24 md:text-4xl font-bold text-zinc-50">
+          <h3 className="text-2xl md:mx-12 md:text-4xl font-bold text-zinc-50">
             What I Do
           </h3>
         </motion.div>
@@ -60,14 +60,15 @@ function Services() {
           viewport={{ once: false, amount: 0.3 }}
           custom={1}
         >
-          <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full md:border-t-0  border-zinc-800">
+          <div className="md:col-span-6 relative md:mx-12 pt-16 pb-8 h-full md:border-t-0  border-zinc-800">
             <span className="inline-block mb-2 text-sm md:ml-8 tracking-wider text-indigo-400 uppercase">
               Design
             </span>
             <h2 className="text-2xl md:ml-8 md:text-3xl font-semibold text-gray-100 leading-snug">
-              User Interface Design for Websites <br /> & Mobile Applications
+              User Interface Design for Websites{" "}
+              <br className="hidden xl:block" /> & Mobile Applications
             </h2>
-            <div className="p-4 mt-4 md:px-20 md:my-12 md:py-10 bg-zinc-900/40 ">
+            <div className="p-4 mt-4 md:px-10 md:my-12 xl:px-20 md:py-10 bg-zinc-900/40 ">
               <p className="text-gray-300 leading-relaxed text-base">
                 I specialize in visually appealing and user-centered
                 experiences, revolving around understanding user needs and
@@ -82,14 +83,15 @@ function Services() {
 
           {/* --- Frontend Development Card --- */}
 
-          <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full border-t md:border-t-0  border-zinc-800">
+          <div className="md:col-span-6 relative md:mx-12 pt-16 pb-8 h-full border-t md:border-t-0  border-zinc-800">
             <span className="inline-block mb-2 text-sm md:ml-8 tracking-wider text-indigo-400 uppercase">
               Develop
             </span>
             <h2 className="text-2xl md:text-3xl md:ml-8 font-semibold text-gray-100 leading-snug">
-              Frontend Development for Websites <br /> & Mobile Applications
+              Frontend Development for Websites
+              <br className="hidden xl:block" /> & Mobile Applications
             </h2>
-            <div className="p-4 mt-6 md:px-20 md:my-12 md:py-10 bg-zinc-900/40 ">
+            <div className="p-4 mt-6 md:px-10 xl:px-20 md:my-12 md:py-10 bg-zinc-900/40 ">
               <p className="text-gray-300 leading-relaxed text-base">
                 With precision and functionality, I bring designs to life. I
                 convert static visuals into dynamic, interactive interfaces with

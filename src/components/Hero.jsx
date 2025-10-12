@@ -59,7 +59,7 @@ const Hero = () => {
         className="relative z-10 flex flex-col items-center md:items-start justify-center py-8 w-full max-w-5xl space-y-6 backdrop-blur-[1px]"
       >
         {/* --- Image + Name Row --- */}
-        <motion.div variants={fadeInUp} className="flex items-end gap-x-8">
+        <motion.div variants={fadeInUp} className="flex items-end gap-x-6">
           <motion.div
             variants={fadeInUp}
             whileHover={{ scale: 1.05, rotate: 2 }}
@@ -81,7 +81,7 @@ const Hero = () => {
               {heading}
             </motion.h1>
             <motion.div variants={fadeInUp} className="mt-2">
-              <Socials size="sm" />
+              <Socials size="sm" gap={4} />
             </motion.div>
           </motion.div>
         </motion.div>

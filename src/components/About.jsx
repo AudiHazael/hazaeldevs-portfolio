@@ -17,7 +17,7 @@ const fadeInUp = {
 
 function About() {
   return (
-    <section className="relative py-12 md:my-24 pt-12 pb-6 md:px-8 overflow-hidden bg-gradient-to-b from-gray-900 via-zinc-900 to-black text-gray-100 backdrop-blur-3xl shadow-2xl">
+    <section className="relative md:my-24 py-16 md:px-8 overflow-hidden bg-gradient-to-b from-gray-900 via-zinc-900 to-black text-gray-100 backdrop-blur-3xl shadow-2xl">
       {/* Subtle decorative glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500/15 blur-3xl rounded-full animate-pulse"></div>
@@ -46,9 +46,8 @@ function About() {
             </h3>
 
             {/* Decorative line */}
-            <div className="mt-4 w-20 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
+            <div className="mt-4 w-36 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
 
-            {/* Right bio content */}
             <motion.div
               className="md:col-span-6 space-y-5"
               initial="hidden"
@@ -98,7 +97,7 @@ function About() {
                 </h5>
 
                 <motion.div
-                  className="flex mt-6"
+                  className="flex my-6"
                   variants={fadeInUp}
                   initial="hidden"
                   animate="visible"

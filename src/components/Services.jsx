@@ -26,7 +26,7 @@ function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 text-zinc-100 border-t border-zinc-800"
+      className="relative py-12 text-zinc-100 border-t border-zinc-800"
     >
       <script
         type="application/ld+json"

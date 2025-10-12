@@ -17,7 +17,7 @@ const fadeInUp = {
 
 function About() {
   return (
-    <section className="relative md:my-24 pt-12 pb-6 md:px-8 overflow-hidden bg-gradient-to-b from-gray-900 via-zinc-900 to-black text-gray-100 backdrop-blur-3xl shadow-2xl">
+    <section className="relative py-12 md:my-24 pt-12 pb-6 md:px-8 overflow-hidden bg-gradient-to-b from-gray-900 via-zinc-900 to-black text-gray-100 backdrop-blur-3xl shadow-2xl">
       {/* Subtle decorative glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500/15 blur-3xl rounded-full animate-pulse"></div>

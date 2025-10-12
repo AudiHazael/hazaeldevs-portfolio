@@ -116,7 +116,7 @@ const Portfolio = () => {
         </motion.h6>
 
         <motion.h3
-          className="text-3xl md:text-4xl font-bold text-zinc-50 mb-10"
+          className="text-2xl md:text-4xl font-bold text-zinc-50 mb-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

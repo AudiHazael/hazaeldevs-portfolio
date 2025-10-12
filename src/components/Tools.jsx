@@ -18,7 +18,7 @@ function Tools() {
   ];
 
   return (
-    <section className="py-10 text-gray-800">
+    <section className="py-4 text-gray-800">
       <div className="flex flex-wrap items-center justify-center max-w-6xl gap-12 px-2 mx-auto">
         {tools.map((tool, i) => (
           <motion.div

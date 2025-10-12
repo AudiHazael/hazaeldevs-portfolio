@@ -38,14 +38,17 @@ function Services() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.3 }}
           variants={fadeInUp}
           custom={0}
-          className="mb-2 flex flex-col justify-center items-start"
+          className="flex flex-col justify-center items-start"
         >
-          <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-2">
+          <h6 className="text-sm md:mx-24 font-semibold tracking-widest text-indigo-400 uppercase">
             My Services
           </h6>
+          <h3 className="text-2xl md:mx-24 md:text-4xl font-bold text-zinc-50">
+            What I Do
+          </h3>
         </motion.div>
 
         {/* --- UI Design Card --- */}
@@ -54,12 +57,12 @@ function Services() {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.3 }}
           custom={1}
         >
           <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full md:border-t-0  border-zinc-800">
             <span className="inline-block mb-2 text-sm md:ml-8 tracking-wider text-indigo-400 uppercase">
-              Designer
+              Design
             </span>
             <h2 className="text-2xl md:ml-8 md:text-3xl font-semibold text-gray-100 leading-snug">
               User Interface Design for Websites <br /> & Mobile Applications
@@ -81,7 +84,7 @@ function Services() {
 
           <div className="md:col-span-6 relative md:mx-24 pt-16 pb-8 h-full border-t md:border-t-0  border-zinc-800">
             <span className="inline-block mb-2 text-sm md:ml-8 tracking-wider text-indigo-400 uppercase">
-              Developer
+              Develop
             </span>
             <h2 className="text-2xl md:text-3xl md:ml-8 font-semibold text-gray-100 leading-snug">
               Frontend Development for Websites <br /> & Mobile Applications
@@ -140,7 +143,7 @@ function Services() {
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.3 }}
               custom={i + 3}
               className="w-full group p-6 rounded-lg border-b border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300"
             >

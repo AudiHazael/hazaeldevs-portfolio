@@ -31,7 +31,7 @@ function About() {
             className="md:col-span-12 relative"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             custom={0.2}
             variants={fadeInUp}
           >
@@ -53,7 +53,7 @@ function About() {
               className="md:col-span-6 space-y-5"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.3 }}
               custom={0.4}
               variants={fadeInUp}
             >

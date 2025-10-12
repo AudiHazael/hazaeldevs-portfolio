@@ -95,7 +95,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="py-20 bg-inherit text-gray-200 border-t border-gray-800"
+      className="py-12 bg-inherit text-gray-200 border-t border-gray-800"
     >
       {/* Structured Data for SEO */}
       <script

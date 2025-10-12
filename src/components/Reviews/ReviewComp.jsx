@@ -55,7 +55,7 @@ export default function Reviews() {
   };
 
   return (
-    <section className="md:max-w-[80%] mx-auto py-8 px-4">
+    <section className="md:max-w-[80%] mx-auto px-4">
       <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-3">
         Testimonials
       </h6>
@@ -78,7 +78,7 @@ export default function Reviews() {
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
-        className="pb-8"
+        className=""
       >
         {reviews.map((r, i) => (
           <SwiperSlide key={i}>

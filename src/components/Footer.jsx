@@ -17,8 +17,8 @@ const fadeInUp = {
 
 function Footer() {
   return (
-    <footer className="py-5 text-white border-t-1 border-gray-800">
-      <div className="container px-4 mx-auto py-8">
+    <footer className="pt-12 pb-4 text-white border-t-1 border-gray-800">
+      <div className="container px-4 mx-auto">
         <motion.div
           className="mb-8"
           initial="hidden"

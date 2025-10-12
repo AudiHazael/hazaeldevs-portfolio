@@ -136,14 +136,13 @@ function Form() {
           value="Hello 👋, thank you for contacting us! We’ve received your message and will reply shortly."
         />
 
-        {/* Submit Button with Loading State */}
         <button
           type="submit"
           disabled={loading}
-          className={`inline-block px-6 md:px-8 py-3 font-semibold text-white rounded-md transition ${
+          className={`inline-block px-6 md:px-8 py-3 font-semibold rounded-md border transition-all duration-300 ${
             loading
-              ? "bg-gray-400 cursor-not-allowed"
-              : "bg-indigo-500/15 hover:bg-indigo-600"
+              ? "border-gray-500 text-gray-400 cursor-not-allowed"
+              : "border-purple-500/40 text-purple-300 hover:border-indigo-400 hover:text-indigo-200"
           }`}
         >
           {loading ? "Sending..." : "Send Message"}
@@ -160,19 +159,19 @@ function Form() {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white text-gray-900 rounded-lg shadow-lg max-w-sm w-full p-6 text-center"
+              className="bg-zinc-900/40 backdrop-blur-3xl shadow-2xl border border-gray-800 text-gray-100 rounded-lg  max-w-md w-full p-12 text-center"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
             >
               <h2 className="text-xl font-semibold mb-2">✅ Form Submitted</h2>
-              <p className="mb-4 text-gray-600">
+              <p className="mb-4 text-gray-200">
                 Thank you! Your form has been submitted. We’ll contact you as
                 soon as possible.
               </p>
               <button
                 onClick={handleClosePopup}
-                className="px-4 py-2 bg-indigo-500/15 text-white rounded-md hover:bg-indigo-600"
+                className="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600"
               >
                 Close
               </button>

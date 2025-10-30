@@ -68,7 +68,7 @@ function Services() {
               User Interface Design for Websites{" "}
               <br className="hidden xl:block" /> & Mobile Applications
             </h2>
-            <div className="p-4 mt-4 md:px-10 md:my-12 xl:px-20 md:py-10 bg-zinc-900/40 ">
+            <div className="p-4 mt-8 md:px-10 md:my-12 xl:px-20 md:py-10 bg-zinc-900/40 border border-zinc-800">
               <p className="text-gray-300 leading-relaxed text-base">
                 I specialize in visually appealing and user-centered
                 experiences, revolving around understanding user needs and
@@ -91,7 +91,7 @@ function Services() {
               Frontend Development for Websites
               <br className="hidden xl:block" /> & Mobile Applications
             </h2>
-            <div className="p-4 mt-6 md:px-10 xl:px-20 md:my-12 md:py-10 bg-zinc-900/40 ">
+            <div className="p-4 mt-8 md:px-10 xl:px-20 md:my-12 md:py-10 bg-zinc-900/40 border border-zinc-800">
               <p className="text-gray-300 leading-relaxed text-base">
                 With precision and functionality, I bring designs to life. I
                 convert static visuals into dynamic, interactive interfaces with
@@ -147,7 +147,7 @@ function Services() {
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
               custom={i + 3}
-              className="w-full group p-6 rounded-lg border-b border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300"
+              className="w-full group p-6 rounded-lg border border-zinc-800/75 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300"
             >
               <div className="flex items-center space-x-3 mb-8">
                 {feature.icon({

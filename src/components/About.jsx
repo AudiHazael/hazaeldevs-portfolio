@@ -46,7 +46,7 @@ function About() {
             </h3>
 
             {/* Decorative line */}
-            <div className="mt-4 w-36 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
+            {/* <div className="mt-4 w-36 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div> */}
 
             <motion.div
               className="md:col-span-6 space-y-5"

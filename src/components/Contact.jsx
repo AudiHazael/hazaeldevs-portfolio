@@ -58,7 +58,7 @@ function Contact() {
             </motion.p>
 
             <motion.div
-              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md dark:bg-zinc-900/40 border-b border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md bg-zinc-900/40 border border-gray-800/75 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
               variants={fadeInUp}
               custom={0.9}
             >
@@ -72,7 +72,7 @@ function Contact() {
             </motion.div>
 
             <motion.div
-              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md dark:bg-zinc-900/40 border-b border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md bg-zinc-900/40 border border-gray-800/75 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
               variants={fadeInUp}
               custom={1.1}
             >
@@ -84,7 +84,7 @@ function Contact() {
             </motion.div>
 
             <motion.div
-              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md dark:bg-zinc-900/40 border-b border-gray-800 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md bg-zinc-900/40 border border-gray-800/75 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
               variants={fadeInUp}
               custom={1.3}
             >

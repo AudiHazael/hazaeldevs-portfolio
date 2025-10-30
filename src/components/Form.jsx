@@ -23,16 +23,31 @@ function Form() {
     setLoading(true);
 
     const formData = new FormData(e.target);
-    try {
-      await fetch("https://formsubmit.co/c41c51ccdd0636aed8eba6d6d1ef1bad", {
-        method: "POST",
-        body: formData,
-      });
 
-      setShowPopup(true);
-      e.target.reset();
+    try {
+      // ✅ Use FormSubmit JSON endpoint to avoid redirect issues
+      const response = await fetch(
+        "https://formsubmit.co/ajax/c41c51ccdd0636aed8eba6d6d1ef1bad",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: formData,
+        }
+      );
+
+      if (response.ok) {
+        setShowPopup(true);
+        e.target.reset();
+      } else {
+        const errorData = await response.json();
+        console.error("FormSubmit error:", errorData);
+        alert("Submission failed. Please try again.");
+      }
     } catch (error) {
-      console.error("Form submission error:", error);
+      console.error("Network error:", error);
+      alert("There was a network error. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -40,21 +55,31 @@ function Form() {
 
   const handleClosePopup = () => {
     setShowPopup(false);
-    window.location.reload(); // Refresh page
   };
 
   return (
     <>
       <motion.form
         onSubmit={handleSubmit}
-        className="w-full p-4 text-stone-50 backdrop-blur-md dark:bg-zinc-900/40 border border-gray-800 rounded-md shadow-md"
+        className="w-full p-4 text-stone-50 backdrop-blur-md bg-zinc-900/40 border border-gray-800 rounded-md shadow-md"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
         variants={fadeInUp}
         custom={0.2}
       >
+        {/* Hidden Fields for FormSubmit */}
         <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_blacklist" value="spam, ads" />
+        <input type="hidden" name="_template" value="box" />
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Hello 👋, thank you for contacting us! We’ve received your message and will reply shortly."
+        />
+
+        {/* Forward a copy to your Gmail */}
+        <input type="hidden" name="_cc" value="hazaelaudi@gmail.com" />
 
         {/* Name */}
         <div className="mb-4">
@@ -66,7 +91,7 @@ function Form() {
             id="name"
             name="name"
             required
-            className="w-full px-3 py-2 border border-gray-800 rounded-md bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full px-3 py-2 border border-gray-800/75 rounded-md bg-zinc-800/25 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
@@ -80,7 +105,7 @@ function Form() {
             id="email"
             name="email"
             required
-            className="w-full px-3 py-2 border border-gray-800 rounded-md bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full px-3 py-2 border border-gray-800/75 rounded-md bg-zinc-800/25 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
@@ -93,7 +118,7 @@ function Form() {
             type="text"
             id="subject"
             name="_subject"
-            className="w-full px-3 py-2 border border-gray-800 rounded-md bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full px-3 py-2 border border-gray-800/75 rounded-md bg-zinc-800/25 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
@@ -106,7 +131,8 @@ function Form() {
             id="message"
             name="message"
             rows="4"
-            className="w-full px-3 py-2 border border-gray-800 rounded-md bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
+            className="w-full px-3 py-2 border border-gray-800/75 rounded-md bg-zinc-800/25 focus:outline-none focus:ring-2 focus:ring-blue-400"
           ></textarea>
         </div>
 
@@ -123,19 +149,7 @@ function Form() {
           </label>
         </div>
 
-        {/* Hidden Fields for FormSubmit */}
-        <input type="hidden" name="_blacklist" value="spam, ads" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_cc" value="hazaelaudi@gmail.com" />
-        <input type="hidden" name="_bcc" value="hazaelaudi@gmail.com" />
-        <input type="hidden" name="_replyto" value="%email%" />
-
-        <input
-          type="hidden"
-          name="_autoresponse"
-          value="Hello 👋, thank you for contacting us! We’ve received your message and will reply shortly."
-        />
-
+        {/* Submit Button */}
         <button
           type="submit"
           disabled={loading}
@@ -159,15 +173,14 @@ function Form() {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-zinc-900/40 backdrop-blur-3xl shadow-2xl border border-gray-800 text-gray-100 rounded-lg  max-w-md w-full p-12 text-center"
+              className="bg-zinc-900/40 backdrop-blur-3xl shadow-2xl border border-gray-800 text-gray-100 rounded-lg max-w-md w-full p-12 text-center"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
             >
               <h2 className="text-xl font-semibold mb-2">✅ Form Submitted</h2>
               <p className="mb-4 text-gray-200">
-                Thank you! Your form has been submitted. We’ll contact you as
-                soon as possible.
+                Thank you! Your message has been sent successfully.
               </p>
               <button
                 onClick={handleClosePopup}

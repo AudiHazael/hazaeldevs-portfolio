@@ -83,20 +83,25 @@ export default function Reviews() {
         {reviews.map((r, i) => (
           <SwiperSlide key={i}>
             <motion.div
-              className="bg-zinc-900/40 rounded-lg shadow-md p-6 flex flex-col w-full h-auto md:h-86 border border-zinc-800 hover:border-indigo-400 transition-all duration-300"
-              initial={{ opacity: 0, scale: 0.95 }}
+              className="bg-zinc-900/40 rounded-xl shadow-md p-6 flex flex-col justify-between w-full h-[320px] md:h-[340px] border border-zinc-800 hover:border-indigo-400 transition-all duration-300"
+              initial={{ opacity: 0, scale: 0.97 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
             >
+              {/* Rating */}
               <p className="text-yellow-500 text-lg mb-2">
                 {"★".repeat(r.rating)}
                 {"☆".repeat(5 - r.rating)}
               </p>
-              <p className="text-zinc-50 flex-grow font-light">“{r.body}”</p>
+
+              {/* Review Body */}
+              <p className="text-zinc-50 text-sm flex-grow leading-relaxed italic">
+                “{r.body}”
+              </p>
 
               {/* Avatar + Author */}
-              <div className="flex items-center mt-4">
+              <div className="flex items-center mt-4 pt-4 border-t border-zinc-800">
                 {r.avatar && (
                   <img
                     src={r.avatar}
@@ -105,12 +110,19 @@ export default function Reviews() {
                   />
                 )}
                 <div>
-                  <span className="text-md font-semibold text-zinc-50">
+                  <span className="text-md font-semibold text-zinc-50 block">
                     {r.author}
                   </span>
-                  <br />
-                  <span className="text-md text-zinc-50">{r.post}</span>
-                  <span className="text-sm text-zinc-50">{r.organization}</span>
+                  {r.post && (
+                    <span className="text-sm text-gray-400 block">
+                      {r.post}
+                    </span>
+                  )}
+                  {r.organization && (
+                    <span className="text-xs text-gray-500">
+                      {r.organization}
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.div>

@@ -147,7 +147,7 @@ function Services() {
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
               custom={i + 3}
-              className="w-full group p-4 rounded-lg border border-zinc-800/75 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300 h-44 flex flex-col justify-start items-start"
+              className="w-full group px-2 py-4  rounded-lg border border-zinc-800/75 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300 h-44 flex flex-col justify-start items-start"
             >
               <div className="flex items-center space-x-3 mb-4">
                 {feature.icon({

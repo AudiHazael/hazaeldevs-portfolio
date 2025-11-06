@@ -2,7 +2,7 @@ import { SitemapStream } from "sitemap";
 import { createWriteStream, writeFileSync } from "fs";
 import { finished } from "stream/promises";
 
-const hostname = "https://hazaeldevs-portfolio.vercel.app"; // no trailing slash
+const hostname = "https://hazaeldevs.com"; // no trailing slash
 
 const links = [
   { url: "/", changefreq: "daily", priority: 1.0 },

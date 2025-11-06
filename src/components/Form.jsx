@@ -156,7 +156,7 @@ function Form() {
           className={`inline-block px-6 md:px-8 py-3 font-semibold rounded-md border transition-all duration-300 ${
             loading
               ? "border-gray-500 text-gray-400 cursor-not-allowed"
-              : "border-purple-500/40 text-purple-300 hover:border-indigo-400 hover:text-indigo-200"
+              : " text-white border-gray-700 bg-indigo-500/15 border  hover:bg-indigo-600 transition"
           }`}
         >
           {loading ? "Sending..." : "Send Message"}

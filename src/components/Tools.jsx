@@ -6,6 +6,7 @@ import {
   FaBootstrap,
   FaGithub,
 } from "react-icons/fa";
+import Tailwind from "./Tailwind";
 import { motion } from "framer-motion";
 
 function Tools() {
@@ -15,6 +16,7 @@ function Tools() {
     { icon: <FaSass fontSize="2rem" color="#cd6799" />, delay: 0.4 },
     { icon: <FaBootstrap fontSize="2rem" color="#7952b3" />, delay: 0.6 },
     { icon: <FaGithub fontSize="2rem" className="text-white" />, delay: 0.8 },
+    { icon: <Tailwind />, delay: 1.0 },
   ];
 
   return (

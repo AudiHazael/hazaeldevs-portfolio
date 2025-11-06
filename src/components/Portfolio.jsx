@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const BASE_URL = "https://hazaeldevs-portfolio.vercel.app/";
+const BASE_URL = "https://hazaeldevs.com/";
 
 const portfolioItems = [
   {

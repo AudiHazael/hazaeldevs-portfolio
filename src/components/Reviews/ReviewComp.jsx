@@ -16,8 +16,8 @@ export default function Reviews() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Haza’ElDevs Web Development",
-    image: "https://hazaeldevs-portfolio.vercel.app/og-preview.png",
-    url: "https://hazaeldevs-portfolio.vercel.app/",
+    image: "https://hazaeldevs.com/og-preview.png",
+    url: "https://hazaeldevs.com/",
 
     address: {
       "@type": "PostalAddress",

@@ -1,6 +1,14 @@
 // reviews.js
 const reviews = [
   {
+    author: "Gladys Zigwai",
+    rating: 5,
+    body: "",
+    avatar: "/Gladys.png",
+    post: "Operations Manager, ",
+    organization: "Karez Nigeria Ltd.",
+  },
+  {
     author: "Isaac Ekele",
     rating: 5,
     body: "Working with Haza’ElDevs was a fantastic experience. He built a clean, responsive website for my business and even explained how to manage it on my own. The process was smooth, and he delivered right on schedule",

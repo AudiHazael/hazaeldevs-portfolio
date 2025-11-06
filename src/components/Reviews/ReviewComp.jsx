@@ -110,19 +110,21 @@ export default function Reviews() {
                   />
                 )}
                 <div>
-                  <span className="text-md font-semibold text-zinc-50 block">
+                  <span className="text-md mb-1 font-semibold text-zinc-50 block">
                     {r.author}
                   </span>
-                  {r.post && (
-                    <span className="text-sm text-gray-400 block">
-                      {r.post}
-                    </span>
-                  )}
-                  {r.organization && (
-                    <span className="text-xs text-gray-500">
-                      {r.organization}
-                    </span>
-                  )}
+                  <div className="flex gap-2">
+                    {r.post && (
+                      <span className="text-xs md:text-sm text-gray-300 block">
+                        {r.post}
+                      </span>
+                    )}
+                    {r.organization && (
+                      <span className="text-xs md:text-sm text-gray-400">
+                        {r.organization}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>

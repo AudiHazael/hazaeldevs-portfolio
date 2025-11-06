@@ -147,9 +147,9 @@ function Services() {
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
               custom={i + 3}
-              className="w-full group p-6 rounded-lg border border-zinc-800/75 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300"
+              className="w-full group p-4 rounded-lg border border-zinc-800/75 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300 h-36"
             >
-              <div className="flex items-center space-x-3 mb-8">
+              <div className="flex items-center space-x-3 mb-4">
                 {feature.icon({
                   className:
                     "w-6 h-6 text-indigo-400 group-hover:text-indigo-300 transition-colors",
@@ -158,7 +158,7 @@ function Services() {
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-gray-400 text-[10px] md:text-md leading-relaxed">
+              <p className="text-gray-300 text-sm md:text-md leading-relaxed">
                 {feature.text}
               </p>
             </motion.div>

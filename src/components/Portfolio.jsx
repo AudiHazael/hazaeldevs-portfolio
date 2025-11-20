@@ -216,7 +216,7 @@ const Portfolio = () => {
             }}
             centeredSlides={false}
             grabCursor={true}
-            className="!pb-10 cursor-grab"
+            className="pb-10 cursor-grab"
           >
             {portfolioItems.map((item, i) => (
               <SwiperSlide key={i}>

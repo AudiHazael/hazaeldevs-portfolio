@@ -76,7 +76,7 @@ const Hero = () => {
           <motion.div variants={fadeInUp} className="flex flex-col justify-end">
             <motion.h1
               variants={fadeInUp}
-              className="text-3xl md:text-4xl mb-2 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+              className="text-3xl md:text-4xl mb-2 font-semibold text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400"
             >
               {heading}
             </motion.h1>

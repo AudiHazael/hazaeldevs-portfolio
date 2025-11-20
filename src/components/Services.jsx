@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Icons } from "./Icons";
+import { Code, LayoutDashboard, MonitorSmartphone, Rocket } from "lucide-react";
+import { DevicePhoneMobileIcon, BoltIcon } from "@heroicons/react/24/outline";
 
 function Services() {
   const fadeInUp = {
@@ -12,28 +13,52 @@ function Services() {
     }),
   };
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "Frontend Development",
-    name: "Professional Frontend Web Development Services",
-    description:
-      "Custom development services using modern frameworks like React and Next.js to build fast, responsive, and SEO-friendly user interfaces.",
-    provider: { "@type": "Person", name: "Haza’ElDevs" },
-    areaServed: { "@type": "Country", name: "Worldwide" },
-  };
+  // Services data
+  const services = [
+    {
+      title: "Business Website",
+      img: "/business-website.jpg", // add your image paths
+      desc: "Professional websites for businesses to establish their online presence and attract clients.",
+    },
+    {
+      title: "Landing Pages",
+      img: "/landing-page.jpg",
+      desc: "High-converting landing pages designed to maximize leads and drive sales.",
+    },
+    {
+      title: "E-commerce Website",
+      img: "/ecommerce.jpg",
+      desc: "Fully functional e-commerce websites with seamless shopping experience and responsive design.",
+    },
+  ];
+
+  // Reasons data
+  const reasons = [
+    {
+      title: "Modern & Mobile Friendly",
+      icon: MonitorSmartphone,
+      desc: "All websites are responsive, mobile-optimized, and built using modern design principles.",
+    },
+    {
+      title: "Fast Delivery",
+      icon: BoltIcon,
+      desc: "I deliver projects quickly without compromising on quality or performance.",
+    },
+    {
+      title: "SEO Ready",
+      icon: Rocket,
+      desc: "Websites are optimized for search engines to help your business get discovered online.",
+    },
+    {
+      title: "Affordable Pricing",
+      icon: Code,
+      desc: "High-quality websites at reasonable prices that suit your budget.",
+    },
+  ];
 
   return (
-    <section
-      id="services"
-      className="relative py-12 text-zinc-100 border-t border-zinc-800"
-    >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-
-      <div className="md:max-w-9/10 px-6 mx-auto">
+    <section className="relative py-12 text-zinc-100 border-t border-zinc-800 bg-inherit overflow-hidden">
+      <div className="md:max-w-[80%] mx-auto px-6">
         {/* Header */}
         <motion.div
           initial="hidden"
@@ -41,128 +66,90 @@ function Services() {
           viewport={{ once: false, amount: 0.3 }}
           variants={fadeInUp}
           custom={0}
-          className="flex flex-col justify-center items-start"
+          className="flex flex-col justify-center items-start mb-12"
         >
-          <h6 className="text-sm md:mx-12 font-semibold tracking-widest text-indigo-400 uppercase">
+          <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase">
             My Services
           </h6>
-          <h3 className="text-2xl md:mx-12 md:text-4xl font-bold text-zinc-50">
-            What I Do
+          <h3 className="text-2xl md:text-4xl font-bold text-zinc-50">
+            What I Offer
           </h3>
         </motion.div>
 
-        {/* --- UI Design Card --- */}
-        <motion.div
-          className="group grid grid-cols-1 md:grid-cols-12 justify-center items-stretch overflow-hidden rounded-xl mb-12"
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-          custom={1}
-        >
-          <div className="md:col-span-6 relative md:mx-12 pt-16 pb-8 h-full md:border-t-0  border-zinc-800">
-            <span className="inline-block mb-2 text-sm md:ml-8 tracking-wider text-indigo-400 uppercase">
-              Design
-            </span>
-            <h2 className="text-2xl md:ml-8 md:text-3xl font-semibold text-gray-100 leading-snug">
-              User Interface Design for Websites{" "}
-              <br className="hidden xl:block" /> & Mobile Applications
-            </h2>
-            <div className="p-4 mt-8 md:px-10 md:my-12 xl:px-20 md:py-10 bg-zinc-900/40 border border-zinc-800">
-              <p className="text-gray-300 leading-relaxed text-base">
-                I specialize in visually appealing and user-centered
-                experiences, revolving around understanding user needs and
-                seamlessly translating them into elegant design solutions.
-                <br />
-                <br />I strive to create interfaces that not only engage users
-                but also improve their overall digital journey through a
-                meticulous blend of aesthetics and functionality.
-              </p>
-            </div>
-          </div>
-
-          {/* --- Frontend Development Card --- */}
-
-          <div className="md:col-span-6 relative md:mx-12 pt-16 pb-8 h-full border-t md:border-t-0  border-zinc-800">
-            <span className="inline-block mb-2 text-sm md:ml-8 tracking-wider text-indigo-400 uppercase">
-              Develop
-            </span>
-            <h2 className="text-2xl md:text-3xl md:ml-8 font-semibold text-gray-100 leading-snug">
-              Frontend Development for Websites
-              <br className="hidden xl:block" /> & Mobile Applications
-            </h2>
-            <div className="p-4 mt-8 md:px-10 xl:px-20 md:my-12 md:py-10 bg-zinc-900/40 border border-zinc-800">
-              <p className="text-gray-300 leading-relaxed text-base">
-                With precision and functionality, I bring designs to life. I
-                convert static visuals into dynamic, interactive interfaces with
-                ReactJS, adhering to industry best practices.
-                <br />
-                <br />
-                My experience includes developing responsive and scalable user
-                interface (UI) components that ensure consistent user
-                experiences across multiple devices and platforms.
-              </p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* --- Feature Grid --- */}
-        <div className="md:max-w-[70%] mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
-          {[
-            {
-              icon: Icons.CodeIcon,
-              title: "Clean Code",
-              text: "Writing clear, efficient, and scalable code with proper documentation.",
-            },
-            {
-              icon: Icons.LayoutDashboard,
-              title: "UI/UX Focus",
-              text: "Designing user-friendly and aesthetically pleasing interfaces.",
-            },
-            {
-              icon: Icons.SEO,
-              title: "SEO",
-              text: "Optimizing your site to rank higher on search engines, increasing your visibility.",
-            },
-            {
-              icon: Icons.Mphone,
-              title: "Mobile Optimization",
-              text: "Optimizing apps for fast load times and accessibility compliance.",
-            },
-            {
-              icon: Icons.Devices,
-              title: "Responsive Design",
-              text: "Creating layouts that adapt seamlessly to any screen size, from desktops to mobile phones.",
-            },
-            {
-              icon: Icons.Zap,
-              title: "Performance",
-              text: "Ensuring top-notch performance and smooth user experience.",
-            },
-          ].map((feature, i) => (
+        {/* Services Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {services.map((service, i) => (
             <motion.div
               key={i}
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
-              custom={i + 3}
-              className="w-full group px-2 md:px-4 py-4  rounded-lg border border-zinc-800/75 bg-zinc-900/40 hover:bg-zinc-900/60 transition-all duration-300 h-40 flex flex-col justify-start items-start"
+              custom={i + 1}
+              className="bg-zinc-900/40 border border-zinc-800 rounded-xl p-6 flex flex-col items-start gap-4 hover:bg-zinc-900/60 transition-all duration-300"
             >
-              <div className="flex items-center space-x-3 mb-4">
-                {feature.icon({
-                  className:
-                    "w-6 h-6 text-indigo-400 group-hover:text-indigo-300 transition-colors",
-                })}
-                <h3 className="font-semibold text-zinc-100 uppercase tracking-wide text-sm">
-                  {feature.title}
-                </h3>
-              </div>
-              <p className="text-gray-300 text-[10px] md:text-md leading-relaxed">
-                {feature.text}
+              <img
+                src={service.img}
+                alt={service.title}
+                className="w-full h-40 object-cover rounded-lg mb-4"
+              />
+              <h4 className="text-xl font-semibold text-zinc-50">
+                {service.title}
+              </h4>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {service.desc}
               </p>
             </motion.div>
           ))}
+        </div>
+
+        {/* Reasons Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-20">
+          <motion.div
+            className="grid grid-cols-2 gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            {reasons.map((reason, i) => {
+              const Icon = reason.icon;
+              return (
+                <motion.div
+                  key={i}
+                  variants={fadeInUp}
+                  custom={i + 2}
+                  className="bg-zinc-900/40 border border-zinc-800 rounded-xl p-6 
+                     flex flex-col items-start gap-4 
+                     hover:bg-zinc-900/60 transition-all duration-300 min-h-40"
+                >
+                  <div className="flex gap-3 items-center">
+                    <Icon className="w-5 h-5 text-indigo-400" />
+                    <h5 className="text-sm font-semibold text-zinc-50">
+                      {reason.title}
+                    </h5>
+                  </div>
+
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {reason.desc}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            variants={fadeInUp}
+            custom={1}
+            className="w-full"
+          >
+            <img
+              src="/hazael-audi (2).jpg"
+              alt="Why choose me"
+              className="w-full h-[280px] object-cover rounded-xl border border-zinc-800 bg-zinc-900/40"
+            />
+          </motion.div>
         </div>
       </div>
     </section>

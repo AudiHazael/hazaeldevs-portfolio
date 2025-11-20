@@ -9,9 +9,9 @@ import Portfolio from "../components/Portfolio";
 import Navbar from "../components/Nav";
 import Reviews from "../components/Reviews/ReviewComp";
 import Footer from "../components/Footer";
+import ClientLogoSwiper from "../components/ClientLogoSwiper";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+import MainHero from "../components/MainHero";
 
 function Home() {
   return (
@@ -22,14 +22,15 @@ function Home() {
         </div>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 justify-center items-stretch">
-        <div className="md:col-span-6 relative py-20 h-full">
-          <Hero />
-        </div>
-        <div className="md:col-span-6 h-full">
-          <About />
-        </div>
+      <div>
+        <MainHero />
       </div>
+
+      <div id="about">
+        <About />
+      </div>
+
+      <ClientLogoSwiper />
 
       <div className="" id="services">
         <Services />

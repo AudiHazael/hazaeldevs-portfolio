@@ -46,7 +46,7 @@ const MainHero = () => {
   return (
     <section
       id="home"
-      className="relative flex justify-center items-center px-6 md:px-20 pt-20 w-full min-h-screen overflow-hidden text-gray-200"
+      className="relative flex justify-center items-center px-6 md:px-20 pt-12 w-full min-h-screen overflow-hidden text-gray-200"
     >
       {/* Background Images */}
       <div className="absolute inset-0">
@@ -85,18 +85,18 @@ const MainHero = () => {
       >
         <motion.h1
           variants={fadeInUp}
-          className="font-semibold text-purple-100 text-4xl lg:text-6xl text-center [text-shadow:0_0_6px_rgba(0,0,0,0.9),0_0_12px_rgba(0,0,0,0.9)]"
+          className="font-semibold text-purple-100 text-3xl lg:text-6xl text-center [text-shadow:0_0_6px_rgba(0,0,0,0.9),0_0_12px_rgba(0,0,0,0.9)]"
         >
-          Fast, High‑Converting Websites That Grow Your Business
+          I Build Fast, High‑Converting Websites That Grow Your Business
         </motion.h1>
-
+{/* 
         <motion.h2
           variants={fadeInUp}
           className="mt-4 max-w-3xl text-zinc-50 text-2xl text-center leading-tight"
         >
           I design and build responsive, SEO-friendly websites optimized for
           speed and conversions — so your visitors become customers.
-        </motion.h2>
+        </motion.h2> */}
 
         {/* Buttons */}
         <motion.div

@@ -155,13 +155,13 @@ function Services() {
               custom={i + 1}
               className="group flex flex-col items-start gap-4 bg-zinc-900/40 hover:bg-zinc-900/60 border border-zinc-800 rounded-md overflow-hidden transition-all duration-300"
             >
-                <div className="relative mb-4 w-full h-44 md:h-52">
+                <div className="relative w-full h-64 md:h-64">
                   <img
                     src={service.img}
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-[#6b21a8]/40 group-hover:bg-[#6b21a8]/55 transition-opacity duration-300 pointer-events-none mix-blend-multiply" />
+                  <div className="absolute inset-0 bg-[#6b21a8]/40 group-hover:bg-[#6b21a8]/50 transition-opacity duration-300 pointer-events-none mix-blend-multiply" />
                 </div>
 
               <div className="p-6">

@@ -9,30 +9,39 @@ const LOGOS = [
 ];
 
 const ClientLogoSwiper = () => {
+  const defaultSlides = 3;
+  const breakpoints = {
+    640: { slidesPerView: 3 },
+    1024: { slidesPerView: 5 },
+  };
+
+  const maxSlidesPerView = Math.max(
+    defaultSlides,
+    ...Object.values(breakpoints).map((b) => b.slidesPerView)
+  );
+  const enableLoop = LOGOS.length >= maxSlidesPerView;
+
   return (
-    <section className="py-12 w-full overflow-hidden">
+    <section className="py-6 w-full overflow-hidden">
       <div className="mx-auto px-6 md:px-12 max-w-7xl">
+        <h2 className="mb-6 font-medium text-zinc-300 md:text-md text-sm text-center lg:text-start tracking-wide">
+          Trusted by businesses we’ve helped grow
+        </h2>
 
         <Swiper
           modules={[Autoplay]}
-          slidesPerView={3}
-          spaceBetween={20}
-          loop={true}
+          slidesPerView={defaultSlides}
+          spaceBetween={40}
+          loop={enableLoop}
           autoplay={{
             delay: 1800,
             disableOnInteraction: false,
           }}
-          breakpoints={{
-            640: { slidesPerView: 3 },
-            1024: { slidesPerView: 5 },
-          }}
-          className="flex justify-center items-center"
+          breakpoints={breakpoints}
+          className="flex items-center"
         >
           {LOGOS.map((logo) => (
-            <SwiperSlide
-              key={logo.id}
-              className="flex justify-center items-center"
-            >
+            <SwiperSlide key={logo.id} className="flex justify-center items-center">
               <div className="flex justify-center items-center w-28 md:w-36 h-16 md:h-20">
                 <img
                   src={logo.src}

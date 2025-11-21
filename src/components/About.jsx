@@ -25,7 +25,7 @@ const CombinedHeroAbout = () => {
   };
 
   return (
-    <section className="relative bg-linear-to-b from-gray-900 via-zinc-900 to-black px-6 md:px-20 py-20 overflow-hidden text-gray-100">
+    <section className="relative bg-linear-to-b from-gray-900 via-zinc-900 to-black px-6 py-12 overflow-hidden text-gray-100">
       {/* --- Decorative Glow Background --- */}
       <div className="-z-10 absolute inset-0">
         <div className="top-10 left-0 absolute bg-indigo-700/25 blur-3xl rounded-full w-72 h-72 animate-pulse"></div>

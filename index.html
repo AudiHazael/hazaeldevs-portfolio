@@ -31,6 +31,10 @@
       name="description"
       content="Need a modern, fast, and SEO-optimized website? Haza’ElDevs builds professional portfolio and custom business websites that drive growth. Hire a Lagos-based developer."
     />
+    <meta name="author" content="Haza'ElDevs (Audi Hazael)" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.hazaeldevs.com/" />
+    <meta name="theme-color" content="#0f172a" />
 
     <!-- Open Graph (Facebook, LinkedIn, WhatsApp previews) -->
     <meta
@@ -45,6 +49,8 @@
       property="og:image"
       content="https://www.hazaeldevs.com/og-preview.png"
     />
+    <meta property="og:site_name" content="Haza’ElDevs" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://www.hazaeldevs.com/" />
     <meta property="og:type" content="website" />
 
@@ -62,6 +68,8 @@
       name="twitter:image"
       content="https://www.hazaeldevs.com/og-preview.png"
     />
+    <meta name="twitter:site" content="@hazaeltweets" />
+    <meta name="twitter:creator" content="@hazaeltweets" />
 
     <!-- Mobile Friendly -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -79,7 +87,6 @@
         "description": "Professional freelance web developer specializing in responsive websites, SEO optimization, and modern web solutions.",
         "url": "https://www.hazaeldevs.com/",
         "jobTitle": "Web Developer",
-
         "about": [
           { "@type": "Thing", "name": "Front-End Web Development" },
           { "@type": "Thing", "name": "Responsive Web Design" },
@@ -92,16 +99,47 @@
           { "@type": "Thing", "name": "Tailwind CSS" },
           { "@type": "Thing", "name": "JavaScript" }
         ],
-
         "worksFor": {
           "@type": "Organization",
-          "name": "Haza’ElDevs"
+          "name": "Haza’ElDevs",
+          "url": "https://www.hazaeldevs.com/"
         },
         "sameAs": [
-          "https://www.instagram.com/hd_webdesigner?igsh=NjNjYm9hY2s2d3cw",
-          "https://www.facebook.com/share/16YLCxt6fX/",
-          "https://x.com/hazaeltweets?t=OBDiUPL-AD4srshRpm98jg&s=09",
+          "https://www.instagram.com/hd_webdesigner",
+          "https://www.facebook.com/hazaeldevs",
+          "https://x.com/hazaeltweets",
           "https://github.com/AudiHazael/"
+        ]
+      }
+    </script>
+    <!-- Organization + WebSite structured data (helps brand + search results) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "Haza’ElDevs",
+            "url": "https://www.hazaeldevs.com/",
+            "logo": "https://www.hazaeldevs.com/og-preview.png",
+            "sameAs": [
+              "https://www.instagram.com/hd_webdesigner",
+              "https://x.com/hazaeltweets",
+              "https://github.com/AudiHazael/"
+            ],
+            "contactPoint": [{
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "telephone": "+2347039404909",
+              "availableLanguage": ["English"]
+            }]
+          },
+          {
+            "@type": "WebSite",
+            "url": "https://www.hazaeldevs.com/",
+            "name": "Haza’ElDevs",
+            "publisher": { "@type": "Organization", "name": "Haza’ElDevs" }
+          }
         ]
       }
     </script>

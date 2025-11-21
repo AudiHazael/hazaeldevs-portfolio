@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Socials from "./Socials";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
-import ClientLogoSwiper from "./ClientLogoSwiper";
 
 const images = ["/hero-one.jpg"];
 
@@ -31,8 +29,8 @@ const fadeInUp = {
 
 const MainHero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const quoteLink = "#contact";
-  const portfolioLink = "#projects";
+  const quoteLink = "https://wa.me/7039404909?text=I%need%a%quote%for%my%website.";
+  const portfolioLink = "#project";
 
   useEffect(() => {
     const interval = setInterval(() => {

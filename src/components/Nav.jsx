@@ -37,24 +37,26 @@ function Navbar() {
 
   const navLinks = [
     { id: "home", label: "Home" },
+    { id: "about", label: "About" },
     { id: "services", label: "Services" },
     { id: "portfolio", label: "Portfolio" },
     { id: "contact", label: "Contact" },
   ];
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (id) => {
+    if (id) setActiveSection(id);
     if (window.innerWidth < 768) setIsOpen(false);
   };
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 z-50 w-full bg-black/10 backdrop-blur-md border-b border-white/5 shadow-md"
+      className="top-0 left-0 z-50 fixed bg-black/10 shadow-md backdrop-blur-md border-white/5 border-b w-full"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.1 }}
       variants={fadeDown}
     >
-      <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-[90%]">
+      <div className="flex justify-between items-center mx-auto px-4 py-3 max-w-[90%]">
         {/* --- Logo --- */}
         <a href="#home" className="flex items-center">
           <img
@@ -65,12 +67,12 @@ function Navbar() {
         </a>
 
         {/* --- Desktop Nav Links --- */}
-        <div className="hidden md:flex items-center space-x-6 text-white font-medium">
+        <div className="hidden md:flex items-center space-x-6 font-medium text-white">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
-              onClick={handleLinkClick}
+              onClick={() => handleLinkClick(link.id)}
               className={`hover:text-indigo-300 transition ${
                 activeSection === link.id
                   ? "text-indigo-400 font-semibold border-b-2 border-indigo-400"
@@ -83,7 +85,7 @@ function Navbar() {
         </div>
 
         {/* --- Right Section (Theme Toggle + Mobile Menu Button) --- */}
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="md:hidden flex items-center gap-4">
           {/* Light/Dark Toggle */}
           <label className="swap swap-rotate">
             <input
@@ -93,7 +95,7 @@ function Navbar() {
             />
             {/* sun icon */}
             <svg
-              className="swap-on fill-current w-6 h-6 text-yellow-400"
+              className="fill-current w-6 h-6 text-yellow-400 swap-on"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -101,7 +103,7 @@ function Navbar() {
             </svg>
             {/* moon icon */}
             <svg
-              className="swap-off fill-current w-6 h-6 text-gray-300"
+              className="fill-current w-6 h-6 text-gray-300 swap-off"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -112,7 +114,7 @@ function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white md:hidden focus:outline-none"
+            className="md:hidden focus:outline-none text-white"
             aria-label="Toggle navigation"
           >
             <svg
@@ -143,13 +145,13 @@ function Navbar() {
 
       {/* --- Mobile Dropdown Menu --- */}
       {isOpen && (
-        <div className="md:hidden bg-black/90 backdrop-blur-md border-t border-white/10 py-4">
-          <ul className="flex flex-col ml-16 gap-4 text-white font-medium">
+        <div className="md:hidden bg-black/90 backdrop-blur-md py-4 border-white/10 border-t">
+          <ul className="flex flex-col gap-4 ml-16 font-medium text-white">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
                   href={`#${link.id}`}
-                  onClick={handleLinkClick}
+                  onClick={() => handleLinkClick(link.id)}
                   className={`hover:text-indigo-300 transition ${
                     activeSection === link.id
                       ? "text-indigo-400 font-semibold border-b-2 border-indigo-400"

@@ -34,7 +34,7 @@ const CombinedHeroAbout = () => {
       </div>
 
       {/* --- Two Column Layout --- */}
-      <div className="items-center gap-14 grid grid-cols-1 md:grid-cols-2 mx-auto md:max-w-[80%]">
+      <div className="items-center gap-4 grid grid-cols-1 lg:grid-cols-2 mx-auto md:max-w-[80%]">
         {/* LEFT COLUMN → HERO */}
         <motion.div
           initial="hidden"
@@ -96,7 +96,7 @@ const CombinedHeroAbout = () => {
           </motion.div>
         </motion.div>
         {/* Mobile-only horizontal rule immediately under the hero block */}
-        <hr className="md:hidden block my-4 border-gray-700 border-t w-full" />
+        <hr className="lg:hidden block my-4 border-gray-700 border-t w-full" />
 
         {/* RIGHT COLUMN → ABOUT */}
         <motion.div

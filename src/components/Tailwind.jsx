@@ -5,7 +5,7 @@ const Tailwind = (props) => {
     <svg
       viewBox="0 0 48 48"
       fill="currentColor"
-      className="w-7 h-7 text-[#38BDF8]"
+      className="w-9 h-9 text-[#38BDF8]"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >

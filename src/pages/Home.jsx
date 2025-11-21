@@ -23,7 +23,7 @@ function Home() {
       </section>
 
       <div>
-        <MainHero />
+        <MainHero id="home" />
       </div>
 
       <div id="about">

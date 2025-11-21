@@ -54,7 +54,7 @@ function Services() {
           <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
             <li>Product catalog and search</li>
             <li>Secure checkout and payment integration</li>
-            <li>Order management dashboard</li>
+            <li>Order management system</li>
             <li>Customer reviews and ratings</li>
           </ul>
         </>
@@ -177,7 +177,7 @@ function Services() {
         </div>
 
         {/* Reasons Section */}
-        <div className="items-center gap-12 grid grid-cols-1 md:grid-cols-2 mt-20">
+        <div className="items-center gap-12 grid grid-cols-1 xl:grid-cols-2 mt-20">
           <motion.div
             className="sm:flex-col-reverse gap-6 grid grid-cols-1 sm:grid-cols-2"
             initial="hidden"

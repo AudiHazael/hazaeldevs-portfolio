@@ -24,7 +24,7 @@ const ClientLogoSwiper = () => {
   return (
     <section className="py-6 w-full overflow-hidden">
       <div className="mx-auto px-6 md:px-12 max-w-7xl">
-        <h2 className="mb-6 font-medium text-zinc-300 md:text-md text-sm text-center lg:text-start tracking-wide">
+        <h2 className="mb-8 font-medium text-md text-zinc-300 text-center lg:text-start tracking-wide">
           Trusted by businesses we’ve helped grow
         </h2>
 
@@ -46,7 +46,7 @@ const ClientLogoSwiper = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="opacity-60 hover:opacity-100 grayscale hover:grayscale-0 max-w-full max-h-full object-contain transition duration-300"
+                  className="opacity-100 hover:opacity-75 max-w-full max-h-full object-contain transition duration-300"
                 />
               </div>
             </SwiperSlide>

@@ -29,8 +29,12 @@ const fadeInUp = {
 
 const MainHero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const quoteLink = "https://wa.me/7039404909?text=I%need%a%quote%for%my%website.";
-  const portfolioLink = "#project";
+  const quoteMessage =
+    "Hi Hazael, I’d like a free quote for a website. Business name: [Your business]. Brief summary: [project / features].";
+  const quoteLink = `https://wa.me/2347039404909?text=${encodeURIComponent(
+    quoteMessage
+  )}`;
+  const portfolioLink =  "#portfolio";
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -83,16 +87,16 @@ const MainHero = () => {
           variants={fadeInUp}
           className="font-semibold text-purple-100 text-4xl lg:text-6xl text-center [text-shadow:0_0_6px_rgba(0,0,0,0.9),0_0_12px_rgba(0,0,0,0.9)]"
         >
-          Get a Professional Website that Grows Your Business
+          Fast, High‑Converting Websites That Grow Your Business
         </motion.h1>
 
-        {/* <motion.h2
+        <motion.h2
           variants={fadeInUp}
-          className="mt-4 text-zinc-50 text-2xl text-center leading-tight"
+          className="mt-4 max-w-3xl text-zinc-50 text-2xl text-center leading-tight"
         >
-          I build fast, modern and high-converting websites for small
-          businesses, entrepreneurs and organizations.
-        </motion.h2> */}
+          I design and build responsive, SEO-friendly websites optimized for
+          speed and conversions — so your visitors become customers.
+        </motion.h2>
 
         {/* Buttons */}
         <motion.div
@@ -106,7 +110,7 @@ const MainHero = () => {
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center bg-purple-500/80 hover:bg-purple-400 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 backdrop-blur-sm px-8 py-3 rounded-full font-semibold text-white text-lg transition-all duration-300"
           >
-            Get a Quote
+            Request a Free Quote
             <ArrowLongRightIcon className="-mt-1 ml-2 w-5 h-5" />
           </motion.a>
 
@@ -117,7 +121,7 @@ const MainHero = () => {
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center hover:bg-purple-400/20 backdrop-blur-sm px-8 py-3 border border-purple-400/50 rounded-full font-semibold text-purple-200 hover:text-white text-lg transition-all duration-300"
           >
-            See My Work
+            View Portfolio
             <ArrowLongRightIcon className="-mt-1 ml-2 w-5 h-5" />
           </motion.a>
         </motion.div>

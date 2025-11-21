@@ -25,33 +25,33 @@ const CombinedHeroAbout = () => {
   };
 
   return (
-    <section className="relative  py-20 px-6 md:px-20 bg-linear-to-b from-gray-900 via-zinc-900 to-black text-gray-100 overflow-hidden">
+    <section className="relative bg-linear-to-b from-gray-900 via-zinc-900 to-black px-6 md:px-20 py-20 overflow-hidden text-gray-100">
       {/* --- Decorative Glow Background --- */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-10 left-0 w-72 h-72 bg-indigo-700/25 blur-3xl rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-80 h-80 bg-purple-500/20 blur-3xl rounded-full animate-pulse"></div>
-        <div className="absolute bottom-10 left-20 w-60 h-60 bg-indigo-600/20 blur-3xl rounded-full animate-pulse"></div>
+      <div className="-z-10 absolute inset-0">
+        <div className="top-10 left-0 absolute bg-indigo-700/25 blur-3xl rounded-full w-72 h-72 animate-pulse"></div>
+        <div className="top-40 right-10 absolute bg-purple-500/20 blur-3xl rounded-full w-80 h-80 animate-pulse"></div>
+        <div className="bottom-10 left-20 absolute bg-indigo-600/20 blur-3xl rounded-full w-60 h-60 animate-pulse"></div>
       </div>
 
       {/* --- Two Column Layout --- */}
-      <div className="md:max-w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+      <div className="items-center gap-14 grid grid-cols-1 md:grid-cols-2 mx-auto md:max-w-[80%]">
         {/* LEFT COLUMN → HERO */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
-          className="max-w-4xl flex flex-col items-center space-y-6"
+          className="flex flex-col items-center space-y-6 max-w-4xl"
         >
           {/* Profile Row */}
           <motion.div
             variants={fadeInUp}
             custom={0.1}
-            className="max-w-4xl flex items-end justify-center gap-6"
+            className="flex justify-center items-end gap-6 max-w-4xl"
           >
             <motion.div
               whileHover={{ scale: 1.05, rotate: 2 }}
               transition={{ type: "spring", stiffness: 150 }}
-              className="relative w-28 h-28 md:w-32 md:h-32 rounded-full ring-2 ring-purple-400/40 shadow-xl overflow-hidden"
+              className="relative shadow-xl rounded-full ring-2 ring-purple-400/40 w-28 md:w-32 h-28 md:h-32 overflow-hidden"
             >
               <img
                 src="/hazael-audi.jpg"
@@ -61,7 +61,7 @@ const CombinedHeroAbout = () => {
             </motion.div>
 
             <div className="flex flex-col justify-end">
-              <h1 className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400">
+              <h1 className="bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400 font-semibold text-transparent text-3xl md:text-4xl">
                 {slide.heading}
               </h1>
               <motion.div variants={fadeInUp} custom={0.9} className="mt-4">
@@ -70,11 +70,14 @@ const CombinedHeroAbout = () => {
             </div>
           </motion.div>
 
+          {/* Mobile-only divider under profile row */}
+          {/* <hr className="md:hidden block my-4 border-gray-700 border-t w-full" /> */}
+
           {/* Subheading */}
           <motion.h2
             variants={fadeInUp}
             custom={0.5}
-            className="text-xl md:text-2xl text-center font-bold text-zinc-50 leading-snug"
+            className="font-bold text-zinc-50 text-xl md:text-2xl text-center leading-snug"
           >
             {slide.subheading}
           </motion.h2>
@@ -85,13 +88,15 @@ const CombinedHeroAbout = () => {
               href={slide.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-lg md:text-xl px-8 py-3 font-semibold text-purple-300 border border-purple-500/40 rounded-full hover:border-indigo-400 hover:text-indigo-200 transition-all duration-300"
+              className="inline-block px-8 py-3 border border-purple-500/40 hover:border-indigo-400 rounded-full font-semibold text-purple-300 hover:text-indigo-200 text-lg md:text-xl transition-all duration-300"
             >
               {slide.buttonText}
-              <ArrowLongRightIcon className="w-5 h-5 inline-block ml-2 -mt-1" />
+              <ArrowLongRightIcon className="inline-block -mt-1 ml-2 w-5 h-5" />
             </a>
           </motion.div>
         </motion.div>
+        {/* Mobile-only horizontal rule immediately under the hero block */}
+        <hr className="md:hidden block my-4 border-gray-700 border-t w-full" />
 
         {/* RIGHT COLUMN → ABOUT */}
         <motion.div
@@ -103,7 +108,7 @@ const CombinedHeroAbout = () => {
           <motion.span
             variants={fadeInUp}
             custom={0.2}
-            className="inline-block text-sm tracking-wider text-indigo-400 uppercase"
+            className="inline-block text-indigo-400 text-sm uppercase tracking-wider"
           >
             Designer • Developer
           </motion.span>
@@ -111,10 +116,10 @@ const CombinedHeroAbout = () => {
           <motion.h3
             variants={fadeInUp}
             custom={0.3}
-            className="text-xl md:text-3xl font-semibold leading-snug"
+            className="font-semibold text-xl md:text-3xl leading-snug"
           >
             Designing the vision,{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400">
+            <span className="bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400 text-transparent">
               coding the reality.
             </span>
           </motion.h3>
@@ -122,7 +127,7 @@ const CombinedHeroAbout = () => {
           <motion.p
             variants={fadeInUp}
             custom={0.5}
-            className="text-base leading-relaxed text-gray-300"
+            className="text-gray-300 text-base leading-relaxed"
           >
             My journey into user interface design began with a fascination for
             how people interact with technology. Over the years, I’ve honed my
@@ -138,9 +143,9 @@ const CombinedHeroAbout = () => {
           <motion.div
             variants={fadeInUp}
             custom={0.7}
-            className="pt-4 border-t border-gray-700"
+            className="pt-4 border-gray-700 md:border-t"
           >
-            <h5 className="text-lg font-semibold text-white">
+            <h5 className="font-semibold text-white text-lg">
               HazaelDevs • Audi Hazael
             </h5>
           </motion.div>

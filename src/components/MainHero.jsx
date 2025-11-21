@@ -44,7 +44,7 @@ const MainHero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen relative flex items-center justify-center w-full pt-20 px-6 md:px-20 text-gray-200 overflow-hidden"
+      className="relative flex justify-center items-center px-6 md:px-20 pt-20 w-full min-h-screen overflow-hidden text-gray-200"
     >
       {/* Background Images */}
       <div className="absolute inset-0">
@@ -54,7 +54,7 @@ const MainHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: currentIndex === index ? 1 : 0 }}
             transition={{ duration: 1.8, ease: "easeInOut" }}
-            className="absolute inset-0 bg-no-repeat bg-cover md:bg-center brightness-95"
+            className="absolute inset-0 bg-cover bg-no-repeat md:bg-center brightness-95"
             style={{
               backgroundImage: `url(${src})`,
               backgroundPosition: "center",
@@ -65,13 +65,13 @@ const MainHero = () => {
       </div>
 
       {/* Glow Effects */}
-      <div className="absolute inset-0 -z-10 mix-blend-screen">
-        <div className="absolute md:top-20 md:left-10 w-72 h-72 bg-indigo-700/30 blur-3xl rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/30 blur-3xl rounded-full animate-pulse"></div>
+      <div className="-z-10 absolute inset-0 mix-blend-screen">
+        <div className="md:top-20 md:left-10 absolute bg-indigo-700/30 blur-3xl rounded-full w-72 h-72 animate-pulse"></div>
+        <div className="right-10 bottom-20 absolute bg-purple-500/30 blur-3xl rounded-full w-80 h-80 animate-pulse"></div>
       </div>
 
       {/* Dark + Purple Overlay */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/95 via-purple-900/50 to-black/90 mix-blend-multiply pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-black/95 via-purple-900/50 to-black/90 pointer-events-none mix-blend-multiply"></div>
 
       {/* HERO CONTENT */}
       <motion.div
@@ -79,20 +79,18 @@ const MainHero = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
-        className="relative z-10 flex flex-col items-center justify-center py-8 w-full max-w-5xl space-y-6"
+        className="z-10 relative flex flex-col justify-center items-center space-y-6 py-8 w-full max-w-5xl"
       >
         <motion.h1
           variants={fadeInUp}
-          className="text-4xl md:text-6xl font-semibold text-center 
-             text-purple-100 
-             [text-shadow:0_0_6px_rgba(0,0,0,0.9),0_0_12px_rgba(0,0,0,0.9)]"
+          className="font-semibold text-purple-100 text-4xl lg:text-6xl text-center [text-shadow:0_0_6px_rgba(0,0,0,0.9),0_0_12px_rgba(0,0,0,0.9)]"
         >
           Get a Professional Website that Grows Your Business
         </motion.h1>
 
         {/* <motion.h2
           variants={fadeInUp}
-          className="text-2xl text-center text-zinc-50 leading-tight mt-4"
+          className="mt-4 text-zinc-50 text-2xl text-center leading-tight"
         >
           I build fast, modern and high-converting websites for small
           businesses, entrepreneurs and organizations.
@@ -101,20 +99,17 @@ const MainHero = () => {
         {/* Buttons */}
         <motion.div
           variants={fadeInUp}
-          className="flex gap-4 flex-wrap justify-center items-center mt-4"
+          className="flex flex-wrap justify-center items-center gap-4 mt-4"
         >
           {/* Primary Button */}
           <motion.a
             href={quoteLink}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center text-lg px-8 py-3 font-semibold 
-               rounded-full transition-all duration-300
-               bg-purple-500/80 text-white shadow-lg shadow-purple-900/40 
-               hover:bg-purple-400 hover:shadow-purple-700/40 backdrop-blur-sm"
+            className="inline-flex items-center bg-purple-500/80 hover:bg-purple-400 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 backdrop-blur-sm px-8 py-3 rounded-full font-semibold text-white text-lg transition-all duration-300"
           >
             Get a Quote
-            <ArrowLongRightIcon className="w-5 h-5 ml-2 -mt-1" />
+            <ArrowLongRightIcon className="-mt-1 ml-2 w-5 h-5" />
           </motion.a>
 
           {/* Secondary Button */}
@@ -122,13 +117,10 @@ const MainHero = () => {
             href={portfolioLink}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center text-lg px-8 py-3 font-semibold 
-               rounded-full border border-purple-400/50 
-               text-purple-200 hover:text-white hover:bg-purple-400/20 
-               transition-all duration-300 backdrop-blur-sm"
+            className="inline-flex items-center hover:bg-purple-400/20 backdrop-blur-sm px-8 py-3 border border-purple-400/50 rounded-full font-semibold text-purple-200 hover:text-white text-lg transition-all duration-300"
           >
             See My Work
-            <ArrowLongRightIcon className="w-5 h-5 ml-2 -mt-1" />
+            <ArrowLongRightIcon className="-mt-1 ml-2 w-5 h-5" />
           </motion.a>
         </motion.div>
       </motion.div>

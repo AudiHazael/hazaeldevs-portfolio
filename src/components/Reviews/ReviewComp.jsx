@@ -55,12 +55,12 @@ export default function Reviews() {
   };
 
   return (
-    <section className="md:max-w-[80%] mx-auto px-4">
-      <h6 className="text-sm font-semibold tracking-widest text-indigo-400 uppercase mb-3">
+    <section className="mx-auto px-4 md:max-w-[80%]">
+      <h6 className="mb-3 font-semibold text-indigo-400 text-sm uppercase tracking-widest">
         Testimonials
       </h6>
       <motion.h2
-        className="text-2xl font-bold mb-6 text-zinc-50"
+        className="mb-6 font-bold text-zinc-50 text-2xl"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -83,44 +83,44 @@ export default function Reviews() {
         {reviews.map((r, i) => (
           <SwiperSlide key={i}>
             <motion.div
-              className="bg-zinc-900/40 rounded-xl shadow-md p-6 flex flex-col justify-between w-full h-80 border border-zinc-800 hover:border-indigo-400 transition-all duration-300"
+              className="flex flex-col justify-between bg-zinc-900/40 shadow-md p-6 border border-zinc-800 hover:border-indigo-400 rounded-xl w-full h-80 transition-all duration-300"
               initial={{ opacity: 0, scale: 0.97 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.3 }}
             >
               {/* Rating */}
-              <p className="text-yellow-500 text-lg mb-2">
+              <p className="mb-2 text-yellow-500 text-lg">
                 {"★".repeat(r.rating)}
                 {"☆".repeat(5 - r.rating)}
               </p>
 
               {/* Review Body */}
-              <p className="text-zinc-50 text-sm flex-grow leading-relaxed italic">
+              <p className="text-zinc-50 text-sm italic leading-relaxed grow">
                 “{r.body}”
               </p>
 
               {/* Avatar + Author */}
-              <div className="flex items-center mt-4 pt-4 border-t border-zinc-800">
+              <div className="flex items-center mt-4 pt-4 border-zinc-800 border-t">
                 {r.avatar && (
                   <img
                     src={r.avatar}
                     alt={r.author}
-                    className="w-10 h-10 rounded-full object-cover mr-3 border border-white/10"
+                    className="mr-3 border border-white/10 rounded-full w-10 h-10 object-cover"
                   />
                 )}
                 <div>
-                  <span className="text-md mb-1 font-semibold text-zinc-50 block">
+                  <span className="block mb-1 font-semibold text-md text-zinc-50">
                     {r.author}
                   </span>
                   <div className="flex gap-2">
                     {r.post && (
-                      <span className="text-xs md:text-sm text-gray-300 block">
+                      <span className="block text-gray-300 text-xs md:text-sm">
                         {r.post}
                       </span>
                     )}
                     {r.organization && (
-                      <span className="text-xs md:text-sm text-gray-400">
+                      <span className="text-gray-400 text-xs md:text-sm">
                         {r.organization}
                       </span>
                     )}

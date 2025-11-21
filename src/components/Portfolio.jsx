@@ -166,7 +166,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="py-12 bg-inherit text-gray-200 border-t border-gray-800"
+      className="bg-inherit py-12 border-gray-800 border-t text-gray-200"
     >
       {/* Structured Data for SEO */}
       <script
@@ -174,10 +174,10 @@ const Portfolio = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }}
       />
 
-      <div className="md:max-w-[80%] mx-auto px-4">
+      <div className="mx-auto px-4 md:max-w-[80%]">
         {/* Section Heading */}
         <motion.h6
-          className="text-indigo-400 uppercase font-semibold mb-2"
+          className="mb-2 font-semibold text-indigo-400 uppercase"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -187,7 +187,7 @@ const Portfolio = () => {
         </motion.h6>
 
         <motion.h3
-          className="text-2xl md:text-4xl font-bold text-zinc-50 mb-10"
+          className="mb-10 font-bold text-zinc-50 text-2xl md:text-4xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -221,7 +221,7 @@ const Portfolio = () => {
             {portfolioItems.map((item, i) => (
               <SwiperSlide key={i}>
                 <motion.div
-                  className="h-full flex flex-col rounded-xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-md overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:border-indigo-400"
+                  className="flex flex-col bg-zinc-900/40 backdrop-blur-md border border-zinc-800 hover:border-indigo-400 rounded-xl h-[375px] md:h-[425px] overflow-hidden transition-transform hover:-translate-y-2 duration-300"
                   variants={fadeUp}
                   custom={i * 0.1}
                 >
@@ -229,18 +229,18 @@ const Portfolio = () => {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="object-cover w-full h-48 md:h-64 opacity-90 hover:opacity-100 transition"
+                    className="opacity-90 hover:opacity-100 w-full h-48 md:h-64 object-cover transition"
                   />
 
                   {/* Project Details */}
                   <div className="flex flex-col flex-1 p-5">
                     <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <h4 className="text-lg font-semibold text-zinc-50">
+                      <h4 className="font-semibold text-zinc-50 text-lg">
                         {item.title}
                       </h4>
                       {item.collaborator && (
                         <>
-                          <span className="text-sm text-stone-400">
+                          <span className="text-stone-400 text-sm">
                             – In collaboration with
                           </span>
                           <a
@@ -255,7 +255,7 @@ const Portfolio = () => {
                       )}
                     </div>
 
-                    <p className="text-sm text-stone-200 mb-4 leading-relaxed flex-1">
+                    <p className="flex-1 mb-4 text-stone-200 text-sm leading-relaxed">
                       {item.text}
                     </p>
 
@@ -263,7 +263,7 @@ const Portfolio = () => {
                       {item.tools.map((tool, t) => (
                         <span
                           key={t}
-                          className="px-3 py-1 text-xs font-medium text-zinc-100 border border-zinc-700 bg-zinc-800/40 rounded-lg"
+                          className="bg-zinc-800/40 px-3 py-1 border border-zinc-700 rounded-lg font-medium text-zinc-100 text-xs"
                         >
                           {tool}
                         </span>
@@ -271,12 +271,12 @@ const Portfolio = () => {
                     </div>
 
                     {/* Buttons at bottom */}
-                    <div className="mt-auto flex gap-3">
+                    <div className="flex gap-3 mt-auto">
                       <a
                         href={item.previewLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md text-white bg-indigo-500/15 border border-gray-700 hover:bg-indigo-600 transition"
+                        className="flex items-center gap-2 bg-indigo-500/15 hover:bg-indigo-600 px-4 py-2 border border-gray-700 rounded-md font-medium text-white text-sm transition"
                       >
                         <Icons.LinkIcon className="w-4 h-4" />
                         Live Demo
@@ -285,7 +285,7 @@ const Portfolio = () => {
                         href={item.repoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md text-stone-100 border border-indigo-500 hover:bg-indigo-400 hover:text-zinc-950 transition"
+                        className="flex items-center gap-2 hover:bg-indigo-400 px-4 py-2 border border-indigo-500 rounded-md font-medium text-stone-100 hover:text-zinc-950 text-sm transition"
                       >
                         <Icons.Github className="w-4 h-4" />
                         Code

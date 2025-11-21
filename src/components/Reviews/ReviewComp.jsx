@@ -96,7 +96,7 @@ export default function Reviews() {
               </p>
 
               {/* Review Body */}
-              <p className="text-zinc-50 text-sm italic leading-relaxed grow">
+              <p className="flex-1 mb-4 text-stone-200 text-sm leading-relaxed">
                 “{r.body}”
               </p>
 

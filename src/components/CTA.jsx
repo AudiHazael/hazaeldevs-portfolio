@@ -26,7 +26,7 @@ const CTA = () => {
 
   return (
     <motion.section
-      className="relative bg-linear-to-b from-gray-900 via-zinc-900 to-black shadow-lg p-6 md:p-8 w-full overflow-hidden text-white"
+      className="relative bg-linear-to-b from-gray-900 via-zinc-900 to-black shadow-lg p-6 md:p-8 py-12 w-full overflow-hidden text-white"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.15 }}
@@ -41,7 +41,7 @@ const CTA = () => {
       <div className="flex md:flex-row flex-col justify-between items-center gap-4 mx-auto max-w-4xl">
         <motion.div className="flex-1" variants={item}>
           <motion.div
-            className="bg-black/40 backdrop-blur-md p-4 md:p-6 text-center"
+            className="bg-black/20 backdrop-blur-md p-4 md:p-6 py-12 text-center"
             variants={item}
           >
             <motion.p

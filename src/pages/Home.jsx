@@ -12,6 +12,9 @@ import Footer from "../components/Footer";
 import ClientLogoSwiper from "../components/ClientLogoSwiper";
 
 import MainHero from "../components/MainHero";
+import Process from "../components/Process";
+import Faq from "../components/Faq";
+import CTA from "../components/CTA";
 
 function Home() {
   return (
@@ -52,6 +55,18 @@ function Home() {
 
       <div id="reviews">
         <Reviews />
+      </div>
+
+      <div id="process">
+        <Process />
+      </div>
+
+      <div id="Faq">
+        <Faq /> 
+      </div>
+
+      <div id="cta">
+        <CTA />
       </div>
 
       <div className="" id="contact">

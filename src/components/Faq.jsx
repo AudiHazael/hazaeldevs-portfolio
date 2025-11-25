@@ -8,7 +8,11 @@ const cardVariants = {
 
 const imageVariants = {
   hidden: { opacity: 0, scale: 0.98 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const faqs = [
@@ -47,14 +51,15 @@ export default function Faq() {
     <section id="faq" className="bg-inherit py-12 text-zinc-100">
       <div className="mx-auto px-6 md:max-w-[80%]">
         <div className="mb-8">
-          <h6 className="mb-2 font-semibold text-indigo-400 uppercase">Frequently Asked</h6>
-          <h3 className="font-bold text-zinc-50 text-2xl md:text-4xl">Questions from visitors and clients</h3>
-          <p className="mt-2 max-w-2xl text-gray-300">
-            Answers for people who are still choosing a solution and for those ready to move forward. If you don't see your question, there's a quick way to get in touch below.
-          </p>
+          <h6 className="mb-2 font-semibold text-indigo-400 uppercase">
+            Frequently Asked
+          </h6>
+          <h3 className="font-bold text-zinc-50 text-2xl md:text-4xl">
+            Questions from visitors and clients
+          </h3>
         </div>
 
-        <div className="items-center gap-8 grid grid-cols-1 lg:grid-cols-2">
+        <div className="gap-8 grid grid-cols-1 lg:grid-cols-2">
           {/* Accordion Column */}
           <div>
             <div className="xs:space-y-3 md:space-y-0">
@@ -80,62 +85,70 @@ export default function Faq() {
                       className="flex justify-between items-center gap-4 px-5 py-4 focus:outline-none w-full text-left"
                     >
                       <div>
-                        <h4 className="font-semibold text-md text-zinc-50">{f.q}</h4>
+                        <h4 className="font-semibold text-md text-zinc-50">
+                          {f.q}
+                        </h4>
                       </div>
 
-                        <motion.div
-                          className="flex justify-center items-center bg-white/2 rounded-full w-8 h-8 text-indigo-400"
-                          aria-hidden
+                      <motion.div
+                        className="flex justify-center items-center bg-white/2 rounded-full w-8 h-8 text-indigo-400"
+                        aria-hidden
+                      >
+                        <motion.svg
+                          className="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          animate={{ rotate: isOpen ? 45 : 0 }}
+                          transition={{ duration: 0.2 }}
                         >
-                          <motion.svg
-                            className="w-4 h-4"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            animate={{ rotate: isOpen ? 45 : 0 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            <path d="M12 5v14M5 12h14" />
-                          </motion.svg>
-                        </motion.div>
+                          <path d="M12 5v14M5 12h14" />
+                        </motion.svg>
+                      </motion.div>
                     </button>
 
-                      <AnimatePresence initial={false}>
-                        {isOpen && (
-                          <motion.div
-                            id={panelId}
-                            role="region"
-                            aria-labelledby={btnId}
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.32, ease: "easeInOut" }}
-                            className="px-5 pb-5 overflow-hidden"
-                          >
-                            <p className="text-gray-300 text-sm leading-relaxed">{f.a}</p>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          id={panelId}
+                          role="region"
+                          aria-labelledby={btnId}
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.32, ease: "easeInOut" }}
+                          className="px-5 pb-5 overflow-hidden"
+                        >
+                          <p className="text-gray-300 text-sm leading-relaxed">
+                            {f.a}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </motion.div>
                 );
               })}
             </div>
 
-            <motion.div className="flex flex-wrap gap-3 mt-6"
+            <motion.div
+              className="flex flex-wrap gap-3 mt-6"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.5 }}
-              >
-                
+            >
+              <p className="mt-2 max-w-2xl text-gray-300">
+                If you don't see your question, there's a quick way to get in
+                touch below.
+              </p>
               <a
                 href="https://wa.me/2347039404909?text=Hi%20Hazael%2C%20I%20have%20a%20question%20about%20a%20website%20project%20and%20would%20like%20to%20chat."
                 target="_blank"
                 rel="noopener noreferrer"
-                 className="inline-flex items-center bg-purple-500/80 hover:bg-purple-400 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 backdrop-blur-sm px-8 py-3 rounded-full font-semibold text-white text-lg transition-all duration-300"
+                className="inline-flex items-center bg-purple-500/80 hover:bg-purple-400 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 backdrop-blur-sm px-8 py-3 rounded-full font-semibold text-white text-lg transition-all duration-300"
               >
                 Chat with us
               </a>

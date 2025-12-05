@@ -1,4 +1,6 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowLongLeftIcon } from "@heroicons/react/24/outline";
 
 export default function Location() {
   return (
@@ -13,6 +15,13 @@ export default function Location() {
       </Helmet>
 
       <main className="mx-auto px-6 py-16 max-w-5xl text-zinc-100">
+        <Link
+          to="/"
+          className="flex gap-2 mt-4 px-4 py-2 rounded-md text-indigo-300 transition"
+        >
+          <ArrowLongLeftIcon className="w-5" />
+          Go Back Home
+        </Link>
         <h1 className="mb-6 font-bold text-3xl md:text-4xl">
           Location & Availability
         </h1>
@@ -56,6 +65,7 @@ export default function Location() {
           <ul className="space-y-2 pl-6 text-zinc-300 text-sm list-disc">
             <li>Nigeria & West Africa</li>
             <li>United Kingdom</li>
+            <li>Australia</li>
             <li>Europe</li>
             <li>United States & Canada</li>
             <li>Remote-first startups globally</li>

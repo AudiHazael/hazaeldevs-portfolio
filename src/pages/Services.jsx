@@ -1,8 +1,15 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
     <main className="mx-auto px-6 py-16 max-w-5xl text-zinc-100">
+      <Link
+        to="/"
+        className="flex gap-2 mt-4 px-4 py-2 rounded-md text-indigo-300 transition"
+      >
+        <ArrowLongLeftIcon className="w-5" />
+        Go Back Home
+      </Link>
       <h1 className="mb-6 font-bold text-3xl md:text-4xl">
         Professional Website Development Services
       </h1>

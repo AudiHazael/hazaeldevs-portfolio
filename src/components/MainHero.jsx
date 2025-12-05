@@ -46,7 +46,7 @@ const MainHero = () => {
   return (
     <section
       id="home"
-      className="relative flex justify-center items-center px-6 md:px-20 pt-12 w-full min-h-screen overflow-hidden text-gray-200"
+      className="relative flex justify-center items-center px-6 md:px-20 w-full min-h-screen overflow-hidden text-gray-200"
     >
       {/* Background Images */}
       <div className="absolute inset-0">
@@ -144,7 +144,6 @@ const MainHero = () => {
           <a href="/services" className="text-purple-300 underline">
             services
           </a>{" "}
-          
         </motion.p>
       </motion.div>
     </section>

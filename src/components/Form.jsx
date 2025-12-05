@@ -86,7 +86,7 @@ function Form() {
 
         {/* Name */}
         <div className="mb-4">
-          <label htmlFor="name" className="block mb-1 font-semibold">
+          <label htmlFor="name" className="block mb-1 font-medium">
             Name
           </label>
           <input
@@ -100,7 +100,7 @@ function Form() {
 
         {/* Email */}
         <div className="mb-4">
-          <label htmlFor="email" className="block mb-1 font-semibold">
+          <label htmlFor="email" className="block mb-1 font-medium">
             Email
           </label>
           <input
@@ -114,7 +114,7 @@ function Form() {
 
         {/* Subject */}
         <div className="mb-4">
-          <label className="block mb-1 font-semibold">
+          <label className="block mb-1 font-medium">
             What do you need help with?
           </label>
 
@@ -165,9 +165,11 @@ function Form() {
 
         {/* Message */}
         <div className="mb-4">
-          <label htmlFor="message" className="block mb-1 font-normal text-sm">
-            Briefly describe what you need <br /> Example: business type, number
-            of pages, or a website you like.
+          <label htmlFor="message" className="block mb-1 font-medium">
+            Briefly describe what you need <br />{" "}
+            <span className="font-light text-sm">
+              Example: business type, number of pages, or a website you like.
+            </span>
           </label>
           <textarea
             id="message"

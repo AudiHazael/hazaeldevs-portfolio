@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const CTA = () => {
-  const quoteMessage = `Hi Hazael, I'd love a quick quote for a website — nothing fancy, just something that makes my competitors jealous.`;
+  const quoteMessage = `Hi Hazael, I visited your website and would like to briefly describe a website project.`;
   const waLink = `https://wa.me/2347039404909?text=${encodeURIComponent(
     quoteMessage
   )}`;
@@ -38,64 +38,62 @@ const CTA = () => {
         <div className="-right-12 -bottom-6 absolute bg-purple-400/8 blur-2xl rounded-full w-56 h-56 mix-blend-screen" />
       </div>
 
-      <div className="flex md:flex-row flex-col justify-between items-center gap-4 mx-auto max-w-4xl">
+      <div className="flex md:flex-row flex-col justify-between items-center gap-4 mx-auto py-6 max-w-4xl">
         <motion.div className="flex-1" variants={item}>
           <motion.div
-            className="bg-black/20 backdrop-blur-md p-4 md:p-6 py-12 text-center"
+            className="bg-black/20 backdrop-blur-md p-4 md:p-6 py-16 text-center"
             variants={item}
           >
             <motion.p
               className="drop-shadow-md text-white/90 text-sm"
               variants={item}
             >
-              Got 30 seconds? Good — that’s all I need.
+              Have a website idea or need to improve an existing one?
             </motion.p>
             <motion.h3
               className="drop-shadow-lg mt-1 font-semibold text-white text-2xl"
               variants={item}
             >
-              Give me a problem, I’ll give you a website (and maybe a little
-              swagger).
+              Describe your project and I’ll tell you the best next step
             </motion.h3>
             <motion.p
               className="drop-shadow-sm mt-2 text-white/90 text-sm"
               variants={item}
             >
-              We build things that look expensive, without the expensive drama.
-              Quick call → faster launch → bragging rights.
+              You can send a short written summary. No calls required to get
+              started.
             </motion.p>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="flex items-center gap-3 shrink-0"
-          variants={item}
-        >
-          <motion.a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white shadow-lg px-4 py-2 rounded-full font-semibold text-indigo-700"
-            whileHover={btnHover}
-            whileTap={btnTap}
+          <motion.div
+            className="flex justify-center items-center gap-3 shrink-0"
             variants={item}
-            transition={{ type: "spring", stiffness: 300 }}
-            aria-label="Request a quick quote on WhatsApp"
           >
-            💬 Quick quote
-          </motion.a>
+            <motion.a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white shadow-lg px-4 py-2 rounded-full font-semibold text-indigo-700"
+              whileHover={btnHover}
+              whileTap={btnTap}
+              variants={item}
+              transition={{ type: "spring", stiffness: 300 }}
+              aria-label="Describe your project on WhatsApp"
+            >
+              Describe your project
+            </motion.a>
 
-          <motion.a
-            href="#contact"
-            className="inline-flex items-center gap-2 bg-indigo-700 hover:bg-indigo-600 shadow-md px-4 py-2 rounded-full ring-1 ring-white/10 font-semibold text-white"
-            whileHover={btnHover}
-            whileTap={btnTap}
-            variants={item}
-            transition={{ type: "spring", stiffness: 300 }}
-            aria-label="Start a project"
-          >
-            ✉️ Start project
-          </motion.a>
+            <motion.a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-indigo-700 hover:bg-indigo-600 shadow-md px-4 py-2 rounded-full ring-1 ring-white/10 font-semibold text-white"
+              whileHover={btnHover}
+              whileTap={btnTap}
+              variants={item}
+              transition={{ type: "spring", stiffness: 300 }}
+              aria-label="Contact via form"
+            >
+              Contact via form
+            </motion.a>
+          </motion.div>
         </motion.div>
       </div>
     </motion.section>

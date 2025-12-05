@@ -17,12 +17,12 @@ const imageVariants = {
 
 const faqs = [
   {
-    q: "I'm still deciding — how do I know which website is right for my business?",
+    q: "I’m not technical — how do I know which website my business actually needs?",
     a: `Start with the outcome: do you want more leads, sales, or visibility? I help you map features to goals (e.g. booking forms for service businesses, product pages for e-commerce). We begin with a short discovery call so you leave with a clear recommendation and a realistic estimate.`,
   },
   {
     q: "I already know what I want — what's the typical timeline?",
-    a: `For a small business site (5–8 pages) expect 3–5 weeks from kickoff to launch. Landing pages and smaller projects can be faster. Larger e-commerce sites take longer and include staging and extended QA. I'll share a tailored timeline in the proposal.`,
+    a: `For a small business site (5–8 pages) expect 3–5 weeks from kickoff to launch. Landing pages typically take 7–10 days if content is ready.. Larger e-commerce sites take longer and include staging and extended QA. I'll share a tailored timeline in the proposal.`,
   },
   {
     q: "How much will it cost?",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "Will my site be fast and SEO-friendly?",
-    a: `Yes — every site I build prioritizes performance, semantic HTML, and basic SEO best practices (meta tags, Open Graph, fast assets). For advanced SEO we can add ongoing optimization as a separate phase.`,
+    a: `Yes — every site I build prioritizes performance, semantic HTML, and basic SEO best practices (meta tags, Open Graph, fast assets). For advanced SEO we can add ongoing optimization as a separate phase as a separate phase once the site is live and validated.`,
   },
   {
     q: "Do you provide hosting and maintenance?",
@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     q: "What if I need changes after launch?",
-    a: `Minor tweaks are typically included during the warranty period. For ongoing updates we offer fast hourly support or a small monthly plan depending on your needs.`,
+    a: `Minor tweaks are typically included during the warranty period. For ongoing updates we offer fast hourly support or a small monthly plan depending on your needs. Most serious projects start with a paid discovery or defined scope to avoid surprises on both sides.`,
   },
 ];
 
@@ -141,8 +141,8 @@ export default function Faq() {
               viewport={{ once: false, amount: 0.5 }}
             >
               <p className="mt-2 max-w-2xl text-gray-300">
-                If you don't see your question, there's a quick way to get in
-                touch below.
+                Most clients reach out when they’re ready to take action or need
+                expert validation.
               </p>
               <a
                 href="https://wa.me/2347039404909?text=Hi%20Hazael%2C%20I%20have%20a%20question%20about%20a%20website%20project%20and%20would%20like%20to%20chat."
@@ -150,7 +150,7 @@ export default function Faq() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-purple-500/80 hover:bg-purple-400 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 backdrop-blur-sm px-8 py-3 rounded-full font-semibold text-white text-lg transition-all duration-300"
               >
-                Chat with us
+                Chat with me
               </a>
 
               <a

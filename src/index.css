@@ -5,11 +5,11 @@
 
 /* globals.css */
 html {
-  @apply bg-gradient-to-b from-slate-950 via-gray-950 to-black;
+  background: linear-gradient(to bottom, #020617, #09090b, #000000);
   font-size: 75%;
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
-  font-style: normal;
+  font-style: light;
   font-weight: 300;
 }
 

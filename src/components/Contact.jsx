@@ -18,12 +18,12 @@ const fadeInUp = {
 
 function Contact() {
   return (
-    <section className="py-20 text-gray-800 bg-transparent" id="contact">
-      <div className="md:max-w-[75%] px-4 mx-auto">
-        <div className="flex flex-col gap-4 md:flex-row justify-center items-end">
+    <section className="bg-transparent py-20 text-gray-800" id="contact">
+      <div className="mx-auto px-4 md:max-w-[75%]">
+        <div className="flex md:flex-row flex-col justify-center items-end gap-4">
           {/* Contact Details */}
           <motion.div
-            className="space-y-6 md:w-1/2 mt-4"
+            className="space-y-6 mt-4 md:w-1/2"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
@@ -35,76 +35,82 @@ function Contact() {
               variants={fadeInUp}
               custom={0.3}
             >
-              Contact Me
+              Start a project
             </motion.h6>
 
             <motion.h4
-              className="text-2xl text-zinc-50 font-bold md:text-3xl"
+              className="font-bold text-zinc-50 text-2xl md:text-3xl"
               variants={fadeInUp}
               custom={0.5}
             >
-              Reach Out - Let's Create Together
+              Let’s Build a Website That Brings You Clients
             </motion.h4>
 
             <motion.p
-              className="text-stone-200 text-md"
+              className="text-md text-stone-200"
               variants={fadeInUp}
               custom={0.7}
             >
-              Do you want to transform your ideas into memorable experiences? I
-              am here to listen, collaborate, and help you realize your vision.
-              Reach out today and let's embark on a creative and successful
-              journey together.
+              If you need a fast, modern website that makes your business look
+              credible and converts visitors into real enquiries, you're in the
+              right place. <br /> Tell me what you’re trying to achieve and I’ll
+              recommend the simplest, most effective setup to get you there.
             </motion.p>
 
             <motion.div
-              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md bg-zinc-900/40 border border-gray-800/75 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="inset-shadow-xs flex justify-start items-center gap-4 space-x-2 bg-zinc-900/40 shadow-md backdrop-blur-md px-2 border border-gray-800/75 rounded-lg w-full h-24 hover:-translate-y-1"
               variants={fadeInUp}
               custom={0.9}
             >
               {Icons.Map({ className: "w-6 h-6 mt-1 text-indigo-400 " })}
               <div>
-                <h4 className="text-md font-bold text-stone-100">Address</h4>
+                <h4 className="font-bold text-md text-stone-100">Address</h4>
                 <p className="text-stone-300">
-                  Plot 15, Jesus Avenue, Simawa, Lukosi, Sagamu, Ogun State
+                  Remote — working with clients worldwide
                 </p>
               </div>
             </motion.div>
 
             <motion.div
-              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md bg-zinc-900/40 border border-gray-800/75 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="inset-shadow-xs flex justify-start items-center gap-4 space-x-2 bg-zinc-900/40 shadow-md backdrop-blur-md px-2 border border-gray-800/75 rounded-lg w-full h-24 hover:-translate-y-1"
               variants={fadeInUp}
               custom={1.1}
             >
               {Icons.Phone({ className: "w-6 h-6  mt-1 text-indigo-400 " })}
               <div>
-                <h4 className="text-md font-bold text-stone-100">Phone</h4>
-                <p className="text-stone-300 ">+234 703 940 4909</p>
+                <h4 className="font-bold text-md text-stone-100">WhatsApp</h4>
+                <p className="text-stone-300">
+                  Chat-first. Calls by appointment.
+                </p>
               </div>
             </motion.div>
 
             <motion.div
-              className="flex gap-4 rounded-lg shadow-md inset-shadow-xs backdrop-blur-md bg-zinc-900/40 border border-gray-800/75 hover:-translate-y-1 h-24 w-full justify-start items-center space-x-2 px-2"
+              className="inset-shadow-xs flex justify-start items-center gap-4 space-x-2 bg-zinc-900/40 shadow-md backdrop-blur-md px-2 border border-gray-800/75 rounded-lg w-full h-24 hover:-translate-y-1"
               variants={fadeInUp}
               custom={1.3}
             >
               {Icons.Mail({ className: "w-6 h-6 mt-1 text-indigo-400" })}
               <div>
-                <h4 className="text-md font-bold text-stone-100">Email</h4>
-                <p className="text-stone-300 ">hazaeldevs@gmail.com</p>
+                <h4 className="font-bold text-md text-stone-100">Email</h4>
+                <p className="text-stone-300">hazaeldevs@gmail.com</p>
               </div>
             </motion.div>
           </motion.div>
 
           {/* Contact Form */}
           <motion.div
-            className="w-full md:w-1/2 px-0 md:px-4"
+            className="px-0 md:px-4 w-full md:w-1/2"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
             variants={fadeInUp}
             custom={1.5}
           >
+            <p className="mb-4 text-gray-400 text-sm">
+              Typical response time: within 24 hours. Serious enquiries only.
+            </p>
+
             <Form />
           </motion.div>
         </div>

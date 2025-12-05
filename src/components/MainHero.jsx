@@ -34,7 +34,7 @@ const MainHero = () => {
   const quoteLink = `https://wa.me/2347039404909?text=${encodeURIComponent(
     quoteMessage
   )}`;
-  const portfolioLink =  "#portfolio";
+  const portfolioLink = "#portfolio";
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -85,18 +85,32 @@ const MainHero = () => {
       >
         <motion.h1
           variants={fadeInUp}
-          className="font-semibold text-purple-100 text-3xl lg:text-6xl text-center [text-shadow:0_0_6px_rgba(0,0,0,0.9),0_0_12px_rgba(0,0,0,0.9)]"
+          className="font-semibold text-purple-100 text-3xl lg:text-5xl text-center [text-shadow:0_0_6px_rgba(0,0,0,0.9),0_0_12px_rgba(0,0,0,0.9)]"
         >
-          I Build Fast, High‑Converting Websites That Grow Your Business
+          Helping businesses build trust online before customers make contact
         </motion.h1>
-{/* 
+
         <motion.h2
           variants={fadeInUp}
-          className="mt-4 max-w-3xl text-zinc-50 text-2xl text-center leading-tight"
+          className="mt-4 max-w-3xl text-zinc-100 text-2xl text-center leading-tight"
         >
-          I design and build responsive, SEO-friendly websites optimized for
-          speed and conversions — so your visitors become customers.
-        </motion.h2> */}
+          I design and build clear, professional websites that:
+        </motion.h2>
+        <motion.ul
+          variants={fadeInUp}
+          className="space-y-1 mx-auto mb-2 max-w-3xl text-zinc-100 text-lg text-center"
+        >
+          <li>Confirm your credibility</li>
+          <li>Explain what you do</li>
+          <li>Make it easy to contact you</li>
+        </motion.ul>
+        <motion.p
+          variants={fadeInUp}
+          className="mt-4 text-zinc-300 text-sm text-center"
+        >
+          Working remotely with clients internationally <br />
+          Used by small businesses, startups, and service providers
+        </motion.p>
 
         {/* Buttons */}
         <motion.div
@@ -110,7 +124,7 @@ const MainHero = () => {
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center bg-purple-500/80 hover:bg-purple-400 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 backdrop-blur-sm px-8 py-3 rounded-full font-semibold text-white text-lg transition-all duration-300"
           >
-            Request a Free Quote
+            Request a Project Breakdown
             <ArrowLongRightIcon className="-mt-1 ml-2 w-5 h-5" />
           </motion.a>
 
@@ -125,6 +139,13 @@ const MainHero = () => {
             <ArrowLongRightIcon className="-mt-1 ml-2 w-5 h-5" />
           </motion.a>
         </motion.div>
+        <motion.p variants={fadeInUp} className="text-zinc-400 text-sm">
+          Explore{" "}
+          <a href="/services" className="text-purple-300 underline">
+            services
+          </a>{" "}
+          
+        </motion.p>
       </motion.div>
     </section>
   );

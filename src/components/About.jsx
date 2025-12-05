@@ -19,9 +19,9 @@ const fadeInUp = {
 const CombinedHeroAbout = () => {
   const slide = {
     heading: "Hazael Audi",
-    subheading: "UI Designer & Frontend Developer",
-    buttonText: "Contact Me",
-    link: "https://wa.me/2347039404909?text=Hello%20HazaelDevs!%20I'm%20interested%20in%20your%20services.",
+    subheading: "Website Designer & Developer for Small Businesses",
+    buttonText: "Describe your project",
+    link: "https://wa.me/2347039404909?text=Hi%Hazael,%I%visited%your%website%and%would%like%to%briefly%describe%a%project.",
   };
 
   return (
@@ -105,22 +105,14 @@ const CombinedHeroAbout = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="space-y-6"
         >
-          <motion.span
-            variants={fadeInUp}
-            custom={0.2}
-            className="inline-block text-indigo-400 text-sm uppercase tracking-wider"
-          >
-            Designer • Developer
-          </motion.span>
-
           <motion.h3
             variants={fadeInUp}
             custom={0.3}
             className="font-semibold text-xl md:text-3xl leading-snug"
           >
-            Designing the vision,{" "}
+            Building clear,{" "}
             <span className="bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400 text-transparent">
-              coding the reality.
+              dependable websites for business use
             </span>
           </motion.h3>
 
@@ -129,15 +121,19 @@ const CombinedHeroAbout = () => {
             custom={0.5}
             className="text-gray-300 text-base leading-relaxed"
           >
-            My journey into user interface design began with a fascination for
-            how people interact with technology. Over the years, I’ve honed my
-            ability to create digital experiences that balance aesthetics with
-            usability.
+            I work with businesses that need a clear, professional online
+            presence that helps customers understand their services and make
+            contact with confidence.
             <br />
             <br />
-            As a frontend developer, I bring visual ideas to life through clean,
-            efficient, and responsive code. Every interaction is an opportunity
-            to delight users and make technology feel effortless.
+            My focus is on structure, clarity, and practical design — not
+            unnecessary trends or overcomplication. Every project follows a
+            defined process to ensure expectations, timelines, and scope remain
+            clear from start to finish.
+            <br />
+            <br />I work remotely with clients internationally and prioritize
+            written communication to keep projects efficient and
+            well-documented.
           </motion.p>
 
           <motion.div

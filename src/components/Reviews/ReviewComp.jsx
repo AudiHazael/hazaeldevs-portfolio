@@ -83,7 +83,7 @@ export default function Reviews() {
         {reviews.map((r, i) => (
           <SwiperSlide key={i}>
             <motion.div
-              className="flex flex-col justify-between bg-zinc-900/40 shadow-md p-6 border border-zinc-800 hover:border-indigo-400 rounded-xl w-full h-80 transition-all duration-300"
+              className="flex flex-col justify-between bg-zinc-900/40 shadow-md p-6 border border-zinc-800 hover:border-indigo-400 rounded-xl w-full h-96 transition-all duration-300"
               initial={{ opacity: 0, scale: 0.97 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, ease: "easeOut" }}

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Listbox } from "@headlessui/react";
+import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -17,6 +19,7 @@ const fadeInUp = {
 function Form() {
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [subject, setSubject] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -61,7 +64,7 @@ function Form() {
     <>
       <motion.form
         onSubmit={handleSubmit}
-        className="w-full p-4 text-stone-50 backdrop-blur-md bg-zinc-900/40 border border-gray-800 rounded-md shadow-md"
+        className="bg-zinc-900/40 shadow-md backdrop-blur-md p-4 border border-gray-800 rounded-md w-full text-stone-50"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
@@ -91,7 +94,7 @@ function Form() {
             id="name"
             name="name"
             required
-            className="w-full px-3 py-2 border border-gray-800/75 rounded-md bg-zinc-800/25 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="bg-zinc-800/25 px-3 py-2 border border-gray-800/75 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
           />
         </div>
 
@@ -105,34 +108,73 @@ function Form() {
             id="email"
             name="email"
             required
-            className="w-full px-3 py-2 border border-gray-800/75 rounded-md bg-zinc-800/25 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="bg-zinc-800/25 px-3 py-2 border border-gray-800/75 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
           />
         </div>
 
         {/* Subject */}
         <div className="mb-4">
-          <label htmlFor="subject" className="block mb-1 font-semibold">
-            Subject
+          <label className="block mb-1 font-semibold">
+            What do you need help with?
           </label>
-          <input
-            type="text"
-            id="subject"
-            name="_subject"
-            className="w-full px-3 py-2 border border-gray-800/75 rounded-md bg-zinc-800/25 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
+
+          <Listbox value={subject} onChange={setSubject}>
+            <div className="relative">
+              {/* Trigger */}
+              <Listbox.Button className="relative bg-zinc-800/25 px-3 py-2 border border-gray-800/75 rounded-md focus:outline-none w-full text-white text-left">
+                <span className={subject ? "text-white" : "text-zinc-400"}>
+                  {subject || "Select one"}
+                </span>
+
+                <span className="right-2 absolute inset-y-0 flex items-center pointer-events-none">
+                  <ChevronUpDownIcon className="w-5 h-5 text-zinc-400" />
+                </span>
+              </Listbox.Button>
+
+              {/* Dropdown */}
+              <Listbox.Options className="z-50 absolute bg-zinc-800 shadow-xl mt-2 border border-gray-700 rounded-md w-full overflow-hidden">
+                {[
+                  "New website",
+                  "Revamp existing website",
+                  "Landing page",
+                  "Not sure yet",
+                ].map((item) => (
+                  <Listbox.Option key={item} value={item}>
+                    {({ active }) => (
+                      <li
+                        className={`cursor-pointer px-3 py-2 text-sm transition
+                  ${
+                    active
+                      ? "bg-purple-600/30 text-white"
+                      : "bg-zinc-800 text-zinc-200"
+                  }
+                `}
+                      >
+                        {item}
+                      </li>
+                    )}
+                  </Listbox.Option>
+                ))}
+              </Listbox.Options>
+            </div>
+          </Listbox>
+
+          {/* ✅ Hidden field so FormSubmit still works */}
+          <input type="hidden" name="_subject" value={subject} required />
         </div>
 
         {/* Message */}
         <div className="mb-4">
-          <label htmlFor="message" className="block mb-1 font-semibold">
-            Message
+          <label htmlFor="message" className="block mb-1 font-normal text-sm">
+            Briefly describe what you need <br /> Example: business type, number
+            of pages, or a website you like.
           </label>
           <textarea
             id="message"
             name="message"
             rows="4"
             required
-            className="w-full px-3 py-2 border border-gray-800/75 rounded-md bg-zinc-800/25 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="bg-zinc-800/25 px-3 py-2 border border-gray-800/75 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
           ></textarea>
         </div>
 
@@ -142,10 +184,10 @@ function Form() {
             type="checkbox"
             id="terms"
             required
-            className="mt-1 text-blue-500 focus:ring-blue-400 border"
+            className="mt-1 border focus:ring-blue-400 text-blue-500"
           />
           <label htmlFor="terms" className="text-sm">
-            Agree to Privacy Policy and Terms and Conditions
+            I understand this is a project inquiry, not an instant quote.
           </label>
         </div>
 
@@ -167,24 +209,25 @@ function Form() {
       <AnimatePresence>
         {showPopup && (
           <motion.div
-            className="fixed inset-0 flex items-center justify-center bg-black/60 z-50"
+            className="z-50 fixed inset-0 flex justify-center items-center bg-black/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-zinc-900/40 backdrop-blur-3xl shadow-2xl border border-gray-800 text-gray-100 rounded-lg max-w-md w-full p-12 text-center"
+              className="bg-zinc-900/40 shadow-2xl backdrop-blur-3xl p-12 border border-gray-800 rounded-lg w-full max-w-md text-gray-100 text-center"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
             >
-              <h2 className="text-xl font-semibold mb-2">✅ Form Submitted</h2>
+              <h2 className="mb-2 font-semibold text-xl">✅ Form Submitted</h2>
               <p className="mb-4 text-gray-200">
-                Thank you! Your message has been sent successfully.
+                Message received. Thanks for reaching out. I’ll review your
+                message and respond by email, typically within 24–48 hours.
               </p>
               <button
                 onClick={handleClosePopup}
-                className="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600"
+                className="bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded-md text-white"
               >
                 Close
               </button>

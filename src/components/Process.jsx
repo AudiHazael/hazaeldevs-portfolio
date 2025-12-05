@@ -3,11 +3,11 @@ import React from "react";
 const steps = [
   {
     id: 1,
-    title: "Decide & Align",
+    title: "Goals & Priorities",
     bullets: [
-      "Clarify goals: leads, sales, or brand",
-      "Set budget and timeline expectations",
-      "Choose features that move the needle",
+      " Review your business, competitors, and audience",
+      "Define pages, scope, and key conversion points",
+      "Agree on what success looks like",
     ],
   },
   {
@@ -23,7 +23,7 @@ const steps = [
     id: 3,
     title: "Proposal & Plan",
     bullets: [
-      "Receive a clear proposal and timeline",
+      "Receive a clear proposal with pricing and timeline",
       "Approve milestones and deliverables",
       "Sign-off and schedule start date",
     ],
@@ -41,9 +41,9 @@ const steps = [
     id: 5,
     title: "Build & Optimize",
     bullets: [
-      "Responsive, accessible, SEO-aware code",
-      "Performance and best-practice optimizations",
-      "Staging review and QA"
+      "Clean, responsive, SEO-aware build",
+      "Performance and best-practice optimization",
+      "QA review before launch",
     ],
   },
   {
@@ -67,14 +67,18 @@ function Process() {
   return (
     <section id="process" className="bg-inherit py-12 text-zinc-100">
       <div className="mx-auto px-6 md:max-w-[80%]">
-        <h6 className="mb-2 font-semibold text-indigo-400 uppercase">Our Process</h6>
+        <h6 className="mb-2 font-semibold text-indigo-400 uppercase">
+          {" "}
+          Process
+        </h6>
         <h3 className="mb-6 font-bold text-zinc-50 text-2xl md:text-4xl">
-          A simple, proven roadmap from idea to launch
+          A clear, proven roadmap from idea to launch
         </h3>
 
         <p className="mb-8 max-w-3xl text-gray-300">
-          We focus on outcomes — not busywork. The process below keeps things
-          predictable and fast so you start seeing results sooner.
+          This process is designed to keep projects clear, predictable, and
+          focused on outcomes. You’ll always know what’s happening, what’s next,
+          and what you’re paying for.
         </p>
 
         <div className="gap-6 grid grid-cols-1 sm:grid-cols-2">
@@ -90,7 +94,9 @@ function Process() {
               </div>
 
               <div>
-                <h4 className="font-semibold text-zinc-50 text-lg">{s.title}</h4>
+                <h4 className="font-semibold text-zinc-50 text-lg">
+                  {s.title}
+                </h4>
                 <ul className="space-y-1 mt-2 pl-5 text-gray-300 text-sm list-disc">
                   {s.bullets.map((b, i) => (
                     <li key={i}>{b}</li>
@@ -103,25 +109,29 @@ function Process() {
 
         <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center gap-4 mt-8">
           <div>
-            <h5 className="font-semibold text-zinc-50 text-lg">Ready to get started?</h5>
-            <p className="text-gray-300 text-sm">Request a free, no-obligation quote and timeline.</p>
+            <h5 className="font-semibold text-zinc-50 text-lg">
+              Ready to get started?
+            </h5>
+            <p className="text-gray-300 text-sm">
+              Receive a clear breakdown, timeline, and next steps.
+            </p>
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex gap-6">
             <a
               href={quoteLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-purple-500/80 hover:bg-purple-400 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 backdrop-blur-sm px-8 py-3 rounded-full font-semibold text-white text-lg transition-all duration-300"
             >
-              Get a Free Quote
+              Request a Project Breakdown
             </a>
 
             <a
-              href="#contact"
-             className="inline-flex items-center hover:bg-purple-400/20 backdrop-blur-sm px-8 py-3 border border-purple-400/50 rounded-full font-semibold text-purple-200 hover:text-white text-lg transition-all duration-300"
+              href="/services"
+              className="inline-flex items-center hover:bg-purple-400/20 backdrop-blur-sm px-8 py-3 border border-purple-400/50 rounded-full font-semibold text-purple-200 hover:text-white text-lg transition-all duration-300"
             >
-              Contact Us
+              View Services
             </a>
           </div>
         </div>

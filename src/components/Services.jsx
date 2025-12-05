@@ -16,46 +16,52 @@ function Services() {
   // Services data
   const services = [
     {
-      title: "Business Website",
+      title: "Company Website",
       img: "/business.png",
       desc: (
         <>
-          <p>Professional websites tailored for businesses to establish a strong online presence and attract clients. Features include:</p>
+          <p>
+            A clear, professional website that helps people quickly understand
+            who you are, what you do, and how to contact you with confidence.
+          </p>
           <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
-            <li>Custom branding and design</li>
-            <li>Contact forms and lead capture</li>
-            <li>Blog integration</li>
-            <li>Analytics setup</li>
+            <li>Clear service pages written for non-technical visitors</li>
+            <li>Simple contact and enquiry flow</li>
+            <li>Professional structure that builds credibility</li>
           </ul>
         </>
       ),
     },
     {
-      title: "Landing Pages",
+      title: "Project & Marketing Pages",
       img: "/landing.png",
       desc: (
         <>
-          <p>High-converting landing pages designed to maximize leads and drive sales. Each page includes:</p>
+          <p>
+            Single-purpose pages designed to explain an offer clearly and guide
+            visitors toward a specific action.
+          </p>
           <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
-            <li>Clear call-to-action buttons</li>
-            <li>Mobile-first responsive layout</li>
-            <li>Fast loading times</li>
-            <li>SEO optimization</li>
+            <li>Clear messaging with one main goal</li>
+            <li>Mobile-friendly layout</li>
+            <li>Fast loading and easy to share</li>
           </ul>
         </>
       ),
     },
     {
-      title: "E-commerce Website",
+      title: "Clear Process & Communication",
       img: "/ecommerce.png",
       desc: (
         <>
-          <p>Fully functional e-commerce websites for seamless shopping experiences. Key features:</p>
+          <p>
+            A straightforward development process designed to avoid surprises
+            and wasted time.
+          </p>
           <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
-            <li>Product catalog and search</li>
-            <li>Secure checkout and payment integration</li>
-            <li>Order management system</li>
-            <li>Customer reviews and ratings</li>
+            <li>Defined scope before work begins</li>
+            <li>Clear timelines and expectations</li>
+            <li>Written updates instead of unnecessary calls</li>
           </ul>
         </>
       ),
@@ -69,7 +75,10 @@ function Services() {
       icon: MonitorSmartphone,
       desc: (
         <>
-          <p>All websites are built with modern design principles and optimized for every device:</p>
+          <p>
+            All websites are built with modern design principles and optimized
+            for every device:
+          </p>
           <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
             <li>Responsive layouts for phones, tablets, and desktops</li>
             <li>Touch-friendly navigation</li>
@@ -83,7 +92,10 @@ function Services() {
       icon: BoltIcon,
       desc: (
         <>
-          <p>Projects are delivered quickly, with a streamlined process to save you time:</p>
+          <p>
+            Projects are delivered quickly, with a streamlined process to save
+            you time:
+          </p>
           <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
             <li>Clear project milestones</li>
             <li>Regular progress updates</li>
@@ -97,7 +109,10 @@ function Services() {
       icon: Rocket,
       desc: (
         <>
-          <p>Websites are optimized for search engines to help your business get discovered online:</p>
+          <p>
+            Websites are optimized for search engines to help your business get
+            discovered online:
+          </p>
           <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
             <li>Semantic HTML structure</li>
             <li>Meta tags and Open Graph setup</li>
@@ -112,7 +127,9 @@ function Services() {
       icon: Code,
       desc: (
         <>
-          <p>High-quality websites at reasonable prices, with flexible packages:</p>
+          <p>
+            High-quality websites at reasonable prices, with flexible packages:
+          </p>
           <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
             <li>Transparent pricing with no hidden fees</li>
             <li>Custom solutions for every budget</li>
@@ -155,22 +172,22 @@ function Services() {
               custom={i + 1}
               className="group flex flex-col items-start gap-4 bg-zinc-900/40 hover:bg-zinc-900/60 border border-zinc-800 rounded-md overflow-hidden transition-all duration-300"
             >
-                <div className="relative w-full h-64 md:h-64">
-                  <img
-                    src={service.img}
-                    alt={service.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-[#6b21a8]/40 group-hover:bg-[#6b21a8]/50 transition-opacity duration-300 pointer-events-none mix-blend-multiply" />
-                </div>
+              <div className="relative w-full h-64 md:h-64">
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-[#6b21a8]/40 group-hover:bg-[#6b21a8]/50 transition-opacity duration-300 pointer-events-none mix-blend-multiply" />
+              </div>
 
               <div className="p-6">
-              <h4 className="font-semibold text-zinc-50 text-xl">
-                {service.title}
-              </h4>
-              <div className="text-gray-300 text-sm leading-relaxed">
-                {service.desc}
-              </div>
+                <h4 className="font-semibold text-zinc-50 text-xl">
+                  {service.title}
+                </h4>
+                <div className="text-gray-300 text-sm leading-relaxed">
+                  {service.desc}
+                </div>
               </div>
             </motion.div>
           ))}

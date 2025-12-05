@@ -62,7 +62,7 @@ export default function Services() {
 
       <div className="mt-12">
         <a
-          href="#contact"
+          href="/#contact"
           className="inline-block bg-purple-500/80 hover:bg-purple-400 px-8 py-3 rounded-full font-semibold text-white transition"
         >
           Request a Free Project Review

@@ -38,7 +38,7 @@ export default function Location() {
             Primary Location
           </h2>
           <p className="text-zinc-300 text-sm">
-            📍 Lagos, Nigeria
+            Lagos, Nigeria
             <br />
             Time Zone: GMT+1 (West Africa Time)
           </p>

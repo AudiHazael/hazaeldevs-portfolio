@@ -85,20 +85,20 @@ const MainHero = () => {
       >
         <motion.h1
           variants={fadeInUp}
-          className="font-semibold text-purple-100 text-3xl lg:text-5xl text-center [text-shadow:0_0_6px_rgba(0,0,0,0.9),0_0_12px_rgba(0,0,0,0.9)]"
+          className="font-semibold text-purple-100 text-2xl lg:text-5xl text-center [text-shadow:0_0_6px_rgba(0,0,0,0.9),0_0_12px_rgba(0,0,0,0.9)]"
         >
           Helping businesses build trust online before customers make contact
         </motion.h1>
 
         <motion.h2
           variants={fadeInUp}
-          className="mt-4 max-w-3xl text-zinc-100 text-2xl text-center leading-tight"
+          className="mt-4 max-w-3xl font-medium text-zinc-100 text-xl text-center leading-tight"
         >
           I design and build clear, professional websites that:
         </motion.h2>
         <motion.ul
           variants={fadeInUp}
-          className="space-y-1 mx-auto mb-2 max-w-3xl text-zinc-100 text-lg text-center"
+          className="space-y-1 mx-auto mb-2 max-w-3xl font-medium text-zinc-100 text-lg text-center"
         >
           <li>Confirm your credibility</li>
           <li>Explain what you do</li>
@@ -106,7 +106,7 @@ const MainHero = () => {
         </motion.ul>
         <motion.p
           variants={fadeInUp}
-          className="mt-4 text-zinc-300 text-sm text-center"
+          className="mt-4 text-zinc-50 text-sm text-center"
         >
           Working remotely with clients internationally <br />
           Used by small businesses, startups, and service providers
@@ -141,7 +141,7 @@ const MainHero = () => {
         </motion.div>
         <motion.p variants={fadeInUp} className="text-zinc-400 text-sm">
           Explore{" "}
-          <a href="/services" className="text-purple-300 underline">
+          <a href="/services" className="text-purple-300">
             services
           </a>{" "}
         </motion.p>

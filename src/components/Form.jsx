@@ -5,20 +5,16 @@ import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: (delay = 0) => ({
+  visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.6,
-      delay,
-      ease: "easeOut",
-    },
-  }),
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 function Form() {
-  const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const [subject, setSubject] = useState("");
 
   const handleSubmit = async (e) => {
@@ -26,113 +22,71 @@ function Form() {
     setLoading(true);
 
     const formData = new FormData(e.target);
+    formData.append("access_key", "e8e13ec9-dfa7-41ad-8cc0-dcc5bf8a4732");
+    formData.append("subject", subject || "General inquiry");
 
     try {
-      // ✅ Use FormSubmit JSON endpoint to avoid redirect issues
-      const response = await fetch(
-        "https://formsubmit.co/ajax/c41c51ccdd0636aed8eba6d6d1ef1bad",
-        {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-          },
-          body: formData,
-        }
-      );
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-      if (response.ok) {
+      const data = await res.json();
+
+      if (data.success) {
         setShowPopup(true);
         e.target.reset();
+        setSubject("");
       } else {
-        const errorData = await response.json();
-        console.error("FormSubmit error:", errorData);
         alert("Submission failed. Please try again.");
       }
-    } catch (error) {
-      console.error("Network error:", error);
-      alert("There was a network error. Please try again later.");
+    } catch (err) {
+      alert("Network error. Please try again.");
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleClosePopup = () => {
-    setShowPopup(false);
   };
 
   return (
     <>
       <motion.form
         onSubmit={handleSubmit}
-        className="bg-zinc-900/40 shadow-md backdrop-blur-md p-4 border border-gray-800 rounded-md w-full text-stone-50"
+        className="bg-zinc-900/40 p-4 border border-gray-800 rounded-md w-full text-white"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
         variants={fadeInUp}
-        custom={0.2}
       >
-        {/* Hidden Fields for FormSubmit */}
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_blacklist" value="spam, ads" />
-        <input type="hidden" name="_template" value="box" />
-        <input
-          type="hidden"
-          name="_autoresponse"
-          value="Hello 👋, thank you for contacting us! We’ve received your message and will reply shortly."
-        />
-
-        {/* Forward a copy to your Gmail */}
-        <input type="hidden" name="_cc" value="hazaelaudi@gmail.com" />
-
         {/* Name */}
         <div className="mb-4">
-          <label htmlFor="name" className="block mb-1 font-medium">
-            Name
-          </label>
+          <label className="block mb-1">Name</label>
           <input
-            type="text"
-            id="name"
             name="name"
             required
-            className="bg-zinc-800/25 px-3 py-2 border border-gray-800/75 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
+            className="bg-zinc-800 px-3 py-2 rounded w-full"
           />
         </div>
 
         {/* Email */}
         <div className="mb-4">
-          <label htmlFor="email" className="block mb-1 font-medium">
-            Email
-          </label>
+          <label className="block mb-1">Email</label>
           <input
             type="email"
-            id="email"
             name="email"
             required
-            className="bg-zinc-800/25 px-3 py-2 border border-gray-800/75 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
+            className="bg-zinc-800 px-3 py-2 rounded w-full"
           />
         </div>
 
         {/* Subject */}
         <div className="mb-4">
-          <label className="block mb-1 font-medium">
-            What do you need help with?
-          </label>
-
+          <label className="block mb-1">What do you need help with?</label>
           <Listbox value={subject} onChange={setSubject}>
             <div className="relative">
-              {/* Trigger */}
-              <Listbox.Button className="relative bg-zinc-800/25 px-3 py-2 border border-gray-800/75 rounded-md focus:outline-none w-full text-white text-left">
-                <span className={subject ? "text-white" : "text-zinc-400"}>
-                  {subject || "Select one"}
-                </span>
-
-                <span className="right-2 absolute inset-y-0 flex items-center pointer-events-none">
-                  <ChevronUpDownIcon className="w-5 h-5 text-zinc-400" />
-                </span>
+              <Listbox.Button className="bg-zinc-800 px-3 py-2 rounded w-full text-left">
+                {subject || "Select one"}
+                <ChevronUpDownIcon className="top-2.5 right-2 absolute w-5 h-5" />
               </Listbox.Button>
-
-              {/* Dropdown */}
-              <Listbox.Options className="z-50 absolute bg-zinc-800 shadow-xl mt-2 border border-gray-700 rounded-md w-full overflow-hidden">
+              <Listbox.Options className="absolute bg-zinc-800 shadow mt-2 rounded w-full">
                 {[
                   "New website",
                   "Revamp existing website",
@@ -142,13 +96,9 @@ function Form() {
                   <Listbox.Option key={item} value={item}>
                     {({ active }) => (
                       <li
-                        className={`cursor-pointer px-3 py-2 text-sm transition
-                  ${
-                    active
-                      ? "bg-purple-600/30 text-white"
-                      : "bg-zinc-800 text-zinc-200"
-                  }
-                `}
+                        className={`px-3 py-2 cursor-pointer ${
+                          active ? "bg-indigo-600/30" : ""
+                        }`}
                       >
                         {item}
                       </li>
@@ -158,78 +108,58 @@ function Form() {
               </Listbox.Options>
             </div>
           </Listbox>
-
-          {/* ✅ Hidden field so FormSubmit still works */}
-          <input type="hidden" name="_subject" value={subject} required />
         </div>
 
         {/* Message */}
         <div className="mb-4">
           <label htmlFor="message" className="block mb-1 font-medium">
+            {" "}
             Briefly describe what you need <br />{" "}
             <span className="font-light text-sm">
-              Example: business type, number of pages, or a website you like.
-            </span>
+              {" "}
+              Example: business type, number of pages, or a website you like.{" "}
+            </span>{" "}
           </label>
           <textarea
-            id="message"
             name="message"
             rows="4"
             required
-            className="bg-zinc-800/25 px-3 py-2 border border-gray-800/75 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
-          ></textarea>
-        </div>
-
-        {/* Checkbox */}
-        <div className="flex items-end gap-2 mb-6">
-          <input
-            type="checkbox"
-            id="terms"
-            required
-            className="mt-1 border focus:ring-blue-400 text-blue-500"
+            className="bg-zinc-800 px-3 py-2 rounded w-full"
           />
-          <label htmlFor="terms" className="text-sm">
-            I understand this is a project inquiry, not an instant quote.
-          </label>
         </div>
 
-        {/* Submit Button */}
+        {/* Submit */}
         <button
           type="submit"
           disabled={loading}
-          className={`inline-block px-6 md:px-8 py-3 font-semibold rounded-md border transition-all duration-300 ${
-            loading
-              ? "border-gray-500 text-gray-400 cursor-not-allowed"
-              : " text-white border-gray-700 bg-indigo-500/15 border  hover:bg-indigo-600 transition"
+          className={`px-6 py-3 rounded ${
+            loading ? "opacity-50" : "bg-indigo-500 hover:bg-indigo-600"
           }`}
         >
           {loading ? "Sending..." : "Send Message"}
         </button>
       </motion.form>
 
-      {/* Popup Modal */}
+      {/* Success Modal */}
       <AnimatePresence>
         {showPopup && (
           <motion.div
-            className="z-50 fixed inset-0 flex justify-center items-center bg-black/60"
+            className="fixed inset-0 flex justify-center items-center bg-black/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-zinc-900/40 shadow-2xl backdrop-blur-3xl p-12 border border-gray-800 rounded-lg w-full max-w-md text-gray-100 text-center"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+              className="bg-zinc-900 p-8 rounded text-center"
+              initial={{ scale: 0.85 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.85 }}
             >
-              <h2 className="mb-2 font-semibold text-xl">✅ Form Submitted</h2>
-              <p className="mb-4 text-gray-200">
-                Message received. Thanks for reaching out. I’ll review your
-                message and respond by email, typically within 24–48 hours.
-              </p>
+              <h2 className="mb-2 text-xl">✅ Message Sent</h2>
+              <p className="mb-4">I’ll reply within 24–48 hours.</p>
               <button
-                onClick={handleClosePopup}
-                className="bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded-md text-white"
+                onClick={() => setShowPopup(false)}
+                className="bg-indigo-500 px-4 py-2 rounded"
               >
                 Close
               </button>

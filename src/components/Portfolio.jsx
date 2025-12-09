@@ -114,7 +114,7 @@ const Portfolio = () => {
       <div className="mx-auto px-4 md:max-w-[80%]">
         {/* Section Heading */}
         <motion.h6
-          className="mb-2 font-semibold text-indigo-400 uppercase"
+          className="mb-2 font-semibold text-purple-300/50 uppercase"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -209,20 +209,23 @@ const Portfolio = () => {
 
                     {/* Buttons at bottom */}
                     <div className="flex gap-3">
+                      {/* Live Demo */}
                       <a
                         href={item.previewLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-indigo-500/15 hover:bg-indigo-600 px-4 py-2 border border-gray-700 rounded-md font-medium text-white text-sm transition"
+                        className="group inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 shadow-black/20 shadow-sm backdrop-blur-md px-4 py-2 border border-indigo-300/30 hover:border-indigo-300/50 rounded-lg focus:outline-none ring-1 ring-white/10 focus-visible:ring-4 focus-visible:ring-indigo-400/30 font-medium text-slate-100 hover:text-white text-sm transition-all duration-300 ease-out"
                       >
                         <Icons.LinkIcon className="w-4 h-4" />
                         Live Demo
                       </a>
+
+                      {/* Code */}
                       <a
                         href={item.repoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 hover:bg-indigo-400 px-4 py-2 border border-indigo-500 rounded-md font-medium text-stone-100 hover:text-zinc-950 text-sm transition"
+                        className="group inline-flex items-center gap-2 bg-white/5 hover:bg-white/15 shadow-black/20 shadow-sm backdrop-blur-md px-4 py-2 border border-slate-500/30 hover:border-slate-400/50 rounded-lg focus:outline-none ring-1 ring-white/10 focus-visible:ring-4 focus-visible:ring-slate-400/30 font-medium text-slate-200 hover:text-white text-sm transition-all duration-300 ease-out"
                       >
                         <Icons.Github className="w-4 h-4" />
                         Code

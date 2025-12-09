@@ -31,7 +31,7 @@ function Contact() {
             custom={0.2}
           >
             <motion.h6
-              className="mb-2 font-semibold text-indigo-400 uppercase"
+              className="mb-2 font-semibold text-purple-300/50 uppercase"
               variants={fadeInUp}
               custom={0.3}
             >
@@ -62,7 +62,7 @@ function Contact() {
               variants={fadeInUp}
               custom={0.9}
             >
-              {Icons.Map({ className: "w-6 h-6 mt-1 text-indigo-400 " })}
+              {Icons.Map({ className: "w-6 h-6 mt-1 text-purple-300/50 " })}
               <div>
                 <h4 className="font-bold text-md text-stone-100">Address</h4>
                 <p className="text-stone-300">
@@ -76,7 +76,7 @@ function Contact() {
               variants={fadeInUp}
               custom={1.1}
             >
-              {Icons.Phone({ className: "w-6 h-6  mt-1 text-indigo-400 " })}
+              {Icons.Phone({ className: "w-6 h-6  mt-1 text-purple-300/50 " })}
               <div>
                 <h4 className="font-bold text-md text-stone-100">WhatsApp</h4>
                 <p className="text-stone-300">
@@ -90,7 +90,7 @@ function Contact() {
               variants={fadeInUp}
               custom={1.3}
             >
-              {Icons.Mail({ className: "w-6 h-6 mt-1 text-indigo-400" })}
+              {Icons.Mail({ className: "w-6 h-6 mt-1 text-purple-300/50" })}
               <div>
                 <h4 className="font-bold text-md text-stone-100">Email</h4>
                 <p className="text-stone-300">hazaeldevs@gmail.com</p>

@@ -67,7 +67,7 @@ function Process() {
   return (
     <section id="process" className="bg-inherit py-12 text-zinc-100">
       <div className="mx-auto px-6 md:max-w-[80%]">
-        <h6 className="mb-2 font-semibold text-indigo-400 uppercase">
+        <h6 className="mb-2 font-semibold text-purple-300/50 uppercase">
           {" "}
           Process
         </h6>
@@ -88,7 +88,7 @@ function Process() {
               className="flex gap-4 bg-zinc-900/40 p-5 border border-zinc-800 rounded-md"
             >
               <div className="shrink-0">
-                <div className="flex justify-center items-center bg-indigo-600 rounded-full w-8 h-8 font-bold text-white">
+                <div className="flex justify-center items-center bg-purple-400/70 border border-purple-300/30 hover:border-purple-300/50 rounded-full ring-1 ring-white/5 w-8 h-8 font-medium text-slate-300 text-xs">
                   {s.id}
                 </div>
               </div>
@@ -122,14 +122,14 @@ function Process() {
               href={quoteLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-purple-500/80 hover:bg-purple-400 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 backdrop-blur-sm px-8 py-3 rounded-full font-semibold text-white text-sm md:text-lg transition-all duration-300 tex"
+              className="inline-flex relative items-center gap-2 bg-linear-to-r from-purple-500/70 to-fuchsia-500/60 shadow-black/30 shadow-lg hover:shadow-xl backdrop-blur-md px-8 py-3 rounded-full focus-outline-none focus-visible:ring-4 focus-visible:ring-purple-400/30 font-semibold text-white text-sm md:text-lg transition-all duration-300 ease-out"
             >
               Request a Project Breakdown
             </a>
 
             <a
               href="/services"
-              className="inline-flex items-center hover:bg-purple-400/20 backdrop-blur-sm px-8 py-3 border border-purple-400/50 rounded-full font-semibold text-purple-200 hover:text-white text-sm md:text-lg transition-all duration-300 text"
+              className="inline-flex items-center gap-2 bg-black/5 hover:bg-white/10 shadow-black/20 shadow-sm backdrop-blur-md px-8 py-3 border border-purple-300/30 hover:border-purple-300/50 rounded-full focus-outline-none focus-visible:ring-4 focus-visible:ring-purple-300/30 font-semibold text-purple-200/90 hover:text-white text-sm md:text-lg transition-all duration-300 ease-out"
             >
               View Services
             </a>

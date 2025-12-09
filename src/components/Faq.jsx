@@ -51,7 +51,7 @@ export default function Faq() {
     <section id="faq" className="bg-inherit py-12 text-zinc-100">
       <div className="mx-auto px-6 md:max-w-[80%]">
         <div className="mb-8">
-          <h6 className="mb-2 font-semibold text-indigo-400 uppercase">
+          <h6 className="mb-2 font-semibold text-purple-300/50 uppercase">
             Frequently Asked
           </h6>
           <h3 className="font-bold text-zinc-50 text-2xl md:text-4xl">
@@ -91,7 +91,7 @@ export default function Faq() {
                       </div>
 
                       <motion.div
-                        className="flex justify-center items-center bg-white/2 rounded-full w-8 h-8 text-indigo-400"
+                        className="flex justify-center items-center bg-white/2 rounded-full w-8 h-8 text-purple-300/50"
                         aria-hidden
                       >
                         <motion.svg
@@ -148,14 +148,14 @@ export default function Faq() {
                 href="https://wa.me/2347039404909?text=Hi%20Hazael%2C%20I%20have%20a%20question%20about%20a%20website%20project%20and%20would%20like%20to%20chat."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-purple-500/80 hover:bg-purple-400 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 backdrop-blur-sm px-8 py-3 rounded-full font-semibold text-white text-lg transition-all duration-300"
+                className="inline-flex relative items-center gap-2 bg-linear-to-r from-purple-500/70 to-fuchsia-500/60 shadow-black/30 shadow-lg hover:shadow-xl backdrop-blur-md px-8 py-3 rounded-full focus-outline-none focus-visible:ring-4 focus-visible:ring-purple-400/30 font-semibold text-white transition-all duration-300 ease-out"
               >
                 Chat with me
               </a>
 
               <a
                 href="#contact"
-                className="inline-flex items-center hover:bg-purple-400/20 backdrop-blur-sm px-8 py-3 border border-purple-400/50 rounded-full font-semibold text-purple-200 hover:text-white text-lg transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-black/5 hover:bg-white/10 shadow-black/20 shadow-sm backdrop-blur-md px-8 py-3 border border-purple-300/30 hover:border-purple-300/50 rounded-full focus-outline-none focus-visible:ring-4 focus-visible:ring-purple-300/30 font-semibold text-purple-200/90 hover:text-white transition-all duration-300 ease-out"
               >
                 Request a Quote
               </a>

@@ -56,7 +56,7 @@ export default function Reviews() {
 
   return (
     <section className="mx-auto px-4 md:max-w-[80%]">
-      <h6 className="mb-3 font-semibold text-indigo-400 text-sm uppercase tracking-widest">
+      <h6 className="mb-3 font-semibold text-purple-300/50 text-sm uppercase tracking-widest">
         Testimonials
       </h6>
       <motion.h2

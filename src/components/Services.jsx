@@ -152,7 +152,7 @@ function Services() {
           custom={0}
           className="flex flex-col justify-center items-start mb-12"
         >
-          <h6 className="font-semibold text-indigo-400 text-sm uppercase tracking-widest">
+          <h6 className="font-semibold text-purple-300/50 text-sm uppercase tracking-widest">
             My Services
           </h6>
           <h3 className="font-bold text-zinc-50 text-2xl md:text-4xl">

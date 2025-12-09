@@ -70,9 +70,6 @@ const CombinedHeroAbout = () => {
             </div>
           </motion.div>
 
-          {/* Mobile-only divider under profile row */}
-          {/* <hr className="md:hidden block my-4 border-gray-700 border-t w-full" /> */}
-
           {/* Subheading */}
           <motion.h2
             variants={fadeInUp}
@@ -88,10 +85,10 @@ const CombinedHeroAbout = () => {
               href={slide.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 border border-purple-500/40 hover:border-indigo-400 rounded-full font-semibold text-purple-300 hover:text-indigo-200 text-lg md:text-xl transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-black/5 hover:bg-white/10 shadow-black/20 shadow-sm backdrop-blur-md px-8 py-3 border border-purple-300/30 hover:border-purple-300/50 rounded-full focus-outline-none focus-visible:ring-4 focus-visible:ring-purple-300/30 font-semibold text-purple-200/90 hover:text-white text-lg transition-all duration-300 ease-out"
             >
-              {slide.buttonText}
-              <ArrowLongRightIcon className="inline-block -mt-1 ml-2 w-5 h-5" />
+              <span>{slide.buttonText}</span>
+              <ArrowLongRightIcon className="w-5 h-5 transition-transform group-hover:translate-x-1 duration-300 ease-out" />
             </a>
           </motion.div>
         </motion.div>

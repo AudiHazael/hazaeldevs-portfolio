@@ -120,23 +120,22 @@ const MainHero = () => {
           {/* Primary Button */}
           <motion.a
             href={quoteLink}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center bg-purple-500/80 hover:bg-purple-400 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/40 backdrop-blur-sm px-8 py-3 rounded-full font-semibold text-white text-lg transition-all duration-300"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex relative items-center gap-2 bg-linear-to-r from-purple-500/70 to-fuchsia-500/60 shadow-black/30 shadow-lg hover:shadow-xl backdrop-blur-md px-8 py-3 rounded-full focus-outline-none focus-visible:ring-4 focus-visible:ring-purple-400/30 font-semibold text-white text-lg transition-all duration-300 ease-out"
           >
             Request a Project Breakdown
-            <ArrowLongRightIcon className="-mt-1 ml-2 w-5 h-5" />
+            <ArrowLongRightIcon className="w-5 h-5 translate-y-px" />
           </motion.a>
 
           {/* Secondary Button */}
           <motion.a
             href={portfolioLink}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center hover:bg-purple-400/20 backdrop-blur-sm px-8 py-3 border border-purple-400/50 rounded-full font-semibold text-purple-200 hover:text-white text-lg transition-all duration-300"
+            whileHover={{ y: -1 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-2 bg-black/5 hover:bg-white/10 shadow-black/20 shadow-sm backdrop-blur-md px-8 py-3 border border-purple-300/30 hover:border-purple-300/50 rounded-full focus-outline-none focus-visible:ring-4 focus-visible:ring-purple-300/30 font-semibold text-purple-200/90 hover:text-white text-lg transition-all duration-300 ease-out"
           >
             View Portfolio
-            <ArrowLongRightIcon className="-mt-1 ml-2 w-5 h-5" />
           </motion.a>
         </motion.div>
         <motion.p variants={fadeInUp} className="text-zinc-400 text-sm">

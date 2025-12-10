@@ -33,7 +33,7 @@ export default function MainHero() {
   return (
     <section
       id="home"
-      className="relative flex items-center px-6 sm:px-10 md:px-20 w-full min-h-screen overflow-hidden text-white"
+      className="relative flex items-center-safe px-6 sm:px-10 md:px-20 w-full min-h-screen overflow-hidden text-white"
     >
       {/* Background */}
       <div className="-z-10 absolute inset-0">
@@ -105,7 +105,7 @@ export default function MainHero() {
         >
           Helping Businesses
           <br />
-          <span className="block bg-clip-text bg-linear-to-r from-purple-100 to-purple-400/75 font-extrabold text-transparent text-4xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-wider">
+          <span className="block bg-clip-text bg-linear-to-r from-purple-200 to-purple-400/75 font-extrabold text-transparent text-4xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-wider">
             build trust online
           </span>
         </motion.h1>

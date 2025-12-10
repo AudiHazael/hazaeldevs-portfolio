@@ -72,7 +72,7 @@ const CTA = () => {
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 shadow-black/20 shadow-sm backdrop-blur-md px-4 py-2 border border-purple-300/30 hover:border-purple-300/50 rounded-full focus:outline-none ring-1 ring-white/10 focus-visible:ring-4 focus-visible:ring-purple-300/30 font-semibold text-purple-200/90 hover:text-white text-sm transition-all duration-300 ease-out"
+              className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 shadow-black/20 shadow-sm backdrop-blur-md px-4 py-2 border border-purple-300/30 hover:border-purple-300/50 rounded-full focus:outline-none ring-1 ring-white/10 focus-visible:ring-4 focus-visible:ring-purple-300/30 font-semibold text-purple-200/90 hover:text-white transition-all duration-300 ease-out"
               whileHover={btnHover}
               whileTap={btnTap}
               variants={item}
@@ -84,7 +84,7 @@ const CTA = () => {
 
             <motion.a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-linear-to-r from-purple-500/70 to-fuchsia-500/60 shadow-black/30 shadow-lg hover:shadow-xl backdrop-blur-md px-4 py-2 rounded-full focus:outline-none ring-1 ring-white/20 focus-visible:ring-4 focus-visible:ring-purple-400/30 font-semibold text-white text-sm transition-all duration-300 ease-out"
+              className="inline-flex items-center gap-2 bg-linear-to-r from-purple-500/70 to-fuchsia-500/60 shadow-black/30 shadow-lg hover:shadow-xl backdrop-blur-md px-4 py-2 rounded-full focus:outline-none ring-1 ring-white/20 focus-visible:ring-4 focus-visible:ring-purple-400/30 font-semibold text-white transition-all duration-300 ease-out"
               whileHover={btnHover}
               whileTap={btnTap}
               variants={item}

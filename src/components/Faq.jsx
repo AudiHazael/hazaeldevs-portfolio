@@ -176,7 +176,7 @@ export default function Faq() {
                 alt="Discussing website process"
                 className="w-full h-[360px] object-cover"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-[#6b21a8]/50 transition-opacity duration-300 pointer-events-none mix-blend-multiply" />
             </div>
           </motion.div>
         </div>

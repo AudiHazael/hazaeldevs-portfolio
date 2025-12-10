@@ -6,7 +6,7 @@
 /* globals.css */
 html {
   background: linear-gradient(to bottom, #020617, #09090b, #000000);
-  font-size: 75%;
+  font-size: 80%;
   scroll-behavior: smooth;
   font-optical-sizing: auto;
 }

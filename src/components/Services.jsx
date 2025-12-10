@@ -211,7 +211,7 @@ function Services() {
                   className="flex flex-col items-start gap-4 bg-zinc-900/40 hover:bg-zinc-900/60 p-4 sm:p-6 border border-zinc-800 rounded-xl w-full min-h-[140px] transition-all duration-300"
                 >
                   <div className="flex items-center gap-3">
-                    <Icon className="w-5 h-5 text-indigo-400" />
+                    <Icon className="w-5 h-5 text-purple-400/70" />
                     <h5 className="font-semibold text-zinc-50 text-sm">
                       {reason.title}
                     </h5>

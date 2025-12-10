@@ -58,6 +58,7 @@ function Navbar() {
       after:h-[2px] after:w-full after:rounded-full
       after:bg-gradient-to-r
       after:from-purple-300/70 after:to-fuchsia-200/40
+      after:text-purple-200
       ${
         activeSection === id
           ? "after:opacity-100"

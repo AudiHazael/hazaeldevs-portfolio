@@ -91,7 +91,7 @@ export default function MainHero() {
           variants={fadeIn}
           initial="hidden"
           animate="visible"
-          className="text-md text-purple-300/70 uppercase tracking-widest"
+          className="text-purple-300/70 text-sm uppercase tracking-widest"
         >
           Web Design & Development
         </motion.span>
@@ -101,11 +101,11 @@ export default function MainHero() {
           variants={fadeIn}
           initial="hidden"
           animate="visible"
-          className="font-medium text-3xl leading-tight tracking-wide"
+          className="font-medium text-xl leading-tight tracking-wide"
         >
           Helping Businesses
           <br />
-          <span className="block font-extrabold text-purple-300/90 text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-wider">
+          <span className="block font-extrabold text-purple-300/90 text-4xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-wider">
             build trust online
           </span>
         </motion.h1>
@@ -115,7 +115,7 @@ export default function MainHero() {
           variants={fadeIn}
           initial="hidden"
           animate="visible"
-          className="max-w-3xl text-gray-200 text-xl sm:text-xl"
+          className="max-w-3xl text-gray-200 text-lg"
         >
           Your website should establish confidence before the first call. I
           design sites that make your business feel credible, clear, and easy to
@@ -127,7 +127,7 @@ export default function MainHero() {
           variants={fadeIn}
           initial="hidden"
           animate="visible"
-          className="space-y-1 text-gray-300 text-xl"
+          className="space-y-1 text-gray-300 text-lg"
         >
           <li>• Confirm your credibility</li>
           <li>• Explain what you do clearly</li>
@@ -143,7 +143,7 @@ export default function MainHero() {
         >
           <a
             href={quoteLink}
-            className="inline-flex items-center gap-2 bg-linear-to-r from-purple-500 to-fuchsia-500 hover:opacity-90 shadow-lg px-8 py-3 rounded-full font-semibold text-lg transition"
+            className="inline-flex items-center gap-2 bg-linear-to-r from-purple-500 to-fuchsia-500 hover:opacity-90 shadow-lg px-8 py-3 rounded-full font-semibold transition"
           >
             Request a Project Breakdown
             <ArrowLongRightIcon className="w-5 h-5" />
@@ -151,7 +151,7 @@ export default function MainHero() {
 
           <a
             href="#portfolio"
-            className="inline-flex items-center gap-2 hover:bg-white/10 backdrop-blur-md px-8 py-3 border border-purple-300/40 rounded-full text-purple-200 text-lg transition"
+            className="inline-flex items-center gap-2 hover:bg-white/10 backdrop-blur-md px-8 py-3 border border-purple-300/40 rounded-full text-purple-200 transition"
           >
             View Portfolio
           </a>

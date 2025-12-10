@@ -51,7 +51,11 @@ function Navbar() {
   const linkClasses = (id) =>
     `
       relative font-medium transition-colors duration-300
-      ${activeSection === id ? "text-white font-semibold" : "text-slate-300"}
+      ${
+        activeSection === id
+          ? "text-purple-200 font-semibold"
+          : "text-slate-300"
+      }
       hover:text-purple-200
       after:content-['']
       after:absolute after:left-0 after:-bottom-1

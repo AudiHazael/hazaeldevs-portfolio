@@ -115,7 +115,7 @@ export default function MainHero() {
           variants={fadeIn}
           initial="hidden"
           animate="visible"
-          className="max-w-3xl text-gray-200 text-lg"
+          className="max-w-3xl text-gray-200"
         >
           Your website should establish confidence before the first call. I
           design sites that make your business feel credible, clear, and easy to
@@ -127,7 +127,7 @@ export default function MainHero() {
           variants={fadeIn}
           initial="hidden"
           animate="visible"
-          className="space-y-1 text-gray-300 text-lg"
+          className="space-y-1 text- text-gray-300"
         >
           <li>• Confirm your credibility</li>
           <li>• Explain what you do clearly</li>
@@ -158,7 +158,7 @@ export default function MainHero() {
         </motion.div>
 
         {/* Stats — centered beneath the content on large screens, stacked on small */}
-        <motion.div
+        {/* <motion.div
           variants={fadeIn}
           initial="hidden"
           animate="visible"
@@ -176,7 +176,7 @@ export default function MainHero() {
             <p className="font-semibold text-3xl">7+</p>
             <p className="text-sm">Happy Clients</p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

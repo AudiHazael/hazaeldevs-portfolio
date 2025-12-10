@@ -53,9 +53,9 @@ export default function MainHero() {
       <div className="-z-5 absolute inset-0 bg-linear-to-r from-black/95 via-black/70 to-black/60" />
 
       {/* Social Rail (right side) */}
-      <div className="hidden top-1/2 right-6 z-20 absolute lg:flex flex-col gap-5 text-gray-400 -translate-y-1/2">
+      <div className="hidden top-1/2 right-6 z-20 absolute lg:flex flex-col gap-5 text-gray-300 -translate-y-1/2">
         <a
-          href="https://twitter.com/"
+          href="https://x.com/hazaeltweets"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Twitter"
@@ -64,7 +64,7 @@ export default function MainHero() {
           <FaTwitter size={18} />
         </a>
         <a
-          href="https://linkedin.com/"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -73,7 +73,7 @@ export default function MainHero() {
           <FaLinkedinIn size={18} />
         </a>
         <a
-          href="https://github.com/"
+          href="https://github.com/AudiHazael/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
@@ -81,7 +81,7 @@ export default function MainHero() {
         >
           <FaGithub size={18} />
         </a>
-        <div className="bg-gray-500/30 mx-auto mt-4 w-px h-16" />
+        <div className="bg-gray-500/75 mx-auto mt-4 w-px h-16" />
       </div>
 
       {/* Content */}
@@ -105,7 +105,7 @@ export default function MainHero() {
         >
           Helping Businesses
           <br />
-          <span className="block font-extrabold text-purple-300/90 text-4xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-wider">
+          <span className="block bg-clip-text bg-linear-to-r from-purple-100 to-purple-400/75 font-extrabold text-transparent text-4xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-wider">
             build trust online
           </span>
         </motion.h1>

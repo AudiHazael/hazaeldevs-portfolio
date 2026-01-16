@@ -10,17 +10,9 @@ const steps = [
       "Agree on what success looks like",
     ],
   },
+
   {
     id: 2,
-    title: "Discovery",
-    bullets: [
-      "We review your business, competitors and users",
-      "Define scope, pages and conversion points",
-      "Agree on success metrics",
-    ],
-  },
-  {
-    id: 3,
     title: "Proposal & Plan",
     bullets: [
       "Receive a clear proposal with pricing and timeline",
@@ -29,7 +21,7 @@ const steps = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     title: "Design & Prototype",
     bullets: [
       "Wireframes and high-fidelity mockups",
@@ -38,7 +30,7 @@ const steps = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     title: "Build & Optimize",
     bullets: [
       "Clean, responsive, SEO-aware build",
@@ -47,7 +39,7 @@ const steps = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     title: "Launch & Support",
     bullets: [
       "Go-live and monitor performance",
@@ -66,73 +58,76 @@ const quoteLink = `https://wa.me/2347039404909?text=${encodeURIComponent(
 function Process() {
   return (
     <section id="process" className="bg-inherit py-12 text-zinc-100">
-      <div className="mx-auto px-6 md:max-w-[80%]">
-        <h6 className="mb-2 font-semibold text-purple-300/50 uppercase">
-          {" "}
-          Process
-        </h6>
-        <h3 className="mb-6 font-bold text-zinc-50 text-2xl md:text-4xl">
-          A clear, proven roadmap from idea to launch
-        </h3>
+      <div className="relative bg-zinc-900 py-16 text-zinc-100">
+        <div className="mx-auto px-6 md:max-w-[80%]">
+          <h6 className="mb-2 font-semibold text-purple-300/50 text-center uppercase tracking-wider">
+            Process
+          </h6>
+          <h3 className="mb-6 font-bold text-zinc-50 text-3xl md:text-5xl text-center">
+            A Proven Roadmap From Idea to Launch
+          </h3>
+          <p className="mx-auto mb-16 max-w-3xl text-gray-400 text-center">
+            Our process is clear, predictable, and focused on outcomes—so you
+            always know what’s next and what success looks like.
+          </p>
 
-        <p className="mb-8 max-w-3xl text-gray-300">
-          This process is designed to keep projects clear, predictable, and
-          focused on outcomes. You’ll always know what’s happening, what’s next,
-          and what you’re paying for.
-        </p>
+          {/* Roadmap container */}
+          <div className="relative flex md:flex-row flex-col md:justify-between md:items-start gap-12 align-middle">
+            {/* Horizontal connector line */}
+            <div className="hidden md:block top-1/2 right-0 left-0 -z-10 absolute bg-linear-to-r from-purple-500/30 via-purple-400/20 to-fuchsia-500/30 h-1"></div>
 
-        <div className="gap-6 grid grid-cols-1 sm:grid-cols-2">
-          {steps.map((s) => (
-            <article
-              key={s.id}
-              className="flex gap-4 bg-zinc-900/40 p-5 border border-zinc-800 rounded-md"
-            >
-              <div className="shrink-0">
-                <div className="flex justify-center items-center bg-purple-400/70 border border-purple-300/30 hover:border-purple-300/50 rounded-full ring-1 ring-white/5 w-8 h-8 font-medium text-slate-300 text-xs">
+            {steps.map((s, i) => (
+              <div
+                key={s.id}
+                className="group relative flex md:flex-col md:items-center text-center"
+              >
+                {/* Step circle */}
+                <div className="flex justify-center items-center bg-linear-to-br from-purple-500 to-fuchsia-500 shadow-lg rounded-full ring-2 ring-purple-300/30 w-14 md:w-16 h-14 md:h-16 font-bold text-white text-lg md:text-xl group-hover:scale-110 transition-transform duration-300">
                   {s.id}
                 </div>
-              </div>
 
-              <div>
-                <h4 className="font-semibold text-zinc-50 text-lg">
-                  {s.title}
-                </h4>
-                <ul className="space-y-1 mt-2 pl-5 text-gray-300 text-sm list-disc">
-                  {s.bullets.map((b, i) => (
-                    <li key={i}>{b}</li>
-                  ))}
-                </ul>
-              </div>
-            </article>
-          ))}
-        </div>
+                {/* Vertical connector for mobile */}
 
-        <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center gap-4 mt-8">
-          <div>
-            <h5 className="font-semibold text-zinc-50 text-lg">
-              Ready to get started?
-            </h5>
-            <p className="text-gray-300 text-sm">
-              Receive a clear breakdown, timeline, and next steps.
-            </p>
+                <div className="md:hidden bg-linear-to-r from-purple-500/10 to-fuchsia-500/10 mx-2 my-6 w-full h-0.5"></div>
+
+                {/* Step content */}
+                <div className="mt-4 md:mt-6 max-w-xs md:max-w-sm">
+                  <h4 className="font-normal text-zinc-50 text-sm text-left md:text-center align-center">
+                    {s.title}
+                  </h4>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <div className="flex gap-6">
-            <a
-              href={quoteLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex relative items-center gap-2 bg-linear-to-r from-purple-500/70 to-fuchsia-500/60 shadow-black/30 shadow-lg hover:shadow-xl backdrop-blur-md px-8 py-3 rounded-full focus-outline-none focus-visible:ring-4 focus-visible:ring-purple-400/30 font-semibold text-white text-sm md:text-lg transition-all duration-300 ease-out"
-            >
-              Request a Project Breakdown
-            </a>
+          {/* CTA */}
+          <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center gap-6 mt-20 md:text-left text-center">
+            <div>
+              <h5 className="font-semibold text-zinc-50 text-lg md:text-xl">
+                Ready to get started?
+              </h5>
+              <p className="text-gray-400 text-sm md:text-base">
+                Receive a clear breakdown, timeline, and next steps.
+              </p>
+            </div>
 
-            <a
-              href="/services"
-              className="inline-flex items-center gap-2 bg-black/5 hover:bg-white/10 shadow-black/20 shadow-sm backdrop-blur-md px-8 py-3 border border-purple-300/30 hover:border-purple-300/50 rounded-full focus-outline-none focus-visible:ring-4 focus-visible:ring-purple-300/30 font-semibold text-purple-200/90 hover:text-white text-sm md:text-lg transition-all duration-300 ease-out"
-            >
-              View Services
-            </a>
+            <div className="flex sm:flex-row flex-col justify-center md:justify-start gap-6 mt-4 sm:mt-0">
+              <a
+                href={quoteLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-linear-to-r from-purple-500 to-fuchsia-500 shadow-lg hover:shadow-xl backdrop-blur-md px-8 py-3 rounded-full font-semibold text-white text-sm md:text-lg transition-all hover:-translate-y-1 duration-300 ease-out transform"
+              >
+                Request a Project Breakdown
+              </a>
+
+              <a
+                href="/services"
+                className="inline-flex items-center gap-2 bg-black/10 hover:bg-black/20 shadow-sm backdrop-blur-md px-8 py-3 border border-purple-300/30 hover:border-purple-400/50 rounded-full font-semibold text-purple-200/90 hover:text-white text-sm md:text-lg transition-all duration-300 ease-out"
+              >
+                View Services
+              </a>
+            </div>
           </div>
         </div>
       </div>

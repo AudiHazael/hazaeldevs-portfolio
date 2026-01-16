@@ -111,19 +111,19 @@ function Process() {
               </p>
             </div>
 
-            <div className="flex sm:flex-row flex-col justify-center md:justify-start gap-6 mt-4 sm:mt-0">
+            <div className="flex sm:flex-row flex-col justify-center sm:justify-start items-center gap-4 sm:gap-6 mt-2 sm:mt-0 w-full">
               <a
                 href={quoteLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-linear-to-r from-purple-500 to-fuchsia-500 shadow-lg hover:shadow-xl backdrop-blur-md px-8 py-3 rounded-full font-semibold text-white text-sm md:text-lg transition-all hover:-translate-y-1 duration-300 ease-out transform"
+                className="inline-flex justify-center items-center gap-2 bg-linear-to-r from-purple-500 to-fuchsia-500 shadow-lg hover:shadow-xl backdrop-blur-md px-8 py-4 sm:py-3 rounded-full w-full sm:w-fit font-semibold text-white text-sm md:text-lg transition-all hover:-translate-y-1 duration-300 ease-out transform"
               >
                 Request a Project Breakdown
               </a>
 
               <a
                 href="/services"
-                className="inline-flex items-center gap-2 bg-black/10 hover:bg-black/20 shadow-sm backdrop-blur-md px-8 py-3 border border-purple-300/30 hover:border-purple-400/50 rounded-full font-semibold text-purple-200/90 hover:text-white text-sm md:text-lg transition-all duration-300 ease-out"
+                className="inline-flex justify-center items-center gap-2 bg-black/10 hover:bg-black/20 shadow-sm backdrop-blur-md px-8 py-4 sm:py-3 border border-purple-300/30 hover:border-purple-400/50 rounded-full w-full sm:w-fit font-semibold text-purple-200/90 hover:text-white text-sm md:text-lg transition-all duration-300 ease-out"
               >
                 View Services
               </a>

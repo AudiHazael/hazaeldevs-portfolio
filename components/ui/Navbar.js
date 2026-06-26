@@ -84,7 +84,7 @@ export default function Navbar() {
         {/* ── Logo ── */}
         <Link href="/" aria-label="Haza'ElDevs home">
           <Image
-            src="/Logo-Image.png"
+            src="/logo.png"
             alt="HazaelDevs logo"
             width={100}
             height={40}

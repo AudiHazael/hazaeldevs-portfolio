@@ -18,7 +18,7 @@ function Socials({ size = "md", gap = 6, color = "text-stone-300" }) {
       icon: Icons.Github,
     },
     {
-      href: "#",
+      href: "https://www.linkedin.com/in/hazael-audi-8a9768417/",
       label: "LinkedIn",
       icon: Icons.LinkedIn,
     },

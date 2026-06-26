@@ -412,7 +412,7 @@ export default function AboutPage() {
             {/* Second photo placeholder */}
             <div className="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 aspect-square">
               <Image
-                src="/design-system-thinking.png"
+                src="/design_systems_illustration.svg"
                 alt="Audi Hazael"
                 fill
                 className="object-cover"

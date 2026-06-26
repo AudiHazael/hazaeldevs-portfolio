@@ -1,61 +1,86 @@
 "use client";
+
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const LOGOS = [
-  { id: 1, src: "/karez.png", alt: "Karez Nigeria ltd" },
-  { id: 2, src: "/kelle.png", alt: "Artist Kelle" },
-  { id: 3, src: "/i4DT-logo.png", alt: "Initiative for Digital Development" },
-  { id: 4, src: "/kwikride.png", alt: "KwikRide" },
-  { id: 5, src: "/HaulConnect.png", alt: "HaulConnect" },
+  { id: 1, src: "/karez.png", alt: "Karez Nigeria Ltd", invert: true },
+  { id: 2, src: "/kelle.png", alt: "Artist Kelle", invert: true },
+  {
+    id: 3,
+    src: "/i4DT-logo.png",
+    alt: "Initiative for Digital Development",
+    invert: false,
+  },
+  { id: 4, src: "/kwikride.png", alt: "KwikRide", invert: false },
+  { id: 5, src: "/HaulConnect.png", alt: "HaulConnect", invert: false },
 ];
 
-const ClientLogoSwiper = () => {
-  const defaultSlides = 3;
-  const breakpoints = {
-    640: { slidesPerView: 3 },
-    1024: { slidesPerView: 5 },
-  };
+// Duplicate so Swiper loop never shows a gap
+const LOOP_LOGOS = [...LOGOS, ...LOGOS];
 
-  const maxSlidesPerView = Math.max(
-    defaultSlides,
-    ...Object.values(breakpoints).map((b) => b.slidesPerView),
-  );
-  const enableLoop = LOGOS.length >= maxSlidesPerView;
-
+export default function ClientLogoSwiper() {
   return (
-    <section className="py-6 w-full overflow-hidden">
-      <div className="mx-auto px-6 md:px-12 max-w-7xl">
-        <h2 className="mb-8 font-medium text-md text-zinc-300 text-center lg:text-start tracking-wide">
-          Trusted by businesses we’ve helped grow
-        </h2>
+    <section className="relative py-10 w-full overflow-hidden border-t border-zinc-800/60">
+      {/* Edge fade masks */}
+      <div
+        className="absolute inset-y-0 left-0 w-20 z-10 pointer-events-none"
+        style={{
+          background: "linear-gradient(to right, #020617 30%, transparent)",
+        }}
+      />
+      <div
+        className="absolute inset-y-0 right-0 w-20 z-10 pointer-events-none"
+        style={{
+          background: "linear-gradient(to left, #020617 30%, transparent)",
+        }}
+      />
+
+      <div className="mx-auto px-6 md:px-12 max-w-7xl space-y-7">
+        <p className="text-xs font-semibold text-zinc-500 uppercase tracking-[0.18em] text-start">
+          Businesses I&apos;ve worked with
+        </p>
 
         <Swiper
           modules={[Autoplay]}
-          slidesPerView={defaultSlides}
-          spaceBetween={40}
-          loop={enableLoop}
-          autoplay={{
-            delay: 1800,
-            disableOnInteraction: false,
+          slidesPerView={2}
+          spaceBetween={64}
+          loop={true}
+          speed={3500}
+          autoplay={{ delay: 0, disableOnInteraction: false }}
+          breakpoints={{
+            480: { slidesPerView: 3, spaceBetween: 64 },
+            768: { slidesPerView: 4, spaceBetween: 80 },
+            1024: { slidesPerView: 5, spaceBetween: 96 },
           }}
-          breakpoints={breakpoints}
-          className="flex items-center"
+          allowTouchMove={true}
+          className="w-full overflow-visible"
         >
-          {LOGOS.map((logo) => (
+          {LOOP_LOGOS.map((logo, i) => (
             <SwiperSlide
-              key={logo.id}
-              className="flex justify-center items-center"
+              key={`${logo.id}-${i}`}
+              className="flex items-center justify-center"
             >
-              <div className="flex justify-center items-center w-28 md:w-36 h-16 md:h-20">
+              {/*
+                KEY FIX: anchor on height, not width.
+                - h-8 (32px) is the fixed visual height for every logo
+                - w-auto lets each logo expand naturally at that height
+                - max-w-[120px] caps very wide logos so nothing dominates
+                This way all logos read at the same optical weight regardless
+                of their original dimensions or aspect ratio.
+              */}
+              <div className="flex items-center justify-center h-12 w-auto max-w-35">
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  className="opacity-100 hover:opacity-75 max-w-full max-h-full object-contain transition duration-300"
-                  width={144}
-                  height={80}
+                  width={120}
+                  height={60}
+                  className="h-12 w-auto max-w-35 object-contain opacity-50 hover:opacity-90 transition-opacity duration-300"
+                  style={
+                    logo.invert ? { filter: "brightness(0) invert(1)" } : {}
+                  }
                 />
               </div>
             </SwiperSlide>
@@ -64,6 +89,4 @@ const ClientLogoSwiper = () => {
       </div>
     </section>
   );
-};
-
-export default ClientLogoSwiper;
+}

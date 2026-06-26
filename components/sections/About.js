@@ -22,7 +22,7 @@ const CombinedHeroAbout = () => {
   const slide = {
     heading: "Hazael Audi",
     // ✦ CHANGE: title updated to include systems
-    subheading: "Website & Systems Developer for Small Businesses",
+    subheading: "Website & Systems Developer for Businesses",
     buttonText: "Describe your project",
     link: "https://wa.me/2347039404909?text=Hi%20Hazael,%20I%20visited%20your%20website%20and%20would%20like%20to%20briefly%20describe%20a%20project.",
   };

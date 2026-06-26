@@ -10,6 +10,12 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/about`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 1.0,
+    },
+    {
       url: `${baseUrl}/services`,
       lastModified,
       changeFrequency: "monthly",
@@ -18,7 +24,7 @@ export default function sitemap() {
     {
       url: `${baseUrl}/portfolio`,
       lastModified,
-      changeFrequency: "weekly",  // updates when new projects are added
+      changeFrequency: "weekly", // updates when new projects are added
       priority: 0.9,
     },
     {

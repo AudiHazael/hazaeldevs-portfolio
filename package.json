@@ -1,15 +1,12 @@
 {
-  "name": "my-portfolio",
+  "name": "hazaeldevs-portfolio",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "prebuild": "node generate-sitemap.js",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "generate-sitemap": "node generate-sitemap.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
@@ -17,27 +14,19 @@
     "aos": "^2.3.4",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.525.0",
-    "motion": "^12.23.12",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-helmet-async": "^2.0.5",
+    "next": "^15.3.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.6.3",
+    "resend": "^6.14.0",
     "swiper": "^11.2.10"
   },
   "devDependencies": {
-    "@eslint/js": "^9.29.0",
-    "@tailwindcss/vite": "^4.1.11",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@vitejs/plugin-react": "^4.5.2",
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.11",
     "daisyui": "^5.1.10",
     "eslint": "^9.29.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.2.0",
-    "sitemap": "^8.0.0",
-    "tailwindcss": "^4.1.11",
-    "vite": "^7.0.0"
+    "eslint-config-next": "^15.3.3",
+    "tailwindcss": "^4.1.11"
   }
 }

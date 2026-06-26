@@ -160,7 +160,7 @@ export default function ContactPage() {
                 <span className="text-purple-300/50 text-sm font-semibold uppercase tracking-widest">
                   Contact
                 </span>
-                <h1 className="mt-3 text-5xl md:text-6xl font-bold text-zinc-50 leading-[1.05] tracking-tight">
+                <h1 className="mt-3 text-4xl md:text-5xl font-bold text-zinc-50 leading-[1.05] tracking-tight">
                   Let&apos;s build{" "}
                   <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-300 to-fuchsia-400">
                     something

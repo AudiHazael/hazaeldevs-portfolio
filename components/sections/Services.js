@@ -256,8 +256,8 @@ function Services({ showHeading = false }) {
                 src="/hazael-audi (2).jpg"
                 alt="Hazael Audi — Website and systems developer"
                 width={600}
-                height={340}
-                className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                height={200}
+                className=" object-cover transition-transform duration-500 hover:scale-105"
               />
               <div className="absolute inset-0 bg-[#6b21a8]/50 transition-opacity duration-300 pointer-events-none mix-blend-multiply" />
             </div>

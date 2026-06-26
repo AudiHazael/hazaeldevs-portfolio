@@ -86,10 +86,10 @@ export default function HaulConnect() {
           <motion.h2
             variants={fadeInUp}
             custom={0.1}
-            className="text-5xl md:text-7xl font-bold text-zinc-50 leading-[1.0] tracking-tight"
+            className="text-5xl md:text-7xl font-bold text-zinc-50 leading-none tracking-tight"
           >
             Haul
-            <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-300 to-fuchsia-400">
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-orange-400 to-orange-400">
               Connect
             </span>
           </motion.h2>
@@ -200,7 +200,7 @@ export default function HaulConnect() {
               className="w-full object-cover object-top"
             />
             {/* Fade at bottom */}
-            <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-zinc-950/60 to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 inset-x-0 h-16 bg-linear-to-t from-zinc-950/60 to-transparent pointer-events-none" />
           </div>
 
           {/* Floating label */}

@@ -9,7 +9,8 @@ const portfolioSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   name: "Haza'ElDevs Portfolio",
-  description: "Websites, landing pages, and business systems built for small businesses and startups by Audi Hazael.",
+  description:
+    "Websites, landing pages, and business systems built for small businesses and startups by Audi Hazael.",
   url: "https://www.hazaeldevs.com/portfolio",
   author: {
     "@type": "Person",
@@ -22,22 +23,34 @@ const portfolioSchema = {
     "@type": "ItemList",
     itemListElement: [
       {
-        "@type": "ListItem", position: 1,
+        "@type": "ListItem",
+        position: 1,
         item: {
           "@type": "CreativeWork",
           name: "HaulConnect",
-          description: "Full-stack logistics operator platform for the Nigerian haulage market.",
+          description:
+            "Full-stack logistics operator platform for the Nigerian haulage market.",
           url: "https://haulconnect.com.ng",
           creator: { "@type": "Person", name: "Audi Hazael" },
         },
       },
       {
-        "@type": "ListItem", position: 2,
-        item: { "@type": "CreativeWork", name: "Artist Kelle", url: "https://www.artistkelle.com/" },
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "CreativeWork",
+          name: "Artist Kelle",
+          url: "https://www.artistkelle.com/",
+        },
       },
       {
-        "@type": "ListItem", position: 3,
-        item: { "@type": "CreativeWork", name: "Karez Nigeria Limited", url: "https://www.kareznigeria.com/" },
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "CreativeWork",
+          name: "Karez Nigeria Limited",
+          url: "https://www.kareznigeria.com/",
+        },
       },
     ],
   },
@@ -47,25 +60,47 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.hazaeldevs.com" },
-    { "@type": "ListItem", position: 2, name: "Portfolio", item: "https://www.hazaeldevs.com/portfolio" },
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.hazaeldevs.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Portfolio",
+      item: "https://www.hazaeldevs.com/portfolio",
+    },
   ],
 };
 
 export const metadata = {
   title: "Portfolio — Websites & Systems Built for Real Businesses",
-  description: "See the websites, landing pages, and business systems Audi Hazael has built for small businesses and startups. Every project solved a real problem.",
+  description:
+    "See the websites, landing pages, and business systems Audi Hazael has built for small businesses and startups. Every project solved a real problem.",
   keywords: [
-    "web developer portfolio Nigeria", "small business website examples",
-    "Next.js portfolio Lagos", "HaulConnect logistics platform",
+    "web developer portfolio Nigeria",
+    "small business website examples",
+    "Next.js portfolio Lagos",
+    "HaulConnect logistics platform",
     "business systems developer portfolio",
   ],
   alternates: { canonical: "https://www.hazaeldevs.com/portfolio" },
   openGraph: {
-    title: "Portfolio — Websites & Systems Built for Real Businesses | Haza'ElDevs",
-    description: "Websites, landing pages, and business systems built for small businesses and startups.",
+    title:
+      "Portfolio — Websites & Systems Built for Real Businesses | Haza'ElDevs",
+    description:
+      "Websites, landing pages, and business systems built for small businesses and startups.",
     url: "https://www.hazaeldevs.com/portfolio",
-    images: [{ url: "/og-portfolio.png", width: 1200, height: 630, alt: "Haza'ElDevs Portfolio" }],
+    images: [
+      {
+        url: "/og-portfolio.png",
+        width: 1200,
+        height: 630,
+        alt: "Haza'ElDevs Portfolio",
+      },
+    ],
   },
   other: {
     "schema-portfolio": JSON.stringify(portfolioSchema),
@@ -74,7 +109,8 @@ export const metadata = {
 };
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
-const waLink = (msg) => `https://wa.me/2347039404909?text=${encodeURIComponent(msg)}`;
+const waLink = (msg) =>
+  `https://wa.me/2347039404909?text=${encodeURIComponent(msg)}`;
 
 // Featured project — HaulConnect gets its own elevated treatment
 const featured = {
@@ -88,9 +124,9 @@ const featured = {
   caseStudy: "/systems",
   stats: [
     { value: "2 in 1", label: "Live business + sellable product" },
-    { value: "7",      label: "Branded transactional emails" },
-    { value: "0",      label: "Third-party ops tools" },
-    { value: "8",      label: "Nigerian cities covered" },
+    { value: "7", label: "Branded transactional emails" },
+    { value: "0", label: "Third-party ops tools" },
+    { value: "8", label: "Nigerian cities covered" },
   ],
   stack: ["Next.js 14", "Supabase", "Tailwind CSS", "Resend", "Vercel"],
 };
@@ -113,14 +149,14 @@ const projects = [
     url: "https://www.kareznigeria.com/",
     repo: null,
   },
-  {
-    title: "Soy-Joy",
-    tag: "Landing Page",
-    desc: "A clean, product-focused landing page that introduces the brand, communicates its values clearly, and works reliably across all devices.",
-    img: "/soyjoy.png",
-    url: "https://soy-joy.vercel.app/",
-    repo: "https://github.com/AudiHazael/soy-joy",
-  },
+  // {
+  //   title: "Soy-Joy",
+  //   tag: "Landing Page",
+  //   desc: "A clean, product-focused landing page that introduces the brand, communicates its values clearly, and works reliably across all devices.",
+  //   img: "/soyjoy.png",
+  //   url: "https://soy-joy.vercel.app/",
+  //   repo: "https://github.com/AudiHazael/soy-joy",
+  // },
   {
     title: "Luxor",
     tag: "Landing Page",
@@ -146,6 +182,14 @@ const projects = [
     url: "https://i4-dt.vercel.app/",
     repo: null,
   },
+  {
+    title: "Kwik Ride",
+    tag: "Operations & Management Dashboard",
+    desc: "A clean informational landing page for a volunteer-driven initiative that teaches tech skills to students — showcasing the mission and capturing sign-ups.",
+    img: "/kwik-ride.png",
+    url: null,
+    repo: null,
+  },
 ];
 
 // ─── PAGE ─────────────────────────────────────────────────────────────────────
@@ -154,13 +198,12 @@ export default function PortfolioPage() {
     <>
       <Navbar />
       <main className="pt-24 text-zinc-100">
-
         {/* ── HERO ── */}
         <section className="px-6 md:px-10 pt-16 pb-20 md:max-w-[80%] mx-auto">
           <span className="text-purple-300/50 text-sm font-semibold uppercase tracking-widest">
             Portfolio
           </span>
-          <h1 className="mt-3 text-5xl md:text-7xl font-bold text-zinc-50 leading-[1.0] tracking-tight max-w-3xl">
+          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-zinc-50 leading-none tracking-tight max-w-3xl">
             Work that{" "}
             <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-300 to-fuchsia-400">
               speaks
@@ -168,16 +211,15 @@ export default function PortfolioPage() {
             for itself.
           </h1>
           <p className="mt-6 text-gray-300 text-lg max-w-xl leading-relaxed">
-            Three years of client work across business websites, marketing pages,
-            and full-stack systems. Every project here started with a real
-            business problem.
+            Three years of client work across business websites, marketing
+            pages, and full-stack systems. Every project here started with a
+            real business problem.
           </p>
         </section>
 
         {/* ── FEATURED: HAULCONNECT ── */}
         <section className="px-6 md:px-10 py-16 border-t border-zinc-800">
           <div className="md:max-w-[80%] mx-auto space-y-10">
-
             {/* Label row */}
             <div className="flex items-center gap-4">
               <span className="text-purple-300/50 text-sm font-semibold uppercase tracking-widest">
@@ -193,7 +235,7 @@ export default function PortfolioPage() {
               <div className="space-y-4">
                 <h2 className="text-4xl md:text-6xl font-bold text-zinc-50 leading-[1.05] tracking-tight">
                   Haul
-                  <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-300 to-fuchsia-400">
+                  <span className="bg-clip-text text-transparent bg-linear-to-r from-orange-400 to-orange-400">
                     Connect
                   </span>
                 </h2>
@@ -202,7 +244,10 @@ export default function PortfolioPage() {
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
                   {featured.stack.map((t) => (
-                    <span key={t} className="px-3 py-1 bg-zinc-800/60 border border-zinc-700 rounded-full text-xs text-zinc-400">
+                    <span
+                      key={t}
+                      className="px-3 py-1 bg-zinc-800/60 border border-zinc-700 rounded-full text-xs text-zinc-400"
+                    >
                       {t}
                     </span>
                   ))}
@@ -211,9 +256,16 @@ export default function PortfolioPage() {
 
               <div className="grid grid-cols-2 gap-3">
                 {featured.stats.map(({ value, label }) => (
-                  <div key={label} className="bg-zinc-900/50 border border-zinc-800 rounded-xl px-5 py-4">
-                    <p className="text-2xl font-bold text-purple-300">{value}</p>
-                    <p className="text-gray-400 text-sm mt-1 leading-snug">{label}</p>
+                  <div
+                    key={label}
+                    className="bg-zinc-900/50 border border-zinc-800 rounded-xl px-5 py-4"
+                  >
+                    <p className="text-2xl font-bold text-purple-300">
+                      {value}
+                    </p>
+                    <p className="text-gray-400 text-sm mt-1 leading-snug">
+                      {label}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -231,10 +283,14 @@ export default function PortfolioPage() {
                   className="w-full object-cover object-top"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-linear-to-t from-zinc-950/60 to-transparent pointer-events-none" />
                 <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm border border-zinc-700 rounded-lg px-3 py-1.5">
-                  <p className="text-xs font-semibold text-zinc-300">Operations Dashboard</p>
-                  <p className="text-[10px] text-zinc-500">Leads & Jobs Kanban · Margin Calculator · Carrier DB</p>
+                  <p className="text-xs font-semibold text-zinc-300">
+                    Operations Dashboard
+                  </p>
+                  <p className="text-[10px] text-zinc-500">
+                    Leads & Jobs Kanban · Margin Calculator · Carrier DB
+                  </p>
                 </div>
               </div>
             </div>
@@ -297,18 +353,26 @@ export default function PortfolioPage() {
                   <div className="flex flex-col flex-1 p-6 gap-4">
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <h3 className="font-bold text-zinc-50 text-lg">{project.title}</h3>
+                        <h3 className="font-bold text-zinc-50 text-lg">
+                          {project.title}
+                        </h3>
                         {project.collab && (
                           <span className="text-xs text-zinc-500">
                             w/{" "}
-                            <a href={project.collab.url} target="_blank" rel="noopener noreferrer"
-                              className="text-purple-400 hover:text-purple-300 transition">
+                            <a
+                              href={project.collab.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-purple-400 hover:text-purple-300 transition"
+                            >
                               {project.collab.name}
                             </a>
                           </span>
                         )}
                       </div>
-                      <p className="text-gray-400 text-sm leading-relaxed">{project.desc}</p>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        {project.desc}
+                      </p>
                     </div>
 
                     {/* Links */}
@@ -362,7 +426,9 @@ export default function PortfolioPage() {
                 GitHub ↗
               </a>
               <a
-                href={waLink("Hi Hazael, I'd like to see more of your work and discuss a project.")}
+                href={waLink(
+                  "Hi Hazael, I'd like to see more of your work and discuss a project.",
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm bg-linear-to-r from-purple-500 to-fuchsia-500 hover:opacity-90 transition text-white"
@@ -373,7 +439,6 @@ export default function PortfolioPage() {
             </div>
           </div>
         </section>
-
       </main>
       <Footer />
     </>

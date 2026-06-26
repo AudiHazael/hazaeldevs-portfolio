@@ -295,7 +295,7 @@ export default function ServicesPage() {
           <span className="text-purple-300/50 text-sm font-semibold uppercase tracking-widest">
             Services
           </span>
-          <h1 className="mt-3 text-5xl md:text-7xl font-bold text-zinc-50 leading-[1.0] tracking-tight max-w-3xl">
+          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-zinc-50 leading-none tracking-tight max-w-3xl">
             What I{" "}
             <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-300 to-fuchsia-400">
               build
@@ -344,7 +344,7 @@ export default function ServicesPage() {
                   className="group grid grid-cols-1 lg:grid-cols-5 gap-0 bg-zinc-900/40 hover:bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700 rounded-2xl overflow-hidden transition-all duration-300"
                 >
                   {/* Image — 2 cols */}
-                  <div className="lg:col-span-2 relative h-56 lg:h-auto min-h-[200px]">
+                  <div className="lg:col-span-2 relative h-56 lg:h-auto min-h-50">
                     <Image
                       src={offer.img}
                       alt={offer.title}
@@ -427,7 +427,7 @@ export default function ServicesPage() {
             {/* Timeline */}
             <div className="relative">
               {/* Vertical line — desktop only */}
-              <div className="hidden md:block absolute left-[19px] top-2 bottom-2 w-px bg-zinc-800" />
+              <div className="hidden md:block absolute left-4.75 top-2 bottom-2 w-px bg-zinc-800" />
 
               <div className="space-y-10">
                 {process.map(({ step, title, desc }) => (

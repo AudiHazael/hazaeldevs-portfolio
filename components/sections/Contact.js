@@ -239,7 +239,7 @@ export default function Contact() {
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUp}
             custom={0.2}
-            className="lg:col-span-3 bg-zinc-900/40 border border-zinc-800 rounded-2xl p-8"
+            className="lg:col-span-3 bg-zinc-900/40 border border-zinc-800 rounded-2xl p-4 md:p-6 lg:p-8"
           >
             <div className="mb-6">
               <h3 className="font-bold text-zinc-50 text-lg">Send a message</h3>

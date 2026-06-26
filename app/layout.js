@@ -1,16 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-body",
+import { Geist, Outfit } from "next/font/google";
+
+const geist = Geist({
   subsets: ["latin"],
-  display: "swap",
+  variable: "--font-body",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-mono",
+const outfit = Outfit({
   subsets: ["latin"],
-  display: "swap",
+  variable: "--font-heading",
 });
 
 // ─── Site-wide default metadata ─────────────────────────────────────────────
@@ -51,12 +50,15 @@ export const metadata = {
       "Fast, credible websites for small businesses and startups. Based in Lagos, serving clients globally.",
     images: [
       {
-        url: "/og-preview.png",
+        url: "/hazaeldevs_og_preview.png",
         width: 1200,
         height: 630,
         alt: "Haza'ElDevs — React Developer for Small Business Websites",
       },
     ],
+    icons: {
+      icon: "/rel-icon.png",
+    },
   },
 
   twitter: {
@@ -66,7 +68,7 @@ export const metadata = {
     title: "Haza'ElDevs | React Developer for Small Business Websites",
     description:
       "Fast, credible websites for small businesses and startups. Based in Lagos, serving clients globally.",
-    images: ["/og-preview.png"],
+    images: ["/hazaeldevs_og_preview.png"],
   },
 
   robots: {
@@ -76,6 +78,8 @@ export const metadata = {
       index: true,
       follow: true,
       "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
 
@@ -84,9 +88,13 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: "#0f172a",
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${geist.variable} ${outfit.variable}`}>
       <body>{children}</body>
     </html>
   );

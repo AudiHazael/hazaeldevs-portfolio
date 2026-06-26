@@ -29,14 +29,14 @@ const portfolioItems = [
     previewLink: "https://www.kareznigeria.com/",
     repoLink: "/",
   },
-  {
-    title: "Soy-Joy",
-    text: "Soy-Joy required a simple product-focused website to introduce their brand and communicate their values clearly. I designed and developed a clean landing page that presents the product, highlights key information, and works reliably across devices.",
-    img: "/soyjoy.png",
-    tools: [],
-    previewLink: "https://soy-joy.vercel.app/",
-    repoLink: "https://github.com/AudiHazael/soy-joy",
-  },
+  // {
+  //   title: "Soy-Joy",
+  //   text: "Soy-Joy required a simple product-focused website to introduce their brand and communicate their values clearly. I designed and developed a clean landing page that presents the product, highlights key information, and works reliably across devices.",
+  //   img: "/soyjoy.png",
+  //   tools: [],
+  //   previewLink: "https://soy-joy.vercel.app/",
+  //   repoLink: "https://github.com/AudiHazael/soy-joy",
+  // },
   {
     title: "Extensive Academy",
     text: "Working alongside Codemax, I contributed to the frontend development of an educational platform. My role focused on translating designs into a responsive, accessible interface suitable for students and administrators.",
@@ -71,6 +71,14 @@ const portfolioItems = [
     img: "/i4dt.png",
     tools: [],
     previewLink: "https://i4-dt.vercel.app/",
+    repoLink: "#",
+  },
+  {
+    title: "Kwik Ride",
+    text: "A clean informational landing page for a volunteer-driven initiative that teaches tech skills to students — showcasing the mission and capturing sign-ups.",
+    img: "/kwik-ride.png",
+    tools: [],
+    previewLink: "https://kwik-ride.vercel.app/",
     repoLink: "#",
   },
 ];

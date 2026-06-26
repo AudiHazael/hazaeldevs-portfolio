@@ -8,7 +8,8 @@ const LOGOS = [
   { id: 1, src: "/karez.png", alt: "Karez Nigeria ltd" },
   { id: 2, src: "/kelle.png", alt: "Artist Kelle" },
   { id: 3, src: "/i4DT-logo.png", alt: "Initiative for Digital Development" },
-  { id: 4, src: "/safebridge.png", alt: "HaulConnect" },
+  { id: 4, src: "/kwikride.png", alt: "KwikRide" },
+  { id: 5, src: "/HaulConnect.png", alt: "HaulConnect" },
 ];
 
 const ClientLogoSwiper = () => {

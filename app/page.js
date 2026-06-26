@@ -111,7 +111,7 @@ export default function Home() {
         <About />
         <ClientLogoSwiper />
         <Services />
-        <Tools />
+        {/* <Tools /> */}
         <Portfolio />
         <HaulConnectPreview />
         <Reviews />

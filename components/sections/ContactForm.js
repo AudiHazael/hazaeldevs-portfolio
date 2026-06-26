@@ -7,20 +7,20 @@ import { ChevronUpDownIcon, CheckIcon } from "@heroicons/react/20/solid";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const subjects = [
-  { value: "New website",             label: "New website" },
+  { value: "New website", label: "New website" },
   { value: "Revamp existing website", label: "Revamp existing website" },
-  { value: "Landing page",            label: "Landing page" },
-  { value: "Business system",         label: "Business system / internal tool" },
-  { value: "Not sure yet",            label: "Not sure yet — let's talk" },
+  { value: "Landing page", label: "Landing page" },
+  { value: "Business system", label: "Business system / internal tool" },
+  { value: "Not sure yet", label: "Not sure yet — let's talk" },
 ];
 
 const inputClass =
   "w-full bg-zinc-900/60 border border-zinc-700 hover:border-zinc-600 focus:border-purple-500/60 focus:ring-2 focus:ring-purple-500/20 rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-500 outline-none transition-all duration-200";
 
 export default function ContactForm() {
-  const [loading,   setLoading]   = useState(false);
+  const [loading, setLoading] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [subject,   setSubject]   = useState(null);
+  const [subject, setSubject] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,8 +32,8 @@ export default function ContactForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name:    form.name.value,
-          email:   form.email.value,
+          name: form.name.value,
+          email: form.email.value,
           subject: subject?.value || "General inquiry",
           message: form.message.value,
         }),
@@ -56,7 +56,6 @@ export default function ContactForm() {
   return (
     <>
       <form onSubmit={handleSubmit} className="space-y-5">
-
         {/* Name + Email row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1.5">
@@ -104,11 +103,17 @@ export default function ContactForm() {
                 {subjects.map((item) => (
                   <Listbox.Option key={item.value} value={item}>
                     {({ active, selected }) => (
-                      <li className={`flex items-center justify-between px-4 py-3 text-sm cursor-pointer transition-colors duration-150 ${
-                        active ? "bg-purple-500/15 text-zinc-50" : "text-zinc-300"
-                      }`}>
+                      <li
+                        className={`flex items-center justify-between px-4 py-3 text-sm cursor-pointer transition-colors duration-150 ${
+                          active
+                            ? "bg-purple-500/15 text-zinc-50"
+                            : "text-zinc-300"
+                        }`}
+                      >
                         {item.label}
-                        {selected && <CheckIcon className="w-4 h-4 text-purple-400 shrink-0" />}
+                        {selected && (
+                          <CheckIcon className="w-4 h-4 text-purple-400 shrink-0" />
+                        )}
                       </li>
                     )}
                   </Listbox.Option>
@@ -124,7 +129,8 @@ export default function ContactForm() {
             Describe what you need
           </label>
           <p className="text-xs text-zinc-500">
-            Business type, number of pages, a site you like — whatever helps me understand.
+            Business type, number of pages, a site you like — whatever helps me
+            understand.
           </p>
           <textarea
             name="message"
@@ -143,9 +149,26 @@ export default function ContactForm() {
         >
           {loading ? (
             <>
-              <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" d="M4 12a8 8 0 018-8" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+              <svg
+                className="w-4 h-4 animate-spin"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  className="opacity-75"
+                  d="M4 12a8 8 0 018-8"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
               </svg>
               Sending…
             </>
@@ -183,7 +206,8 @@ export default function ContactForm() {
               </div>
               <h2 className="text-xl font-bold text-zinc-50">Message sent</h2>
               <p className="text-gray-400 text-sm leading-relaxed">
-                I&apos;ll get back to you within 24 hours with a clear next step.
+                I&apos;ll get back to you within 24 hours with a clear next
+                step.
               </p>
               <button
                 onClick={() => setShowPopup(false)}

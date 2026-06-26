@@ -19,7 +19,7 @@ export default function HaulConnectPreview() {
     <section className="relative py-24 px-6 md:px-10 border-t border-zinc-800 overflow-hidden">
       {/* Ambient glow behind the screenshot */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-purple-700/15 blur-[120px] rounded-full" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-100 bg-purple-700/15 blur-[120px] rounded-full" />
       </div>
 
       <div className="mx-auto md:max-w-[80%] space-y-14">

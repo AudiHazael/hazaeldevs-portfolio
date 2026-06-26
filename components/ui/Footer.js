@@ -47,6 +47,8 @@ function Footer() {
             src="/Logo-Image.png"
             alt="Haza’ElDevs logo – Web developer in Lagos, Nigeria"
             className="w-32"
+            width={128}
+            height={128}
           />
 
           <p className="text-gray-300 text-sm">

@@ -176,7 +176,7 @@ export default function AboutPage() {
                 <span className="text-purple-300/50 text-sm font-semibold uppercase tracking-widest">
                   About
                 </span>
-                <h1 className="mt-3 text-5xl md:text-6xl font-bold text-zinc-50 leading-[1.05] tracking-tight">
+                <h1 className="mt-3 text-4xl font-bold text-zinc-50 leading-[1.05] tracking-tight">
                   I build what{" "}
                   <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-300 to-fuchsia-400">
                     businesses
@@ -222,11 +222,13 @@ export default function AboutPage() {
             {/* Photo placeholder */}
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 aspect-4/5 flex items-center justify-center">
-                {/* ✦ Replace src with your actual photo */}
-                <div className="absolute inset-0 bg-linear-to-br from-purple-900/30 to-zinc-900/80" />
-                <p className="text-zinc-600 text-sm z-10">
-                  [ Photo placeholder ]
-                </p>
+                <Image
+                  src="/hazael-audi.jpg"
+                  alt="Audi Hazael"
+                  width={400}
+                  height={400}
+                  className="object-cover"
+                />
                 <div className="absolute inset-0 bg-purple-900/20 mix-blend-multiply pointer-events-none" />
               </div>
               {/* Floating badge */}
@@ -346,7 +348,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
               {skills.map(({ category, items }) => (
                 <div key={category} className="space-y-3">
                   <h3 className="text-xs font-semibold text-purple-400/70 uppercase tracking-widest">

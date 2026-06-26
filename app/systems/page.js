@@ -17,7 +17,11 @@ const softwareServiceSchema = {
     url: "https://www.hazaeldevs.com",
     founder: { "@type": "Person", name: "Audi Hazael" },
     areaServed: ["Nigeria", "Global"],
-    address: { "@type": "PostalAddress", addressLocality: "Lagos", addressCountry: "NG" },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Lagos",
+      addressCountry: "NG",
+    },
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -80,8 +84,18 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.hazaeldevs.com" },
-    { "@type": "ListItem", position: 2, name: "Systems", item: "https://www.hazaeldevs.com/systems" },
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.hazaeldevs.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Systems",
+      item: "https://www.hazaeldevs.com/systems",
+    },
   ],
 };
 
@@ -106,7 +120,14 @@ export const metadata = {
     description:
       "Internal tools, operations dashboards, and automated workflows that replace manual processes. Based in Lagos, serving clients globally.",
     url: "https://www.hazaeldevs.com/systems",
-    images: [{ url: "/og-systems.png", width: 1200, height: 630, alt: "Haza'ElDevs — Business Systems" }],
+    images: [
+      {
+        url: "/og-systems.png",
+        width: 1200,
+        height: 630,
+        alt: "Haza'ElDevs — Business Systems",
+      },
+    ],
   },
   other: {
     "schema-service": JSON.stringify(softwareServiceSchema),
@@ -141,7 +162,6 @@ export default function SystemsPage() {
     <>
       <Navbar />
       <main className="pt-24">
-
         {/* ── Page header ── */}
         <section className="px-6 md:px-10 py-16 md:max-w-[80%] mx-auto">
           <span className="text-purple-300/50 text-sm font-semibold uppercase tracking-widest">
@@ -158,10 +178,9 @@ export default function SystemsPage() {
             because their operations can&apos;t keep up. Leads tracked on
             WhatsApp. Jobs managed in spreadsheets. Documents sent manually.
             <br />
-            <br />
-            I build the internal tools that replace all of that — custom-built
-            for how your business actually works, not forced into a SaaS tool
-            that almost fits.
+            <br />I build the internal tools that replace all of that —
+            custom-built for how your business actually works, not forced into a
+            SaaS tool that almost fits.
           </p>
         </section>
 

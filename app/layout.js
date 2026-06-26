@@ -50,14 +50,14 @@ export const metadata = {
       "Fast, credible websites for small businesses and startups. Based in Lagos, serving clients globally.",
     images: [
       {
-        url: "/hazaeldevs_og_preview.png",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Haza'ElDevs — React Developer for Small Business Websites",
       },
     ],
     icons: {
-      icon: "/rel-icon.png",
+      icon: "/icon.png",
     },
   },
 

@@ -410,12 +410,16 @@ export default function AboutPage() {
             </div>
 
             {/* Second photo placeholder */}
-            <div className="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 aspect-square flex items-center justify-center">
-              <div className="absolute inset-0 bg-linear-to-br from-indigo-900/30 to-zinc-900/80" />
-              <p className="text-zinc-600 text-sm z-10">
-                [ Photo placeholder ]
-              </p>
-              <div className="absolute inset-0 bg-indigo-900/20 mix-blend-multiply pointer-events-none" />
+            <div className="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 aspect-square">
+              <Image
+                src="/design-system-thinking.png"
+                alt="Audi Hazael"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
+
+              <div className="absolute inset-0 bg-indigo-900/20 mix-blend-multiply pointer-events-none z-20" />
             </div>
           </div>
         </section>

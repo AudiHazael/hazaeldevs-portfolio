@@ -43,13 +43,16 @@ function Footer() {
           variants={fadeInUp}
           custom={0.4}
         >
-          <Image
-            src="/Logo-Image.png"
-            alt="Haza’ElDevs logo – Web developer in Lagos, Nigeria"
-            className="w-32"
-            width={128}
-            height={128}
-          />
+          <Link href="/" aria-label="Haza'ElDevs home">
+            <Image
+              src="/Logo-Image.png"
+              alt="HazaelDevs logo"
+              width={128}
+              height={128}
+              className="h-10 w-auto object-contain"
+              priority
+            />
+          </Link>
 
           <p className="text-gray-300 text-sm">
             I design and build fast, conversion-focused websites for businesses
@@ -78,10 +81,22 @@ function Footer() {
             About
           </Link>
           <Link
-            href="/location"
+            href="/services"
             className="text-zinc-300 hover:text-white transition"
           >
-            Location
+            Services
+          </Link>
+          <Link
+            href="/portfolio"
+            className="text-zinc-300 hover:text-white transition"
+          >
+            Portfolio
+          </Link>
+          <Link
+            href="/systems"
+            className="text-zinc-300 hover:text-white transition"
+          >
+            Systems
           </Link>
           <Link
             href="/#contact"

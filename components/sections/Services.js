@@ -171,7 +171,7 @@ function Services({ showHeading = false }) {
           </h3>
           {/* ✦ NEW: one-line subtitle that bridges websites and systems */}
           <p className="mt-2 text-gray-400 text-sm max-w-xl">
-            I build what your business actually needs — whether that's a
+            I build what your business actually needs — whether that&apos;s a
             credible website, a marketing page, or an internal system that
             replaces the spreadsheets and manual follow-ups slowing you down.
           </p>
@@ -227,7 +227,7 @@ function Services({ showHeading = false }) {
                   key={i}
                   variants={fadeInUp}
                   custom={i + 2}
-                  className="flex flex-col items-start gap-4 bg-zinc-900/40 hover:bg-zinc-900/60 p-4 sm:p-6 border border-zinc-800 rounded-xl w-full min-h-[140px] transition-all duration-300"
+                  className="flex flex-col items-start gap-4 bg-zinc-900/40 hover:bg-zinc-900/60 p-4 sm:p-6 border border-zinc-800 rounded-xl w-full min-h-35 transition-all duration-300"
                 >
                   <div className="flex items-center gap-3">
                     <Icon className="w-5 h-5 text-purple-400/70" />

@@ -137,9 +137,9 @@ const CombinedHeroAbout = () => {
             {/* ✦ NEW paragraph: plants the systems seed without overselling it */}
             Some clients come back after the website is live. They have a
             process that still runs on WhatsApp messages and spreadsheets — lead
-            tracking, job management, document generation. That's where I build
-            the next layer: internal tools and workflows that replace the manual
-            work and let the business scale without the chaos.
+            tracking, job management, document generation. That&apos;s where I
+            build the next layer: internal tools and workflows that replace the
+            manual work and let the business scale without the chaos.
           </motion.p>
 
           <motion.div

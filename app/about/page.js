@@ -221,7 +221,7 @@ export default function AboutPage() {
 
             {/* Photo placeholder */}
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 aspect-[4/5] flex items-center justify-center">
+              <div className="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 aspect-4/5 flex items-center justify-center">
                 {/* ✦ Replace src with your actual photo */}
                 <div className="absolute inset-0 bg-linear-to-br from-purple-900/30 to-zinc-900/80" />
                 <p className="text-zinc-600 text-sm z-10">
@@ -259,13 +259,13 @@ export default function AboutPage() {
 
             <div className="relative">
               {/* Vertical line */}
-              <div className="hidden md:block absolute left-[52px] top-3 bottom-3 w-px bg-zinc-800" />
+              <div className="hidden md:block absolute left-13 top-3 bottom-3 w-px bg-zinc-800" />
 
               <div className="space-y-10">
                 {timeline.map(({ year, title, desc }) => (
                   <div key={year} className="flex gap-6 md:gap-10 items-start">
                     {/* Year marker */}
-                    <div className="shrink-0 w-[104px] text-right">
+                    <div className="shrink-0 w-26 text-right">
                       <span className="text-xs font-bold text-purple-400/70 uppercase tracking-widest">
                         {year}
                       </span>

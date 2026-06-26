@@ -299,8 +299,8 @@ export default function ContactPage() {
                 What are you building?
               </h2>
               <p className="mt-2 text-gray-400 max-w-lg">
-                Pick the one that fits and it'll open a WhatsApp message with
-                the right context already filled in.
+                Pick the one that fits and it&apos;ll open a WhatsApp message
+                with the right context already filled in.
               </p>
             </div>
 
@@ -336,8 +336,8 @@ export default function ContactPage() {
                 What happens after you message
               </h2>
               <p className="mt-2 text-gray-400 max-w-lg">
-                No sales calls. No waiting weeks for a proposal. Here's exactly
-                what to expect.
+                No sales calls. No waiting weeks for a proposal. Here&apos;s
+                exactly what to expect.
               </p>
             </div>
 
@@ -412,8 +412,8 @@ export default function ContactPage() {
                 Ready when you are.
               </h2>
               <p className="text-gray-300 max-w-xl mx-auto leading-relaxed">
-                No long intake forms. No discovery calls before you're ready.
-                Just a message — and we'll take it from there.
+                No long intake forms. No discovery calls before you&apos;re
+                ready. Just a message — and we&apos;ll take it from there.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">

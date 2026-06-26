@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Socials from "../sections/Socials";
 import Link from "next/link";
@@ -42,7 +43,7 @@ function Footer() {
           variants={fadeInUp}
           custom={0.4}
         >
-          <img
+          <Image
             src="/Logo-Image.png"
             alt="Haza’ElDevs logo – Web developer in Lagos, Nigeria"
             className="w-32"
@@ -80,12 +81,12 @@ function Footer() {
           >
             Location
           </Link>
-          <a
+          <Link
             href="/#contact"
             className="text-zinc-300 hover:text-white transition"
           >
             Contact
-          </a>
+          </Link>
         </motion.nav>
 
         {/* CTA Line */}

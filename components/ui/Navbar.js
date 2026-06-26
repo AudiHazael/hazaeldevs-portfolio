@@ -88,7 +88,7 @@ export default function Navbar() {
             alt="HazaelDevs logo"
             width={100}
             height={40}
-            className="h-10 w-auto object-contain"
+            className="h-7 sm:h-8 md:h-10 w-auto object-contain"
             priority
           />
         </Link>

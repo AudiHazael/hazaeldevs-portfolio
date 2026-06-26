@@ -144,7 +144,7 @@ export async function POST(req) {
       // ✦ Once your domain is verified in Resend, change this to:
       //   from: "Haza'ElDevs <hello@hazaeldevs.com>"
       // Until then, the sandbox address works for testing only.
-      from: "Haza'ElDevs Portfolio <onboarding@resend.dev>",
+      from: "Haza'ElDevs Portfolio <hazael@hazaeldevs.com>",
       to: ["hazaeldevs@gmail.com"],
       subject: `[Portfolio] ${subject || "New enquiry"} — ${name}`,
       // reply_to lets you hit Reply in Gmail and go straight to the sender

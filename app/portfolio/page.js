@@ -182,14 +182,14 @@ const projects = [
     url: "https://i4-dt.vercel.app/",
     repo: null,
   },
-  {
-    title: "Kwik Ride",
-    tag: "Operations & Management Dashboard",
-    desc: "A clean informational landing page for a volunteer-driven initiative that teaches tech skills to students — showcasing the mission and capturing sign-ups.",
-    img: "/kwik-ride.png",
-    url: null,
-    repo: null,
-  },
+  // {
+  //   title: "Kwik Ride",
+  //   tag: "Operations & Management Dashboard",
+  //   desc: "A clean informational landing page for a volunteer-driven initiative that teaches tech skills to students — showcasing the mission and capturing sign-ups.",
+  //   img: "/kwik-ride.png",
+  //   url: null,
+  //   repo: null,
+  // },
 ];
 
 // ─── PAGE ─────────────────────────────────────────────────────────────────────

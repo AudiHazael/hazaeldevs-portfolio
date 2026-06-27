@@ -92,24 +92,24 @@ const waLink = (msg) =>
 
 const timeline = [
   {
-    year: "2022-23",
+    year: "2021-23",
     title: "Started with design",
     desc: "Picked up Figma and learned to design interfaces before writing a single line of code. That grounding in visual thinking still shapes how every project is approached.",
   },
   {
     year: "2023–24",
     title: "First client projects",
-    desc: "Moved from design into development. Built first client sites — Artist Kelle, Soy-Joy, i4DT — learning how real businesses think about their online presence.",
+    desc: "Moved from design into development. Built first client sites — Luxor, Soy-Joy — learning how real businesses think about their online presence.",
   },
   {
-    year: "2024",
+    year: "2024-25",
     title: "Deeper client work",
-    desc: "Karez Nigeria, Luxor, Extensive Academy. Each project added a layer — automotive, premium brand, collaborative frontend with another developer.",
+    desc: "Karez Nigeria, Artist Kelle, i4DT, Extensive Academy. Each project added a layer — automotive, premium brand, collaborative frontend with another developer.",
   },
   {
-    year: "2024–25",
+    year: "2025–26",
     title: "Full-stack & systems",
-    desc: "Built HaulConnect from scratch — a full logistics operator platform with a public website, custom operations dashboard, email system, and PDF generation. No prior full-stack experience. Shipped.",
+    desc: "Built HaulConnect from scratch — a full logistics operator platform with a public website, custom operations dashboard, email system, and PDF generation.",
   },
   {
     year: "Now",

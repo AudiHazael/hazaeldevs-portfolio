@@ -12,6 +12,7 @@ html {
   background: linear-gradient(to bottom, #020617, #09090b, #000000);
   scroll-behavior: smooth;
   font-optical-sizing: auto;
+  font-size: 95%;
 }
 
 h1,

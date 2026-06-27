@@ -144,7 +144,7 @@ export default function Hero() {
         </motion.h1>
 
         {/* Description */}
-        <motion.p variants={fadeInUp} className="max-w-xl text-gray-200">
+        <motion.p variants={fadeInUp} className="max-w-4xl text-gray-200">
           {config.description}
         </motion.p>
 

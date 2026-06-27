@@ -39,13 +39,13 @@ export default function ClientLogoSwiper() {
       />
 
       <div className="mx-auto px-6 md:px-12 max-w-7xl space-y-7">
-        <p className="text-xs font-semibold text-zinc-500 uppercase tracking-[0.18em] text-start">
+        <p className="text-xs font-semibold text-zinc-500 uppercase tracking-[0.18em] text-center">
           Businesses I&apos;ve worked with
         </p>
 
         <Swiper
           modules={[Autoplay]}
-          slidesPerView={2}
+          slidesPerView={3}
           spaceBetween={64}
           loop={true}
           speed={3500}
@@ -63,14 +63,6 @@ export default function ClientLogoSwiper() {
               key={`${logo.id}-${i}`}
               className="flex items-center justify-center"
             >
-              {/*
-                KEY FIX: anchor on height, not width.
-                - h-8 (32px) is the fixed visual height for every logo
-                - w-auto lets each logo expand naturally at that height
-                - max-w-[120px] caps very wide logos so nothing dominates
-                This way all logos read at the same optical weight regardless
-                of their original dimensions or aspect ratio.
-              */}
               <div className="flex items-center justify-center h-12 w-auto max-w-35">
                 <Image
                   src={logo.src}

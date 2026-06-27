@@ -51,7 +51,7 @@ const portfolioItems = [
   },
   {
     title: "Luxor",
-    text: "A bold and elegant digital presence for a premium watch brand. For Luxor, I crafted a stylish landing page that reflects the premium nature of the brand.",
+    text: "A bold, elegant landing page for a premium watch brand — designed to reflect exclusivity through strong typography, cinematic imagery, and a layout that lets the product speak for itself.",
     img: "/Luxor.png",
     tools: [],
     previewLink: "https://luxor-seven.vercel.app/",
@@ -73,14 +73,14 @@ const portfolioItems = [
     previewLink: "https://i4-dt.vercel.app/",
     repoLink: "#",
   },
-  {
-    title: "Kwik Ride",
-    text: "A clean informational landing page for a volunteer-driven initiative that teaches tech skills to students — showcasing the mission and capturing sign-ups.",
-    img: "/kwik-ride.png",
-    tools: [],
-    previewLink: "https://kwik-ride.vercel.app/",
-    repoLink: "#",
-  },
+  // {
+  //   title: "Kwik Ride",
+  //   text: "A clean informational landing page for a volunteer-driven initiative that teaches tech skills to students — showcasing the mission and capturing sign-ups.",
+  //   img: "/kwik-ride.png",
+  //   tools: [],
+  //   previewLink: "https://kwik-ride.vercel.app/",
+  //   repoLink: "#",
+  // },
 ];
 
 const fadeUp = {
@@ -163,12 +163,13 @@ const Portfolio = () => {
             }}
             centeredSlides={false}
             grabCursor={true}
-            className="pb-10 cursor-grab"
+            style={{ alignItems: "stretch" }}
+            className="cursor-grab [&_.swiper-slide]:h-auto"
           >
             {portfolioItems.map((item, i) => (
               <SwiperSlide key={i}>
                 <motion.div
-                  className="flex flex-col bg-zinc-900/40 backdrop-blur-md border border-zinc-800 hover:border-indigo-400 rounded-xl h-[375px] overflow-hidden transition-transform hover:-translate-y-2 duration-300 m"
+                  className="flex flex-col h-full bg-zinc-900/40 backdrop-blur-md border border-zinc-800 hover:border-indigo-400 rounded-xl overflow-hidden transition-transform hover:-translate-y-2 duration-300"
                   variants={fadeUp}
                   custom={i * 0.1}
                 >
@@ -176,7 +177,7 @@ const Portfolio = () => {
                   <Image
                     src={item.img}
                     alt={item.title}
-                    className="opacity-90 hover:opacity-100 w-full h-48 md:h-64 object-cover transition"
+                    className="opacity-90 hover:opacity-100 w-full h-40 md:h-48 object-cover transition"
                     width={640}
                     height={480}
                   />
@@ -204,7 +205,7 @@ const Portfolio = () => {
                       )}
                     </div>
 
-                    <p className="flex-1 mb-4 text-stone-200 text-sm leading-relaxed">
+                    <p className="flex-1 mb-4 text-stone-200 text-sm leading-relaxed line-clamp-4">
                       {item.text}
                     </p>
 

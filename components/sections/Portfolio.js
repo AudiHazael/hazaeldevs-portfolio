@@ -73,14 +73,17 @@ const portfolioItems = [
     previewLink: "https://i4-dt.vercel.app/",
     repoLink: "#",
   },
-  // {
-  //   title: "Kwik Ride",
-  //   text: "A clean informational landing page for a volunteer-driven initiative that teaches tech skills to students — showcasing the mission and capturing sign-ups.",
-  //   img: "/kwik-ride.png",
-  //   tools: [],
-  //   previewLink: "https://kwik-ride.vercel.app/",
-  //   repoLink: "#",
-  // },
+  {
+    title: "KwikRide",
+    // tag: "Admin Dashboard",
+    text: "Frontend for the admin dashboard of a Nigerian ride-hailing platform — built to manage riders, trips, and operations. Django backend by a separate developer; integration in progress.",
+    img: "/kwikride-ng.png",
+    tools: [],
+    previewLink: "https://kwikride.ng",
+    repoLink: "#",
+    collaborator: { name: "Firebreather", link: "#" },
+  },
+  ,
 ];
 
 const fadeUp = {

@@ -182,14 +182,15 @@ const projects = [
     url: "https://i4-dt.vercel.app/",
     repo: null,
   },
-  // {
-  //   title: "Kwik Ride",
-  //   tag: "Operations & Management Dashboard",
-  //   desc: "A clean informational landing page for a volunteer-driven initiative that teaches tech skills to students — showcasing the mission and capturing sign-ups.",
-  //   img: "/kwik-ride.png",
-  //   url: null,
-  //   repo: null,
-  // },
+  {
+    title: "KwikRide",
+    tag: "Admin Dashboard",
+    desc: "Frontend for the admin dashboard of a Nigerian ride-hailing platform — built to manage riders, trips, and operations. Django backend by a separate developer; integration in progress.",
+    img: "/kwikride-ng.png",
+    url: "https://kwikride.ng",
+    repo: "#",
+    collab: { name: "Firebreather", url: "#" },
+  },
 ];
 
 // ─── PAGE ─────────────────────────────────────────────────────────────────────

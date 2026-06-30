@@ -2,6 +2,8 @@ import "./globals.css";
 
 import { Geist, Outfit } from "next/font/google";
 
+import Analytics from "@/components/ui/Analytics";
+
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-body",
@@ -95,7 +97,10 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geist.variable} ${outfit.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }

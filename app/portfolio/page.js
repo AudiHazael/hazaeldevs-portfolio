@@ -186,7 +186,7 @@ const projects = [
     title: "KwikRide",
     tag: "Admin Dashboard",
     desc: "Frontend for the admin dashboard of a Nigerian ride-hailing platform — built to manage riders, trips, and operations. Django backend by a separate developer; integration in progress.",
-    img: "/kwikride-ng.png",
+    img: "/kwikride-ng-1.png",
     url: "https://kwikride.ng",
     repo: "#",
     collab: { name: "Firebreather", url: "#" },

@@ -82,15 +82,14 @@ export default function Navbar() {
       variants={fadeDown}
     >
       <div className="flex justify-between items-center mx-auto px-4 py-3 max-w-[90%]">
-        {/* ── Logo ── */}
         <Link href="/" aria-label="Haza'ElDevs home">
           <Image
             src="/logo.png"
             alt="HazaelDevs logo"
             width={100}
             height={40}
-            className="h-10 w-auto object-contain"
             priority
+            className="h-6 sm:h-7 md:h-8 lg:h-10 w-auto object-contain"
           />
         </Link>
 

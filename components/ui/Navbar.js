@@ -13,6 +13,7 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Systems", href: "/systems" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -84,11 +85,11 @@ export default function Navbar() {
         {/* ── Logo ── */}
         <Link href="/" aria-label="Haza'ElDevs home">
           <Image
-            src="/logo.png"
+            src="/Logo.png"
             alt="HazaelDevs logo"
             width={100}
             height={40}
-            className="h-7 sm:h-8 md:h-10 w-auto object-contain"
+            className="h-10 w-auto object-contain"
             priority
           />
         </Link>

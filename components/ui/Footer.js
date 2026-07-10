@@ -99,7 +99,13 @@ function Footer() {
             Systems
           </Link>
           <Link
-            href="/#contact"
+            href="/blog"
+            className="text-zinc-300 hover:text-white transition"
+          >
+            Blog
+          </Link>
+          <Link
+            href="/contact"
             className="text-zinc-300 hover:text-white transition"
           >
             Contact

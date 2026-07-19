@@ -99,14 +99,49 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does a small business website cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Starter websites typically range from $300 to $500, while standard websites range from $600 to $1,200 depending on scope.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you build landing pages for lead generation?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Landing pages are designed around a single conversion goal such as bookings, enquiries, or signups.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with businesses outside Nigeria?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Projects are delivered remotely for clients in Nigeria and internationally.",
+      },
+    },
+  ],
+};
+
 export const metadata = {
   title: "Web Design & Development Services for Small Businesses",
   description:
-    "Custom websites, landing pages, and business systems for small businesses and startups. Built with Next.js, designed for clarity and conversion. Based in Lagos, Nigeria — serving clients globally.",
+    "Get a conversion-focused website, landing page, or business system built for your small business. Clear scope, transparent pricing, and delivery you can trust.",
   keywords: [
+    "small business web design services",
+    "website developer for small business",
     "web design services for small businesses",
     "affordable website packages Nigeria",
+    "website design Lagos",
     "landing page developer Lagos",
+    "lead generation landing page developer",
     "business website designer",
     "Next.js developer Nigeria",
     "business systems developer",
@@ -114,9 +149,10 @@ export const metadata = {
   ],
   alternates: { canonical: "https://www.hazaeldevs.com/services" },
   openGraph: {
+    type: "website",
     title: "Web Design & Development Services | Haza'ElDevs",
     description:
-      "Websites, landing pages, and business systems for small businesses and startups.",
+      "Conversion-focused websites, landing pages, and business systems for small businesses and startups.",
     url: "https://www.hazaeldevs.com/services",
     images: [
       {
@@ -127,9 +163,17 @@ export const metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Design & Development Services | Haza'ElDevs",
+    description:
+      "Conversion-focused websites, landing pages, and business systems for small businesses and startups.",
+    images: ["/og-services.png"],
+  },
   other: {
     "schema-service": JSON.stringify(serviceSchema),
     "schema-breadcrumb": JSON.stringify(breadcrumbSchema),
+    "schema-faq": JSON.stringify(faqSchema),
   },
 };
 
@@ -288,6 +332,18 @@ const waLink = (msg) =>
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-24 text-zinc-100">
         {/* ── HERO ── */}

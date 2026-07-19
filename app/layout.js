@@ -21,20 +21,22 @@ export const metadata = {
   metadataBase: new URL("https://www.hazaeldevs.com"),
 
   title: {
-    default: "Haza'ElDevs | React Developer for Small Business Websites",
+    default: "Web Design & Business Systems Developer | Haza'ElDevs",
     template: "%s | Haza'ElDevs",
   },
 
   description:
-    "Audi Hazael builds fast, credible websites and landing pages for small businesses and startups. Based in Lagos, Nigeria — serving clients globally.",
+    "Audi Hazael builds conversion-focused websites, landing pages, and business workflow systems for small businesses and startups. Based in Lagos, Nigeria and serving clients globally.",
 
   keywords: [
-    "React developer for small businesses",
-    "freelance web developer Nigeria",
-    "business website designer Lagos",
-    "landing page developer",
-    "startup website developer",
-    "affordable website packages",
+    "web designer for small business",
+    "small business website developer Nigeria",
+    "freelance web developer Lagos",
+    "landing page developer for lead generation",
+    "business systems developer",
+    "workflow automation developer Nigeria",
+    "custom dashboard developer",
+    "hire Next.js developer",
     "Haza'ElDevs",
     "Audi Hazael",
   ],
@@ -47,9 +49,9 @@ export const metadata = {
     locale: "en_US",
     url: "https://www.hazaeldevs.com",
     siteName: "Haza'ElDevs",
-    title: "Haza'ElDevs | React Developer for Small Business Websites",
+    title: "Web Design & Business Systems Developer | Haza'ElDevs",
     description:
-      "Fast, credible websites for small businesses and startups. Based in Lagos, serving clients globally.",
+      "Conversion-focused websites, landing pages, and business systems for small businesses and startups.",
     images: [
       {
         url: "/opengraph-image.png",
@@ -67,9 +69,9 @@ export const metadata = {
     card: "summary_large_image",
     site: "@hazaeltweets",
     creator: "@hazaeltweets",
-    title: "Haza'ElDevs | React Developer for Small Business Websites",
+    title: "Web Design & Business Systems Developer | Haza'ElDevs",
     description:
-      "Fast, credible websites for small businesses and startups. Based in Lagos, serving clients globally.",
+      "Conversion-focused websites, landing pages, and business systems for small businesses and startups.",
     images: ["/hazaeldevs_og_preview.png"],
   },
 

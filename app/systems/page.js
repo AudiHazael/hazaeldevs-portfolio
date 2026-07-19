@@ -99,26 +99,62 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a business workflow system?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A workflow system is a custom internal tool that helps manage leads, jobs, documents, and communication in one place.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you replace spreadsheets with a dashboard?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Dashboards can centralize data and automate repetitive manual operations currently handled in spreadsheets.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you build custom internal tools for SMEs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Systems are built around each business workflow and can include automation, notifications, and document generation.",
+      },
+    },
+  ],
+};
+
 // ─── METADATA ────────────────────────────────────────────────────────────────
 export const metadata = {
   title: "Business Systems & Workflow Development",
   description:
-    "I design and build the internal tools and automated workflows that replace spreadsheets and WhatsApp threads — so your business can scale without the manual chaos. Based in Lagos, serving clients globally.",
+    "Replace spreadsheets and manual operations with custom dashboards, automation, and internal tools built for your business workflow.",
   keywords: [
+    "workflow automation services",
+    "custom internal tools developer",
     "business systems developer Nigeria",
     "workflow automation developer Lagos",
     "operations dashboard developer",
+    "custom CRM for small business",
     "internal tools developer Nigeria",
     "custom admin dashboard Next.js",
+    "replace spreadsheets with dashboard",
     "logistics platform developer",
     "business process automation Nigeria",
     "replace Airtable with custom dashboard",
   ],
   alternates: { canonical: "https://www.hazaeldevs.com/systems" },
   openGraph: {
+    type: "website",
     title: "Business Systems & Workflow Development | Haza'ElDevs",
     description:
-      "Internal tools, operations dashboards, and automated workflows that replace manual processes. Based in Lagos, serving clients globally.",
+      "Custom internal tools, operations dashboards, and workflow automation that replace manual processes.",
     url: "https://www.hazaeldevs.com/systems",
     images: [
       {
@@ -129,10 +165,18 @@ export const metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Business Systems & Workflow Development | Haza'ElDevs",
+    description:
+      "Custom internal tools, operations dashboards, and workflow automation that replace manual processes.",
+    images: ["/og-systems.png"],
+  },
   other: {
     "schema-service": JSON.stringify(softwareServiceSchema),
     "schema-app": JSON.stringify(haulConnectAppSchema),
     "schema-breadcrumb": JSON.stringify(breadcrumbSchema),
+    "schema-faq": JSON.stringify(faqSchema),
   },
 };
 
@@ -160,6 +204,26 @@ const capabilities = [
 export default function SystemsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(softwareServiceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(haulConnectAppSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-24">
         {/* ── Page header ── */}

@@ -78,29 +78,39 @@ const breadcrumbSchema = {
 export const metadata = {
   title: "Portfolio — Websites & Systems Built for Real Businesses",
   description:
-    "See the websites, landing pages, and business systems Audi Hazael has built for small businesses and startups. Every project solved a real problem.",
+    "See real client projects: small business websites, landing pages, and custom systems built to generate leads and improve operations.",
   keywords: [
     "web developer portfolio Nigeria",
     "small business website examples",
+    "web design case studies",
+    "landing page portfolio",
     "Next.js portfolio Lagos",
     "HaulConnect logistics platform",
     "business systems developer portfolio",
   ],
   alternates: { canonical: "https://www.hazaeldevs.com/portfolio" },
   openGraph: {
+    type: "website",
     title:
       "Portfolio — Websites & Systems Built for Real Businesses | Haza'ElDevs",
     description:
-      "Websites, landing pages, and business systems built for small businesses and startups.",
+      "Real client websites, landing pages, and business systems built for small businesses and startups.",
     url: "https://www.hazaeldevs.com/portfolio",
     images: [
       {
-        url: "/og-portfolio.png",
+        url: "/og-preview.png",
         width: 1200,
         height: 630,
         alt: "Haza'ElDevs Portfolio",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio | Haza'ElDevs",
+    description:
+      "Real client websites, landing pages, and business systems built for small businesses and startups.",
+    images: ["/og-preview.png"],
   },
   other: {
     "schema-portfolio": JSON.stringify(portfolioSchema),
@@ -197,6 +207,14 @@ const projects = [
 export default function PortfolioPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <main className="pt-24 text-zinc-100">
         {/* ── HERO ── */}

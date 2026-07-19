@@ -15,8 +15,40 @@ import Contact from "@/components/sections/Contact";
 
 // ─── METADATA ────────────────────────────────────────────────────────────────
 export const metadata = {
+  title: "Web Designer & Business Systems Developer for Small Businesses",
+  description:
+    "Need a website that brings in leads? Haza'ElDevs builds high-conversion business websites, landing pages, and workflow systems for startups and small businesses.",
+  keywords: [
+    "small business web designer",
+    "website developer for small business",
+    "lead generation website developer",
+    "landing page developer Nigeria",
+    "business systems developer Lagos",
+    "workflow automation for small business",
+  ],
   alternates: {
     canonical: "https://www.hazaeldevs.com",
+  },
+  openGraph: {
+    title: "Web Designer & Business Systems Developer | Haza'ElDevs",
+    description:
+      "High-conversion websites, landing pages, and workflow systems for startups and small businesses.",
+    url: "https://www.hazaeldevs.com",
+    images: [
+      {
+        url: "/og-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Haza'ElDevs Home",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Designer & Business Systems Developer | Haza'ElDevs",
+    description:
+      "High-conversion websites, landing pages, and workflow systems for startups and small businesses.",
+    images: ["/og-preview.png"],
   },
 };
 

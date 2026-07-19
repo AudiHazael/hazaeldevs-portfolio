@@ -32,8 +32,14 @@ export async function generateMetadata({ params }) {
       url: `https://www.hazaeldevs.com/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
+      modifiedTime: post.date,
       authors: ["Audi Hazael"],
       tags: post.tags,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
     },
   };
 }
@@ -129,11 +135,40 @@ export default function BlogPost({ params }) {
     keywords: post.tags?.join(", "),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.hazaeldevs.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://www.hazaeldevs.com/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `https://www.hazaeldevs.com/blog/${post.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Navbar />
       <main className="pt-24 text-zinc-100">

@@ -57,19 +57,22 @@ const breadcrumbSchema = {
 export const metadata = {
   title: "About — Audi Hazael, Website & Systems Developer",
   description:
-    "Audi Hazael is a website and systems developer based in Lagos, Nigeria. 3 years of client work, a background in Figma and design, and a strong interest in business process and workflow optimisation.",
+    "Meet Audi Hazael, a Lagos-based web designer and business systems developer helping small businesses get more leads and run smoother operations.",
   keywords: [
     "Audi Hazael developer",
     "HazaelDevs about",
-    "web developer Lagos Nigeria",
+    "web designer Lagos Nigeria",
+    "business systems developer Lagos",
+    "small business website developer",
     "Next.js developer background",
     "freelance developer Nigeria story",
   ],
   alternates: { canonical: "https://www.hazaeldevs.com/about" },
   openGraph: {
+    type: "website",
     title: "About Audi Hazael | Haza'ElDevs",
     description:
-      "Website and systems developer based in Lagos. 3 years of client work, started in design, now building full-stack platforms.",
+      "Lagos-based web designer and systems developer helping businesses get more leads and improve operations.",
     url: "https://www.hazaeldevs.com/about",
     images: [
       {
@@ -79,6 +82,13 @@ export const metadata = {
         alt: "About Audi Hazael",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Audi Hazael | Haza'ElDevs",
+    description:
+      "Lagos-based web designer and systems developer helping businesses get more leads and improve operations.",
+    images: ["/og-preview.png"],
   },
   other: {
     "schema-person": JSON.stringify(personSchema),
@@ -165,6 +175,14 @@ const skills = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <main className="pt-24 text-zinc-100">
         {/* ── HERO ── */}

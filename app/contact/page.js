@@ -58,22 +58,58 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How quickly do you reply?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Within 24 hours on weekdays, often faster.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with clients outside Nigeria?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Communication and delivery are remote, and clients can be local or international.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I hire you for both website and systems work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Projects can include both customer-facing websites and internal workflow systems.",
+      },
+    },
+  ],
+};
+
 export const metadata = {
   title: "Work With Me — Hire a Website & Systems Developer",
   description:
-    "Ready to get your business online or replace your manual workflows? Describe your project and Audi Hazael will get back to you within 24 hours. Based in Lagos, serving clients globally.",
+    "Need a website or business workflow system? Send your project brief and get a response within 24 hours. Hire Audi Hazael for clear, conversion-focused execution.",
   keywords: [
+    "hire web designer",
+    "hire website developer for small business",
     "hire a web developer Nigeria",
+    "hire Next.js developer",
     "freelance developer for hire Lagos",
     "get a business website",
     "hire a systems developer",
+    "business systems consultant Nigeria",
     "web developer contact Lagos",
   ],
   alternates: { canonical: "https://www.hazaeldevs.com/contact" },
   openGraph: {
+    type: "website",
     title: "Work With Me | Haza'ElDevs",
     description:
-      "Describe your project and Audi Hazael will get back to you within 24 hours.",
+      "Need a website or business workflow system? Send your project brief and get a response within 24 hours.",
     url: "https://www.hazaeldevs.com/contact",
     images: [
       {
@@ -84,10 +120,18 @@ export const metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work With Me | Haza'ElDevs",
+    description:
+      "Need a website or business workflow system? Send your project brief and get a response within 24 hours.",
+    images: ["/og-contact.png"],
+  },
   other: {
     "schema-person": JSON.stringify(personSchema),
     "schema-contact": JSON.stringify(contactPageSchema),
     "schema-breadcrumb": JSON.stringify(breadcrumbSchema),
+    "schema-faq": JSON.stringify(faqSchema),
   },
 };
 
@@ -149,6 +193,22 @@ const faqs = [
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-24 text-zinc-100">
         {/* ── HERO ── */}

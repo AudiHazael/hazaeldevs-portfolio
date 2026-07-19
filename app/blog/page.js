@@ -9,13 +9,63 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 export const metadata = {
   title: "Blog — Websites, Systems & Business Growth",
   description:
-    "Practical writing on website design, business systems, and building a credible online presence. By Audi Hazael of Haza'ElDevs.",
+    "Actionable guides on small business websites, SEO, lead generation, and workflow systems. Learn how to turn your website into a lead channel.",
+  keywords: [
+    "small business website tips",
+    "small business website SEO",
+    "lead generation website blog",
+    "how to get leads from website",
+    "business systems blog",
+    "website conversion advice",
+    "small business SEO content",
+    "website strategy for startups",
+  ],
   alternates: { canonical: "https://www.hazaeldevs.com/blog" },
   openGraph: {
     title: "Blog | Haza'ElDevs",
-    description: "Practical writing on websites, business systems, and growth.",
+    description:
+      "Actionable guides on websites, SEO, lead generation, and business systems for small businesses.",
     url: "https://www.hazaeldevs.com/blog",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Haza'ElDevs",
+    description:
+      "Actionable guides on websites, SEO, lead generation, and business systems for small businesses.",
+  },
+};
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Haza'ElDevs Blog",
+  url: "https://www.hazaeldevs.com/blog",
+  description:
+    "Actionable guides on small business websites, lead generation, and workflow systems.",
+  publisher: {
+    "@type": "Organization",
+    name: "Haza'ElDevs",
+    url: "https://www.hazaeldevs.com",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.hazaeldevs.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: "https://www.hazaeldevs.com/blog",
+    },
+  ],
 };
 
 const CATEGORY_LABELS = {
@@ -38,6 +88,14 @@ export default function BlogPage({ searchParams }) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <main className="pt-24 text-zinc-100">
         {/* ── Hero ── */}

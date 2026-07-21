@@ -174,7 +174,7 @@ export default function BlogPost({ params }) {
       <main className="pt-24 text-zinc-100">
         {/* ── Post header ── */}
         <header className="px-6 md:px-10 pt-16 pb-10 border-b border-zinc-800">
-          <div className="md:max-w-[65ch] mx-auto space-y-6">
+          <div className="max-w-[75vw] xl:max-w-6xl mx-auto space-y-6">
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
@@ -220,21 +220,21 @@ export default function BlogPost({ params }) {
 
         {/* ── Post body ── */}
         <article className="px-6 md:px-10 py-14">
-          <div className="md:max-w-[65ch] mx-auto">
+          <div className="max-w-[75vw] xl:max-w-6xl mx-auto">
             <MDXRemote source={post.content} components={components} />
           </div>
         </article>
 
         {/* ── Compact newsletter ── */}
         <div className="px-6 md:px-10 pb-10">
-          <div className="md:max-w-[65ch] mx-auto">
+          <div className="max-w-[75vw] xl:max-w-6xl mx-auto">
             <NewsletterSignup compact />
           </div>
         </div>
 
         {/* ── Comments ── */}
         <div className="px-6 md:px-10 pb-16">
-          <div className="md:max-w-[65ch] mx-auto">
+          <div className="max-w-[75vw] xl:max-w-6xl mx-auto">
             <GiscusComments />
           </div>
         </div>
@@ -242,7 +242,7 @@ export default function BlogPost({ params }) {
         {/* ── Prev / Next navigation ── */}
         {(prevPost || nextPost) && (
           <div className="px-6 md:px-10 py-10 border-t border-zinc-800">
-            <div className="md:max-w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="max-w-[75vw] xl:max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
               {prevPost ? (
                 <Link
                   href={`/blog/${prevPost.slug}`}
@@ -279,7 +279,7 @@ export default function BlogPost({ params }) {
         {/* ── Related posts ── */}
         {related.length > 0 && (
           <section className="px-6 md:px-10 py-12 border-t border-zinc-800">
-            <div className="md:max-w-[80%] mx-auto space-y-6">
+            <div className="max-w-[75vw] xl:max-w-6xl mx-auto space-y-6">
               <h2 className="text-2xl font-bold text-zinc-50">Related posts</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {related.map((rPost) => (

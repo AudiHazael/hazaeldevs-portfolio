@@ -73,10 +73,11 @@ const CATEGORY_LABELS = {
   "business-systems": "Business Systems",
 };
 
-export default function BlogPage({ searchParams }) {
+export default async function BlogPage({ searchParams }) {
+  const resolvedParams = await searchParams;
   const allPosts = getAllPosts();
   const categories = getAllCategories();
-  const activeCategory = searchParams?.category || "all";
+  const activeCategory = resolvedParams?.category || "all";
 
   const filtered =
     activeCategory === "all"
@@ -99,21 +100,21 @@ export default function BlogPage({ searchParams }) {
       <Navbar />
       <main className="pt-24 text-zinc-100">
         {/* ── Hero ── */}
-        <section className="px-6 md:px-10 pt-16 pb-12 md:max-w-[80%] mx-auto">
+        <section className="px-6 md:px-10 pt-16 pb-12 max-w-[75vw] xl:max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div>
               <span className="text-purple-300/50 text-sm font-semibold uppercase tracking-widest">
                 Blog
               </span>
               <h1 className="mt-3 text-5xl md:text-6xl font-bold text-zinc-50 leading-[1.05] tracking-tight">
-                Writing that{" "}
+                Guides that help your{" "}
                 <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-300 to-fuchsia-400">
-                  works.
+                  business grow online.
                 </span>
               </h1>
               <p className="mt-4 text-gray-400 max-w-lg leading-relaxed">
-                Practical writing on website design, business systems, and
-                building a credible online presence. No fluff.
+                Actionable articles on website design, lead generation, and
+                business systems — written for small business owners.
               </p>
             </div>
             {/* <BlogSearch posts={allPosts} /> */}
@@ -150,7 +151,7 @@ export default function BlogPage({ searchParams }) {
         {/* ── Featured post ── */}
         {featured && activeCategory === "all" && (
           <section className="px-6 md:px-10 pb-12 border-t border-zinc-800">
-            <div className="md:max-w-[80%] mx-auto pt-12">
+            <div className="max-w-[75vw] xl:max-w-6xl mx-auto pt-12">
               <span className="text-xs font-semibold text-purple-400/70 uppercase tracking-widest">
                 Featured
               </span>
@@ -199,7 +200,7 @@ export default function BlogPage({ searchParams }) {
 
         {/* ── Post grid ── */}
         <section className="px-6 md:px-10 py-12 border-t border-zinc-800">
-          <div className="md:max-w-[80%] mx-auto space-y-8">
+          <div className="max-w-[75vw] xl:max-w-6xl mx-auto space-y-8">
             {rest.length === 0 ? (
               <p className="text-zinc-500 text-sm">
                 No posts in this category yet.

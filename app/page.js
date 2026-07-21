@@ -113,6 +113,10 @@ const professionalServiceSchema = {
       },
       {
         "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Sales Funnel" },
+      },
+      {
+        "@type": "Offer",
         itemOffered: {
           "@type": "Service",
           name: "Business Systems & Workflows",

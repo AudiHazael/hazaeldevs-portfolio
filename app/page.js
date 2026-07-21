@@ -23,6 +23,7 @@ export const metadata = {
     "website developer for small business",
     "lead generation website developer",
     "landing page developer Nigeria",
+    "sales funnel developer Lagos",
     "business systems developer Lagos",
     "workflow automation for small business",
   ],
@@ -61,7 +62,7 @@ const websiteSchema = {
   name: "Haza'ElDevs",
   url: "https://www.hazaeldevs.com",
   description:
-    "Websites, landing pages, and business systems for small businesses and startups. Built by Audi Hazael in Lagos, Nigeria.",
+    "Websites, landing pages, sales funnels, and business systems for small businesses and startups. Built by Audi Hazael in Lagos, Nigeria.",
   author: { "@type": "Person", name: "Audi Hazael" },
   potentialAction: {
     "@type": "SearchAction",

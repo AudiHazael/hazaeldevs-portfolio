@@ -35,7 +35,7 @@ const services = [
     ),
   },
   {
-    title: "Landing & Marketing Pages",
+    title: "Landing Pages & Sales Funnels",
     img: "/landing.png",
     desc: (
       <>

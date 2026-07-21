@@ -197,7 +197,7 @@ const offerings = [
   {
     icon: MegaphoneIcon,
     tag: null,
-    title: "Landing & Marketing Page",
+    title: "Landing Pages & Sales Funnels",
     desc: "A single-purpose page with one clear goal — a booking, a sign-up, a quote request. Designed to explain fast and convert.",
     deliverables: [
       "One focused conversion goal",

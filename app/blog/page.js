@@ -100,7 +100,7 @@ export default async function BlogPage({ searchParams }) {
       <Navbar />
       <main className="pt-24 text-zinc-100">
         {/* ── Hero ── */}
-        <section className="px-6 md:px-10 pt-16 pb-12 max-w-[75vw] xl:max-w-6xl mx-auto">
+        <section className="px-6 md:px-10 pt-16 pb-12 w-full xl:max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div>
               <span className="text-purple-300/50 text-sm font-semibold uppercase tracking-widest">
@@ -151,7 +151,7 @@ export default async function BlogPage({ searchParams }) {
         {/* ── Featured post ── */}
         {featured && activeCategory === "all" && (
           <section className="px-6 md:px-10 pb-12 border-t border-zinc-800">
-            <div className="max-w-[75vw] xl:max-w-6xl mx-auto pt-12">
+            <div className="w-full xl:max-w-6xl mx-auto pt-12">
               <span className="text-xs font-semibold text-purple-400/70 uppercase tracking-widest">
                 Featured
               </span>
@@ -200,7 +200,7 @@ export default async function BlogPage({ searchParams }) {
 
         {/* ── Post grid ── */}
         <section className="px-6 md:px-10 py-12 border-t border-zinc-800">
-          <div className="max-w-[75vw] xl:max-w-6xl mx-auto space-y-8">
+          <div className="w-full xl:max-w-6xl mx-auto space-y-8">
             {rest.length === 0 ? (
               <p className="text-zinc-500 text-sm">
                 No posts in this category yet.

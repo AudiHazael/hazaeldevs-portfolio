@@ -1,4 +1,5 @@
 import { getAllPosts } from "@/lib/blog";
+import { industries } from "@/lib/industries-data";
 
 export default function sitemap() {
   const baseUrl = "https://www.hazaeldevs.com";
@@ -28,5 +29,12 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  const industryRoutes = industries.map((industry) => ({
+    url: `${baseUrl}/industries/${industry.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...industryRoutes, ...blogRoutes];
 }

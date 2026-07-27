@@ -21,26 +21,25 @@ export const metadata = {
   metadataBase: new URL("https://www.hazaeldevs.com"),
 
   title: {
-    default: "Web Design & Business Systems Developer | Haza'ElDevs",
+    default: "Web Design & Lead Generation Systems | Haza'ElDevs",
     template: "%s | Haza'ElDevs",
   },
 
   description:
-    "Audi Hazael builds conversion-focused websites, landing pages, and business workflow systems for small businesses and startups. Based in Lagos, Nigeria and serving clients globally.",
+    "Conversion-focused websites and lead-generation systems for small businesses and startups. Based in Lagos, working globally.",
 
   keywords: [
     "web designer for small business",
+    "lead generation website developer",
+    "website that converts leads",
     "small business website developer Nigeria",
-    "freelance web developer Lagos",
+    "business growth systems developer",
     "landing page developer for lead generation",
-    "business systems developer",
     "workflow automation developer Nigeria",
-    "custom dashboard developer",
     "hire Next.js developer",
     "Haza'ElDevs",
     "Audi Hazael",
   ],
-
   authors: [{ name: "Audi Hazael", url: "https://www.hazaeldevs.com" }],
   creator: "Audi Hazael",
 

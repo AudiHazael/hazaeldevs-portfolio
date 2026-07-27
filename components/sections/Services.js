@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Code, MonitorSmartphone, Rocket, BoltIcon } from "lucide-react";
 import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
-
+import IndustriesLinkOut from "../industry/IndustriesLinkOut";
 // ─── ANIMATION ───────────────────────────────────────────────────────────────
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -211,6 +211,12 @@ function Services({ showHeading = false }) {
             </motion.div>
           ))}
         </div>
+      </div>
+
+      <div className="mx-auto px-6 md:max-w-[80%]">
+        <h3 className="font-bold text-zinc-50 text-2xl md:text-4xl mb-8">
+          Why work with me?
+        </h3>
 
         {/* Reasons Section */}
         <div className="items-center gap-12 grid grid-cols-1 xl:grid-cols-2 mt-20">
@@ -241,6 +247,7 @@ function Services({ showHeading = false }) {
                 </motion.div>
               );
             })}
+            <IndustriesLinkOut variant="inline" className="sm:col-span-2" />
           </motion.div>
 
           <motion.div

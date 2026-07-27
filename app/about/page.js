@@ -3,6 +3,7 @@ import Footer from "@/components/ui/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import IndustriesLinkOut from "@/components/industry/IndustriesLinkOut";
 
 // ─── SCHEMAS ─────────────────────────────────────────────────────────────────
 const personSchema = {
@@ -235,6 +236,7 @@ export default function AboutPage() {
                   See the work
                 </Link>
               </div>
+              <IndustriesLinkOut />
             </div>
 
             {/* Photo placeholder */}
@@ -430,8 +432,8 @@ export default function AboutPage() {
             {/* Second photo placeholder */}
             <div className="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 aspect-square">
               <Image
-                src="/design_systems_illustration.svg"
-                alt="Audi Hazael"
+                src="/design-system-illustration.png"
+                alt="design system illustration"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 400px"

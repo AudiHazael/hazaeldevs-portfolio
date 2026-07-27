@@ -1,6 +1,7 @@
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import CTA from "@/components/sections/CTA";
+import IndustriesLinkOut from "@/components/industry/IndustriesLinkOut";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
@@ -564,6 +565,7 @@ export default function ServicesPage() {
                     </div>
                   ))}
                 </div>
+                <IndustriesLinkOut />
               </div>
             </div>
           </div>

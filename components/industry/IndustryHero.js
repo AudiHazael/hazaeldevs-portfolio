@@ -19,7 +19,7 @@ export default function IndustryHero({ industry }) {
           {eyebrow}
         </p>
 
-        <h1 className="text-4xl md:text-6xl font-semibold leading-[1.12] text-slate-50 text-balance">
+        <h1 className="text-3xl md:text-6xl font-semibold leading-[1.12] text-slate-50 text-balance">
           {heroHeadline.map((part, i) =>
             part.accent ? (
               <span
@@ -53,7 +53,7 @@ export default function IndustryHero({ industry }) {
           </div>
         ) : null}
 
-        <div className="mt-10 flex flex-col items-center sm:flex-row gap-4">
+        <div className="mt-10 flex flex-col items-start sm:flex-row gap-4">
           <a
             href="#discovery"
             className="rounded-full bg-linear-to-r from-purple-500 to-fuchsia-500 hover:opacity-90 transition-opacity px-7 py-3 text-sm md:text-base font-medium text-white"

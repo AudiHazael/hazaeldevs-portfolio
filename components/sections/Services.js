@@ -219,9 +219,9 @@ function Services({ showHeading = false }) {
         </h3>
 
         {/* Reasons Section */}
-        <div className="items-center gap-12 grid grid-cols-1 xl:grid-cols-2 mt-20">
+        <div className="gap-16 grid grid-cols-1 xl:grid-cols-2 mt-20">
           <motion.div
-            className="gap-6 grid grid-cols-1 sm:grid-cols-2"
+            className="gap-8 grid grid-cols-1 sm:grid-cols-2"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}

@@ -309,7 +309,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
         {/* ── HOW I WORK ── */}
         <section className="px-6 md:px-10 py-20 border-b border-zinc-800">
           <div className="md:max-w-[80%] mx-auto space-y-12">
@@ -354,7 +353,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
         {/* ── SKILLS ── */}
         <section className="px-6 md:px-10 py-20 border-b border-zinc-800">
           <div className="md:max-w-[80%] mx-auto space-y-10">
@@ -390,7 +388,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
         {/* ── BACKGROUND STORY ── */}
         <section className="px-6 md:px-10 py-20 border-b border-zinc-800">
           <div className="md:max-w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -443,7 +440,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
         {/* ── WHAT I LOOK FOR IN CLIENTS ── */}
         <section className="px-6 md:px-10 py-20 border-b border-zinc-800">
           <div className="md:max-w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">

@@ -1,0 +1,75 @@
+<svg viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract illustration of a glowing signal rising through three connected stages">
+  <defs>
+    <linearGradient id="tl-grad" x1="68" y1="358" x2="235" y2="62" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a855f7" />
+      <stop offset="1" stop-color="#e879f9" />
+    </linearGradient>
+    <radialGradient id="tl-radial-purple" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a855f7" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="tl-radial-fuchsia" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e879f9" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#e879f9" stop-opacity="0" />
+    </radialGradient>
+    <filter id="tl-blur-wide" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="26" />
+    </filter>
+    <filter id="tl-blur-soft" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7" />
+    </filter>
+    <pattern id="tl-dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" />
+    </pattern>
+  </defs>
+
+  <!-- Ambient background dot texture -->
+  <rect x="0" y="0" width="300" height="400" fill="url(#tl-dots)" opacity="0.06" />
+
+  <!-- Ambient glow blobs for depth -->
+  <circle cx="60" cy="378" r="70" fill="url(#tl-radial-purple)" opacity="0.35" filter="url(#tl-blur-wide)" />
+  <circle cx="240" cy="42" r="80" fill="url(#tl-radial-fuchsia)" opacity="0.3" filter="url(#tl-blur-wide)" />
+
+  <!-- Glow trail behind the main line -->
+  <path
+    d="M68,358 C110,320 100,240 165,205 C205,183 195,110 235,62"
+    stroke="url(#tl-grad)"
+    stroke-width="9"
+    stroke-linecap="round"
+    opacity="0.3"
+    filter="url(#tl-blur-soft)"
+  />
+
+  <!-- Crisp main line -->
+  <path
+    d="M68,358 C110,320 100,240 165,205 C205,183 195,110 235,62"
+    stroke="url(#tl-grad)"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+
+  <!-- Stage 1: origin -->
+  <g>
+    <circle cx="68" cy="358" r="14" stroke="#c084fc" stroke-opacity="0.35" stroke-width="1" />
+    <circle cx="68" cy="358" r="5" fill="#a855f7" />
+  </g>
+
+  <!-- Stage 2: midpoint -->
+  <g>
+    <circle cx="165" cy="205" r="18" stroke="#d8b4fe" stroke-opacity="0.35" stroke-width="1" />
+    <circle cx="165" cy="205" r="6" fill="#c084fc" />
+  </g>
+
+  <!-- Stage 3: current state, with a small network of connected nodes
+       suggesting systems complexity -->
+  <g>
+    <circle cx="235" cy="62" r="22" stroke="#f0abfc" stroke-opacity="0.35" stroke-width="1" />
+    <line x1="235" y1="62" x2="209" y2="52" stroke="#f0abfc" stroke-opacity="0.5" stroke-width="1" />
+    <line x1="235" y1="62" x2="257" y2="46" stroke="#f0abfc" stroke-opacity="0.5" stroke-width="1" />
+    <line x1="235" y1="62" x2="237" y2="32" stroke="#f0abfc" stroke-opacity="0.5" stroke-width="1" />
+    <circle cx="209" cy="52" r="2.5" fill="#f0abfc" opacity="0.8" />
+    <circle cx="257" cy="46" r="2.5" fill="#f0abfc" opacity="0.8" />
+    <circle cx="237" cy="32" r="2.5" fill="#f0abfc" opacity="0.8" />
+    <circle cx="235" cy="62" r="7" fill="#e879f9" />
+  </g>
+</svg>

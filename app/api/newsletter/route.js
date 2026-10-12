@@ -4,7 +4,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
 
 function sanitise(str = "") {
-  return String(str).replace(/[<>"'&]/g, "").trim();
+  return String(str)
+    .replace(/[<>"'&]/g, "")
+    .trim();
 }
 
 export async function POST(req) {
@@ -14,7 +16,7 @@ export async function POST(req) {
     if (!email?.trim()) {
       return Response.json(
         { success: false, error: "Email is required." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -22,7 +24,7 @@ export async function POST(req) {
     if (!emailRegex.test(email)) {
       return Response.json(
         { success: false, error: "Invalid email address." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -40,11 +42,11 @@ export async function POST(req) {
 
     // Send confirmation email to subscriber
     await resend.emails.send({
-      from: "Haza'ElDevs <onboarding@resend.dev>",
+      from: "HazaelDevs <onboarding@resend.dev>",
       // ✦ Change to your verified domain when ready:
-      // from: "Haza'ElDevs <hello@hazaeldevs.com>",
+      // from: "HazaelDevs <hello@hazaeldevs.com>",
       to: [email],
-      subject: "You're subscribed to Haza'ElDevs",
+      subject: "You're subscribed to HazaelDevs",
       html: `
         <!DOCTYPE html>
         <html lang="en">
@@ -89,7 +91,6 @@ export async function POST(req) {
     });
 
     return Response.json({ success: true });
-
   } catch (error) {
     console.error("[newsletter route]", error);
     return Response.json({ success: false }, { status: 500 });

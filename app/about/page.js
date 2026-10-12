@@ -16,7 +16,7 @@ const personSchema = {
     "Website and systems developer with 3 years of client work. Started with Figma and design, now builds full-stack platforms and business tools for small businesses and startups.",
   worksFor: {
     "@type": "Organization",
-    name: "Haza'ElDevs",
+    name: "HazaelDevs",
     url: "https://www.hazaeldevs.com",
   },
   address: {
@@ -71,7 +71,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hazaeldevs.com/about" },
   openGraph: {
     type: "website",
-    title: "About Audi Hazael | Haza'ElDevs",
+    title: "About Audi Hazael | HazaelDevs",
     description:
       "Lagos-based web designer and systems developer helping businesses get more leads and improve operations.",
     url: "https://www.hazaeldevs.com/about",
@@ -86,7 +86,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Audi Hazael | Haza'ElDevs",
+    title: "About Audi Hazael | HazaelDevs",
     description:
       "Lagos-based web designer and systems developer helping businesses get more leads and improve operations.",
     images: ["/og-preview.png"],

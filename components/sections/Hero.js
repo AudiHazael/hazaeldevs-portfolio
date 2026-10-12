@@ -10,12 +10,12 @@ import Socials from "./Socials";
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
 const config = {
   name: "Hazael Audi",
-  // ✦ CHANGE: subheading now hints at systems work without leading with it
   subheading: "Website & Systems Developer for Small Businesses",
-  headline: "Helping Businesses",
+  location: "Based in Lagos, Nigeria · Working with clients worldwide",
+  headline: "Websites & Systems That",
   headlineAccent: "Build Trust Online",
   description:
-    "Your website should establish confidence before the first call. I design and build sites — and the systems behind them — that make your business feel credible, clear, and easy to work with.",
+    "Your website should establish confidence before the first call. I design and build fast, credible websites, and the systems behind them, for small businesses and startups that want to look professional and be easy to work with.",
   valuePoints: [
     "Confirm your credibility online",
     "Explain what you do clearly",
@@ -35,7 +35,11 @@ const config = {
   },
   socials: [
     { label: "Twitter", href: "https://x.com/hazaeltweets", icon: FaTwitter },
-    { label: "LinkedIn", href: "#", icon: FaLinkedinIn },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/hazael-audi-8a9768417 ",
+      icon: FaLinkedinIn,
+    },
     { label: "GitHub", href: "https://github.com/AudiHazael/", icon: FaGithub },
   ],
 };

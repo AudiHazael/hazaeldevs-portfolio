@@ -17,7 +17,7 @@ import Contact from "@/components/sections/Contact";
 export const metadata = {
   title: "Web Designer & Business Systems Developer for Small Businesses",
   description:
-    "Need a website that brings in leads? Haza'ElDevs builds high-conversion business websites, landing pages, and workflow systems for startups and small businesses.",
+    "Need a website that brings in leads? HazaelDevs builds high-conversion business websites, landing pages, and workflow systems for startups and small businesses.",
   keywords: [
     "small business web designer",
     "website developer for small business",
@@ -31,7 +31,7 @@ export const metadata = {
     canonical: "https://www.hazaeldevs.com",
   },
   openGraph: {
-    title: "Web Designer & Business Systems Developer | Haza'ElDevs",
+    title: "Web Designer & Business Systems Developer | HazaelDevs",
     description:
       "High-conversion websites, landing pages, and workflow systems for startups and small businesses.",
     url: "https://www.hazaeldevs.com",
@@ -40,13 +40,13 @@ export const metadata = {
         url: "/og-preview.png",
         width: 1200,
         height: 630,
-        alt: "Haza'ElDevs Home",
+        alt: "HazaelDevs Home",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Designer & Business Systems Developer | Haza'ElDevs",
+    title: "Web Designer & Business Systems Developer | HazaelDevs",
     description:
       "High-conversion websites, landing pages, and workflow systems for startups and small businesses.",
     images: ["/og-preview.png"],
@@ -59,7 +59,7 @@ export const metadata = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Haza'ElDevs",
+  name: "HazaelDevs",
   url: "https://www.hazaeldevs.com",
   description:
     "Websites, landing pages, sales funnels, and business systems for small businesses and startups. Built by Audi Hazael in Lagos, Nigeria.",
@@ -74,7 +74,7 @@ const websiteSchema = {
 const professionalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Haza'ElDevs",
+  name: "HazaelDevs",
   url: "https://www.hazaeldevs.com",
   logo: "https://www.hazaeldevs.com/Logo-Image.png",
   image: "https://www.hazaeldevs.com/og-preview.png",

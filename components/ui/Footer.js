@@ -43,7 +43,7 @@ function Footer() {
           variants={fadeInUp}
           custom={0.4}
         >
-          <Link href="/" aria-label="Haza'ElDevs home">
+          <Link href="/" aria-label="HazaelDevs home">
             <Image
               src="/Logo-Image.png"
               alt="HazaelDevs logo"

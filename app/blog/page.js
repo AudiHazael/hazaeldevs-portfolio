@@ -22,14 +22,14 @@ export const metadata = {
   ],
   alternates: { canonical: "https://www.hazaeldevs.com/blog" },
   openGraph: {
-    title: "Blog | Haza'ElDevs",
+    title: "Blog | HazaelDevs",
     description:
       "Actionable guides on websites, SEO, lead generation, and business systems for small businesses.",
     url: "https://www.hazaeldevs.com/blog",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog | Haza'ElDevs",
+    title: "Blog | HazaelDevs",
     description:
       "Actionable guides on websites, SEO, lead generation, and business systems for small businesses.",
   },
@@ -38,13 +38,13 @@ export const metadata = {
 const blogSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  name: "Haza'ElDevs Blog",
+  name: "HazaelDevs Blog",
   url: "https://www.hazaeldevs.com/blog",
   description:
     "Actionable guides on small business websites, lead generation, and workflow systems.",
   publisher: {
     "@type": "Organization",
-    name: "Haza'ElDevs",
+    name: "HazaelDevs",
     url: "https://www.hazaeldevs.com",
   },
 };

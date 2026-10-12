@@ -1,272 +1,371 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
-import { Code, MonitorSmartphone, Rocket, BoltIcon } from "lucide-react";
-import { DevicePhoneMobileIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowDownRight,
+  ArrowRight,
+  Check,
+  Code2,
+  MonitorSmartphone,
+  Rocket,
+  Workflow,
+} from "lucide-react";
 import IndustriesLinkOut from "../industry/IndustriesLinkOut";
-// ─── ANIMATION ───────────────────────────────────────────────────────────────
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i = 1) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
-  }),
-};
 
-// ─── DATA ─────────────────────────────────────────────────────────────────────
 const services = [
   {
+    number: "01",
     title: "Business Websites",
     img: "/business.png",
-    desc: (
-      <>
-        <p>
-          A clear, professional website that helps people quickly understand who
-          you are, what you do, and how to contact you with confidence.
-        </p>
-        <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
-          <li>Clear service pages written for non-technical visitors</li>
-          <li>Simple contact and enquiry flow</li>
-          <li>Professional structure that builds credibility</li>
-        </ul>
-      </>
-    ),
+    icon: MonitorSmartphone,
+    description:
+      "A professional online presence that communicates your value, builds credibility, and makes it easy for customers to reach you.",
+    features: [
+      "Clear, customer-focused service pages",
+      "Simple contact and enquiry flows",
+      "Responsive layouts across devices",
+    ],
   },
   {
+    number: "02",
     title: "Landing Pages & Sales Funnels",
     img: "/landing.png",
-    desc: (
-      <>
-        <p>
-          Single-purpose pages designed to explain an offer clearly and guide
-          visitors toward a specific action — a booking, a sign-up, or a quote
-          request.
-        </p>
-        <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
-          <li>Clear messaging with one main goal</li>
-          <li>Mobile-friendly layout</li>
-          <li>Fast loading and easy to share</li>
-        </ul>
-      </>
-    ),
+    icon: Rocket,
+    description:
+      "Focused landing pages that communicate your offer and guide visitors towards a booking, registration, or quote request.",
+    features: [
+      "Clear messaging and calls to action",
+      "Mobile-first user experience",
+      "Fast, shareable campaign pages",
+    ],
   },
   {
-    // ✦ CHANGE: rewritten from "Clear Process & Communication" to reflect
-    //   systems/workflow capability — same card slot, bigger signal
+    number: "03",
     title: "Business Systems & Workflows",
     img: "/ecommerce.png",
-    desc: (
-      <>
-        <p>
-          Beyond websites — I design and build the internal tools and automated
-          workflows that help your business run without you manually managing
-          every step.
-        </p>
-        <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
-          <li>Operations dashboards and admin panels</li>
-          <li>Lead tracking and pipeline management</li>
-          <li>Automated notifications and document generation</li>
-        </ul>
-      </>
-    ),
+    icon: Workflow,
+    description:
+      "Practical digital tools that reduce repetitive work, organize business operations, and make everyday processes easier to manage.",
+    features: [
+      "Operations dashboards and admin panels",
+      "Lead tracking and pipeline management",
+      "Automated notifications and documents",
+    ],
   },
 ];
 
 const reasons = [
   {
-    title: "Modern & Mobile Friendly",
+    number: "01",
+    title: "Designed for Every Device",
     icon: MonitorSmartphone,
-    desc: (
-      <>
-        <p>
-          All websites are built with modern design principles and optimized for
-          every device:
-        </p>
-        <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
-          <li>Responsive layouts for phones, tablets, and desktops</li>
-          <li>Touch-friendly navigation</li>
-          <li>Fast performance on mobile networks</li>
-        </ul>
-      </>
-    ),
+    description:
+      "Responsive interfaces, accessible navigation, and layouts built for phones, tablets, and desktops.",
   },
   {
-    title: "Fast Delivery",
-    // ✦ NOTE: lucide-react doesn't export BoltIcon — using Zap instead
-    icon: Code,
-    desc: (
-      <>
-        <p>
-          Projects are delivered quickly, with a defined process to save you
-          time:
-        </p>
-        <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
-          <li>Clear project milestones from day one</li>
-          <li>Written updates — no unnecessary calls</li>
-          <li>Rapid turnaround for revisions</li>
-        </ul>
-      </>
-    ),
+    number: "02",
+    title: "A Clear Delivery Process",
+    icon: Code2,
+    description:
+      "Defined milestones, written progress updates, and structured revisions to keep projects on track.",
   },
   {
-    title: "SEO Ready",
+    number: "03",
+    title: "Built with Discoverability in Mind",
     icon: Rocket,
-    desc: (
-      <>
-        <p>
-          Every site is built to be found — structured so Google can read,
-          index, and rank it properly:
-        </p>
-        <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
-          <li>Semantic HTML and meta tag setup</li>
-          <li>Auto-generated sitemaps and Open Graph tags</li>
-          <li>Fast load speeds and accessible content</li>
-        </ul>
-      </>
-    ),
+    description:
+      "Semantic HTML, relevant metadata, sitemap support, and performance-conscious development.",
   },
   {
-    // ✦ CHANGE: "Affordable Pricing" → "Built for Real Business Use"
-    //   positions the work as practical and outcome-driven, not just cheap
-    title: "Built for Real Business Use",
-    icon: MonitorSmartphone,
-    desc: (
-      <>
-        <p>
-          Everything is built to actually work in your business — not just look
-          good in a browser:
-        </p>
-        <ul className="mt-2 pl-5 text-gray-300 text-sm list-disc">
-          <li>Scope defined before work begins — no surprises</li>
-          <li>Transparent pricing with no hidden fees</li>
-          <li>Designed to hand off cleanly and run without me</li>
-        </ul>
-      </>
-    ),
+    number: "04",
+    title: "Practical, Business-Focused Work",
+    icon: Workflow,
+    description:
+      "Clear scope, transparent pricing, and solutions designed to be maintained after handover.",
   },
 ];
 
-// ─── COMPONENT ───────────────────────────────────────────────────────────────
+const fadeInUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: "easeOut" },
+  },
+};
+
 function Services({ showHeading = false }) {
+  const reduceMotion = useReducedMotion();
+
+  const reveal = reduceMotion
+    ? {}
+    : {
+        initial: "hidden",
+        whileInView: "visible",
+        viewport: { once: true, amount: 0.15 },
+        variants: fadeInUp,
+      };
+
   return (
-    <section className="relative bg-inherit py-12 border-zinc-800 border-t overflow-hidden text-zinc-100">
-      <div className="mx-auto px-6 md:max-w-[80%]">
-        {/* Header */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-          variants={fadeInUp}
-          custom={0}
-          className="flex flex-col justify-center items-start mb-12"
-        >
-          <h6 className="font-semibold text-purple-300/50 text-sm uppercase tracking-widest">
-            My Services
-          </h6>
-          {/* ✦ CHANGE: heading now covers both offerings */}
-          <h3 className="font-bold text-zinc-50 text-2xl md:text-4xl">
-            {showHeading ? "Services" : "Websites. Systems. Results."}
-          </h3>
-          {/* ✦ NEW: one-line subtitle that bridges websites and systems */}
-          <p className="mt-2 text-gray-400 text-sm max-w-xl">
-            I build what your business actually needs — whether that&apos;s a
-            credible website, a marketing page, or an internal system that
-            replaces the spreadsheets and manual follow-ups slowing you down.
+    <section
+      id="services"
+      className="relative overflow-hidden border-t border-white/8 bg-[#09090f] py-20 text-zinc-100 sm:py-24 lg:py-28"
+    >
+      {/* Ambient background accents */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-32 left-1/2 h-80 w-xl -translate-x-1/2 rounded-full bg-purple-700/10 blur-[110px]"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+        {/* Section heading */}
+        <motion.div {...reveal} className="mb-12 max-w-3xl sm:mb-16">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-8 bg-purple-400" />
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-purple-300">
+              What I do
+            </p>
+          </div>
+
+          <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+            {showHeading ? (
+              "Services built around your business."
+            ) : (
+              <>
+                Websites. Systems.
+                <span className="block text-zinc-400">
+                  Measurable progress.
+                </span>
+              </>
+            )}
+          </h2>
+
+          <p className="mt-5 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base sm:leading-8">
+            From a credible business website to a workflow that eliminates
+            repetitive tasks, I build digital solutions around the way your
+            business actually operates.
           </p>
         </motion.div>
 
-        {/* Services Cards */}
-        <div className="gap-6 grid grid-cols-1 md:grid-cols-3 mb-16">
-          {services.map((service, i) => (
-            <motion.div
-              key={i}
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
-              custom={i + 1}
-              className="group flex flex-col items-start gap-4 bg-zinc-900/40 hover:bg-zinc-900/60 border border-zinc-800 rounded-md overflow-hidden transition-all duration-300"
-            >
-              <div className="relative w-full h-64">
-                <Image
-                  src={service.img}
-                  alt={service.title}
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-[#6b21a8]/40 group-hover:bg-[#6b21a8]/50 transition-opacity duration-300 pointer-events-none mix-blend-multiply" />
-              </div>
+        {/* Service cards */}
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {services.map((service, index) => {
+            const Icon = service.icon;
 
-              <div className="p-6">
-                <h4 className="font-semibold text-zinc-50 text-xl">
-                  {service.title}
-                </h4>
-                <div className="text-gray-300 text-sm leading-relaxed">
-                  {service.desc}
+            return (
+              <motion.article
+                key={service.number}
+                {...reveal}
+                transition={
+                  reduceMotion
+                    ? undefined
+                    : { ...fadeInUp.visible.transition, delay: index * 0.1 }
+                }
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/9 bg-white/2.5 transition-colors duration-300 hover:border-purple-400/30 hover:bg-white/4.5"
+              >
+                {/* Image */}
+                <div className="relative aspect-16/10 overflow-hidden bg-zinc-900">
+                  <Image
+                    src={service.img}
+                    alt={service.title}
+                    fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+
+                  <div className="absolute inset-0 bg-linear-to-t from-[#09090f]/80 via-transparent to-black/10" />
+
+                  <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/15 bg-black/45 px-3 py-1.5 backdrop-blur-md">
+                    <span className="text-xs font-medium tracking-wider text-white/90">
+                      {service.number}
+                    </span>
+                    <span className="h-3 w-px bg-white/30" />
+                    <Icon
+                      aria-hidden="true"
+                      className="h-3.5 w-3.5 text-purple-300"
+                    />
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+
+                {/* Card content */}
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <h3 className="text-xl font-semibold tracking-tight text-white">
+                    {service.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-7 text-zinc-400">
+                    {service.description}
+                  </p>
+
+                  <ul className="mt-5 space-y-3 border-t border-white/8 pt-5">
+                    {service.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-start gap-3 text-sm leading-6 text-zinc-300"
+                      >
+                        <Check
+                          aria-hidden="true"
+                          className="mt-1 h-4 w-4 shrink-0 text-purple-300"
+                        />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a
+                    href="/contact"
+                    aria-label={`Discuss ${service.title}`}
+                    className="mt-7 inline-flex w-fit items-center gap-2 text-sm font-medium text-purple-300 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-4 focus-visible:ring-offset-[#09090f]"
+                  >
+                    Discuss your project
+                    <ArrowRight
+                      aria-hidden="true"
+                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                    />
+                  </a>
+                </div>
+              </motion.article>
+            );
+          })}
         </div>
+
+        {/* Secondary CTA */}
+        <motion.div
+          {...reveal}
+          className="mt-8 flex flex-col gap-4 rounded-2xl border border-purple-300/15 bg-purple-500/5.5 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8"
+        >
+          <div>
+            <h3 className="text-lg font-semibold text-white sm:text-xl">
+              Have a specific business challenge?
+            </h3>
+            <p className="mt-2 max-w-xl text-sm leading-6 text-zinc-400">
+              Let&apos;s identify what needs to be built and define a practical
+              scope before work begins.
+            </p>
+          </div>
+
+          <a
+            href="/contact"
+            className="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-lg bg-purple-400 px-5 py-3 text-sm font-semibold text-[#130d1c] transition-colors hover:bg-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#09090f] sm:self-center"
+          >
+            Let&apos;s talk
+            <ArrowDownRight aria-hidden="true" className="h-4 w-4" />
+          </a>
+        </motion.div>
       </div>
 
-      <div className="mx-auto px-6 md:max-w-[80%]">
-        <h3 className="font-bold text-zinc-50 text-2xl md:text-4xl mb-8">
-          Why work with me?
-        </h3>
+      {/* Why work with me */}
+      <div className="relative mx-auto mt-24 max-w-7xl px-5 sm:mt-32 sm:px-8 lg:px-10">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:gap-16">
+          {/* Benefits */}
+          <div>
+            <motion.div {...reveal} className="mb-9 max-w-xl">
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-px w-8 bg-purple-400" />
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-purple-300">
+                  The difference
+                </p>
+              </div>
 
-        {/* Reasons Section */}
-        <div className="gap-16 grid grid-cols-1 xl:grid-cols-2 mt-20">
-          <motion.div
-            className="gap-8 grid grid-cols-1 sm:grid-cols-2"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            {reasons.map((reason, i) => {
-              const Icon = reason.icon;
-              return (
-                <motion.div
-                  key={i}
-                  variants={fadeInUp}
-                  custom={i + 2}
-                  className="flex flex-col items-start gap-4 bg-zinc-900/40 hover:bg-zinc-900/60 p-4 sm:p-6 border border-zinc-800 rounded-xl w-full min-h-35 transition-all duration-300"
-                >
-                  <div className="flex items-center gap-3">
-                    <Icon className="w-5 h-5 text-purple-400/70" />
-                    <h5 className="font-semibold text-zinc-50 text-sm">
+              <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                Good design is only the beginning.
+              </h2>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-400 sm:text-base">
+                Your website or system should serve a purpose, solve a problem,
+                and make work easier. That is the standard behind every project.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {reasons.map((reason, index) => {
+                const Icon = reason.icon;
+
+                return (
+                  <motion.article
+                    key={reason.number}
+                    {...reveal}
+                    transition={
+                      reduceMotion
+                        ? undefined
+                        : {
+                            ...fadeInUp.visible.transition,
+                            delay: index * 0.08,
+                          }
+                    }
+                    className="rounded-xl border border-white/8 bg-white/2.5 p-5 transition-colors duration-300 hover:border-purple-400/25"
+                  >
+                    <div className="mb-5 flex items-center justify-between">
+                      <span className="text-xs font-medium tracking-widest text-zinc-600">
+                        {reason.number}
+                      </span>
+
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-purple-400/15 bg-purple-400/8">
+                        <Icon
+                          aria-hidden="true"
+                          className="h-4 w-4 text-purple-300"
+                        />
+                      </div>
+                    </div>
+
+                    <h3 className="text-base font-semibold text-zinc-100">
                       {reason.title}
-                    </h5>
-                  </div>
-                  <div className="text-gray-300 text-sm leading-relaxed">
-                    {reason.desc}
-                  </div>
-                </motion.div>
-              );
-            })}
-            <IndustriesLinkOut variant="inline" className="sm:col-span-2" />
-          </motion.div>
+                    </h3>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            variants={fadeInUp}
-            custom={1}
-            className="w-full"
-          >
-            <div className="relative rounded-md w-full overflow-hidden">
-              <Image
-                src="/hazael-audi (2).jpg"
-                alt="Hazael Audi — Website and systems developer"
-                width={600}
-                height={200}
-                className=" object-cover transition-transform duration-500 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-[#6b21a8]/50 transition-opacity duration-300 pointer-events-none mix-blend-multiply" />
+                    <p className="mt-2 text-sm leading-6 text-zinc-400">
+                      {reason.description}
+                    </p>
+                  </motion.article>
+                );
+              })}
+            </div>
+
+            <div className="mt-6">
+              <IndustriesLinkOut variant="inline" className="w-full" />
+            </div>
+          </div>
+
+          {/* Profile panel */}
+
+          <motion.div {...reveal} className="relative w-full min-w-0 lg:mt-32">
+            <div className="absolute -inset-3 rounded-3xl border border-purple-400/10" />
+
+            <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900">
+              <div className="relative w-full aspect-4/5 max-h-[560px] ">
+                <Image
+                  src="/hazael-audi (2).jpg"
+                  alt="Hazael Audi, website and systems developer"
+                  fill
+                  sizes="(max-width: 1023px) 100vw, 40vw"
+                  className="object-cover object-center transition-transform duration-700 hover:scale-[1.02]"
+                />
+
+                <div className="absolute inset-0 bg-linear-to-t from-[#09090f] via-[#09090f]/10 to-transparent" />
+
+                <div className="absolute inset-x-0 bottom-0 bg-black/25 p-6 sm:p-8">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-purple-300">
+                    Your digital partner
+                  </p>
+
+                  <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                    Hazael Audi
+                  </h3>
+
+                  <p className="mt-2 max-w-sm text-sm leading-6 text-zinc-300">
+                    Frontend development, business websites, and practical
+                    digital systems.
+                  </p>
+
+                  <a
+                    href="/contact"
+                    className="mt-6 inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:border-purple-300/50 hover:bg-purple-400/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300"
+                  >
+                    Work with me
+                    <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

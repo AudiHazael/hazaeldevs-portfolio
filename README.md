@@ -1,4 +1,4 @@
-# Haza'ElDevs Portfolio — Next.js
+# HazaelDevs Portfolio — Next.js
 
 Migrated from React + Vite to Next.js 15 (App Router).
 

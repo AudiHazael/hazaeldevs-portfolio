@@ -27,7 +27,7 @@ const portfolioItems = [
     img: "/karez-nigeria.png",
     tools: [],
     previewLink: "https://www.kareznigeria.com/",
-    repoLink: "/",
+    repoLink: "#",
   },
   // {
   //   title: "Soy-Joy",
@@ -58,7 +58,7 @@ const portfolioItems = [
     repoLink: "https://github.com/AudiHazael/Luxor",
   },
   {
-    title: "Haza'ElDevs Store",
+    title: "HazaelDevs Store",
     text: "A sleek and user-friendly interface for a modern gadget store. This is a fully responsive frontend interface featuring product listings, filterable categories, a dynamic cart, and reusable components for scalability.",
     img: "/ecom.png",
     tools: [],

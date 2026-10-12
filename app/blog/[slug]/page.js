@@ -130,7 +130,7 @@ export default async function BlogPost({ params }) {
     },
     publisher: {
       "@type": "Organization",
-      name: "Haza'ElDevs",
+      name: "HazaelDevs",
       url: "https://www.hazaeldevs.com",
     },
     url: `https://www.hazaeldevs.com/blog/${post.slug}`,

@@ -51,7 +51,7 @@ export default async function IndustryPage({ params }) {
     serviceType: `Website & Lead Generation System for ${industry.name}`,
     provider: {
       "@type": "ProfessionalService",
-      name: "Haza'ElDevs",
+      name: "HazaelDevs",
       url: "https://www.hazaeldevs.com",
     },
     areaServed: "Global",

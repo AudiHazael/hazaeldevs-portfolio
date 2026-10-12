@@ -21,12 +21,12 @@ export const metadata = {
   metadataBase: new URL("https://www.hazaeldevs.com"),
 
   title: {
-    default: "Web Design & Lead Generation Systems | Haza'ElDevs",
-    template: "%s | Haza'ElDevs",
+    default: "Web Designer & Developer for Small Businesses | HazaelDevs",
+    template: "%s | HazaelDevs",
   },
 
   description:
-    "Conversion-focused websites and lead-generation systems for small businesses and startups. Based in Lagos, working globally.",
+    "I build fast, conversion-focused websites, landing pages and business systems for startups and small businesses, working with clients worldwide.",
 
   keywords: [
     "web designer for small business",
@@ -37,7 +37,7 @@ export const metadata = {
     "landing page developer for lead generation",
     "workflow automation developer Nigeria",
     "hire Next.js developer",
-    "Haza'ElDevs",
+    "HazaellDevs",
     "Audi Hazael",
   ],
   authors: [{ name: "Audi Hazael", url: "https://www.hazaeldevs.com" }],
@@ -47,8 +47,8 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.hazaeldevs.com",
-    siteName: "Haza'ElDevs",
-    title: "Web Design & Business Systems Developer | Haza'ElDevs",
+    siteName: "HazaelDevs",
+    title: "Web Design & Business Systems Developer | HazaelDevs",
     description:
       "Conversion-focused websites, landing pages, and business systems for small businesses and startups.",
     images: [
@@ -56,7 +56,7 @@ export const metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Haza'ElDevs — React Developer for Small Business Websites",
+        alt: "HazaelDevs — React Developer for Small Business Websites",
       },
     ],
     icons: {
@@ -68,7 +68,7 @@ export const metadata = {
     card: "summary_large_image",
     site: "@hazaeltweets",
     creator: "@hazaeltweets",
-    title: "Web Design & Business Systems Developer | Haza'ElDevs",
+    title: "Web Design & Business Systems Developer | HazaelDevs",
     description:
       "Conversion-focused websites, landing pages, and business systems for small businesses and startups.",
     images: ["/hazaeldevs_og_preview.png"],

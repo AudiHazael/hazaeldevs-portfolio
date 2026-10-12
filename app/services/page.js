@@ -22,7 +22,7 @@ const serviceSchema = {
   serviceType: "Web Design and Development",
   provider: {
     "@type": "ProfessionalService",
-    name: "Haza'ElDevs",
+    name: "HazaelDevs",
     url: "https://www.hazaeldevs.com",
     founder: { "@type": "Person", name: "Audi Hazael" },
     areaServed: [
@@ -151,7 +151,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hazaeldevs.com/services" },
   openGraph: {
     type: "website",
-    title: "Web Design & Development Services | Haza'ElDevs",
+    title: "Web Design & Development Services | HazaelDevs",
     description:
       "Conversion-focused websites, landing pages, and business systems for small businesses and startups.",
     url: "https://www.hazaeldevs.com/services",
@@ -160,13 +160,13 @@ export const metadata = {
         url: "/og-services.png",
         width: 1200,
         height: 630,
-        alt: "Haza'ElDevs Services",
+        alt: "HazaelDevs Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design & Development Services | Haza'ElDevs",
+    title: "Web Design & Development Services | HazaelDevs",
     description:
       "Conversion-focused websites, landing pages, and business systems for small businesses and startups.",
     images: ["/og-services.png"],

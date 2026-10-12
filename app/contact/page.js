@@ -12,7 +12,7 @@ const personSchema = {
   jobTitle: "Website & Systems Developer",
   worksFor: {
     "@type": "Organization",
-    name: "Haza'ElDevs",
+    name: "HazaelDevs",
     url: "https://www.hazaeldevs.com",
   },
   address: {
@@ -32,7 +32,7 @@ const personSchema = {
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Work With Haza'ElDevs",
+  name: "Work With HazaelDevs",
   description:
     "Contact Audi Hazael for website design, development, and business systems work.",
   url: "https://www.hazaeldevs.com/contact",
@@ -107,7 +107,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hazaeldevs.com/contact" },
   openGraph: {
     type: "website",
-    title: "Work With Me | Haza'ElDevs",
+    title: "Work With Me | HazaelDevs",
     description:
       "Need a website or business workflow system? Send your project brief and get a response within 24 hours.",
     url: "https://www.hazaeldevs.com/contact",
@@ -116,13 +116,13 @@ export const metadata = {
         url: "/og-contact.png",
         width: 1200,
         height: 630,
-        alt: "Contact Haza'ElDevs",
+        alt: "Contact HazaelDevs",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Work With Me | Haza'ElDevs",
+    title: "Work With Me | HazaelDevs",
     description:
       "Need a website or business workflow system? Send your project brief and get a response within 24 hours.",
     images: ["/og-contact.png"],

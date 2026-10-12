@@ -13,7 +13,7 @@ const softwareServiceSchema = {
     "Design and development of internal tools, operations dashboards, and automated business workflows that replace manual processes and help businesses scale.",
   provider: {
     "@type": "ProfessionalService",
-    name: "Haza'ElDevs",
+    name: "HazaelDevs",
     url: "https://www.hazaeldevs.com",
     founder: { "@type": "Person", name: "Audi Hazael" },
     areaServed: ["Nigeria", "Global"],
@@ -152,7 +152,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hazaeldevs.com/systems" },
   openGraph: {
     type: "website",
-    title: "Business Systems & Workflow Development | Haza'ElDevs",
+    title: "Business Systems & Workflow Development | HazaelDevs",
     description:
       "Custom internal tools, operations dashboards, and workflow automation that replace manual processes.",
     url: "https://www.hazaeldevs.com/systems",
@@ -161,13 +161,13 @@ export const metadata = {
         url: "/og-systems.png",
         width: 1200,
         height: 630,
-        alt: "Haza'ElDevs — Business Systems",
+        alt: "HazaelDevs — Business Systems",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Business Systems & Workflow Development | Haza'ElDevs",
+    title: "Business Systems & Workflow Development | HazaelDevs",
     description:
       "Custom internal tools, operations dashboards, and workflow automation that replace manual processes.",
     images: ["/og-systems.png"],

@@ -8,7 +8,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 const portfolioSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "Haza'ElDevs Portfolio",
+  name: "HazaelDevs Portfolio",
   description:
     "Websites, landing pages, and business systems built for small businesses and startups by Audi Hazael.",
   url: "https://www.hazaeldevs.com/portfolio",
@@ -17,7 +17,7 @@ const portfolioSchema = {
     name: "Audi Hazael",
     url: "https://www.hazaeldevs.com",
     jobTitle: "Website & Systems Developer",
-    worksFor: { "@type": "Organization", name: "Haza'ElDevs" },
+    worksFor: { "@type": "Organization", name: "HazaelDevs" },
   },
   mainEntity: {
     "@type": "ItemList",
@@ -92,7 +92,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     title:
-      "Portfolio — Websites & Systems Built for Real Businesses | Haza'ElDevs",
+      "Portfolio — Websites & Systems Built for Real Businesses | HazaelDevs",
     description:
       "Real client websites, landing pages, and business systems built for small businesses and startups.",
     url: "https://www.hazaeldevs.com/portfolio",
@@ -101,13 +101,13 @@ export const metadata = {
         url: "/og-preview.png",
         width: 1200,
         height: 630,
-        alt: "Haza'ElDevs Portfolio",
+        alt: "HazaelDevs Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio | Haza'ElDevs",
+    title: "Portfolio | HazaelDevs",
     description:
       "Real client websites, landing pages, and business systems built for small businesses and startups.",
     images: ["/og-preview.png"],

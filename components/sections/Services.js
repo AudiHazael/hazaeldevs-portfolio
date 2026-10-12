@@ -128,7 +128,7 @@ function Services({ showHeading = false }) {
             </p>
           </div>
 
-          <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="max-w-2xl text-2xl md:text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
             {showHeading ? (
               "Services built around your business."
             ) : (
@@ -268,7 +268,7 @@ function Services({ showHeading = false }) {
                 </p>
               </div>
 
-              <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white ">
                 Good design is only the beginning.
               </h2>
 

@@ -129,7 +129,7 @@ function Footer() {
           <p>
             © {new Date().getFullYear()} Haza’ElDevs · Built by{" "}
             <a
-              href="https://wa.link/8k0f7s"
+              href="https://www.hazaeldevs.com/"
               target="_blank"
               rel="noreferrer"
               className="text-indigo-400 hover:underline"
